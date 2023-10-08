@@ -13,7 +13,7 @@ namespace sistemaCompra
         public Login()
         {
             InitializeComponent();
-            invalido.Visible = false;
+            
 
         }
 
@@ -37,6 +37,21 @@ namespace sistemaCompra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            if (cajaUsuario.TextLength < 8 || cajaUsuario.TextLength > 12)
+            {
+                MessageBox.Show("El nombre de usuario debe estar comprendido entre 8 y 12 caracteres");
+                cajaClave.Clear();
+                cajaUsuario.Clear();
+            }
+
+            if (cajaClave.TextLength < 6 || cajaClave.TextLength > 10)
+            {
+                MessageBox.Show("La clave debe estar comprendida entre 6 y 10 caracteres");
+                cajaClave.Clear();
+                cajaUsuario.Clear();
+               
+            }
+
             if (cajaUsuario.Text.ToLower() == "jose" && cajaClave.Text == "j1234")
             {
                 MenuSuperUser menuSuperUser = new MenuSuperUser();
@@ -60,7 +75,7 @@ namespace sistemaCompra
 
             else
             {
-                invalido.Visible = true;
+                MessageBox.Show("Usuario o clave incorrecto");
                 cajaClave.Clear();
                 cajaUsuario.Clear();
             }
@@ -69,14 +84,15 @@ namespace sistemaCompra
 
         private void cajaUsuario_TextChanged(object sender, EventArgs e)
         {
-            TextBox textBox = (TextBox)sender;
-            if (textBox.Text.Contains(" "))
+            if (cajaUsuario.Text.Contains(" "))
             {
-
-                textBox.Text = textBox.Text.Replace(" ", "");
-                textBox.SelectionStart = textBox.Text.Length;
+                MessageBox.Show("El nombre de usuario no debe tener espacios");
+                cajaUsuario.Clear();
             }
+
         }
+
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -101,6 +117,13 @@ namespace sistemaCompra
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void cajaClave_TextChanged(object sender, EventArgs e)
+        {
+
+
 
         }
     }

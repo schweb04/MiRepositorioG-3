@@ -36,7 +36,6 @@
             cajaUsuario = new TextBox();
             cajaClave = new TextBox();
             mostrarPass = new CheckBox();
-            invalido = new Label();
             ingresar = new PictureBox();
             pictureBox3 = new PictureBox();
             user = new Label();
@@ -83,6 +82,7 @@
             resources.ApplyResources(cajaClave, "cajaClave");
             cajaClave.Name = "cajaClave";
             cajaClave.UseSystemPasswordChar = true;
+            cajaClave.TextChanged += cajaClave_TextChanged;
             // 
             // mostrarPass
             // 
@@ -90,13 +90,6 @@
             mostrarPass.Name = "mostrarPass";
             mostrarPass.UseVisualStyleBackColor = true;
             mostrarPass.CheckedChanged += checkBox1_CheckedChanged;
-            // 
-            // invalido
-            // 
-            resources.ApplyResources(invalido, "invalido");
-            invalido.ForeColor = Color.Red;
-            invalido.Name = "invalido";
-            invalido.Click += invalido_Click;
             // 
             // ingresar
             // 
@@ -119,7 +112,6 @@
             BackColor = Color.Honeydew;
             Controls.Add(pictureBox3);
             Controls.Add(ingresar);
-            Controls.Add(invalido);
             Controls.Add(mostrarPass);
             Controls.Add(cajaClave);
             Controls.Add(cajaUsuario);
@@ -149,7 +141,6 @@
         private TextBox cajaUsuario;
         private TextBox cajaClave;
         private CheckBox mostrarPass;
-        private Label invalido;
         private PictureBox ingresar;
         private PictureBox pictureBox3;
     }
