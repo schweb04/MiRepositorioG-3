@@ -13,7 +13,10 @@ namespace sistemaCompra
          * nombre de usuario como en la contraseña
          * 
          * Se necesita controlar la excepción del tamaño del nombre de usuario y contraseña,
-         * no pueden ser ni tan cortos ni tan largos, Contraseña: mínimo 8 caracteres, máximo 12 caracteres
+         * no pueden ser ni tan cortos ni tan largos, 
+         * Nombre de usuario: mínimo 6 caracteres, máximo 10 caracteres
+         * Contraseña: mínimo 8 caracteres, máximo 12 caracteres
+         * 
          * el usuario jose es superusuario, clave j1234
          * el usuario pedro es administrador, clave p1234
          * el usuario luis es cajero, clave l1234
