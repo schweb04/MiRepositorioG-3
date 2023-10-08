@@ -37,11 +37,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(699, 408);
+            label1.Location = new Point(360, 192);
             label1.Name = "label1";
-            label1.Size = new Size(58, 20);
+            label1.Size = new Size(61, 20);
             label1.TabIndex = 1;
-            label1.Text = "Control";
+            label1.Text = "Cambio";
+            label1.Click += label1_Click;
             // 
             // pictureBox1
             // 
