@@ -5,7 +5,19 @@ namespace sistemaCompra
     public partial class Login : Form
     {
 
-        /*el usuario jose es superusuario, clave j1234
+        /*
+         * Ya se controló la excepción del nombre de usuario, no importa si ingresa el nombre
+         * en minúsculas, mayúsculas o combinadas
+         * 
+         * Se necesita controlar la excepción de espacios, los espacios son inválidos tanto en el
+         * nombre de usuario como en la contraseña
+         * 
+         * Se necesita controlar la excepción del tamaño del nombre de usuario y contraseña,
+         * no pueden ser ni tan cortos ni tan largos, 
+         * Nombre de usuario: mínimo 6 caracteres, máximo 10 caracteres
+         * Contraseña: mínimo 8 caracteres, máximo 12 caracteres
+         * 
+         * el usuario jose es superusuario, clave j1234
          * el usuario pedro es administrador, clave p1234
          * el usuario luis es cajero, clave l1234
          */
