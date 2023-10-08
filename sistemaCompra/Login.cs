@@ -49,14 +49,14 @@ namespace sistemaCompra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (cajaUsuario.TextLength < 8 || cajaUsuario.TextLength > 12)
+            if (cajaUsuario.TextLength < 6 || cajaUsuario.TextLength > 10)
             {
                 MessageBox.Show("El nombre de usuario debe estar comprendido entre 8 y 12 caracteres");
                 cajaClave.Clear();
                 cajaUsuario.Clear();
             }
 
-            if (cajaClave.TextLength < 6 || cajaClave.TextLength > 10)
+            if (cajaClave.TextLength < 8 || cajaClave.TextLength > 12)
             {
                 MessageBox.Show("La clave debe estar comprendida entre 6 y 10 caracteres");
                 cajaClave.Clear();
