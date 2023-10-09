@@ -84,6 +84,7 @@
             // 
             // ingresar
             // 
+            ingresar.Image = Properties.Resources.BotonCerrar;
             resources.ApplyResources(ingresar, "ingresar");
             ingresar.Name = "ingresar";
             ingresar.TabStop = false;
@@ -91,6 +92,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Image = Properties.Resources.BotonMinimizar;
             resources.ApplyResources(pictureBox3, "pictureBox3");
             pictureBox3.Name = "pictureBox3";
             pictureBox3.TabStop = false;

@@ -28,210 +28,238 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarCliente));
             pictureBox5 = new PictureBox();
-            lblAgregarCliente = new Label();
-            btnCancelar = new Button();
-            btnAceptar = new Button();
             txtDireccion = new TextBox();
-            lblDireccion = new Label();
             txtCorreo = new TextBox();
-            lblCorreo = new Label();
             txtTelefono = new TextBox();
-            lblTelefono = new Label();
             txtNombreCliente = new TextBox();
-            lblNombreCliente = new Label();
             txtCodigoCliente = new TextBox();
-            lblCodigoCliente = new Label();
-            lblApellido = new Label();
             txtApellido = new TextBox();
-            lblIdentificación = new Label();
             txtIdentificacion = new TextBox();
+            pboxCancelar = new PictureBox();
+            pboxAceptar = new PictureBox();
+            pboxAgregarCl = new PictureBox();
+            pboxCodigoCliente = new PictureBox();
+            pboxNombreCliente = new PictureBox();
+            pboxApellido = new PictureBox();
+            pboxIdentificacion = new PictureBox();
+            pboxTelefono = new PictureBox();
+            pboxCorreo = new PictureBox();
+            pboxDireccion = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAceptar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAgregarCl).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCodigoCliente).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxNombreCliente).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxApellido).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxIdentificacion).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxTelefono).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCorreo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxDireccion).BeginInit();
             SuspendLayout();
             // 
             // pictureBox5
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Image = Properties.Resources.BotonCerrar;
             pictureBox5.ImeMode = ImeMode.NoControl;
-            pictureBox5.Location = new Point(713, 11);
+            pictureBox5.Location = new Point(748, 2);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(24, 20);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.Size = new Size(41, 47);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 20;
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
             // 
-            // lblAgregarCliente
-            // 
-            lblAgregarCliente.AutoSize = true;
-            lblAgregarCliente.Font = new Font("Gill Sans MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            lblAgregarCliente.ForeColor = Color.Black;
-            lblAgregarCliente.Location = new Point(256, 11);
-            lblAgregarCliente.Name = "lblAgregarCliente";
-            lblAgregarCliente.Size = new Size(221, 38);
-            lblAgregarCliente.TabIndex = 30;
-            lblAgregarCliente.Text = "Agregar Cliente";
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(662, 239);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 23);
-            btnCancelar.TabIndex = 47;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnAceptar
-            // 
-            btnAceptar.Location = new Point(581, 239);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(75, 23);
-            btnAceptar.TabIndex = 46;
-            btnAceptar.Text = "Aceptar";
-            btnAceptar.UseVisualStyleBackColor = true;
-            // 
             // txtDireccion
             // 
-            txtDireccion.Location = new Point(396, 153);
+            txtDireccion.Location = new Point(303, 216);
             txtDireccion.Multiline = true;
             txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(260, 64);
+            txtDireccion.Size = new Size(216, 99);
             txtDireccion.TabIndex = 45;
-            // 
-            // lblDireccion
-            // 
-            lblDireccion.AutoSize = true;
-            lblDireccion.Location = new Point(333, 156);
-            lblDireccion.Name = "lblDireccion";
-            lblDireccion.Size = new Size(57, 15);
-            lblDireccion.TabIndex = 44;
-            lblDireccion.Text = "Dirección";
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(148, 194);
+            txtCorreo.Location = new Point(124, 276);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(165, 23);
+            txtCorreo.Size = new Size(133, 23);
             txtCorreo.TabIndex = 41;
-            // 
-            // lblCorreo
-            // 
-            lblCorreo.AutoSize = true;
-            lblCorreo.Location = new Point(32, 197);
-            lblCorreo.Name = "lblCorreo";
-            lblCorreo.Size = new Size(105, 15);
-            lblCorreo.TabIndex = 40;
-            lblCorreo.Text = "Correo electrónico";
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(90, 156);
+            txtTelefono.Location = new Point(113, 216);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(101, 23);
+            txtTelefono.Size = new Size(144, 23);
             txtTelefono.TabIndex = 39;
-            // 
-            // lblTelefono
-            // 
-            lblTelefono.AutoSize = true;
-            lblTelefono.Location = new Point(32, 159);
-            lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(52, 15);
-            lblTelefono.TabIndex = 38;
-            lblTelefono.Text = "Teléfono";
             // 
             // txtNombreCliente
             // 
-            txtNombreCliente.Location = new Point(79, 103);
+            txtNombreCliente.Location = new Point(91, 136);
             txtNombreCliente.Name = "txtNombreCliente";
-            txtNombreCliente.Size = new Size(126, 23);
+            txtNombreCliente.Size = new Size(166, 23);
             txtNombreCliente.TabIndex = 37;
-            // 
-            // lblNombreCliente
-            // 
-            lblNombreCliente.AutoSize = true;
-            lblNombreCliente.Location = new Point(22, 103);
-            lblNombreCliente.Name = "lblNombreCliente";
-            lblNombreCliente.Size = new Size(51, 15);
-            lblNombreCliente.TabIndex = 36;
-            lblNombreCliente.Text = "Nombre";
             // 
             // txtCodigoCliente
             // 
-            txtCodigoCliente.Location = new Point(105, 62);
+            txtCodigoCliente.Location = new Point(91, 64);
             txtCodigoCliente.Name = "txtCodigoCliente";
-            txtCodigoCliente.Size = new Size(100, 23);
+            txtCodigoCliente.Size = new Size(152, 23);
             txtCodigoCliente.TabIndex = 35;
-            // 
-            // lblCodigoCliente
-            // 
-            lblCodigoCliente.AutoSize = true;
-            lblCodigoCliente.Location = new Point(50, 62);
-            lblCodigoCliente.Name = "lblCodigoCliente";
-            lblCodigoCliente.Size = new Size(49, 15);
-            lblCodigoCliente.TabIndex = 34;
-            lblCodigoCliente.Text = "Código ";
-            // 
-            // lblApellido
-            // 
-            lblApellido.AutoSize = true;
-            lblApellido.Location = new Point(236, 103);
-            lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(51, 15);
-            lblApellido.TabIndex = 48;
-            lblApellido.Text = "Apellido";
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(293, 103);
+            txtApellido.Location = new Point(359, 136);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(128, 23);
+            txtApellido.Size = new Size(160, 23);
             txtApellido.TabIndex = 49;
-            // 
-            // lblIdentificación
-            // 
-            lblIdentificación.AutoSize = true;
-            lblIdentificación.Location = new Point(448, 103);
-            lblIdentificación.Name = "lblIdentificación";
-            lblIdentificación.Size = new Size(139, 15);
-            lblIdentificación.TabIndex = 50;
-            lblIdentificación.Text = "Documento de Identidad";
             // 
             // txtIdentificacion
             // 
-            txtIdentificacion.Location = new Point(593, 103);
+            txtIdentificacion.Location = new Point(651, 146);
             txtIdentificacion.Name = "txtIdentificacion";
             txtIdentificacion.Size = new Size(128, 23);
             txtIdentificacion.TabIndex = 51;
+            // 
+            // pboxCancelar
+            // 
+            pboxCancelar.Image = Properties.Resources.BotonCancelar;
+            pboxCancelar.Location = new Point(679, 285);
+            pboxCancelar.Name = "pboxCancelar";
+            pboxCancelar.Size = new Size(110, 39);
+            pboxCancelar.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxCancelar.TabIndex = 53;
+            pboxCancelar.TabStop = false;
+            pboxCancelar.Click += pboxCancelar_Click;
+            // 
+            // pboxAceptar
+            // 
+            pboxAceptar.Image = Properties.Resources.BotonAceptar;
+            pboxAceptar.Location = new Point(566, 285);
+            pboxAceptar.Name = "pboxAceptar";
+            pboxAceptar.Size = new Size(107, 39);
+            pboxAceptar.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxAceptar.TabIndex = 52;
+            pboxAceptar.TabStop = false;
+            // 
+            // pboxAgregarCl
+            // 
+            pboxAgregarCl.Image = Properties.Resources.Cliente1;
+            pboxAgregarCl.Location = new Point(225, 12);
+            pboxAgregarCl.Name = "pboxAgregarCl";
+            pboxAgregarCl.Size = new Size(294, 46);
+            pboxAgregarCl.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxAgregarCl.TabIndex = 54;
+            pboxAgregarCl.TabStop = false;
+            // 
+            // pboxCodigoCliente
+            // 
+            pboxCodigoCliente.Image = Properties.Resources.Agregar2;
+            pboxCodigoCliente.Location = new Point(22, 64);
+            pboxCodigoCliente.Name = "pboxCodigoCliente";
+            pboxCodigoCliente.Size = new Size(221, 45);
+            pboxCodigoCliente.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxCodigoCliente.TabIndex = 55;
+            pboxCodigoCliente.TabStop = false;
+            // 
+            // pboxNombreCliente
+            // 
+            pboxNombreCliente.Image = Properties.Resources.Agregar3;
+            pboxNombreCliente.Location = new Point(22, 136);
+            pboxNombreCliente.Name = "pboxNombreCliente";
+            pboxNombreCliente.Size = new Size(235, 45);
+            pboxNombreCliente.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxNombreCliente.TabIndex = 56;
+            pboxNombreCliente.TabStop = false;
+            // 
+            // pboxApellido
+            // 
+            pboxApellido.Image = Properties.Resources.Cliente2;
+            pboxApellido.Location = new Point(284, 136);
+            pboxApellido.Name = "pboxApellido";
+            pboxApellido.Size = new Size(235, 45);
+            pboxApellido.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxApellido.TabIndex = 57;
+            pboxApellido.TabStop = false;
+            // 
+            // pboxIdentificacion
+            // 
+            pboxIdentificacion.Image = Properties.Resources.Cliente3;
+            pboxIdentificacion.Location = new Point(544, 136);
+            pboxIdentificacion.Name = "pboxIdentificacion";
+            pboxIdentificacion.Size = new Size(235, 45);
+            pboxIdentificacion.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxIdentificacion.TabIndex = 58;
+            pboxIdentificacion.TabStop = false;
+            // 
+            // pboxTelefono
+            // 
+            pboxTelefono.Image = Properties.Resources.Cliente5;
+            pboxTelefono.Location = new Point(22, 216);
+            pboxTelefono.Name = "pboxTelefono";
+            pboxTelefono.Size = new Size(235, 45);
+            pboxTelefono.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxTelefono.TabIndex = 59;
+            pboxTelefono.TabStop = false;
+            // 
+            // pboxCorreo
+            // 
+            pboxCorreo.Image = Properties.Resources.Cliente4;
+            pboxCorreo.Location = new Point(22, 276);
+            pboxCorreo.Name = "pboxCorreo";
+            pboxCorreo.Size = new Size(235, 39);
+            pboxCorreo.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxCorreo.TabIndex = 60;
+            pboxCorreo.TabStop = false;
+            // 
+            // pboxDireccion
+            // 
+            pboxDireccion.Image = Properties.Resources.Cliente6;
+            pboxDireccion.Location = new Point(284, 196);
+            pboxDireccion.Name = "pboxDireccion";
+            pboxDireccion.Size = new Size(264, 128);
+            pboxDireccion.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxDireccion.TabIndex = 61;
+            pboxDireccion.TabStop = false;
             // 
             // AgregarCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(749, 274);
+            ClientSize = new Size(801, 336);
+            Controls.Add(pboxAgregarCl);
+            Controls.Add(pboxCancelar);
+            Controls.Add(pboxAceptar);
             Controls.Add(txtIdentificacion);
-            Controls.Add(lblIdentificación);
             Controls.Add(txtApellido);
-            Controls.Add(lblApellido);
-            Controls.Add(btnCancelar);
-            Controls.Add(btnAceptar);
             Controls.Add(txtDireccion);
-            Controls.Add(lblDireccion);
             Controls.Add(txtCorreo);
-            Controls.Add(lblCorreo);
             Controls.Add(txtTelefono);
-            Controls.Add(lblTelefono);
             Controls.Add(txtNombreCliente);
-            Controls.Add(lblNombreCliente);
             Controls.Add(txtCodigoCliente);
-            Controls.Add(lblCodigoCliente);
-            Controls.Add(lblAgregarCliente);
             Controls.Add(pictureBox5);
+            Controls.Add(pboxCodigoCliente);
+            Controls.Add(pboxNombreCliente);
+            Controls.Add(pboxApellido);
+            Controls.Add(pboxIdentificacion);
+            Controls.Add(pboxTelefono);
+            Controls.Add(pboxCorreo);
+            Controls.Add(pboxDireccion);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AgregarCliente";
             Text = "AgregarCliente";
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAceptar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAgregarCl).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCodigoCliente).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxNombreCliente).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxApellido).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxIdentificacion).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxTelefono).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCorreo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxDireccion).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -239,22 +267,22 @@
         #endregion
 
         private PictureBox pictureBox5;
-        private Label lblAgregarCliente;
-        private Button btnCancelar;
-        private Button btnAceptar;
         private TextBox txtDireccion;
-        private Label lblDireccion;
         private TextBox txtCorreo;
-        private Label lblCorreo;
         private TextBox txtTelefono;
-        private Label lblTelefono;
         private TextBox txtNombreCliente;
-        private Label lblNombreCliente;
         private TextBox txtCodigoCliente;
-        private Label lblCodigoCliente;
-        private Label lblApellido;
         private TextBox txtApellido;
-        private Label lblIdentificación;
         private TextBox txtIdentificacion;
+        private PictureBox pboxCancelar;
+        private PictureBox pboxAceptar;
+        private PictureBox pboxAgregarCl;
+        private PictureBox pboxCodigoCliente;
+        private PictureBox pboxNombreCliente;
+        private PictureBox pboxApellido;
+        private PictureBox pboxIdentificacion;
+        private PictureBox pboxTelefono;
+        private PictureBox pboxCorreo;
+        private PictureBox pboxDireccion;
     }
 }

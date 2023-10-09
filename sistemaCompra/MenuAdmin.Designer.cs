@@ -47,51 +47,56 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(84, 261);
+            pictureBox7.Location = new Point(74, 196);
+            pictureBox7.Margin = new Padding(3, 2, 3, 2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(336, 52);
+            pictureBox7.Size = new Size(294, 39);
             pictureBox7.TabIndex = 24;
             pictureBox7.TabStop = false;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(94, 191);
+            pictureBox1.Location = new Point(82, 143);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(313, 51);
+            pictureBox1.Size = new Size(274, 38);
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(12, 350);
+            pictureBox6.Location = new Point(10, 262);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(160, 44);
+            pictureBox6.Size = new Size(140, 33);
             pictureBox6.TabIndex = 21;
             pictureBox6.TabStop = false;
             pictureBox6.Click += pictureBox6_Click;
             // 
             // pictureBox4
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Image = Properties.Resources.BotonMinimizar;
             pictureBox4.ImeMode = ImeMode.NoControl;
-            pictureBox4.Location = new Point(440, 13);
+            pictureBox4.Location = new Point(359, 11);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(26, 48);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.Size = new Size(31, 35);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 20;
             pictureBox4.TabStop = false;
             pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox5
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Image = Properties.Resources.BotonCerrar;
             pictureBox5.ImeMode = ImeMode.NoControl;
-            pictureBox5.Location = new Point(472, 13);
+            pictureBox5.Location = new Point(396, 5);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(27, 27);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.Size = new Size(38, 41);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 19;
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
@@ -99,9 +104,10 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(120, 124);
+            pictureBox2.Location = new Point(105, 93);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(265, 51);
+            pictureBox2.Size = new Size(232, 38);
             pictureBox2.TabIndex = 18;
             pictureBox2.TabStop = false;
             // 
@@ -110,17 +116,17 @@
             bienvenido.AutoSize = true;
             bienvenido.Font = new Font("Gill Sans MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             bienvenido.ForeColor = Color.Black;
-            bienvenido.Location = new Point(105, 56);
+            bienvenido.Location = new Point(92, 42);
             bienvenido.Name = "bienvenido";
-            bienvenido.Size = new Size(315, 47);
+            bienvenido.Size = new Size(252, 38);
             bienvenido.TabIndex = 17;
             bienvenido.Text = "Bienvenido, admin";
             // 
             // MenuAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(510, 412);
+            ClientSize = new Size(446, 309);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox6);
@@ -129,6 +135,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(bienvenido);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MenuAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarProducto));
             txtCodigoProducto = new TextBox();
             pictureBox5 = new PictureBox();
             txtNombreProducto = new TextBox();
@@ -67,13 +66,13 @@
             // 
             // pictureBox5
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Image = Properties.Resources.BotonCerrar;
             pictureBox5.ImeMode = ImeMode.NoControl;
-            pictureBox5.Location = new Point(772, 11);
+            pictureBox5.Location = new Point(752, 2);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(24, 20);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.Size = new Size(44, 55);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 19;
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
