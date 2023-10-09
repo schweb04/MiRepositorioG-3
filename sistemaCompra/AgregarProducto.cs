@@ -28,6 +28,9 @@ namespace sistemaCompra
             this.Close();
         }
 
-
+        private void pboxCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
