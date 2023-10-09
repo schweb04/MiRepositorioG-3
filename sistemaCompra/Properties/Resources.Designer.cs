@@ -63,6 +63,56 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Admin1 {
+            get {
+                object obj = ResourceManager.GetObject("Admin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Admin2 {
+            get {
+                object obj = ResourceManager.GetObject("Admin2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Admin3 {
+            get {
+                object obj = ResourceManager.GetObject("Admin3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Admin4 {
+            get {
+                object obj = ResourceManager.GetObject("Admin4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Admin5 {
+            get {
+                object obj = ResourceManager.GetObject("Admin5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Agregar1 {
             get {
                 object obj = ResourceManager.GetObject("Agregar1", resourceCulture);
@@ -156,6 +206,16 @@ namespace sistemaCompra.Properties {
         internal static System.Drawing.Bitmap BotonCerrar {
             get {
                 object obj = ResourceManager.GetObject("BotonCerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonCerrarSesion {
+            get {
+                object obj = ResourceManager.GetObject("BotonCerrarSesion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
