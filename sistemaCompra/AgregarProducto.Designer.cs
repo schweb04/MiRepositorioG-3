@@ -32,7 +32,6 @@
             lblCodigo = new Label();
             txtCodigoProducto = new TextBox();
             pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
             lblNombre = new Label();
             txtNombreProducto = new TextBox();
             lblCantidad = new Label();
@@ -47,7 +46,6 @@
             btnAceptar = new Button();
             btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // lblCodigo
@@ -78,19 +76,6 @@
             pictureBox5.TabIndex = 19;
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.ImeMode = ImeMode.NoControl;
-            pictureBox4.Location = new Point(693, 11);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(23, 36);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 20;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
             // 
             // lblNombre
             // 
@@ -223,7 +208,6 @@
             Controls.Add(lblCantidad);
             Controls.Add(txtNombreProducto);
             Controls.Add(lblNombre);
-            Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
             Controls.Add(txtCodigoProducto);
             Controls.Add(lblCodigo);
@@ -231,7 +215,6 @@
             Name = "AgregarProducto";
             Text = "AgregarProducto";
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,7 +224,6 @@
         private Label lblCodigo;
         private TextBox txtCodigoProducto;
         private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
         private Label lblNombre;
         private TextBox txtNombreProducto;
         private Label lblCantidad;

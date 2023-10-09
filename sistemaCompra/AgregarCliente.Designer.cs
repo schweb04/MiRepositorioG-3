@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarCliente));
             pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
             lblAgregarCliente = new Label();
             btnCancelar = new Button();
             btnAceptar = new Button();
@@ -41,15 +40,14 @@
             txtTelefono = new TextBox();
             lblTelefono = new Label();
             txtNombreCliente = new TextBox();
-            lblNombre = new Label();
+            lblNombreCliente = new Label();
             txtCodigoCliente = new TextBox();
-            lblCodigo = new Label();
+            lblCodigoCliente = new Label();
             lblApellido = new Label();
             txtApellido = new TextBox();
             lblIdentificación = new Label();
             txtIdentificacion = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // pictureBox5
@@ -64,19 +62,6 @@
             pictureBox5.TabIndex = 20;
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.ImeMode = ImeMode.NoControl;
-            pictureBox4.Location = new Point(684, 11);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(23, 36);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 21;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
             // 
             // lblAgregarCliente
             // 
@@ -112,7 +97,7 @@
             txtDireccion.Location = new Point(396, 153);
             txtDireccion.Multiline = true;
             txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(238, 80);
+            txtDireccion.Size = new Size(260, 64);
             txtDireccion.TabIndex = 45;
             // 
             // lblDireccion
@@ -163,14 +148,14 @@
             txtNombreCliente.Size = new Size(126, 23);
             txtNombreCliente.TabIndex = 37;
             // 
-            // lblNombre
+            // lblNombreCliente
             // 
-            lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(22, 103);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(51, 15);
-            lblNombre.TabIndex = 36;
-            lblNombre.Text = "Nombre";
+            lblNombreCliente.AutoSize = true;
+            lblNombreCliente.Location = new Point(22, 103);
+            lblNombreCliente.Name = "lblNombreCliente";
+            lblNombreCliente.Size = new Size(51, 15);
+            lblNombreCliente.TabIndex = 36;
+            lblNombreCliente.Text = "Nombre";
             // 
             // txtCodigoCliente
             // 
@@ -179,14 +164,14 @@
             txtCodigoCliente.Size = new Size(100, 23);
             txtCodigoCliente.TabIndex = 35;
             // 
-            // lblCodigo
+            // lblCodigoCliente
             // 
-            lblCodigo.AutoSize = true;
-            lblCodigo.Location = new Point(50, 62);
-            lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(49, 15);
-            lblCodigo.TabIndex = 34;
-            lblCodigo.Text = "Código ";
+            lblCodigoCliente.AutoSize = true;
+            lblCodigoCliente.Location = new Point(50, 62);
+            lblCodigoCliente.Name = "lblCodigoCliente";
+            lblCodigoCliente.Size = new Size(49, 15);
+            lblCodigoCliente.TabIndex = 34;
+            lblCodigoCliente.Text = "Código ";
             // 
             // lblApellido
             // 
@@ -238,17 +223,15 @@
             Controls.Add(txtTelefono);
             Controls.Add(lblTelefono);
             Controls.Add(txtNombreCliente);
-            Controls.Add(lblNombre);
+            Controls.Add(lblNombreCliente);
             Controls.Add(txtCodigoCliente);
-            Controls.Add(lblCodigo);
+            Controls.Add(lblCodigoCliente);
             Controls.Add(lblAgregarCliente);
-            Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AgregarCliente";
             Text = "AgregarCliente";
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -256,7 +239,6 @@
         #endregion
 
         private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
         private Label lblAgregarCliente;
         private Button btnCancelar;
         private Button btnAceptar;
@@ -267,9 +249,9 @@
         private TextBox txtTelefono;
         private Label lblTelefono;
         private TextBox txtNombreCliente;
-        private Label lblNombre;
+        private Label lblNombreCliente;
         private TextBox txtCodigoCliente;
-        private Label lblCodigo;
+        private Label lblCodigoCliente;
         private Label lblApellido;
         private TextBox txtApellido;
         private Label lblIdentificación;
