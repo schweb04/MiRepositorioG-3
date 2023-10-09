@@ -88,6 +88,7 @@
             pictureBox3.Size = new Size(132, 38);
             pictureBox3.TabIndex = 17;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // bienvenido
             // 
@@ -106,7 +107,8 @@
             pboxAgregarProducto.Image = Properties.Resources.Sin_título;
             pboxAgregarProducto.Location = new Point(41, 117);
             pboxAgregarProducto.Name = "pboxAgregarProducto";
-            pboxAgregarProducto.Size = new Size(61, 60);
+            pboxAgregarProducto.Size = new Size(40, 38);
+            pboxAgregarProducto.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAgregarProducto.TabIndex = 21;
             pboxAgregarProducto.TabStop = false;
             pboxAgregarProducto.Click += pboxAgregarProducto_Click;

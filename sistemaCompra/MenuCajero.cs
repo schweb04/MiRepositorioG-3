@@ -49,4 +49,11 @@ public partial class MenuCajero : Form
         AgregarProducto agregarProducto = new AgregarProducto();
         agregarProducto.ShowDialog();
     }
+
+    private void pictureBox3_Click(object sender, EventArgs e)
+    {
+        Compras compras = new Compras();
+        this.Hide();
+        compras.Show();
+    }
 }
