@@ -50,10 +50,9 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(294, 141);
-            pictureBox7.Margin = new Padding(3, 2, 3, 2);
+            pictureBox7.Location = new Point(336, 188);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(196, 29);
+            pictureBox7.Size = new Size(224, 39);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 24;
             pictureBox7.TabStop = false;
@@ -61,10 +60,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(304, 100);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(347, 133);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(177, 28);
+            pictureBox1.Size = new Size(202, 37);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
@@ -72,10 +70,9 @@
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.BotonCerrarSesion;
-            pictureBox6.Location = new Point(12, 340);
-            pictureBox6.Margin = new Padding(3, 2, 3, 2);
+            pictureBox6.Location = new Point(14, 453);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(183, 41);
+            pictureBox6.Size = new Size(209, 55);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 21;
             pictureBox6.TabStop = false;
@@ -85,10 +82,9 @@
             // 
             pictureBox4.Image = Properties.Resources.BotonMinimizar;
             pictureBox4.ImeMode = ImeMode.NoControl;
-            pictureBox4.Location = new Point(406, 11);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
+            pictureBox4.Location = new Point(464, 15);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(31, 35);
+            pictureBox4.Size = new Size(35, 47);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 20;
             pictureBox4.TabStop = false;
@@ -98,10 +94,9 @@
             // 
             pictureBox5.Image = Properties.Resources.BotonCerrar;
             pictureBox5.ImeMode = ImeMode.NoControl;
-            pictureBox5.Location = new Point(443, 5);
-            pictureBox5.Margin = new Padding(3, 2, 3, 2);
+            pictureBox5.Location = new Point(506, 7);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(38, 41);
+            pictureBox5.Size = new Size(43, 55);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 19;
             pictureBox5.TabStop = false;
@@ -110,20 +105,20 @@
             // pboxCtrlUsuarios
             // 
             pboxCtrlUsuarios.Image = Properties.Resources.Admin3;
-            pboxCtrlUsuarios.Location = new Point(133, 205);
-            pboxCtrlUsuarios.Margin = new Padding(3, 2, 3, 2);
+            pboxCtrlUsuarios.Location = new Point(152, 273);
             pboxCtrlUsuarios.Name = "pboxCtrlUsuarios";
-            pboxCtrlUsuarios.Size = new Size(183, 43);
+            pboxCtrlUsuarios.Size = new Size(209, 57);
             pboxCtrlUsuarios.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCtrlUsuarios.TabIndex = 18;
             pboxCtrlUsuarios.TabStop = false;
             // 
             // pboxAdmin
             // 
-            pboxAdmin.Image = Properties.Resources.Admin1;
-            pboxAdmin.Location = new Point(101, 11);
+            pboxAdmin.Image = (Image)resources.GetObject("pboxAdmin.Image");
+            pboxAdmin.Location = new Point(115, 15);
+            pboxAdmin.Margin = new Padding(3, 4, 3, 4);
             pboxAdmin.Name = "pboxAdmin";
-            pboxAdmin.Size = new Size(255, 52);
+            pboxAdmin.Size = new Size(291, 69);
             pboxAdmin.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAdmin.TabIndex = 25;
             pboxAdmin.TabStop = false;
@@ -131,18 +126,19 @@
             // pboxAvatarAdmin
             // 
             pboxAvatarAdmin.Image = Properties.Resources.Admin2;
-            pboxAvatarAdmin.Location = new Point(168, 69);
+            pboxAvatarAdmin.Location = new Point(192, 92);
+            pboxAvatarAdmin.Margin = new Padding(3, 4, 3, 4);
             pboxAvatarAdmin.Name = "pboxAvatarAdmin";
-            pboxAvatarAdmin.Size = new Size(120, 131);
+            pboxAvatarAdmin.Size = new Size(137, 175);
             pboxAvatarAdmin.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAvatarAdmin.TabIndex = 26;
             pboxAvatarAdmin.TabStop = false;
             // 
             // MenuAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(493, 392);
+            ClientSize = new Size(563, 523);
             Controls.Add(pboxAvatarAdmin);
             Controls.Add(pboxAdmin);
             Controls.Add(pictureBox7);
@@ -152,7 +148,6 @@
             Controls.Add(pictureBox5);
             Controls.Add(pboxCtrlUsuarios);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "MenuAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
