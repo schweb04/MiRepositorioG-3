@@ -35,13 +35,9 @@
             txtNombreUsuario = new TextBox();
             lblPassword = new Label();
             txtPassword = new TextBox();
-            gboxTipoUsuario = new GroupBox();
-            rbtnAdministrador = new RadioButton();
-            rbtnCajero = new RadioButton();
             btnCancelar = new Button();
             btnAceptar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            gboxTipoUsuario.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox5
@@ -100,39 +96,6 @@
             txtPassword.Size = new Size(126, 23);
             txtPassword.TabIndex = 40;
             // 
-            // gboxTipoUsuario
-            // 
-            gboxTipoUsuario.Controls.Add(rbtnCajero);
-            gboxTipoUsuario.Controls.Add(rbtnAdministrador);
-            gboxTipoUsuario.Location = new Point(247, 73);
-            gboxTipoUsuario.Name = "gboxTipoUsuario";
-            gboxTipoUsuario.Size = new Size(200, 81);
-            gboxTipoUsuario.TabIndex = 43;
-            gboxTipoUsuario.TabStop = false;
-            gboxTipoUsuario.Text = "Tipo de Usuario";
-            // 
-            // rbtnAdministrador
-            // 
-            rbtnAdministrador.AutoSize = true;
-            rbtnAdministrador.Location = new Point(37, 22);
-            rbtnAdministrador.Name = "rbtnAdministrador";
-            rbtnAdministrador.Size = new Size(101, 19);
-            rbtnAdministrador.TabIndex = 0;
-            rbtnAdministrador.TabStop = true;
-            rbtnAdministrador.Text = "Administrador";
-            rbtnAdministrador.UseVisualStyleBackColor = true;
-            // 
-            // rbtnCajero
-            // 
-            rbtnCajero.AutoSize = true;
-            rbtnCajero.Location = new Point(37, 48);
-            rbtnCajero.Name = "rbtnCajero";
-            rbtnCajero.Size = new Size(59, 19);
-            rbtnCajero.TabIndex = 1;
-            rbtnCajero.TabStop = true;
-            rbtnCajero.Text = "Cajero";
-            rbtnCajero.UseVisualStyleBackColor = true;
-            // 
             // btnCancelar
             // 
             btnCancelar.Location = new Point(372, 178);
@@ -158,7 +121,6 @@
             ClientSize = new Size(459, 213);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
-            Controls.Add(gboxTipoUsuario);
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
             Controls.Add(txtNombreUsuario);
@@ -169,8 +131,6 @@
             Name = "AgregarUsuario";
             Text = "AgregarUsuario";
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            gboxTipoUsuario.ResumeLayout(false);
-            gboxTipoUsuario.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,9 +144,6 @@
         private Label lblPassword;
         private TextBox txtPassword;
         private Label lblTipoUsuario;
-        private GroupBox gboxTipoUsuario;
-        private RadioButton rbtnAdministrador;
-        private RadioButton rbtnCajero;
         private Button btnCancelar;
         private Button btnAceptar;
     }
