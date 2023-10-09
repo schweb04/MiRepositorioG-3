@@ -17,9 +17,9 @@ namespace sistemaCompra
          * Nombre de usuario: mínimo 6 caracteres, máximo 10 caracteres
          * Contraseña: mínimo 8 caracteres, máximo 12 caracteres
          * 
-         * el usuario jose es superusuario, clave j1234
-         * el usuario pedro es administrador, clave p1234
-         * el usuario luis es cajero, clave l1234
+         * el usuario jose01 es superusuario, clave j1234567
+         * el usuario pedro02 es administrador, clave p1234567
+         * el usuario luis03 es cajero, clave l1234567
          */
 
         public Login()
@@ -64,21 +64,21 @@ namespace sistemaCompra
                
             }
 
-            if (cajaUsuario.Text.ToLower() == "jose" && cajaClave.Text == "j1234")
+            if (cajaUsuario.Text.ToLower() == "jose01" && cajaClave.Text == "j1234567")
             {
                 MenuSuperUser menuSuperUser = new MenuSuperUser();
                 menuSuperUser.Show();
                 this.Hide();
             }
 
-            else if (cajaUsuario.Text.ToLower() == "pedro" && cajaClave.Text == "p1234")
+            else if (cajaUsuario.Text.ToLower() == "pedro02" && cajaClave.Text == "p1234567")
             {
                 MenuAdmin menuAdmin = new MenuAdmin();
                 menuAdmin.Show();
                 this.Hide();
             }
 
-            else if (cajaUsuario.Text.ToLower() == "luis" && cajaClave.Text == "l1234")
+            else if (cajaUsuario.Text.ToLower() == "luis03" && cajaClave.Text == "l1234567")
             {
                 MenuCajero menuCajero = new MenuCajero();
                 menuCajero.Show();

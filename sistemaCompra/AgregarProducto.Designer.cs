@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarProducto));
             lblCodigo = new Label();
-            txtCodigo = new TextBox();
+            txtCodigoProducto = new TextBox();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             lblNombre = new Label();
-            txtNombre = new TextBox();
+            txtNombreProducto = new TextBox();
             lblCantidad = new Label();
             txtCantidad = new TextBox();
             lblUnidad = new Label();
@@ -59,12 +59,12 @@
             lblCodigo.TabIndex = 0;
             lblCodigo.Text = "Código ";
             // 
-            // txtCodigo
+            // txtCodigoProducto
             // 
-            txtCodigo.Location = new Point(110, 64);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(100, 23);
-            txtCodigo.TabIndex = 1;
+            txtCodigoProducto.Location = new Point(110, 64);
+            txtCodigoProducto.Name = "txtCodigoProducto";
+            txtCodigoProducto.Size = new Size(100, 23);
+            txtCodigoProducto.TabIndex = 1;
             // 
             // pictureBox5
             // 
@@ -101,17 +101,17 @@
             lblNombre.TabIndex = 21;
             lblNombre.Text = "Nombre";
             // 
-            // txtNombre
+            // txtNombreProducto
             // 
-            txtNombre.Location = new Point(110, 105);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(151, 23);
-            txtNombre.TabIndex = 22;
+            txtNombreProducto.Location = new Point(110, 105);
+            txtNombreProducto.Name = "txtNombreProducto";
+            txtNombreProducto.Size = new Size(151, 23);
+            txtNombreProducto.TabIndex = 22;
             // 
             // lblCantidad
             // 
             lblCantidad.AutoSize = true;
-            lblCantidad.Location = new Point(37, 153);
+            lblCantidad.Location = new Point(25, 153);
             lblCantidad.Name = "lblCantidad";
             lblCantidad.Size = new Size(55, 15);
             lblCantidad.TabIndex = 23;
@@ -119,7 +119,7 @@
             // 
             // txtCantidad
             // 
-            txtCantidad.Location = new Point(98, 153);
+            txtCantidad.Location = new Point(86, 153);
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new Size(63, 23);
             txtCantidad.TabIndex = 24;
@@ -189,7 +189,7 @@
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(667, 218);
+            btnAceptar.Location = new Point(586, 218);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(75, 23);
             btnAceptar.TabIndex = 32;
@@ -198,7 +198,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(586, 218);
+            btnCancelar.Location = new Point(667, 218);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 33;
@@ -221,11 +221,11 @@
             Controls.Add(lblUnidad);
             Controls.Add(txtCantidad);
             Controls.Add(lblCantidad);
-            Controls.Add(txtNombre);
+            Controls.Add(txtNombreProducto);
             Controls.Add(lblNombre);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
-            Controls.Add(txtCodigo);
+            Controls.Add(txtCodigoProducto);
             Controls.Add(lblCodigo);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AgregarProducto";
@@ -239,11 +239,11 @@
         #endregion
 
         private Label lblCodigo;
-        private TextBox txtCodigo;
+        private TextBox txtCodigoProducto;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
         private Label lblNombre;
-        private TextBox txtNombre;
+        private TextBox txtNombreProducto;
         private Label lblCantidad;
         private TextBox txtCantidad;
         private Label lblUnidad;

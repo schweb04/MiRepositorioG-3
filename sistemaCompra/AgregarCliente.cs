@@ -10,18 +10,12 @@ using System.Windows.Forms;
 
 namespace sistemaCompra
 {
-    public partial class AgregarProducto : Form
+    public partial class AgregarCliente : Form
     {
-        public AgregarProducto()
+        public AgregarCliente()
         {
             InitializeComponent();
         }
-
-        /*
-         Hay que cambiar el diseño de los botones Aceptar y Cancelar
-        Así como la fuente de los labels de cada atributo de Producto
-        Y si se puede (yo creo que si), el diseño de los textboxes
-         */
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {

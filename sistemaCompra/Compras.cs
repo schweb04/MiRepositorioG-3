@@ -28,5 +28,12 @@ namespace sistemaCompra
         {
 
         }
+
+        private void pboxAgregarCliente_Click(object sender, EventArgs e)
+        {
+            AgregarCliente agregarCliente = new AgregarCliente();
+            agregarCliente.ShowDialog();
+
+        }
     }
 }
