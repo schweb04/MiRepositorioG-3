@@ -61,7 +61,7 @@
             // pboxAgregarCliente
             // 
             pboxAgregarCliente.Image = Properties.Resources.Sin_título1;
-            pboxAgregarCliente.Location = new Point(325, 143);
+            pboxAgregarCliente.Location = new Point(174, 101);
             pboxAgregarCliente.Name = "pboxAgregarCliente";
             pboxAgregarCliente.Size = new Size(38, 36);
             pboxAgregarCliente.SizeMode = PictureBoxSizeMode.Zoom;
