@@ -123,14 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pboxAvatar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 9</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pboxAvatar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>131, 12</value>
   </data>
   <data name="pboxAvatar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 110</value>
+    <value>121, 147</value>
   </data>
   <data name="pboxAvatar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -2573,13 +2569,10 @@
 </value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 324</value>
-  </data>
-  <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>93, 432</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 53</value>
+    <value>198, 71</value>
   </data>
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2603,13 +2596,10 @@
     <value>Gill Sans MT, 9pt</value>
   </data>
   <data name="cajaUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 169</value>
-  </data>
-  <data name="cajaUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>93, 225</value>
   </data>
   <data name="cajaUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 21</value>
+    <value>180, 25</value>
   </data>
   <data name="cajaUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2630,13 +2620,10 @@
     <value>Gill Sans MT, 9pt</value>
   </data>
   <data name="cajaClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 261</value>
-  </data>
-  <data name="cajaClave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>93, 348</value>
   </data>
   <data name="cajaClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 21</value>
+    <value>180, 25</value>
   </data>
   <data name="cajaClave.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2660,13 +2647,10 @@
     <value>Gill Sans MT, 9pt</value>
   </data>
   <data name="mostrarPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 298</value>
-  </data>
-  <data name="mostrarPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>57, 397</value>
   </data>
   <data name="mostrarPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
+    <value>152, 25</value>
   </data>
   <data name="mostrarPass.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -2687,13 +2671,10 @@
     <value>2</value>
   </data>
   <data name="ingresar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 9</value>
-  </data>
-  <data name="ingresar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>337, 12</value>
   </data>
   <data name="ingresar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 36</value>
+    <value>46, 28</value>
   </data>
   <data name="ingresar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -2714,13 +2695,10 @@
     <value>1</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 9</value>
-  </data>
-  <data name="pictureBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>293, 12</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 48</value>
+    <value>38, 28</value>
   </data>
   <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -2741,10 +2719,14 @@
     <value>0</value>
   </data>
   <data name="pboxUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 125</value>
+    <value>57, 167</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pboxUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="pboxUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 78</value>
+    <value>255, 104</value>
   </data>
   <data name="pboxUsuario.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -2768,10 +2750,13 @@
     <value>NoControl</value>
   </data>
   <data name="pboxPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 215</value>
+    <value>57, 287</value>
+  </data>
+  <data name="pboxPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="pboxPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 78</value>
+    <value>255, 104</value>
   </data>
   <data name="pboxPassword.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -2798,16 +2783,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+    <value>8, 20</value>
   </data>
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>346, 379</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>395, 505</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
