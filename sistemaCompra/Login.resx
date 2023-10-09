@@ -117,193 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="user.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="user.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="user.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gill Sans MT, 12pt, style=Bold</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="user.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pboxAvatar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="user.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 160</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pboxAvatar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 9</value>
   </data>
-  <data name="user.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 29</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pboxAvatar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <data name="user.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="pboxAvatar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 110</value>
   </data>
-  <data name="user.Text" xml:space="preserve">
-    <value>Usuario</value>
-  </data>
-  <data name="&gt;&gt;user.Name" xml:space="preserve">
-    <value>user</value>
-  </data>
-  <data name="&gt;&gt;user.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;user.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;user.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="usuario.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAABvCSURBVHhe7d1p
-        blxJeqhhLaGWoB1YwK2hSxJFShRJURzV1Rqq/eNqCVwCd8AlcAlE1e17cQHD4A/DaBiwTcMoiZPIrB3k
-        EuT4MkMliQxxUk4nzvMAr7tdGkqtPCcizpi3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAGCyvOys3f7HztpMqb921u7knwYANEFM4D931tZTmz//vr6V2s11//r7
-        +vubFL/2k99nO37vtEh4Hf+u/91Z+yb/qwGAYYpJNx+tb6QJuTfJp4m6c3biHlXp3/9hgbAVCwNnEABg
-        AGJCzZP9dppwxzbRX6c/FgX9swUWBABwmQ8TfppId2IiPTu5NrH8v2MnzhC4bAAASUyIvev2DTrCH0AW
-        AwC0T0x8MQH2JsLyBNmaYuETC6D8VwMAdTHpX1on7hlwVgCAKsQd+72j3Equ54+i+PuKdxXkv0IAaIZ8
-        XX8zTWZtuaY/lCwEAGiED0f7pclMN89CAICJFNf20yS1V5q8NLjS3/GWewQAGLt8U5/T/CMsLQK68Z6E
-        /BEAwGh8uL4fE1FpgtJo6p1x8ZZBAEYhv5LXxD9BxWIsfzwAMFhO9U92zgYAMFD5rn439zUk9wYA8FXi
-        kbNX/S/jiaNLNaj43DwpAMC1xTXlNInE19kWJxhNfunzc0kAgKtJR/0zP/++2vn597U0iajpvfp9tZsW
-        c75kCICy3mN9v69ulSYRNb+4gTN/1ADQ56i/Hb36fXU7f+QAtJmj/vZlEQDQcnFzWJoM9kqThOrOIgCg
-        peJ6cO/msMLkoHZkEQDQInHKPwb+0oSg9mURANAC/Zf6OOWvz7MIAKhY3OWfBnqn/FXMIgCgQnG9/+dO
-        GuilC3rl+wMA6vHz6epWabCXSnlZEEAFXp2ubpcGeelLpW2mG4+H5k0IgCbpvdzndHW3NMBLlxWLAN8i
-        CNAwvcf8Tlf3SgO7dOXSAjJvUgBMOpO/Btrp6lbetACYVCZ/DaN4fDRvYgBMmpj8X6bJ/1UasKVBlrYr
-        9wMATKL+5L9i8tfQSouAnby5ATApXp2u7L7qrKaBWhpmK14SBDApXp2ubpcHa2mwvTxd6cZ3SeRND4Bx
-        eXm6ulUaqKVh5VIAwJi97Ky8Lg3Q0rD7ubO8njdDAEap961+hYFZGkmnKx1PBQCMWFyDjWuxxYFZGlEv
-        OyubeZMEYNg+Pu5XHpSlUeaGQIARcce/Jqq0PeZNE4BhcdOfJjGvCQYYItf9NbGdrvjGQIBhcd1fk5yz
-        AABDEHdblwZdaWJyFgBgsP7aWbtTHHClCctZAIABcupfjclZAIDBcOpfTctZAICv1LvrvzegSs3phfcC
-        AHydF6cru6UBVpr8vB0Q4EZedJbXX3ZW0kAqNbDT5a28KQNwHS9OlzvFgVVqQqfL3TXfFAhwPWkA3Tw3
-        oErN63XepAG4TBw1xdFTYTCVmtXpyl7erAG4TBo4Hf2rmp53nt7JmzYAX9J/7K88kEqNzM2AAJd7cbq8
-        XRxEpaZ2utzNmzcAJY7+VWvxSGvezAE4K06VlgZPqenFma28mQPwKXf+q/a8EwCg4OWJO/9Vfd4JAHDW
-        y5N09H+aBkmp1k5WdvLmDkCII6PigCnVVFrk5k0egJCOjPaKA6ZUWZ4GAMjiLWmlgVKqsRcnngYA6IkB
-        sTRQSjWWtvdO3vQB2i0NiN0XMTBKLcl3AwCt97yz8ro0QEpV11nayLsAQDs9P1naeXG6nAZFqT09P1ne
-        zbsAQPvEW9FKg6PUhvJuANA+/dP/5cFRqr2XnaWZvCsAtIvT/2pzafvfzLsCQHs4/a+25z4AoJWc/pfc
-        BwC0kNP/kvsAgBZ6cbLULQ2IUqvyPgCgTeKopzgYSi0rzoTl3QKgfs9PlrdKg6HUttICwPcCAO3x4mR5
-        rzQYSm0snojJuwZAvTz+J32eGwGBVnjRWV4vDYJSW/NCIKAVXP+XPs+NgEArxNvPSoOg1NpOlvfy7gFQ
-        r+dpwJP0eXn3AKjTT52lmdLgJ7W92DfybgJQn790ljaeny6lAU/SZ3Wevs67CUB9np8sbRcHP6nteRIA
-        qNnzk6e7xcFPanl/OXnqSQCgXqWBT1LqZMmTAECdnnee3ikOfJJ65V0FoC79JwDKA5+kJd8JANQpbnIq
-        DXqS+nkUEKiSJwCkS/IoIFAjTwBIl+RRQKBGaQHQLQ56kvqdPN3KuwtAPYoDnqSPnTzdzbsLQB08Aihd
-        IQsAoDYeAZSuVt5lAOoQdzeXBjtJn5d3GYA6/HSytPmXk3jfuaSLetlZuJ13G4DmswCQrtZPx14GBFQk
-        vumsNNhJ+jwLAKAqaQGwWxrsJJ3p3dJG3m0Ams8CQLpacbks7zYAzffTu6edtAhIA5yki/rpZNECAKhH
-        aaCTdL60ANjOuw1A85UGOkmlFr0NEKhHeaCTdD4LAKAi5YFO0vksAICKlAc6SWf76d3iXt5tAJotXmxS
-        Gugklcu7DkCzWQBI1yvvOgDNZgEgXa+86wA0mwWAdL3yrgPQbBYA0vXKuw5As1kASNcr7zoAzWYBIF2v
-        2Gfy7gPQXDGY/RSDmqSrZQEA1MACQLpmFgBADSwApGtmAQDUwAJAumYWAEANLACka2YBANTgp+OFtABY
-        TAObpCuV9pm8+wA0lwWAdM0sAIAaWABI18wCAKjBWmfhdnGQk1TOAgCoRXGQk1TOAgCoRXGQk1TOAgCo
-        RXGQk1TOAgCoRXGQk1TOAgCoRXGQk1TOAgCoxZ/fPdkrDnSSzmcBANTizyeLu8WBTtK51jpr3+RdB6DZ
-        LACkq5d3G4Dme5YWAGkR8F7S5eXdBqD50gJgszTQSTpf3m0Amu/ZcVoAvEuDm6RLy7sNQPNZAEhXL+82
-        AM0XjzWVBjpJZzp+0s27DUDz9RcAT9IAJ+minr17spt3G4DmWzt8eqc02En6PAsAoDqlwU7S51kAANUp
-        DXaSPu/Zu4WdvMsA1OHP7xb2SgOepI89O17YzLsMQB3i1GZpwJP0MQsAoDp/Pl7YKg14kj5mAQBUJwa2
-        0oAn6ZOOF9fzLgNQhxjYigOepD+Kd2bkXQagDl4GJF2eBQBQnbXO2jelAU/Sx/LuAlCX0oAn6WN5VwGo
-        i0cBpQs6XvBFQECdnh0/2U6LgHjdqaTzeQ0wUKd4FLAw6EnqZwEA1GnteHG9MOhJirwECKjVWmfhdnHg
-        k2QBANStOPBJer/mHQBAzZ69m9999m4hDXiSPs0CAKjas+P57dLgJ7W9vIsA1OnZu/mN0uAntb28iwDU
-        KU5zlgY/qd3NewQQqF95AJRa3U7ePQDqlQa7vTODn9TuPAIItIEbAaXPWzueX8+7B0C91t4tvC4NglJb
-        8wgg0Aprh3N3SoOg1NbyrgFQv2fHC93SQCi1ruP5Tt4tAOqXBr6dcwOh1M48AQC0R/+rgYuDodSuPAEA
-        tEnc9LSeBj+p7XkCAGid0mAota34muy8SwC0w/q7+d3SgCi1puOFbt4dANpj7d38RnFQlFqT7wAAWije
-        B5COgOIoSGpla24ABNpq/Wi+u348nwZDqX25ARBorTQIbp8dFKW2tLbvBkCgpdYO516XBkap+o7m3QAI
-        tNdaZ/qb4uAo1d7RnDcAAu2WBsO9c4OjVHlrR/MbeRcAaKcYCEsDpFRzvgIYaL24Eao0QEo1lzd/gHZb
-        P57rlAZJqcqO5rwACCCkBcBWcaCUKmzteM4LgABC/62A5cFSqi3X/wE+4TKAWpHn/wE+t3o8t7WWBkip
-        5lY9/w/wuXgaoDRgSlXl+X+A81aP5/eKg6ZUS97/D3BeHB0VB02pglaP5zp5UwfgU/HdAKWBU6qhuM8l
-        b+oAnBU3SZUGT6mC1vNmDsBZMUieGTSlxrfq8T+Ay8VgWRpEpaa2ejy/nTdvAL7EOwFUXYdzr/PmDcCX
-        9N8JMJcGTqmSOtPf5M0bgIusHj3eKQ6kUsOKbTlv1gBcZq13M2B5QJUaldP/ANezevy4UxxQpYa0ejTX
-        dfof4JrWjh5vlAZVqSmlRay7/wGuK46cekdQhYFVakZe/gNwI2kQ3Tw/qEqTXyxe82YMwHV5JFBNzbv/
-        Ab5SXEdNg2kMqFJj8tW/AF8pBtLSACtNaivHj/fy5gvA13AWQE1qxbP/AIPhLICa0opn/wEGy1kANSQ3
-        /wEMkrMAakJu/gMYAmcBNMmtHM3t5k0VgEHqnQU4SoOtNIGtHc/O5E0VgEFbPXq8XRp8pXG2cvS4kzdR
-        AIYh7rBeOXzcTQuBNPBKk5FH/wBGYOVwdrM0CEvjaOVo1tE/wCj0zgKkQbc0GEujLhakedMEYNjilGtp
-        MJZGWVyO8uIfgBFLg+9uaVCWRpWjf4AxWDucu1MalKVR5OgfYIxWD2e3SoOzNOwc/QOMkccCNY7iJlRH
-        /wBjtnzwaL00SEvDynP/ABMibghciYFZGnLLnvsHmBzxPQHLh4+7pQFbGmRxxilvdgBMgjQ4b5wdrKWB
-        dvjYN/4BTCKXAjTMnh7O3cmbGgCTxKUADavlw9mtvJkBMInSYO1SgAZaLCo99gfQAGnQ3jk7iEs3zmN/
-        AM0QR2suBWggufEPoFmWjmdnigO6dMV6p/73F27nTQqApoj3ta8czabBXLpJjzbypgRA06wcPtotD+7S
-        BaXtJm9CADRR/36A2W5xkJcKxfaytj/t1D9A0/XvBygP9tLZvO4XoCJxPbc02Euftnw0u503GQBqEYN7
-        adCX+j3a88IfgErFIF8e/NXm4rq/d/0DVKx3U+DRbKc0CajFHT7ytj+A2sWR3lI64ksLgbjmq7bni34A
-        2iMWAcXJQK1q6Wh2J28SALRFnPYtTQpqS276A2gti4C2ZvIHaL2lw9nN8iShGov7P9zxD0DP0tHsdmmy
-        UF2Z/AE4xyKg7tLn2zH5A1BkEVBnMfm75g/AhSwC6sppfwCubPnw4dby0aM0gajpecsfANfSf0SwPKmo
-        GS0dPfSiHwCur7cIOEyTiRrX0sGjruv+ANzY0v7sTEwmpUlGE9zBo/X8EQLAzTw9nL6TJpS94kSjiWvp
-        0Kl/AAak91XChw93SxOOJqfeqf/96dv5YwOAweg9IVCYeDQZpaP/zfxRAcBguSdgMls6fNTJHxEADN7S
-        wcPt0gSk8eaZfwCGKu4wT0ebccSpycnRPwDDV5iANMaeOvoHYBSeHj7cKU1EGkuO/gEYjbjbvDARaSy5
-        8x+AEem9IbA4GWnULXjuH4BRKk1GGm1xKSZ/HAAwGmkC6pydkDTa3PwHwMilo8/d0qSk0eUb/wAYubQA
-        2CpNShpNTv8DMBb9JwEepslIY+ng0Ub+KABgdNIkZAEwxuJrmvNHAQCjkyYhC4Axlj8GABitOAVdmpg0
-        /OIGzPwxAMBopYnIGYBxdfBwO38MADBaaSKyABhfXv8LwHjEJHRmUtLosgAAYDz6LwIqTk4acssH0+v5
-        YwCA0UoLgE5pctII2p+eyR8DAIxOvII2LQDibnSNpWnfAQDA6C0eTK+XJyaNokX3AAAwDouHM1uliUmj
-        yQIAgLFIk1Dn7KSk0ZUWAF4EBMBoxTvoS5OSRlonfxwAMBqLBw+3CxOSRtzC/vTt/JEAwHDF3f9pAdAt
-        TUgadZ4EAGBE4uaz8mSkMbSTPxYAGB5H/5OXywAADJ1r/5OXxwEBGKp49ezTw5k06WiSWjyY6caZmfwx
-        AcDg9F/7O9M5O/loMlo8nHYWAIDBe7o/s/P0IE02mtjcCwDAQC3uT2+WJhxNVosHM94MCMBgPN2ffl2a
-        bDSZxWItf3QAcDMLafJPR5VxZKkGlT63mfwRAsDVxbXkJ/szO6XJRZNf+uy68V0N+eMEgIvFkaOJv44s
-        AgC4UDzel0/1d85OImp2FgEAnBOn+Rf3Z7ZikihNHqojiwAAehYPptfTxLB7dqJQ3cVZnrwJANAWcZr/
-        ycH0RpoInOZvd9teGQzQAnHqNwZ9p/n1obQt7LkkAFCpfFOf0/z6cvvTm84GAFSgf1Pf9GYa3J3m11VL
-        28r0et6EAGiSNPHPpIF8+8zALl2nXZcFABrAs/saUttxJilvZgBMit5p/oMH20/2H7ipT0PsQSwEfJ8A
-        wLj1n91/sJv+Mw3O0qh6sBtnmvJmCMAoxGn+/k19D+JGrcLgLI2qtA2mbdHlAYAhilOvcQq2PBBL465/
-        VsAjhAAD8OGmvif7D/bKg640eaXtdcdiAOAG4pRqHO33b+orD7JSE/qwGIhtOm/eAJzVO9o/eLD7JAZO
-        qbIW9h/spbbSdu5JAoA4Mkptpom/Uxo0pVpLi4Gd9J8bzg4ArRJHQWnS3z47KErt7EEnzg4segUxUKO4
-        KSoNdhuO9qWLc3YAqEK8Tz2O9tOg1j070Em6uLTfuHcAaJY0YLmpTxpgsYiOswOxb3nMEJgoccqyf7Ti
-        aF8admk/20v/ueFbC4GxiZuX4sjk7AAlaVS5kRAYETf1SZNZnIGLBblLBcBAxc1IcVNfaeCRNHl9uFQQ
-        l+jybgxwNXEUEUcTeSApDjKSJr/Yh1Nb7hsALuSmPqnm3DcAnLF4cH/9ycHUbhogYpCQVHkL+1NpkR9f
-        uX3fYgDapn+af2ozTfyds4ODpPYUi4GF3k2EU24ihJp9vKmvPBhIancWA1CRtb3e0f7r1F5ph5ekUn8s
-        BtIYkocToAk+3tQ31X2yn3ZoSbphFgPQAPNv7q/Pv53aTTts7LSSNOh6i4FpiwEYv9gR06S/kYpHfUo7
-        rCQNo5046MhDETAqc79N35l/2/v63dKOKUkjaqobY5HFAAxZnH5zml/SZNZfDMQBSh6ygK/Rv6lvajN2
-        rvJOJ0mTVb4suRXjVx7KgKuKZ/ed5pfU/Kb24l4lNw/CJeI0f+ww5R1JkhqdmwfhU07zS2pXvbFuy/0C
-        tJbT/JLkEgEtkjZ4p/kl6XwuEVCfWN2mSd9pfkm6pP5TBDFeeoqABvPSHkn6qpwVoFlig/XSHkkaTPNv
-        7zsrwOTKp/lf5w01bbSSpCG0s7B/byYPvTA+Hx/ju989s5FKkoZUHGx5goCxmPvt7p20AW6XNkxJ0qi6
-        3+2PxS4PMGRx6ql/fb+0IUqSxlWMzW4aZODmXN+XpEYUY3WM2S4PcGOx8aSNaHMurjXFRiVJalD3uzGG
-        uzzAlcXGEhtNbDzljUqS1KjcJ8BFYuOIjaS48UiSGl86uPMYIR99uKO/tLFIkuprrnczt4VAa8WHHxtB
-        aeOQJNVfbw7w5EB7mPglSZ8WN3vHkwN5mqA28eGa+CVJX8pCoDL9id+jfJKkq+UegYYz8UuSviYLgYYx
-        8UuSBll/IeA9AhPLxC9JGmpeKDRZ4vRM+mD2zn1QkiQNvP4rhn3XwBj1H+e7v5s+jPhAJEkaWXNv73li
-        YNRM/JKkSSnmo3ijbJ6iGIb+u/rvbZc+AEmSxtnc/v0tlwUGLP5CTfySpMnvXterhQeg/3389zZ7f6HF
-        v2hJkiavuCzgaYEbihsrHr+510l/ifEXKUlSw7rXffz23kae1rjMbNzg9+b+bvkvU5KkhpXmNGcDLhB/
-        OemIf7v4lydJUqNzNqBo7s29zfjLKf+lSZJUR2kRsONJgSRO97vOL0lqV/e6Mf/lqbBdYvXjdL8kqdW9
-        ub+Vp8V2iGsgTvdLkpR6c3+3+ksCcZOfu/slSTpbOiiu9VXCjvolSbqkmr5YqPdo39v7e8X/oZIk6fNq
-        uC/AUb8kSdcvbpJv5H0Bvff3u9YvSdKNi7PnjVoExDcgOeqXJOnra8wiIK5blP4HSJKkmzXRi4CF/R9u
-        P357by8d+ac/rCRJGmQxx07cIqD3zX1v73ZLf2BJkjSYJmoRMPvm3mb6A8UfSpIkDbnZcS8C4l+eJv/t
-        0h9OkiQNr7EtAnqTf/qXl/5QkiRp+MVBeJ6WRyPeU5z+pZ3SH0aSJI2uuAyfp+fhisn/8du73dIfQpIk
-        jb5Hb+6v52l6OEz+kiRNYne78Sh+nq4HK1YXJn9Jkia0N3d385Q9OP3Jv/AvkyRJE9NA7wdw2l+SpOY0
-        kEsBJn9JkhrW114K6L/X3+QvSVLTuvFTAV7yI0lSc4t39eQp/XrSkf9O6TeUJEnNaG7/7us8rV9N3EFY
-        +o0kSVJzutZZgPhK39JvIkmSmteVzgLkb/bzfn9JkmrpKk8EzL75cfvx27vpF0iSpFq68L0A/VP/5V8o
-        SZKa2+ybu1t5uj8v/WBnNn6SJEmqqzTH5+n+c4/e/mmj+AskSVIVxZt987Tf13/hz4/d0k+WJEl1FAf7
-        eervm33z42bpJ0qSpKrayVN/n2v/kiS1oE/vA3j0293X6R/EP5QkSZWXp/+0AHjz427pJ0iSpPrqTf7T
-        +z/cLv2gJEmqs94CoPfoX+EHJUlSnfUWALO/3d0p/aAkSaqz/gKg8AOSJKnebsXbgEo/IEmS6s3jf5Ik
-        tbD+2/8KPyBJkurN8/+SJLWwWw//7U9pAfBj+n8kSVJbsgCQJKmF3Xr4H396/yj9F0mS1J4sACRJamG3
-        Hv7Xj53SD0iSpHq79fDNj7ulH5AkSfVmASBJUguzAJAkqYVZAEiS1MIsACRJamEWAJIktTALAEmSWlh8
-        GVDxByRJUr1ZAEiS1MIsACRJamEWAJIktTALAEmSWpgFgCRJLSwtAOLrgCVJUpuyAJAkqYXdepj+jyRJ
-        alcWAJIktTALAEmSWpgFgCRJLezWzH+Uf0CSJNXZzJ4FgCRJrSvm/lsz/17+QUmSVGcx99+a/pcf3j/8
-        Lf0DSZLUimLuv/Xgny0AJElqUzH335r62/fFH5QkSRX23396P/Xr92kBkP7PzN+dBZAkqQ3FnP/HAuDB
-        P1kASJLUhh78v+8/LgB6ZwH+zSJAkqSa+3D031sA3P/1+278l1gRxHWB0i+QJEkNL679/60/+cfcf2vq
-        l+92P6wGpnedBZAkqcbizv8P833M/bEA2Jz69bv0D/r1bwiUJEm1NL0bE//HuX7ql283bt3923d3PvuH
-        qZm/x6OB5d9EkiQ1p3OTf2p654fbt8L9X77du5/+wac9+Jfv38+kXyhJkhrYf//w/kGa/M/O7/fj9P8H
-        U7989/rcT0hN/VNaBPxX4TeVJEkT2/S///B+6v+fn9eje//nf83k6b+vdBbgQ7GCsBCQJGnCS3N18aj/
-        Q58e/X8Q9wIUf/InTf3z9++n/24xIEnSpDT9n2nS/9fvv3jE/6F7v37X/ePa/1n3fvlus/SLiv2tf4lA
-        kiSNp+L8/IXicn+e7svu/frtdukXSpKkZnbv/367naf5i1kESJJURzGn5+n9aq51OUCSJE1cl572/5J4
-        VCCtHDql31SSJE1ov3y3Gzf35+n85mIFYSEgSdKE98u3ezc+6r9IflRw66J3BkiSpBGWjvbjsv1Ajviv
-        anr3h9u9ywSSJGmkTe/8wzd5OgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAIDGuXXrfwD2wMQjonC/IgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="usuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 27</value>
-  </data>
-  <data name="usuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 111</value>
-  </data>
-  <data name="usuario.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="pboxAvatar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="usuario.TabIndex" type="System.Int32, mscorlib">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pboxAvatar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;usuario.Name" xml:space="preserve">
-    <value>usuario</value>
+  <data name="&gt;&gt;pboxAvatar.Name" xml:space="preserve">
+    <value>pboxAvatar</value>
   </data>
-  <data name="&gt;&gt;usuario.Type" xml:space="preserve">
+  <data name="&gt;&gt;pboxAvatar.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;usuario.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pboxAvatar.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;usuario.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;pboxAvatar.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2727,10 +2573,13 @@
 </value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 398</value>
+    <value>81, 324</value>
+  </data>
+  <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 79</value>
+    <value>173, 53</value>
   </data>
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2748,46 +2597,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="kword.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="kword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gill Sans MT, 12pt, style=Bold</value>
-  </data>
-  <data name="kword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 251</value>
-  </data>
-  <data name="kword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 29</value>
-  </data>
-  <data name="kword.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="kword.Text" xml:space="preserve">
-    <value>Contraseña</value>
-  </data>
-  <data name="&gt;&gt;kword.Name" xml:space="preserve">
-    <value>kword</value>
-  </data>
-  <data name="&gt;&gt;kword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;kword.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;kword.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="cajaUsuario.Font" type="System.Drawing.Font, System.Drawing">
     <value>Gill Sans MT, 9pt</value>
   </data>
   <data name="cajaUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 202</value>
+    <value>81, 169</value>
+  </data>
+  <data name="cajaUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="cajaUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 25</value>
+    <value>158, 21</value>
   </data>
   <data name="cajaUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2808,10 +2630,13 @@
     <value>Gill Sans MT, 9pt</value>
   </data>
   <data name="cajaClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 283</value>
+    <value>81, 261</value>
+  </data>
+  <data name="cajaClave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="cajaClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 25</value>
+    <value>158, 21</value>
   </data>
   <data name="cajaClave.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2835,10 +2660,13 @@
     <value>Gill Sans MT, 9pt</value>
   </data>
   <data name="mostrarPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 325</value>
+    <value>50, 298</value>
+  </data>
+  <data name="mostrarPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="mostrarPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 25</value>
+    <value>124, 22</value>
   </data>
   <data name="mostrarPass.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -2940,10 +2768,13 @@
 </value>
   </data>
   <data name="ingresar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 12</value>
+    <value>312, 9</value>
+  </data>
+  <data name="ingresar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="ingresar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 27</value>
+    <value>24, 20</value>
   </data>
   <data name="ingresar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2989,10 +2820,13 @@
 </value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 12</value>
+    <value>284, 9</value>
+  </data>
+  <data name="pictureBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 48</value>
+    <value>23, 36</value>
   </data>
   <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -3012,6 +2846,57 @@
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="pboxUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 125</value>
+  </data>
+  <data name="pboxUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 78</value>
+  </data>
+  <data name="pboxUsuario.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pboxUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;pboxUsuario.Name" xml:space="preserve">
+    <value>pboxUsuario</value>
+  </data>
+  <data name="&gt;&gt;pboxUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pboxUsuario.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pboxUsuario.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pboxPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pboxPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 215</value>
+  </data>
+  <data name="pboxPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 78</value>
+  </data>
+  <data name="pboxPassword.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pboxPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;pboxPassword.Name" xml:space="preserve">
+    <value>pboxPassword</value>
+  </data>
+  <data name="&gt;&gt;pboxPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pboxPassword.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pboxPassword.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3019,13 +2904,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 20</value>
+    <value>7, 15</value>
   </data>
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>395, 505</value>
+    <value>346, 379</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

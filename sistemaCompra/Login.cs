@@ -25,7 +25,7 @@ namespace sistemaCompra
         public Login()
         {
             InitializeComponent();
-            
+
 
         }
 
@@ -61,7 +61,7 @@ namespace sistemaCompra
                 MessageBox.Show("La clave debe estar comprendida entre 8 y 12 caracteres");
                 cajaClave.Clear();
                 cajaUsuario.Clear();
-               
+
             }
 
             if (cajaUsuario.Text.ToLower() == "jose01" && cajaClave.Text == "j1234567")
