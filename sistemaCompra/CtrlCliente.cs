@@ -16,5 +16,7 @@ namespace sistemaCompra
         {
             InitializeComponent();
         }
+
+        
     }
 }

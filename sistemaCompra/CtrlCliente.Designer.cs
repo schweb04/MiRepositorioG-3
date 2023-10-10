@@ -80,6 +80,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 26;
             pictureBox5.TabStop = false;
+            
             // 
             // btnAgregar
             // 
