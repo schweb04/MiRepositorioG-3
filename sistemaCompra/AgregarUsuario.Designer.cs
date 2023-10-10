@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             pictureBox5 = new PictureBox();
-            lblAgregarUsuario = new Label();
-            lblNombreUsuario = new Label();
             txtNombreUsuario = new TextBox();
             txtPassword = new TextBox();
             pboxCancelar = new PictureBox();
             pboxAceptar = new PictureBox();
             pboxNewPassword = new PictureBox();
-            pictureBox1 = new PictureBox();
+            pboxAgregarUsuarios = new PictureBox();
+            pboxNombreUsuario = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxNewPassword).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAgregarUsuarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxNombreUsuario).BeginInit();
             SuspendLayout();
             // 
             // pictureBox5
@@ -57,31 +57,11 @@
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
             // 
-            // lblAgregarUsuario
-            // 
-            lblAgregarUsuario.AutoSize = true;
-            lblAgregarUsuario.Font = new Font("Gill Sans MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            lblAgregarUsuario.ForeColor = Color.Black;
-            lblAgregarUsuario.Location = new Point(57, 9);
-            lblAgregarUsuario.Name = "lblAgregarUsuario";
-            lblAgregarUsuario.Size = new Size(228, 38);
-            lblAgregarUsuario.TabIndex = 31;
-            lblAgregarUsuario.Text = "Agregar Usuario";
-            // 
-            // lblNombreUsuario
-            // 
-            lblNombreUsuario.AutoSize = true;
-            lblNombreUsuario.Location = new Point(24, 90);
-            lblNombreUsuario.Name = "lblNombreUsuario";
-            lblNombreUsuario.Size = new Size(51, 15);
-            lblNombreUsuario.TabIndex = 37;
-            lblNombreUsuario.Text = "Nombre";
-            // 
             // txtNombreUsuario
             // 
-            txtNombreUsuario.Location = new Point(81, 86);
+            txtNombreUsuario.Location = new Point(94, 111);
             txtNombreUsuario.Name = "txtNombreUsuario";
-            txtNombreUsuario.Size = new Size(126, 23);
+            txtNombreUsuario.Size = new Size(159, 23);
             txtNombreUsuario.TabIndex = 38;
             // 
             // txtPassword
@@ -100,6 +80,7 @@
             pboxCancelar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCancelar.TabIndex = 42;
             pboxCancelar.TabStop = false;
+            pboxCancelar.Click += pboxCancelar_Click;
             // 
             // pboxAceptar
             // 
@@ -113,7 +94,7 @@
             // 
             // pboxNewPassword
             // 
-            pboxNewPassword.Image = Properties.Resources.Interfaz3;
+            pboxNewPassword.Image = Properties.Resources.InterfazNuevo31;
             pboxNewPassword.ImeMode = ImeMode.NoControl;
             pboxNewPassword.Location = new Point(62, 151);
             pboxNewPassword.Name = "pboxNewPassword";
@@ -122,29 +103,40 @@
             pboxNewPassword.TabIndex = 43;
             pboxNewPassword.TabStop = false;
             // 
-            // pictureBox1
+            // pboxAgregarUsuarios
             // 
-            pictureBox1.Location = new Point(238, 74);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 44;
-            pictureBox1.TabStop = false;
+            pboxAgregarUsuarios.Image = Properties.Resources.Usuario2;
+            pboxAgregarUsuarios.Location = new Point(29, 11);
+            pboxAgregarUsuarios.Name = "pboxAgregarUsuarios";
+            pboxAgregarUsuarios.Size = new Size(273, 34);
+            pboxAgregarUsuarios.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxAgregarUsuarios.TabIndex = 46;
+            pboxAgregarUsuarios.TabStop = false;
+            // 
+            // pboxNombreUsuario
+            // 
+            pboxNombreUsuario.Image = Properties.Resources.Usuario1;
+            pboxNombreUsuario.ImeMode = ImeMode.NoControl;
+            pboxNombreUsuario.Location = new Point(62, 67);
+            pboxNombreUsuario.Name = "pboxNombreUsuario";
+            pboxNombreUsuario.Size = new Size(223, 78);
+            pboxNombreUsuario.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxNombreUsuario.TabIndex = 47;
+            pboxNombreUsuario.TabStop = false;
             // 
             // AgregarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(361, 299);
-            Controls.Add(pictureBox1);
+            Controls.Add(pboxAgregarUsuarios);
             Controls.Add(pboxCancelar);
             Controls.Add(pboxAceptar);
             Controls.Add(txtPassword);
             Controls.Add(txtNombreUsuario);
-            Controls.Add(lblNombreUsuario);
-            Controls.Add(lblAgregarUsuario);
             Controls.Add(pictureBox5);
             Controls.Add(pboxNewPassword);
+            Controls.Add(pboxNombreUsuario);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AgregarUsuario";
             Text = "AgregarUsuario";
@@ -152,7 +144,8 @@
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxNewPassword).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAgregarUsuarios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxNombreUsuario).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,14 +153,13 @@
         #endregion
 
         private PictureBox pictureBox5;
-        private Label lblAgregarUsuario;
-        private Label lblNombreUsuario;
         private TextBox txtNombreUsuario;
         private TextBox txtPassword;
         private Label lblTipoUsuario;
         private PictureBox pboxCancelar;
         private PictureBox pboxAceptar;
         private PictureBox pboxNewPassword;
-        private PictureBox pictureBox1;
+        private PictureBox pboxAgregarUsuarios;
+        private PictureBox pboxNombreUsuario;
     }
 }
