@@ -34,14 +34,12 @@
             pictureBox5 = new PictureBox();
             pictureBox3 = new PictureBox();
             bienvenido = new Label();
-            pboxAgregarProducto = new PictureBox();
             pboxCtrlProductos = new PictureBox();
             pboxCtrlClientes = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxAgregarProducto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).BeginInit();
             SuspendLayout();
@@ -106,17 +104,6 @@
             bienvenido.Size = new Size(102, 38);
             bienvenido.TabIndex = 14;
             bienvenido.Text = "Cajero";
-            bienvenido.Click += bienvenido_Click;
-            // 
-            // pboxAgregarProducto
-            // 
-            pboxAgregarProducto.Image = Properties.Resources.Sin_título;
-            pboxAgregarProducto.Location = new Point(216, 266);
-            pboxAgregarProducto.Name = "pboxAgregarProducto";
-            pboxAgregarProducto.Size = new Size(61, 60);
-            pboxAgregarProducto.TabIndex = 21;
-            pboxAgregarProducto.TabStop = false;
-            pboxAgregarProducto.Click += pboxAgregarProducto_Click;
             // 
             // pboxCtrlProductos
             // 
@@ -146,7 +133,6 @@
             ClientSize = new Size(427, 338);
             Controls.Add(pboxCtrlClientes);
             Controls.Add(pboxCtrlProductos);
-            Controls.Add(pboxAgregarProducto);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
@@ -162,7 +148,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxAgregarProducto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).EndInit();
             ResumeLayout(false);
@@ -176,7 +161,6 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox3;
         private Label bienvenido;
-        private PictureBox pboxAgregarProducto;
         private PictureBox pboxCtrlProductos;
         private PictureBox pboxCtrlClientes;
     }

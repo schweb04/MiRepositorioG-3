@@ -39,6 +39,13 @@ namespace sistemaCompra
             login.Show();
         }
 
+        private void pboxCtrlUsuarios_Click(object sender, EventArgs e)
+        {
+            CtrlUsuario ctrlUsuario = new CtrlUsuario();
+            this.Hide();
+            ctrlUsuario.Show();
+        }
+
         private void pboxCtrlProductos_Click(object sender, EventArgs e)
         {
             CtrlProducto ctrlProducto = new CtrlProducto();
@@ -53,9 +60,6 @@ namespace sistemaCompra
             ctrlCliente.Show();
         }
 
-        private void pboxCtrlUsuarios_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

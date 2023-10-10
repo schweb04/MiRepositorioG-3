@@ -28,25 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnVolver = new Button();
             pictureBox4 = new PictureBox();
             btnEliminar = new Button();
             btnEditar = new Button();
             pictureBox5 = new PictureBox();
             btnAgregar = new Button();
             lblCtrlProductos = new Label();
+            pboxVolver = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxVolver).BeginInit();
             SuspendLayout();
-            // 
-            // btnVolver
-            // 
-            btnVolver.Location = new Point(31, 231);
-            btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(101, 31);
-            btnVolver.TabIndex = 37;
-            btnVolver.Text = "Volver al menú";
-            btnVolver.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
@@ -59,6 +51,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 36;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // btnEliminar
             // 
@@ -89,6 +82,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 33;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // btnAgregar
             // 
@@ -110,12 +104,23 @@
             lblCtrlProductos.TabIndex = 31;
             lblCtrlProductos.Text = "Control de Productos";
             // 
+            // pboxVolver
+            // 
+            pboxVolver.Image = Properties.Resources.BotonSalirMenu;
+            pboxVolver.Location = new Point(12, 219);
+            pboxVolver.Margin = new Padding(3, 2, 3, 2);
+            pboxVolver.Name = "pboxVolver";
+            pboxVolver.Size = new Size(183, 43);
+            pboxVolver.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxVolver.TabIndex = 50;
+            pboxVolver.TabStop = false;
+            // 
             // CtrlProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(424, 273);
-            Controls.Add(btnVolver);
+            Controls.Add(pboxVolver);
             Controls.Add(pictureBox4);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
@@ -127,18 +132,18 @@
             Text = "Producto";
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxVolver).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button btnVolver;
         private PictureBox pictureBox4;
         private Button btnEliminar;
         private Button btnEditar;
         private PictureBox pictureBox5;
         private Button btnAgregar;
         private Label lblCtrlProductos;
+        private PictureBox pboxVolver;
     }
 }

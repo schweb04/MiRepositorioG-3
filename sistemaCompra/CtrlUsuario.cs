@@ -16,5 +16,28 @@ namespace sistemaCompra
         {
             InitializeComponent();
         }
+
+        private void pboxVolver_Click(object sender, EventArgs e)
+        {
+            MenuAdmin menuAdmin = new MenuAdmin();
+            this.Hide();
+            menuAdmin.Show();
+        }
+
+        private void pboxAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarUsuario agregarUsuario = new AgregarUsuario();
+            agregarUsuario.ShowDialog();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

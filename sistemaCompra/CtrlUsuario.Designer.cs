@@ -55,6 +55,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 43;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox5
             // 
@@ -67,6 +68,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 40;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pboxCtrlUsuarios
             // 
@@ -88,6 +90,7 @@
             pboxAgregar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAgregar.TabIndex = 46;
             pboxAgregar.TabStop = false;
+            pboxAgregar.Click += pboxAgregar_Click;
             // 
             // pboxEditar
             // 
@@ -121,6 +124,7 @@
             pboxVolver.SizeMode = PictureBoxSizeMode.Zoom;
             pboxVolver.TabIndex = 49;
             pboxVolver.TabStop = false;
+            pboxVolver.Click += pboxVolver_Click;
             // 
             // CtrlUsuario
             // 
