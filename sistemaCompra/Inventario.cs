@@ -23,5 +23,10 @@ namespace sistemaCompra
             MenuSuperUser menu = new MenuSuperUser();
             menu.Show();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

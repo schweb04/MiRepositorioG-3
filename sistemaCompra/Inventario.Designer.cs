@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             dtgvProductos = new DataGridView();
@@ -38,8 +40,10 @@
             clmUnidad = new DataGridViewTextBoxColumn();
             clmCosto = new DataGridViewTextBoxColumn();
             clmPrecio = new DataGridViewTextBoxColumn();
+            pictureBox5 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -60,39 +64,60 @@
             pictureBox1.Size = new Size(187, 37);
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // dtgvProductos
             // 
             dtgvProductos.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(90, 180, 0);
+            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 180, 0);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvProductos.Columns.AddRange(new DataGridViewColumn[] { clmCodigo, clmNombre, clmCantidad, clmUnidad, clmCosto, clmPrecio });
+            dtgvProductos.EnableHeadersVisualStyles = false;
+            dtgvProductos.GridColor = Color.FromArgb(168, 223, 0);
             dtgvProductos.Location = new Point(31, 118);
             dtgvProductos.Name = "dtgvProductos";
             dtgvProductos.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dtgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgvProductos.RowTemplate.Height = 25;
-            dtgvProductos.Size = new Size(644, 150);
+            dtgvProductos.Size = new Size(643, 150);
             dtgvProductos.TabIndex = 3;
             // 
             // clmCodigo
             // 
             clmCodigo.HeaderText = "Código";
             clmCodigo.Name = "clmCodigo";
+            clmCodigo.ReadOnly = true;
             // 
             // clmNombre
             // 
             clmNombre.HeaderText = "Nombre";
             clmNombre.Name = "clmNombre";
+            clmNombre.ReadOnly = true;
             // 
             // clmCantidad
             // 
             clmCantidad.HeaderText = "Cantidad";
             clmCantidad.Name = "clmCantidad";
+            clmCantidad.ReadOnly = true;
             // 
             // clmUnidad
             // 
             clmUnidad.HeaderText = "Ud. de Medida";
             clmUnidad.Name = "clmUnidad";
+            clmUnidad.ReadOnly = true;
             // 
             // clmCosto
             // 
@@ -106,11 +131,25 @@
             clmPrecio.Name = "clmPrecio";
             clmPrecio.ReadOnly = true;
             // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.BotonCerrar;
+            pictureBox5.ImeMode = ImeMode.NoControl;
+            pictureBox5.Location = new Point(688, 11);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(43, 37);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 19;
+            pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
+            // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(743, 338);
+            Controls.Add(pictureBox5);
             Controls.Add(dtgvProductos);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
@@ -120,6 +159,7 @@
             Text = "Inventario";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvProductos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -135,5 +175,6 @@
         private DataGridViewTextBoxColumn clmUnidad;
         private DataGridViewTextBoxColumn clmCosto;
         private DataGridViewTextBoxColumn clmPrecio;
+        private PictureBox pictureBox5;
     }
 }

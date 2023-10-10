@@ -56,4 +56,10 @@ public partial class MenuCajero : Form
         this.Hide();
         ctrlProducto.Show();
     }
+
+    private void pictureBox3_Click(object sender, EventArgs e)
+    {
+        Inventario inventario = new Inventario();
+        inventario.ShowDialog();
+    }
 }

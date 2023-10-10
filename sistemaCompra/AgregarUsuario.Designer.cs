@@ -36,10 +36,12 @@
             pboxCancelar = new PictureBox();
             pboxAceptar = new PictureBox();
             pboxNewPassword = new PictureBox();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxNewPassword).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox5
@@ -120,11 +122,21 @@
             pboxNewPassword.TabIndex = 43;
             pboxNewPassword.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(238, 74);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 44;
+            pictureBox1.TabStop = false;
+            // 
             // AgregarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(361, 299);
+            Controls.Add(pictureBox1);
             Controls.Add(pboxCancelar);
             Controls.Add(pboxAceptar);
             Controls.Add(txtPassword);
@@ -140,6 +152,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxNewPassword).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -155,5 +168,6 @@
         private PictureBox pboxCancelar;
         private PictureBox pboxAceptar;
         private PictureBox pboxNewPassword;
+        private PictureBox pictureBox1;
     }
 }
