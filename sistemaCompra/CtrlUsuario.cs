@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace sistemaCompra
 {
-    public partial class CtrlProducto : Form
+    public partial class CtrlUsuario : Form
     {
-        public CtrlProducto()
+        public CtrlUsuario()
         {
             InitializeComponent();
         }
-
-
     }
 }
