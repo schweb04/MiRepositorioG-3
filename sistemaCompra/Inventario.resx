@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANUAAAAwCAYAAACGyT+yAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAADJlJREFUeF7tnQt0FNUZx1fIzmxeZLM8AnkIJGATwAqoSCGnWC0HQ0JIQp6Eh4II
+        vwAADr8BOAVTJAAADJlJREFUeF7tnQt0FNUZx1fIzmxeZLM8AnkIJGATwAqoSCGnWC0HQ0JIQp6Eh4II
         CIgiClYURBEUrR5BIdVjRbFqffMSWh4+qpiiRzCixRdiVUREmqbU0jTn6/fd3Du5M3s3ySa7SML9zvmd
         2fm+797ZufP9752ZwFlXay1hYoSvT4lZMCQvet3ggqgD6cWe6tRSo7ZnmQEY02hOS6g+qU6xXo8PKoja
         PzQvpgL3czAWw0v71Boe2OhVZkzIKPLsSyyPqJO/rEbTlkkqd9f1K/JUpox3F+J+B17y4TM8SBSKaR4e
@@ -178,4 +178,22 @@
         9BI6cO78hwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="clmCodigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmNombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmCantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmUnidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmCosto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clmPrecio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
