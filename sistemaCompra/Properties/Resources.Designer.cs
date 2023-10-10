@@ -293,6 +293,106 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo1 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo2 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo21 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo3 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo31 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo4 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo5 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo6 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo7 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ClienteNuevo8 {
+            get {
+                object obj = ResourceManager.GetObject("ClienteNuevo8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Interfaz1 {
             get {
                 object obj = ResourceManager.GetObject("Interfaz1", resourceCulture);
@@ -316,6 +416,76 @@ namespace sistemaCompra.Properties {
         internal static System.Drawing.Bitmap Interfaz3 {
             get {
                 object obj = ResourceManager.GetObject("Interfaz3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InterfazNuevo2 {
+            get {
+                object obj = ResourceManager.GetObject("InterfazNuevo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InterfazNuevo3 {
+            get {
+                object obj = ResourceManager.GetObject("InterfazNuevo3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProductoNuevo1 {
+            get {
+                object obj = ResourceManager.GetObject("ProductoNuevo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProductoNuevo2 {
+            get {
+                object obj = ResourceManager.GetObject("ProductoNuevo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProductoNuevo3 {
+            get {
+                object obj = ResourceManager.GetObject("ProductoNuevo3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProductoNuevo4 {
+            get {
+                object obj = ResourceManager.GetObject("ProductoNuevo4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProductoNuevo5 {
+            get {
+                object obj = ResourceManager.GetObject("ProductoNuevo5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

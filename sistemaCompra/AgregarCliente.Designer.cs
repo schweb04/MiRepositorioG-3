@@ -145,7 +145,7 @@
             // 
             // pboxAgregarCl
             // 
-            pboxAgregarCl.Image = Properties.Resources.Cliente1;
+            pboxAgregarCl.Image = Properties.Resources.ClienteNuevo1;
             pboxAgregarCl.Location = new Point(225, 12);
             pboxAgregarCl.Name = "pboxAgregarCl";
             pboxAgregarCl.Size = new Size(294, 46);
@@ -155,7 +155,7 @@
             // 
             // pboxCodigoCliente
             // 
-            pboxCodigoCliente.Image = Properties.Resources.Agregar2;
+            pboxCodigoCliente.Image = Properties.Resources.ClienteNuevo21;
             pboxCodigoCliente.Location = new Point(22, 64);
             pboxCodigoCliente.Name = "pboxCodigoCliente";
             pboxCodigoCliente.Size = new Size(221, 45);
@@ -165,7 +165,7 @@
             // 
             // pboxNombreCliente
             // 
-            pboxNombreCliente.Image = Properties.Resources.Agregar3;
+            pboxNombreCliente.Image = Properties.Resources.ClienteNuevo31;
             pboxNombreCliente.Location = new Point(22, 136);
             pboxNombreCliente.Name = "pboxNombreCliente";
             pboxNombreCliente.Size = new Size(235, 45);
@@ -175,7 +175,7 @@
             // 
             // pboxApellido
             // 
-            pboxApellido.Image = Properties.Resources.Cliente2;
+            pboxApellido.Image = Properties.Resources.ClienteNuevo6;
             pboxApellido.Location = new Point(284, 136);
             pboxApellido.Name = "pboxApellido";
             pboxApellido.Size = new Size(235, 45);
@@ -185,7 +185,7 @@
             // 
             // pboxIdentificacion
             // 
-            pboxIdentificacion.Image = Properties.Resources.Cliente3;
+            pboxIdentificacion.Image = Properties.Resources.ClienteNuevo7;
             pboxIdentificacion.Location = new Point(544, 136);
             pboxIdentificacion.Name = "pboxIdentificacion";
             pboxIdentificacion.Size = new Size(235, 45);
@@ -195,7 +195,7 @@
             // 
             // pboxTelefono
             // 
-            pboxTelefono.Image = Properties.Resources.Cliente5;
+            pboxTelefono.Image = Properties.Resources.ClienteNuevo4;
             pboxTelefono.Location = new Point(22, 216);
             pboxTelefono.Name = "pboxTelefono";
             pboxTelefono.Size = new Size(235, 45);
@@ -205,7 +205,7 @@
             // 
             // pboxCorreo
             // 
-            pboxCorreo.Image = Properties.Resources.Cliente4;
+            pboxCorreo.Image = Properties.Resources.ClienteNuevo5;
             pboxCorreo.Location = new Point(22, 276);
             pboxCorreo.Name = "pboxCorreo";
             pboxCorreo.Size = new Size(235, 39);
@@ -215,7 +215,7 @@
             // 
             // pboxDireccion
             // 
-            pboxDireccion.Image = Properties.Resources.Cliente6;
+            pboxDireccion.Image = Properties.Resources.ClienteNuevo8;
             pboxDireccion.Location = new Point(284, 196);
             pboxDireccion.Name = "pboxDireccion";
             pboxDireccion.Size = new Size(264, 128);
