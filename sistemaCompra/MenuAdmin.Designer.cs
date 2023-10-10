@@ -121,6 +121,7 @@
             pboxCtrlUsuarios.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCtrlUsuarios.TabIndex = 18;
             pboxCtrlUsuarios.TabStop = false;
+            pboxCtrlUsuarios.Click += pboxCtrlUsuarios_Click;
             // 
             // pboxAdmin
             // 
