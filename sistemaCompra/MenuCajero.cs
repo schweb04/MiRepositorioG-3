@@ -49,4 +49,11 @@ public partial class MenuCajero : Form
         AgregarProducto agregarProducto = new AgregarProducto();
         agregarProducto.ShowDialog();
     }
+
+    private void pboxCtrlProductos_Click(object sender, EventArgs e)
+    {
+        CtrlProducto ctrlProducto = new CtrlProducto();
+        this.Hide();
+        ctrlProducto.Show();
+    }
 }

@@ -37,6 +37,8 @@
             pboxCtrlUsuarios = new PictureBox();
             pboxAdmin = new PictureBox();
             pboxAvatarAdmin = new PictureBox();
+            pboxCtrlProductos = new PictureBox();
+            pboxCtrlClientes = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -45,14 +47,17 @@
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAdmin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAvatarAdmin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).BeginInit();
             SuspendLayout();
             // 
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(336, 188);
+            pictureBox7.Location = new Point(294, 141);
+            pictureBox7.Margin = new Padding(3, 2, 3, 2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(224, 39);
+            pictureBox7.Size = new Size(196, 29);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 24;
             pictureBox7.TabStop = false;
@@ -60,9 +65,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(347, 133);
+            pictureBox1.Location = new Point(304, 100);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(202, 37);
+            pictureBox1.Size = new Size(177, 28);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
@@ -70,9 +76,10 @@
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.BotonCerrarSesion;
-            pictureBox6.Location = new Point(14, 453);
+            pictureBox6.Location = new Point(12, 340);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(209, 55);
+            pictureBox6.Size = new Size(183, 41);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 21;
             pictureBox6.TabStop = false;
@@ -82,9 +89,10 @@
             // 
             pictureBox4.Image = Properties.Resources.BotonMinimizar;
             pictureBox4.ImeMode = ImeMode.NoControl;
-            pictureBox4.Location = new Point(464, 15);
+            pictureBox4.Location = new Point(406, 11);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(35, 47);
+            pictureBox4.Size = new Size(31, 35);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 20;
             pictureBox4.TabStop = false;
@@ -94,9 +102,10 @@
             // 
             pictureBox5.Image = Properties.Resources.BotonCerrar;
             pictureBox5.ImeMode = ImeMode.NoControl;
-            pictureBox5.Location = new Point(506, 7);
+            pictureBox5.Location = new Point(443, 5);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(43, 55);
+            pictureBox5.Size = new Size(38, 41);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 19;
             pictureBox5.TabStop = false;
@@ -105,9 +114,10 @@
             // pboxCtrlUsuarios
             // 
             pboxCtrlUsuarios.Image = Properties.Resources.Admin3;
-            pboxCtrlUsuarios.Location = new Point(152, 273);
+            pboxCtrlUsuarios.Location = new Point(133, 188);
+            pboxCtrlUsuarios.Margin = new Padding(3, 2, 3, 2);
             pboxCtrlUsuarios.Name = "pboxCtrlUsuarios";
-            pboxCtrlUsuarios.Size = new Size(209, 57);
+            pboxCtrlUsuarios.Size = new Size(183, 43);
             pboxCtrlUsuarios.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCtrlUsuarios.TabIndex = 18;
             pboxCtrlUsuarios.TabStop = false;
@@ -115,10 +125,9 @@
             // pboxAdmin
             // 
             pboxAdmin.Image = (Image)resources.GetObject("pboxAdmin.Image");
-            pboxAdmin.Location = new Point(115, 15);
-            pboxAdmin.Margin = new Padding(3, 4, 3, 4);
+            pboxAdmin.Location = new Point(101, 11);
             pboxAdmin.Name = "pboxAdmin";
-            pboxAdmin.Size = new Size(291, 69);
+            pboxAdmin.Size = new Size(255, 35);
             pboxAdmin.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAdmin.TabIndex = 25;
             pboxAdmin.TabStop = false;
@@ -126,19 +135,41 @@
             // pboxAvatarAdmin
             // 
             pboxAvatarAdmin.Image = Properties.Resources.Admin2;
-            pboxAvatarAdmin.Location = new Point(192, 92);
-            pboxAvatarAdmin.Margin = new Padding(3, 4, 3, 4);
+            pboxAvatarAdmin.Location = new Point(168, 52);
             pboxAvatarAdmin.Name = "pboxAvatarAdmin";
-            pboxAvatarAdmin.Size = new Size(137, 175);
+            pboxAvatarAdmin.Size = new Size(120, 131);
             pboxAvatarAdmin.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAvatarAdmin.TabIndex = 26;
             pboxAvatarAdmin.TabStop = false;
             // 
+            // pboxCtrlProductos
+            // 
+            pboxCtrlProductos.Image = Properties.Resources.Admin4;
+            pboxCtrlProductos.Location = new Point(132, 236);
+            pboxCtrlProductos.Name = "pboxCtrlProductos";
+            pboxCtrlProductos.Size = new Size(184, 40);
+            pboxCtrlProductos.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxCtrlProductos.TabIndex = 27;
+            pboxCtrlProductos.TabStop = false;
+            pboxCtrlProductos.Click += pboxCtrlProductos_Click;
+            // 
+            // pboxCtrlClientes
+            // 
+            pboxCtrlClientes.Image = Properties.Resources.Admin5;
+            pboxCtrlClientes.Location = new Point(133, 282);
+            pboxCtrlClientes.Name = "pboxCtrlClientes";
+            pboxCtrlClientes.Size = new Size(184, 40);
+            pboxCtrlClientes.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxCtrlClientes.TabIndex = 28;
+            pboxCtrlClientes.TabStop = false;
+            // 
             // MenuAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(563, 523);
+            ClientSize = new Size(493, 392);
+            Controls.Add(pboxCtrlClientes);
+            Controls.Add(pboxCtrlProductos);
             Controls.Add(pboxAvatarAdmin);
             Controls.Add(pboxAdmin);
             Controls.Add(pictureBox7);
@@ -148,6 +179,7 @@
             Controls.Add(pictureBox5);
             Controls.Add(pboxCtrlUsuarios);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MenuAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -160,6 +192,8 @@
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAdmin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAvatarAdmin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).EndInit();
             ResumeLayout(false);
         }
 
@@ -173,5 +207,7 @@
         private PictureBox pboxCtrlUsuarios;
         private PictureBox pboxAdmin;
         private PictureBox pboxAvatarAdmin;
+        private PictureBox pboxCtrlProductos;
+        private PictureBox pboxCtrlClientes;
     }
 }
