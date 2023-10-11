@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pictureBox1 = new PictureBox();
             dtgvProductos = new DataGridView();
             clmCodigo = new DataGridViewTextBoxColumn();
@@ -38,20 +37,19 @@
             clmUnidad = new DataGridViewTextBoxColumn();
             clmCosto = new DataGridViewTextBoxColumn();
             clmPrecio = new DataGridViewTextBoxColumn();
+            this.pboxInventario = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this.pboxInventario).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.BotonSalirMenu1;
-            pictureBox1.Location = new Point(11, 389);
+            pictureBox1.Location = new Point(10, 292);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(214, 49);
+            pictureBox1.Size = new Size(187, 37);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -59,27 +57,24 @@
             // dtgvProductos
             // 
             dtgvProductos.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(90, 180, 0);
-            dataGridViewCellStyle3.Font = new Font("OCR A Extended", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 180, 0);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dtgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(90, 180, 0);
+            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(255, 180, 0);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dtgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvProductos.Columns.AddRange(new DataGridViewColumn[] { clmCodigo, clmNombre, clmCantidad, clmUnidad, clmCosto, clmPrecio });
             dtgvProductos.EnableHeadersVisualStyles = false;
             dtgvProductos.GridColor = Color.FromArgb(168, 223, 0);
-            dtgvProductos.Location = new Point(35, 71);
-            dtgvProductos.Margin = new Padding(3, 4, 3, 4);
+            dtgvProductos.Location = new Point(31, 181);
             dtgvProductos.Name = "dtgvProductos";
             dtgvProductos.ReadOnly = true;
-           
-            
             dtgvProductos.RowHeadersWidth = 51;
             dtgvProductos.RowTemplate.Height = 25;
-            dtgvProductos.Size = new Size(791, 299);
+            dtgvProductos.Size = new Size(692, 96);
             dtgvProductos.TabIndex = 3;
             // 
             // clmCodigo
@@ -132,22 +127,30 @@
             // 
             // pboxInventario
             // 
-           
+            this.pboxInventario.Image = Properties.Resources.Invetario12;
+            this.pboxInventario.Location = new Point(246, 12);
+            this.pboxInventario.Name = "pboxInventario";
+            this.pboxInventario.Size = new Size(255, 35);
+            this.pboxInventario.SizeMode = PictureBoxSizeMode.Zoom;
+            this.pboxInventario.TabIndex = 27;
+            this.pboxInventario.TabStop = false;
             // 
             // Inventario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(849, 451);
+            ClientSize = new Size(743, 338);
+            Controls.Add(this.pboxInventario);
             Controls.Add(dtgvProductos);
             Controls.Add(pictureBox1);
-           
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Inventario";
             Text = "Inventario";
             Load += Inventario_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvProductos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this.pboxInventario).EndInit();
             ResumeLayout(false);
         }
 

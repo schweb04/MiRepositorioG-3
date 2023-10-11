@@ -34,20 +34,22 @@
             pboxCtrlProductos = new PictureBox();
             pboxCtrlClientes = new PictureBox();
             pboxCajero = new PictureBox();
+            pboxUsuario = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCajero).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxUsuario).BeginInit();
             SuspendLayout();
             // 
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.BotonCerrarSesion;
-            pictureBox6.Location = new Point(12, 396);
+            pictureBox6.Location = new Point(12, 297);
             pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(180, 34);
+            pictureBox6.Size = new Size(167, 36);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 20;
             pictureBox6.TabStop = false;
@@ -56,26 +58,21 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(178, 121);
+            pictureBox3.Location = new Point(156, 91);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(151, 51);
+            pictureBox3.Size = new Size(132, 38);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 17;
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
-            // bienvenido
-            // 
-            
-            // 
             // pboxCtrlProductos
             // 
             pboxCtrlProductos.Image = Properties.Resources.Admin4;
-            pboxCtrlProductos.Location = new Point(142, 209);
-            pboxCtrlProductos.Margin = new Padding(3, 4, 3, 4);
+            pboxCtrlProductos.Location = new Point(124, 157);
             pboxCtrlProductos.Name = "pboxCtrlProductos";
-            pboxCtrlProductos.Size = new Size(210, 53);
+            pboxCtrlProductos.Size = new Size(184, 40);
             pboxCtrlProductos.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCtrlProductos.TabIndex = 22;
             pboxCtrlProductos.TabStop = false;
@@ -84,10 +81,9 @@
             // pboxCtrlClientes
             // 
             pboxCtrlClientes.Image = Properties.Resources.Admin5;
-            pboxCtrlClientes.Location = new Point(142, 271);
-            pboxCtrlClientes.Margin = new Padding(3, 4, 3, 4);
+            pboxCtrlClientes.Location = new Point(124, 203);
             pboxCtrlClientes.Name = "pboxCtrlClientes";
-            pboxCtrlClientes.Size = new Size(210, 53);
+            pboxCtrlClientes.Size = new Size(184, 40);
             pboxCtrlClientes.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCtrlClientes.TabIndex = 23;
             pboxCtrlClientes.TabStop = false;
@@ -95,25 +91,34 @@
             // 
             // pboxCajero
             // 
-            pboxCajero.Image = Properties.Resources.Cajero1;
-            pboxCajero.Location = new Point(65, 12);
+            pboxCajero.Location = new Point(0, 0);
             pboxCajero.Name = "pboxCajero";
-            pboxCajero.Size = new Size(255, 35);
-            pboxCajero.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxCajero.TabIndex = 26;
+            pboxCajero.Size = new Size(100, 50);
+            pboxCajero.TabIndex = 0;
             pboxCajero.TabStop = false;
+            // 
+            // pboxUsuario
+            // 
+            pboxUsuario.Image = Properties.Resources.Cajero11;
+            pboxUsuario.Location = new Point(93, 12);
+            pboxUsuario.Name = "pboxUsuario";
+            pboxUsuario.Size = new Size(255, 35);
+            pboxUsuario.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxUsuario.TabIndex = 27;
+            pboxUsuario.TabStop = false;
             // 
             // MenuCajero
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(501, 458);
+            ClientSize = new Size(438, 344);
+            Controls.Add(pboxUsuario);
             Controls.Add(pboxCtrlClientes);
             Controls.Add(pboxCtrlProductos);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox3);
-           
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MenuCajero";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -123,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCajero).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxUsuario).EndInit();
             ResumeLayout(false);
         }
 
@@ -133,5 +139,6 @@
         private PictureBox pboxCtrlProductos;
         private PictureBox pboxCtrlClientes;
         private PictureBox pboxCajero;
+        private PictureBox pboxUsuario;
     }
 }

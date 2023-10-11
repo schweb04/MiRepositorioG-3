@@ -263,6 +263,16 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cajero11 {
+            get {
+                object obj = ResourceManager.GetObject("Cajero11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cliente1 {
             get {
                 object obj = ResourceManager.GetObject("Cliente1", resourceCulture);
@@ -623,6 +633,16 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Invetario12 {
+            get {
+                object obj = ResourceManager.GetObject("Invetario12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ProductoNuevo1 {
             get {
                 object obj = ResourceManager.GetObject("ProductoNuevo1", resourceCulture);
@@ -696,6 +716,16 @@ namespace sistemaCompra.Properties {
         internal static System.Drawing.Bitmap SuperUsuario1 {
             get {
                 object obj = ResourceManager.GetObject("SuperUsuario1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SuperUsuario11 {
+            get {
+                object obj = ResourceManager.GetObject("SuperUsuario11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
