@@ -62,7 +62,7 @@ namespace sistemaCompra
 
         private void pboxCtrlClientes_Click_1(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

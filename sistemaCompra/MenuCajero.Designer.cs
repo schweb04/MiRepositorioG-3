@@ -67,14 +67,7 @@
             // 
             // bienvenido
             // 
-            bienvenido.AutoSize = true;
-            bienvenido.Font = new Font("Gill Sans MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            bienvenido.ForeColor = Color.Black;
-            bienvenido.Location = new Point(187, 15);
-            bienvenido.Name = "bienvenido";
-            bienvenido.Size = new Size(127, 47);
-            bienvenido.TabIndex = 14;
-            bienvenido.Text = "Cajero";
+            
             // 
             // pboxCtrlProductos
             // 
@@ -119,7 +112,7 @@
             Controls.Add(pboxCtrlProductos);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox3);
-            Controls.Add(bienvenido);
+           
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MenuCajero";
             StartPosition = FormStartPosition.CenterScreen;

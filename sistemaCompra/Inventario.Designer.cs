@@ -44,12 +44,7 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(361, 33);
-            label1.Name = "label1";
-            label1.Size = new Size(75, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Inventario";
+            
             // 
             // pictureBox1
             // 
@@ -80,14 +75,8 @@
             dtgvProductos.Margin = new Padding(3, 4, 3, 4);
             dtgvProductos.Name = "dtgvProductos";
             dtgvProductos.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dtgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+           
+            
             dtgvProductos.RowHeadersWidth = 51;
             dtgvProductos.RowTemplate.Height = 25;
             dtgvProductos.Size = new Size(791, 299);
@@ -143,13 +132,7 @@
             // 
             // pboxInventario
             // 
-            pboxInventario.Image = Properties.Resources.Invetario11;
-            pboxInventario.Location = new Point(240, 38);
-            pboxInventario.Name = "pboxInventario";
-            pboxInventario.Size = new Size(268, 46);
-            pboxInventario.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxInventario.TabIndex = 28;
-            pboxInventario.TabStop = false;
+           
             // 
             // Inventario
             // 
@@ -158,7 +141,7 @@
             ClientSize = new Size(849, 451);
             Controls.Add(dtgvProductos);
             Controls.Add(pictureBox1);
-            Controls.Add(label1);
+           
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Inventario";
             Text = "Inventario";
