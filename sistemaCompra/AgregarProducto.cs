@@ -32,5 +32,10 @@ namespace sistemaCompra
         {
             this.Close();
         }
+
+        private void AgregarProducto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

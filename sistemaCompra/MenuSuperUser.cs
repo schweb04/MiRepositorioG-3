@@ -34,5 +34,9 @@ namespace sistemaCompra
             login.Show();
         }
 
+        private void pboxCtrlUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

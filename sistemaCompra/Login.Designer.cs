@@ -34,14 +34,10 @@
             cajaUsuario = new TextBox();
             cajaClave = new TextBox();
             mostrarPass = new CheckBox();
-            ingresar = new PictureBox();
-            pictureBox3 = new PictureBox();
             pboxUsuario = new PictureBox();
             pboxPassword = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pboxAvatar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ingresar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxUsuario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxPassword).BeginInit();
             SuspendLayout();
@@ -53,6 +49,7 @@
             resources.ApplyResources(pboxAvatar, "pboxAvatar");
             pboxAvatar.Name = "pboxAvatar";
             pboxAvatar.TabStop = false;
+            pboxAvatar.Click += pboxAvatar_Click;
             // 
             // pictureBox2
             // 
@@ -82,22 +79,6 @@
             mostrarPass.UseVisualStyleBackColor = true;
             mostrarPass.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // ingresar
-            // 
-            ingresar.Image = Properties.Resources.BotonCerrar;
-            resources.ApplyResources(ingresar, "ingresar");
-            ingresar.Name = "ingresar";
-            ingresar.TabStop = false;
-            ingresar.Click += pictureBox1_Click;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.BotonMinimizar;
-            resources.ApplyResources(pictureBox3, "pictureBox3");
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
-            // 
             // pboxUsuario
             // 
             pboxUsuario.Image = Properties.Resources.InterfazNuevo2;
@@ -114,11 +95,9 @@
             // 
             // Login
             // 
+            AutoScaleMode = AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Honeydew;
-            Controls.Add(pictureBox3);
-            Controls.Add(ingresar);
             Controls.Add(mostrarPass);
             Controls.Add(cajaClave);
             Controls.Add(cajaUsuario);
@@ -126,15 +105,13 @@
             Controls.Add(pboxAvatar);
             Controls.Add(pboxUsuario);
             Controls.Add(pboxPassword);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             HelpButton = true;
             Name = "Login";
             FormClosing += Login_FormClosing;
             Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pboxAvatar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ingresar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxUsuario).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxPassword).EndInit();
             ResumeLayout(false);
@@ -148,8 +125,6 @@
         private TextBox cajaUsuario;
         private TextBox cajaClave;
         private CheckBox mostrarPass;
-        private PictureBox ingresar;
-        private PictureBox pictureBox3;
         private PictureBox pboxUsuario;
         private PictureBox pboxPassword;
     }

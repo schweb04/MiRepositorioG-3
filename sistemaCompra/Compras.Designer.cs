@@ -39,10 +39,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(10, 292);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(11, 389);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(187, 37);
+            pictureBox1.Size = new Size(214, 49);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -52,18 +51,19 @@
             lblCompras.AutoSize = true;
             lblCompras.Font = new Font("Gill Sans MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             lblCompras.ForeColor = Color.Black;
-            lblCompras.Location = new Point(288, 9);
+            lblCompras.Location = new Point(329, 12);
             lblCompras.Name = "lblCompras";
-            lblCompras.Size = new Size(134, 38);
+            lblCompras.Size = new Size(167, 47);
             lblCompras.TabIndex = 30;
             lblCompras.Text = "Compras";
             // 
             // pboxAgregarCliente
             // 
             pboxAgregarCliente.Image = Properties.Resources.Sin_título1;
-            pboxAgregarCliente.Location = new Point(174, 101);
+            pboxAgregarCliente.Location = new Point(674, 326);
+            pboxAgregarCliente.Margin = new Padding(3, 4, 3, 4);
             pboxAgregarCliente.Name = "pboxAgregarCliente";
-            pboxAgregarCliente.Size = new Size(38, 36);
+            pboxAgregarCliente.Size = new Size(57, 58);
             pboxAgregarCliente.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAgregarCliente.TabIndex = 31;
             pboxAgregarCliente.TabStop = false;
@@ -71,14 +71,13 @@
             // 
             // Compras
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(800, 451);
             Controls.Add(pboxAgregarCliente);
             Controls.Add(lblCompras);
             Controls.Add(pictureBox1);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Compras";
             Text = "Compras";
             Load += Compras_Load;

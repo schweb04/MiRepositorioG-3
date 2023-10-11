@@ -28,5 +28,10 @@ namespace sistemaCompra
         {
             Application.Exit();
         }
+
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

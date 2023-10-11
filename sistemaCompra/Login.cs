@@ -54,6 +54,7 @@ namespace sistemaCompra
                 MessageBox.Show("El nombre de usuario debe estar comprendido entre 6 y 10 caracteres");
                 cajaClave.Clear();
                 cajaUsuario.Clear();
+
             }
 
             if (cajaClave.TextLength < 8 || cajaClave.TextLength > 12)
@@ -64,6 +65,16 @@ namespace sistemaCompra
 
             }
 
+            else
+            {
+                verificarUsuario();
+            }
+
+
+        }
+
+        private void verificarUsuario()
+        {
             if (cajaUsuario.Text.ToLower() == "jose01" && cajaClave.Text == "j1234567")
             {
                 MenuSuperUser menuSuperUser = new MenuSuperUser();
@@ -91,7 +102,6 @@ namespace sistemaCompra
                 cajaClave.Clear();
                 cajaUsuario.Clear();
             }
-
         }
 
         private void cajaUsuario_TextChanged(object sender, EventArgs e)
@@ -136,6 +146,11 @@ namespace sistemaCompra
         {
 
 
+
+        }
+
+        private void pboxAvatar_Click(object sender, EventArgs e)
+        {
 
         }
     }

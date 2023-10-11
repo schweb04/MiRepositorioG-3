@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace sistemaCompra;
 
@@ -52,5 +53,12 @@ public partial class MenuCajero : Form
     {
         Inventario inventario = new Inventario();
         inventario.ShowDialog();
+    }
+
+    private void pboxCtrlClientes_Click(object sender, EventArgs e)
+    {
+        CtrlCliente ctrCliente = new CtrlCliente(OrigenMenu.Cajero);
+        ctrCliente.Show();
+        this.Close();
     }
 }

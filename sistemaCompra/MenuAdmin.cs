@@ -55,11 +55,14 @@ namespace sistemaCompra
 
         private void pboxCtrlClientes_Click(object sender, EventArgs e)
         {
-            CtrlCliente ctrlCliente = new CtrlCliente();
-            this.Hide();
+            CtrlCliente ctrlCliente = new CtrlCliente(OrigenMenu.Admin);
             ctrlCliente.Show();
+            this.Close();
         }
 
-        
+        private void pboxCtrlClientes_Click_1(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
