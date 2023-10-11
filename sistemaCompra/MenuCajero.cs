@@ -29,7 +29,7 @@ public partial class MenuCajero : Form
 
     }
 
-    
+
 
     private void pictureBox4_Click(object sender, EventArgs e)
     {

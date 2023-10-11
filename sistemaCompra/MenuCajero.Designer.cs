@@ -47,10 +47,10 @@
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.BotonCerrarSesion;
-            pictureBox6.Location = new Point(12, 285);
+            pictureBox6.Location = new Point(12, 291);
             pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(180, 42);
+            pictureBox6.Size = new Size(180, 36);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 20;
             pictureBox6.TabStop = false;
