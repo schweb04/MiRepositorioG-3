@@ -17,6 +17,19 @@ namespace sistemaCompra
             InitializeComponent();
         }
 
-        
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pboxVolver_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

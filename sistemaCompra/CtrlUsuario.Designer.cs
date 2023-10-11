@@ -83,7 +83,7 @@
             // pboxAgregar
             // 
             pboxAgregar.Image = Properties.Resources.ControlUsuario2;
-            pboxAgregar.Location = new Point(105, 84);
+            pboxAgregar.Location = new Point(105, 82);
             pboxAgregar.Margin = new Padding(3, 2, 3, 2);
             pboxAgregar.Name = "pboxAgregar";
             pboxAgregar.Size = new Size(183, 43);
@@ -95,7 +95,7 @@
             // pboxEditar
             // 
             pboxEditar.Image = Properties.Resources.ControlUsuario3;
-            pboxEditar.Location = new Point(105, 136);
+            pboxEditar.Location = new Point(105, 140);
             pboxEditar.Margin = new Padding(3, 2, 3, 2);
             pboxEditar.Name = "pboxEditar";
             pboxEditar.Size = new Size(183, 43);
@@ -106,7 +106,7 @@
             // pboxEliminar
             // 
             pboxEliminar.Image = Properties.Resources.ControlUsuario4;
-            pboxEliminar.Location = new Point(105, 184);
+            pboxEliminar.Location = new Point(105, 196);
             pboxEliminar.Margin = new Padding(3, 2, 3, 2);
             pboxEliminar.Name = "pboxEliminar";
             pboxEliminar.Size = new Size(183, 43);
@@ -117,10 +117,10 @@
             // pboxVolver
             // 
             pboxVolver.Image = Properties.Resources.BotonSalirMenu;
-            pboxVolver.Location = new Point(12, 238);
+            pboxVolver.Location = new Point(12, 253);
             pboxVolver.Margin = new Padding(3, 2, 3, 2);
             pboxVolver.Name = "pboxVolver";
-            pboxVolver.Size = new Size(183, 43);
+            pboxVolver.Size = new Size(183, 37);
             pboxVolver.SizeMode = PictureBoxSizeMode.Zoom;
             pboxVolver.TabIndex = 49;
             pboxVolver.TabStop = false;
@@ -130,7 +130,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(409, 292);
+            ClientSize = new Size(409, 301);
             Controls.Add(pboxVolver);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);

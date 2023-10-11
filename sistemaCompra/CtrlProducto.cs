@@ -26,5 +26,10 @@ namespace sistemaCompra
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void pboxVolver_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

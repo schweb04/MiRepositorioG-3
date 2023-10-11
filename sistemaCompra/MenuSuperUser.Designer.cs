@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSuperUser));
-            bienvenido = new Label();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
@@ -37,6 +36,7 @@
             pictureBox1 = new PictureBox();
             pictureBox7 = new PictureBox();
             pboxCtrlUsuarios = new PictureBox();
+            pboxSuperUsuario = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -44,24 +44,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxSuperUsuario).BeginInit();
             SuspendLayout();
-            // 
-            // bienvenido
-            // 
-            bienvenido.AutoSize = true;
-            bienvenido.Font = new Font("Gill Sans MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            bienvenido.ForeColor = Color.Black;
-            bienvenido.Location = new Point(52, 38);
-            bienvenido.Name = "bienvenido";
-            bienvenido.Size = new Size(337, 38);
-            bienvenido.TabIndex = 1;
-            bienvenido.Text = "Bienvenido, superusuario";
             // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.BotonMinimizar;
             pictureBox4.ImeMode = ImeMode.NoControl;
-            pictureBox4.Location = new Point(370, 11);
+            pictureBox4.Location = new Point(370, 20);
             pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(36, 25);
@@ -74,7 +64,7 @@
             // 
             pictureBox5.Image = Properties.Resources.BotonCerrar;
             pictureBox5.ImeMode = ImeMode.NoControl;
-            pictureBox5.Location = new Point(412, 4);
+            pictureBox5.Location = new Point(412, 11);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(40, 34);
@@ -137,12 +127,23 @@
             pboxCtrlUsuarios.TabIndex = 19;
             pboxCtrlUsuarios.TabStop = false;
             // 
+            // pboxSuperUsuario
+            // 
+            pboxSuperUsuario.Image = Properties.Resources.SuperUsuario1;
+            pboxSuperUsuario.Location = new Point(109, 12);
+            pboxSuperUsuario.Name = "pboxSuperUsuario";
+            pboxSuperUsuario.Size = new Size(255, 35);
+            pboxSuperUsuario.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxSuperUsuario.TabIndex = 27;
+            pboxSuperUsuario.TabStop = false;
+            // 
             // MenuSuperUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Honeydew;
             ClientSize = new Size(464, 356);
+            Controls.Add(pboxSuperUsuario);
             Controls.Add(pboxCtrlUsuarios);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox1);
@@ -150,7 +151,6 @@
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
-            Controls.Add(bienvenido);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "MenuSuperUser";
@@ -163,12 +163,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxSuperUsuario).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Label bienvenido;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
@@ -176,5 +175,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox7;
         private PictureBox pboxCtrlUsuarios;
+        private PictureBox pboxSuperUsuario;
     }
 }

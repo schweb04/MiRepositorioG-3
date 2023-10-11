@@ -33,15 +33,16 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox3 = new PictureBox();
-            bienvenido = new Label();
             pboxCtrlProductos = new PictureBox();
             pboxCtrlClientes = new PictureBox();
+            pboxCajero = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCajero).BeginInit();
             SuspendLayout();
             // 
             // pictureBox6
@@ -94,17 +95,6 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
-            // bienvenido
-            // 
-            bienvenido.AutoSize = true;
-            bienvenido.Font = new Font("Gill Sans MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            bienvenido.ForeColor = Color.Black;
-            bienvenido.Location = new Point(164, 11);
-            bienvenido.Name = "bienvenido";
-            bienvenido.Size = new Size(102, 38);
-            bienvenido.TabIndex = 14;
-            bienvenido.Text = "Cajero";
-            // 
             // pboxCtrlProductos
             // 
             pboxCtrlProductos.Image = Properties.Resources.Admin4;
@@ -126,18 +116,28 @@
             pboxCtrlClientes.TabIndex = 23;
             pboxCtrlClientes.TabStop = false;
             // 
+            // pboxCajero
+            // 
+            pboxCajero.Image = Properties.Resources.Cajero1;
+            pboxCajero.Location = new Point(65, 12);
+            pboxCajero.Name = "pboxCajero";
+            pboxCajero.Size = new Size(255, 35);
+            pboxCajero.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxCajero.TabIndex = 26;
+            pboxCajero.TabStop = false;
+            // 
             // MenuCajero
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(427, 338);
+            Controls.Add(pboxCajero);
             Controls.Add(pboxCtrlClientes);
             Controls.Add(pboxCtrlProductos);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox3);
-            Controls.Add(bienvenido);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "MenuCajero";
@@ -150,8 +150,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCajero).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -160,8 +160,8 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox3;
-        private Label bienvenido;
         private PictureBox pboxCtrlProductos;
         private PictureBox pboxCtrlClientes;
+        private PictureBox pboxCajero;
     }
 }
