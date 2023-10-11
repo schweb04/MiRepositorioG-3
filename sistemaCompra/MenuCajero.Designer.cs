@@ -106,10 +106,10 @@
             // pboxAgregarProducto
             // 
             pboxAgregarProducto.Image = Properties.Resources.Sin_título;
-            pboxAgregarProducto.Location = new Point(247, 355);
+            pboxAgregarProducto.Location = new Point(212, 95);
             pboxAgregarProducto.Margin = new Padding(3, 4, 3, 4);
             pboxAgregarProducto.Name = "pboxAgregarProducto";
-            pboxAgregarProducto.Size = new Size(70, 80);
+            pboxAgregarProducto.Size = new Size(67, 64);
             pboxAgregarProducto.TabIndex = 21;
             pboxAgregarProducto.TabStop = false;
             pboxAgregarProducto.Click += pboxAgregarProducto_Click;
