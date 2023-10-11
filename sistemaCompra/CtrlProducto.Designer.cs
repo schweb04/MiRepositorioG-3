@@ -34,6 +34,10 @@
             lblCtrlProductos = new Label();
             pboxVolver = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pboxVolver).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             SuspendLayout();
             // 
             // btnEliminar
@@ -88,6 +92,47 @@
             pboxVolver.TabStop = false;
             pboxVolver.Click += pboxVolver_Click;
             // 
+            pboxCtrlProductos.Image = Properties.Resources.ControlProductos1;
+            pboxCtrlProductos.Location = new Point(22, 10);
+            pboxCtrlProductos.Name = "pboxCtrlProductos";
+            pboxCtrlProductos.Size = new Size(296, 49);
+            pboxCtrlProductos.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxCtrlProductos.TabIndex = 51;
+            pboxCtrlProductos.TabStop = false;
+            // 
+            // pboxAgregar
+            // 
+            pboxAgregar.Image = Properties.Resources.ControlProducto4;
+            pboxAgregar.Location = new Point(121, 76);
+            pboxAgregar.Margin = new Padding(3, 2, 3, 2);
+            pboxAgregar.Name = "pboxAgregar";
+            pboxAgregar.Size = new Size(183, 43);
+            pboxAgregar.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxAgregar.TabIndex = 52;
+            pboxAgregar.TabStop = false;
+            // 
+            // pboxEditar
+            // 
+            pboxEditar.Image = Properties.Resources.ControlProducto3;
+            pboxEditar.Location = new Point(121, 134);
+            pboxEditar.Margin = new Padding(3, 2, 3, 2);
+            pboxEditar.Name = "pboxEditar";
+            pboxEditar.Size = new Size(183, 43);
+            pboxEditar.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxEditar.TabIndex = 53;
+            pboxEditar.TabStop = false;
+            // 
+            // pboxEliminar
+            // 
+            pboxEliminar.Image = Properties.Resources.ControlProducto2;
+            pboxEliminar.Location = new Point(121, 191);
+            pboxEliminar.Margin = new Padding(3, 2, 3, 2);
+            pboxEliminar.Name = "pboxEliminar";
+            pboxEliminar.Size = new Size(183, 43);
+            pboxEliminar.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxEliminar.TabIndex = 54;
+            pboxEliminar.TabStop = false;
+            // 
             // CtrlProducto
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -103,8 +148,11 @@
             Name = "CtrlProducto";
             Text = "Producto";
             ((System.ComponentModel.ISupportInitialize)pboxVolver).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAgregar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxEditar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxEliminar).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -113,5 +161,9 @@
         private Button btnAgregar;
         private Label lblCtrlProductos;
         private PictureBox pboxVolver;
+        private PictureBox pboxCtrlProductos;
+        private PictureBox pboxAgregar;
+        private PictureBox pboxEditar;
+        private PictureBox pboxEliminar;
     }
 }

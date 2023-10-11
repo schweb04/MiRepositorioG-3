@@ -31,13 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuCajero));
             pictureBox6 = new PictureBox();
             pictureBox3 = new PictureBox();
-            bienvenido = new Label();
             pboxCtrlProductos = new PictureBox();
             pboxCtrlClientes = new PictureBox();
+            pboxCajero = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCajero).BeginInit();
             SuspendLayout();
             // 
             // pictureBox6
@@ -99,6 +100,16 @@
             pboxCtrlClientes.TabStop = false;
             pboxCtrlClientes.Click += pboxCtrlClientes_Click;
             // 
+            // pboxCajero
+            // 
+            pboxCajero.Image = Properties.Resources.Cajero1;
+            pboxCajero.Location = new Point(65, 12);
+            pboxCajero.Name = "pboxCajero";
+            pboxCajero.Size = new Size(255, 35);
+            pboxCajero.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxCajero.TabIndex = 26;
+            pboxCajero.TabStop = false;
+            // 
             // MenuCajero
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -118,16 +129,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCajero).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pictureBox6;
         private PictureBox pictureBox3;
-        private Label bienvenido;
         private PictureBox pboxCtrlProductos;
         private PictureBox pboxCtrlClientes;
+        private PictureBox pboxCajero;
     }
 }

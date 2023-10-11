@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            label1 = new Label();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             pictureBox1 = new PictureBox();
             dtgvProductos = new DataGridView();
             clmCodigo = new DataGridViewTextBoxColumn();
@@ -65,14 +64,14 @@
             // dtgvProductos
             // 
             dtgvProductos.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(90, 180, 0);
-            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 180, 0);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dtgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(90, 180, 0);
+            dataGridViewCellStyle3.Font = new Font("OCR A Extended", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 180, 0);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dtgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dtgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvProductos.Columns.AddRange(new DataGridViewColumn[] { clmCodigo, clmNombre, clmCantidad, clmUnidad, clmCosto, clmPrecio });
             dtgvProductos.EnableHeadersVisualStyles = false;
@@ -142,6 +141,16 @@
             clmPrecio.ReadOnly = true;
             clmPrecio.Width = 125;
             // 
+            // pboxInventario
+            // 
+            pboxInventario.Image = Properties.Resources.Invetario11;
+            pboxInventario.Location = new Point(240, 38);
+            pboxInventario.Name = "pboxInventario";
+            pboxInventario.Size = new Size(268, 46);
+            pboxInventario.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxInventario.TabIndex = 28;
+            pboxInventario.TabStop = false;
+            // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -157,12 +166,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvProductos).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private PictureBox pictureBox1;
         private DataGridView dtgvProductos;
         private DataGridViewTextBoxColumn clmCodigo;

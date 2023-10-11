@@ -65,7 +65,7 @@
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // lblCtrlClientes
+            // pboxEditar
             // 
             lblCtrlClientes.AutoSize = true;
             lblCtrlClientes.Font = new Font("Gill Sans MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
@@ -76,7 +76,7 @@
             lblCtrlClientes.TabIndex = 24;
             lblCtrlClientes.Text = "Control de Clientes";
             // 
-            // btnVolver
+            // pboxEliminar
             // 
             btnVolver.Location = new Point(14, 307);
             btnVolver.Margin = new Padding(3, 4, 3, 4);
@@ -103,7 +103,6 @@
             Text = "CtrlCliente";
             Load += CtrlCliente_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
