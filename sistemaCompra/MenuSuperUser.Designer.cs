@@ -32,12 +32,8 @@
             bienvenido = new Label();
             pictureBox6 = new PictureBox();
             pictureBox3 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            pictureBox7 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // bienvenido
@@ -66,29 +62,11 @@
             // 
             pictureBox3.ErrorImage = (Image)resources.GetObject("pictureBox3.ErrorImage");
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(115, 293);
+            pictureBox3.Location = new Point(124, 219);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(274, 53);
             pictureBox3.TabIndex = 14;
             pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(98, 151);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(313, 51);
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(88, 222);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(336, 52);
-            pictureBox7.TabIndex = 16;
-            pictureBox7.TabStop = false;
             // 
             // MenuSuperUser
             // 
@@ -96,8 +74,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Honeydew;
             ClientSize = new Size(530, 475);
-            Controls.Add(pictureBox7);
-            Controls.Add(pictureBox1);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox6);
             Controls.Add(bienvenido);
@@ -107,16 +83,13 @@
             Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private Label bienvenido;
         private PictureBox pictureBox6;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox7;
     }
 }

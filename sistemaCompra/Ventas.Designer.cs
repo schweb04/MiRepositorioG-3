@@ -1,6 +1,6 @@
 ﻿namespace sistemaCompra
 {
-    partial class Factura
+    partial class Ventas
     {
         /// <summary>
         /// Required designer variable.

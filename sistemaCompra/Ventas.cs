@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sistemaCompra
 {
-    public partial class Factura : Form
+    public partial class Ventas : Form
     {
-        public Factura()
+        public Ventas()
         {
             InitializeComponent();
         }
