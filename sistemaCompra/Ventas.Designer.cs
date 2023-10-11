@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -45,15 +46,18 @@
             label9 = new Label();
             textBox7 = new TextBox();
             Cantidad = new Label();
-            dataGridView1 = new DataGridView();
-            Nombre = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
-            Cantid = new DataGridViewTextBoxColumn();
             TOTAL = new Label();
             label11 = new Label();
             label12 = new Label();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dtgvProductosSeleccionados = new DataGridView();
+            clmCodigo = new DataGridViewTextBoxColumn();
+            clmNombre = new DataGridViewTextBoxColumn();
+            clmCantidad = new DataGridViewTextBoxColumn();
+            clmUnidad = new DataGridViewTextBoxColumn();
+            clmCosto = new DataGridViewTextBoxColumn();
+            clmPrecio = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dtgvProductosSeleccionados).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -208,40 +212,6 @@
             Cantidad.TabIndex = 15;
             Cantidad.Text = "Cantidad";
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre, Precio, Cantid });
-            dataGridView1.Location = new Point(299, 42);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(389, 86);
-            dataGridView1.TabIndex = 17;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Nombre
-            // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.MinimumWidth = 6;
-            Nombre.Name = "Nombre";
-            Nombre.Width = 125;
-            // 
-            // Precio
-            // 
-            Precio.HeaderText = "Precio";
-            Precio.MinimumWidth = 6;
-            Precio.Name = "Precio";
-            Precio.Width = 125;
-            // 
-            // Cantid
-            // 
-            Cantid.HeaderText = "Cantidad";
-            Cantid.MinimumWidth = 6;
-            Cantid.Name = "Cantid";
-            Cantid.Width = 125;
-            // 
             // TOTAL
             // 
             TOTAL.AutoSize = true;
@@ -278,16 +248,87 @@
             button1.Text = "Generar Factura";
             button1.UseVisualStyleBackColor = true;
             // 
+            // dtgvProductosSeleccionados
+            // 
+            dtgvProductosSeleccionados.AllowUserToAddRows = false;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(90, 180, 0);
+            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(255, 180, 0);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dtgvProductosSeleccionados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dtgvProductosSeleccionados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvProductosSeleccionados.Columns.AddRange(new DataGridViewColumn[] { clmCodigo, clmNombre, clmCantidad, clmUnidad, clmCosto, clmPrecio });
+            dtgvProductosSeleccionados.EnableHeadersVisualStyles = false;
+            dtgvProductosSeleccionados.GridColor = Color.FromArgb(168, 223, 0);
+            dtgvProductosSeleccionados.Location = new Point(370, 63);
+            dtgvProductosSeleccionados.Name = "dtgvProductosSeleccionados";
+            dtgvProductosSeleccionados.ReadOnly = true;
+            dtgvProductosSeleccionados.RowHeadersWidth = 51;
+            dtgvProductosSeleccionados.RowTemplate.Height = 25;
+            dtgvProductosSeleccionados.Size = new Size(418, 96);
+            dtgvProductosSeleccionados.TabIndex = 22;
+            // 
+            // clmCodigo
+            // 
+            clmCodigo.HeaderText = "Código";
+            clmCodigo.MinimumWidth = 6;
+            clmCodigo.Name = "clmCodigo";
+            clmCodigo.ReadOnly = true;
+            clmCodigo.Width = 125;
+            // 
+            // clmNombre
+            // 
+            clmNombre.HeaderText = "Nombre";
+            clmNombre.MinimumWidth = 6;
+            clmNombre.Name = "clmNombre";
+            clmNombre.ReadOnly = true;
+            clmNombre.Width = 125;
+            // 
+            // clmCantidad
+            // 
+            clmCantidad.HeaderText = "Cantidad";
+            clmCantidad.MinimumWidth = 6;
+            clmCantidad.Name = "clmCantidad";
+            clmCantidad.ReadOnly = true;
+            clmCantidad.Width = 125;
+            // 
+            // clmUnidad
+            // 
+            clmUnidad.HeaderText = "Ud. de Medida";
+            clmUnidad.MinimumWidth = 6;
+            clmUnidad.Name = "clmUnidad";
+            clmUnidad.ReadOnly = true;
+            clmUnidad.Width = 125;
+            // 
+            // clmCosto
+            // 
+            clmCosto.HeaderText = "Costo Unitario";
+            clmCosto.MinimumWidth = 6;
+            clmCosto.Name = "clmCosto";
+            clmCosto.ReadOnly = true;
+            clmCosto.Width = 125;
+            // 
+            // clmPrecio
+            // 
+            clmPrecio.HeaderText = "Precio de Venta";
+            clmPrecio.MinimumWidth = 6;
+            clmPrecio.Name = "clmPrecio";
+            clmPrecio.ReadOnly = true;
+            clmPrecio.Width = 125;
+            // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(715, 333);
+            ClientSize = new Size(826, 333);
+            Controls.Add(dtgvProductosSeleccionados);
             Controls.Add(button1);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(TOTAL);
-            Controls.Add(dataGridView1);
             Controls.Add(textBox7);
             Controls.Add(Cantidad);
             Controls.Add(label9);
@@ -308,7 +349,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Ventas";
             Text = "Ventas";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvProductosSeleccionados).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -332,13 +373,16 @@
         private Label label9;
         private TextBox textBox7;
         private Label Cantidad;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Precio;
-        private DataGridViewTextBoxColumn Cantid;
         private Label TOTAL;
         private Label label11;
         private Label label12;
         private Button button1;
+        private DataGridView dtgvProductosSeleccionados;
+        private DataGridViewTextBoxColumn clmCodigo;
+        private DataGridViewTextBoxColumn clmNombre;
+        private DataGridViewTextBoxColumn clmCantidad;
+        private DataGridViewTextBoxColumn clmUnidad;
+        private DataGridViewTextBoxColumn clmCosto;
+        private DataGridViewTextBoxColumn clmPrecio;
     }
 }

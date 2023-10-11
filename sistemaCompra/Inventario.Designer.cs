@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pictureBox1 = new PictureBox();
-            dtgvProductos = new DataGridView();
+            dtgvProductosInventario = new DataGridView();
             clmCodigo = new DataGridViewTextBoxColumn();
             clmNombre = new DataGridViewTextBoxColumn();
             clmCantidad = new DataGridViewTextBoxColumn();
@@ -39,7 +39,7 @@
             clmPrecio = new DataGridViewTextBoxColumn();
             pboxInvent = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dtgvProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvProductosInventario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxInvent).BeginInit();
             SuspendLayout();
             // 
@@ -54,28 +54,28 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // dtgvProductos
+            // dtgvProductosInventario
             // 
-            dtgvProductos.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(90, 180, 0);
-            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 180, 0);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dtgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dtgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvProductos.Columns.AddRange(new DataGridViewColumn[] { clmCodigo, clmNombre, clmCantidad, clmUnidad, clmCosto, clmPrecio });
-            dtgvProductos.EnableHeadersVisualStyles = false;
-            dtgvProductos.GridColor = Color.FromArgb(168, 223, 0);
-            dtgvProductos.Location = new Point(31, 181);
-            dtgvProductos.Name = "dtgvProductos";
-            dtgvProductos.ReadOnly = true;
-            dtgvProductos.RowHeadersWidth = 51;
-            dtgvProductos.RowTemplate.Height = 25;
-            dtgvProductos.Size = new Size(692, 96);
-            dtgvProductos.TabIndex = 3;
+            dtgvProductosInventario.AllowUserToAddRows = false;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(90, 180, 0);
+            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(255, 180, 0);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dtgvProductosInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dtgvProductosInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvProductosInventario.Columns.AddRange(new DataGridViewColumn[] { clmCodigo, clmNombre, clmCantidad, clmUnidad, clmCosto, clmPrecio });
+            dtgvProductosInventario.EnableHeadersVisualStyles = false;
+            dtgvProductosInventario.GridColor = Color.FromArgb(168, 223, 0);
+            dtgvProductosInventario.Location = new Point(12, 84);
+            dtgvProductosInventario.Name = "dtgvProductosInventario";
+            dtgvProductosInventario.ReadOnly = true;
+            dtgvProductosInventario.RowHeadersWidth = 51;
+            dtgvProductosInventario.RowTemplate.Height = 25;
+            dtgvProductosInventario.Size = new Size(804, 96);
+            dtgvProductosInventario.TabIndex = 3;
             // 
             // clmCodigo
             // 
@@ -128,7 +128,7 @@
             // pboxInvent
             // 
             pboxInvent.Image = Properties.Resources.Invetario121;
-            pboxInvent.Location = new Point(257, 12);
+            pboxInvent.Location = new Point(316, 12);
             pboxInvent.Name = "pboxInvent";
             pboxInvent.Size = new Size(240, 47);
             pboxInvent.SizeMode = PictureBoxSizeMode.Zoom;
@@ -139,9 +139,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(743, 338);
+            ClientSize = new Size(828, 338);
             Controls.Add(pboxInvent);
-            Controls.Add(dtgvProductos);
+            Controls.Add(dtgvProductosInventario);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
@@ -149,14 +149,14 @@
             Text = "Inventario";
             Load += Inventario_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dtgvProductos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvProductosInventario).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxInvent).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private PictureBox pictureBox1;
-        private DataGridView dtgvProductos;
+        private DataGridView dtgvProductosInventario;
         private DataGridViewTextBoxColumn clmCodigo;
         private DataGridViewTextBoxColumn clmNombre;
         private DataGridViewTextBoxColumn clmCantidad;
