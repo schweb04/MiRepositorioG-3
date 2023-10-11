@@ -83,7 +83,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "MenuSuperUser";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Menu";
+            Text = "MenuSuperUser";
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxSuperUsuario).EndInit();

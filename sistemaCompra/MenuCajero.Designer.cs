@@ -121,7 +121,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "MenuCajero";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "MenuCajero";
             Load += MenuCajero_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

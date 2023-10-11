@@ -212,12 +212,12 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre, Precio, Cantid });
-            dataGridView1.Location = new Point(286, 42);
+            dataGridView1.Location = new Point(299, 42);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(374, 46);
+            dataGridView1.Size = new Size(389, 86);
             dataGridView1.TabIndex = 17;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -278,7 +278,7 @@
             button1.Text = "Generar Factura";
             button1.UseVisualStyleBackColor = true;
             // 
-            // Factura
+            // Ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -306,8 +306,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "Factura";
-            Text = "Factura";
+            Name = "Ventas";
+            Text = "Ventas";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
