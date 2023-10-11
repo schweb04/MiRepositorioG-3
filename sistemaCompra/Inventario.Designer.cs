@@ -39,11 +39,11 @@
             clmCosto = new DataGridViewTextBoxColumn();
             clmPrecio = new DataGridViewTextBoxColumn();
             pictureBox5 = new PictureBox();
-            this.pboxInventario = new PictureBox();
+            pboxInventario = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.pboxInventario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxInventario).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -138,20 +138,20 @@
             // 
             // pboxInventario
             // 
-            this.pboxInventario.Image = Properties.Resources.Invetario1;
-            this.pboxInventario.Location = new Point(248, 11);
-            this.pboxInventario.Name = "pboxInventario";
-            this.pboxInventario.Size = new Size(255, 35);
-            this.pboxInventario.SizeMode = PictureBoxSizeMode.Zoom;
-            this.pboxInventario.TabIndex = 28;
-            this.pboxInventario.TabStop = false;
+            pboxInventario.Image = Properties.Resources.Invetario11;
+            pboxInventario.Location = new Point(240, 38);
+            pboxInventario.Name = "pboxInventario";
+            pboxInventario.Size = new Size(268, 46);
+            pboxInventario.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxInventario.TabIndex = 28;
+            pboxInventario.TabStop = false;
             // 
             // Inventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(743, 338);
-            Controls.Add(this.pboxInventario);
+            Controls.Add(pboxInventario);
             Controls.Add(pictureBox5);
             Controls.Add(dtgvProductos);
             Controls.Add(pictureBox1);
@@ -162,7 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvProductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.pboxInventario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxInventario).EndInit();
             ResumeLayout(false);
         }
 
@@ -176,5 +176,6 @@
         private DataGridViewTextBoxColumn clmCosto;
         private DataGridViewTextBoxColumn clmPrecio;
         private PictureBox pictureBox5;
+        private PictureBox pboxInventario;
     }
 }

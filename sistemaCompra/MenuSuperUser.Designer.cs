@@ -130,7 +130,7 @@
             // pboxSuperUsuario
             // 
             pboxSuperUsuario.Image = Properties.Resources.SuperUsuario1;
-            pboxSuperUsuario.Location = new Point(109, 12);
+            pboxSuperUsuario.Location = new Point(95, 12);
             pboxSuperUsuario.Name = "pboxSuperUsuario";
             pboxSuperUsuario.Size = new Size(255, 35);
             pboxSuperUsuario.SizeMode = PictureBoxSizeMode.Zoom;
@@ -142,7 +142,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Honeydew;
-            ClientSize = new Size(464, 356);
+            ClientSize = new Size(473, 360);
             Controls.Add(pboxSuperUsuario);
             Controls.Add(pboxCtrlUsuarios);
             Controls.Add(pictureBox7);
