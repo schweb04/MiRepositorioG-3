@@ -29,15 +29,5 @@ namespace sistemaCompra
             AgregarUsuario agregarUsuario = new AgregarUsuario();
             agregarUsuario.ShowDialog();
         }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

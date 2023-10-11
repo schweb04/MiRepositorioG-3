@@ -21,32 +21,13 @@ public partial class MenuCajero : Form
     private void pictureBox6_Click(object sender, EventArgs e)
     {
         Login login = new Login();
-        this.Hide();
         login.Show();
+        this.Hide();
     }
 
     private void MenuCajero_Load(object sender, EventArgs e)
     {
 
-    }
-
-
-
-    private void pictureBox4_Click(object sender, EventArgs e)
-    {
-        this.WindowState = FormWindowState.Minimized;
-    }
-
-    private void pictureBox5_Click(object sender, EventArgs e)
-    {
-        Application.Exit();
-    }
-
-    private void pboxCtrlProductos_Click(object sender, EventArgs e)
-    {
-        CtrlProducto ctrlProducto = new CtrlProducto();
-        this.Hide();
-        ctrlProducto.Show();
     }
 
     private void pictureBox3_Click(object sender, EventArgs e)
@@ -59,6 +40,13 @@ public partial class MenuCajero : Form
     {
         CtrlCliente ctrCliente = new CtrlCliente(OrigenMenu.Cajero);
         ctrCliente.Show();
-        this.Close();
+        this.Hide();
+    }
+
+    private void pboxCtrlProductos_Click(object sender, EventArgs e)
+    {
+        //CtrlProducto ctrlProducto(OrigenMenu.Cajero);
+        //ctrlProducto.Show();
+        //this.Hide();
     }
 }

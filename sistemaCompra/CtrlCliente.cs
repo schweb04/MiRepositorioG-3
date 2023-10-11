@@ -34,18 +34,25 @@ namespace sistemaCompra
 
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+
+        private void pboxAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarUsuario agregarUsuario = new AgregarUsuario();
+            agregarUsuario.ShowDialog();
+        }
+
+        private void pboxVolver2_Click(object sender, EventArgs e)
         {
             switch (origen)
             {
                 case OrigenMenu.Cajero:
-                   
+
                     MenuCajero formMenuCajero = new MenuCajero();
                     formMenuCajero.Show();
                     break;
 
                 case OrigenMenu.Admin:
-                    
+
                     MenuAdmin formMenuAdmin = new MenuAdmin();
                     formMenuAdmin.Show();
                     break;

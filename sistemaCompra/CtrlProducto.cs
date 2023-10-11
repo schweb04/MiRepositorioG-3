@@ -17,21 +17,19 @@ namespace sistemaCompra
             InitializeComponent();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void pboxVolver_Click(object sender, EventArgs e)
         {
             MenuAdmin menuAdmin = new MenuAdmin();
-            this.Hide();
             menuAdmin.Show();
+            this.Hide();
         }
+
+        private void pboxAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarProducto agregarProducto = new AgregarProducto();
+            agregarProducto.ShowDialog();
+        }
+
+       
     }
 }
