@@ -139,7 +139,7 @@
             // 
             // pboxCodigoProducto
             // 
-            pboxCodigoProducto.Image = Properties.Resources.Agregar2;
+            pboxCodigoProducto.Image = Properties.Resources.ClienteNuevo2;
             pboxCodigoProducto.Location = new Point(25, 74);
             pboxCodigoProducto.Name = "pboxCodigoProducto";
             pboxCodigoProducto.Size = new Size(221, 45);
@@ -149,7 +149,7 @@
             // 
             // pboxAgregarPr
             // 
-            pboxAgregarPr.Image = Properties.Resources.Agregar1;
+            pboxAgregarPr.Image = Properties.Resources.ProductoNuevo1;
             pboxAgregarPr.Location = new Point(253, 11);
             pboxAgregarPr.Name = "pboxAgregarPr";
             pboxAgregarPr.Size = new Size(294, 46);
@@ -159,7 +159,7 @@
             // 
             // pboxNombreProducto
             // 
-            pboxNombreProducto.Image = Properties.Resources.Agregar3;
+            pboxNombreProducto.Image = Properties.Resources.ClienteNuevo3;
             pboxNombreProducto.Location = new Point(267, 74);
             pboxNombreProducto.Name = "pboxNombreProducto";
             pboxNombreProducto.Size = new Size(235, 45);
@@ -169,7 +169,7 @@
             // 
             // pboxCantidad
             // 
-            pboxCantidad.Image = Properties.Resources.Agregar4;
+            pboxCantidad.Image = Properties.Resources.ProductoNuevo2;
             pboxCantidad.Location = new Point(25, 135);
             pboxCantidad.Name = "pboxCantidad";
             pboxCantidad.Size = new Size(221, 45);
@@ -179,7 +179,7 @@
             // 
             // pboxUnidad
             // 
-            pboxUnidad.Image = Properties.Resources.Agregar5;
+            pboxUnidad.Image = Properties.Resources.ProductoNuevo3;
             pboxUnidad.Location = new Point(145, 194);
             pboxUnidad.Name = "pboxUnidad";
             pboxUnidad.Size = new Size(236, 43);
@@ -189,7 +189,7 @@
             // 
             // pboxCosto
             // 
-            pboxCosto.Image = Properties.Resources.Agregar6;
+            pboxCosto.Image = Properties.Resources.ProductoNuevo4;
             pboxCosto.Location = new Point(267, 135);
             pboxCosto.Name = "pboxCosto";
             pboxCosto.Size = new Size(247, 41);
@@ -199,7 +199,7 @@
             // 
             // pboxPrecio
             // 
-            pboxPrecio.Image = Properties.Resources.Agregar7;
+            pboxPrecio.Image = Properties.Resources.ProductoNuevo5;
             pboxPrecio.Location = new Point(534, 135);
             pboxPrecio.Name = "pboxPrecio";
             pboxPrecio.Size = new Size(262, 41);

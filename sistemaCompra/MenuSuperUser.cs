@@ -17,23 +17,6 @@ namespace sistemaCompra
             InitializeComponent();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void M_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Inventario inventario = new Inventario();
-            this.Hide();
-            inventario.Show();
-        }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -44,20 +27,6 @@ namespace sistemaCompra
             Application.Exit();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Control control = new Control();
-            this.Hide();
-            control.Show();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            Compras compra = new Compras();
-            this.Hide();
-            compra.Show();
-        }
-
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             Login login = new Login();
@@ -65,24 +34,5 @@ namespace sistemaCompra
             login.Show();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

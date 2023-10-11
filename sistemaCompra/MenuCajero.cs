@@ -29,10 +29,7 @@ public partial class MenuCajero : Form
 
     }
 
-    private void bienvenido_Click(object sender, EventArgs e)
-    {
 
-    }
 
     private void pictureBox4_Click(object sender, EventArgs e)
     {
@@ -44,9 +41,16 @@ public partial class MenuCajero : Form
         Application.Exit();
     }
 
-    private void pboxAgregarProducto_Click(object sender, EventArgs e)
+    private void pboxCtrlProductos_Click(object sender, EventArgs e)
     {
-        AgregarProducto agregarProducto = new AgregarProducto();
-        agregarProducto.ShowDialog();
+        CtrlProducto ctrlProducto = new CtrlProducto();
+        this.Hide();
+        ctrlProducto.Show();
+    }
+
+    private void pictureBox3_Click(object sender, EventArgs e)
+    {
+        Inventario inventario = new Inventario();
+        inventario.ShowDialog();
     }
 }

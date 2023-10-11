@@ -100,14 +100,14 @@
             // 
             // pboxUsuario
             // 
-            pboxUsuario.Image = Properties.Resources.Interfaz2;
+            pboxUsuario.Image = Properties.Resources.InterfazNuevo2;
             resources.ApplyResources(pboxUsuario, "pboxUsuario");
             pboxUsuario.Name = "pboxUsuario";
             pboxUsuario.TabStop = false;
             // 
             // pboxPassword
             // 
-            pboxPassword.Image = Properties.Resources.Interfaz3;
+            pboxPassword.Image = Properties.Resources.InterfazNuevo3;
             resources.ApplyResources(pboxPassword, "pboxPassword");
             pboxPassword.Name = "pboxPassword";
             pboxPassword.TabStop = false;
