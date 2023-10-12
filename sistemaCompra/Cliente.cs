@@ -11,9 +11,10 @@ namespace sistemaCompra
         private string Apellido = "";
         private int Telefono; //Formato: 0000-0000000
         private string Correo = "";
-        public bool TipoDeDocumento; //0 = Cédula de Identidad. 1 = RIF
+        public char TipoDeDocumento = 'd'; //d = Valor por defecto, V = Venezolano, E = Extranjero, J = Judicial
         private int NumeroDeDocumento;
         private string TipoDeImpuesto = ""; //Exento, 16% o Retenciones
-        public string Direccion = "";
+        private string Direccion = "";
+        private bool ContibuyenteEspecial;
     }
 }
