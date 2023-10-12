@@ -24,17 +24,27 @@ namespace sistemaCompra
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-            this.Hide();
             login.Show();
+            this.Close();
         }
 
         private void pboxCtrlUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuSuperUser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

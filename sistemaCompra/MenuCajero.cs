@@ -22,7 +22,7 @@ public partial class MenuCajero : Form
     {
         Login login = new Login();
         login.Show();
-        this.Hide();
+        this.Close();
     }
 
     private void MenuCajero_Load(object sender, EventArgs e)
@@ -40,13 +40,12 @@ public partial class MenuCajero : Form
     {
         CtrlCliente ctrCliente = new CtrlCliente(OrigenMenu.Cajero);
         ctrCliente.Show();
-        this.Hide();
+        this.Close();
     }
 
-    private void pboxCtrlProductos_Click(object sender, EventArgs e)
+
+    private void MenuCajero_FormClosing(object sender, FormClosingEventArgs e)
     {
-        //CtrlProducto ctrlProducto(OrigenMenu.Cajero);
-        //ctrlProducto.Show();
-        //this.Hide();
+
     }
 }

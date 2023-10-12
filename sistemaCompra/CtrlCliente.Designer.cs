@@ -42,7 +42,7 @@
             // 
             // pboxCtrlClientes
             // 
-            pboxCtrlClientes.Image = Properties.Resources.ControlClientes11;
+          
             pboxCtrlClientes.Location = new Point(62, 21);
             pboxCtrlClientes.Name = "pboxCtrlClientes";
             pboxCtrlClientes.Size = new Size(296, 30);
@@ -52,7 +52,7 @@
             // 
             // pboxAgregar
             // 
-            pboxAgregar.Image = Properties.Resources.ControlCliente21;
+            
             pboxAgregar.Location = new Point(117, 79);
             pboxAgregar.Margin = new Padding(3, 2, 3, 2);
             pboxAgregar.Name = "pboxAgregar";
@@ -64,7 +64,7 @@
             // 
             // pboxEditar
             // 
-            pboxEditar.Image = Properties.Resources.ControlCliente31;
+            
             pboxEditar.Location = new Point(117, 133);
             pboxEditar.Margin = new Padding(3, 2, 3, 2);
             pboxEditar.Name = "pboxEditar";
@@ -75,7 +75,7 @@
             // 
             // pboxEliminar
             // 
-            pboxEliminar.Image = Properties.Resources.ControlCliente41;
+           
             pboxEliminar.Location = new Point(117, 187);
             pboxEliminar.Margin = new Padding(3, 2, 3, 2);
             pboxEliminar.Name = "pboxEliminar";

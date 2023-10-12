@@ -21,7 +21,7 @@ namespace sistemaCompra
         {
             MenuAdmin menuAdmin = new MenuAdmin();
             menuAdmin.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void pboxAgregar_Click(object sender, EventArgs e)
@@ -30,6 +30,9 @@ namespace sistemaCompra
             agregarProducto.ShowDialog();
         }
 
-       
+        private void CtrlProducto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,22 +35,22 @@ namespace sistemaCompra
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-            this.Hide();
             login.Show();
+            this.Close();
         }
 
         private void pboxCtrlUsuarios_Click(object sender, EventArgs e)
         {
             CtrlUsuario ctrlUsuario = new CtrlUsuario();
-            this.Hide();
             ctrlUsuario.Show();
+            this.Close();
         }
 
         private void pboxCtrlProductos_Click(object sender, EventArgs e)
         {
             CtrlProducto ctrlProducto = new CtrlProducto();
-            this.Hide();
             ctrlProducto.Show();
+            this.Close();
         }
 
         private void pboxCtrlClientes_Click(object sender, EventArgs e)
@@ -61,6 +61,11 @@ namespace sistemaCompra
         }
 
         private void pboxCtrlClientes_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }

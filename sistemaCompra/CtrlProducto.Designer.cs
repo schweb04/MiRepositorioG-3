@@ -43,10 +43,9 @@
             // pboxVolver
             // 
             pboxVolver.Image = Properties.Resources.BotonSalirMenu;
-            pboxVolver.Location = new Point(12, 238);
-            pboxVolver.Margin = new Padding(3, 2, 3, 2);
+            pboxVolver.Location = new Point(14, 317);
             pboxVolver.Name = "pboxVolver";
-            pboxVolver.Size = new Size(167, 28);
+            pboxVolver.Size = new Size(191, 37);
             pboxVolver.SizeMode = PictureBoxSizeMode.Zoom;
             pboxVolver.TabIndex = 50;
             pboxVolver.TabStop = false;
@@ -55,9 +54,10 @@
             // pboxCtrlProductos
             // 
             pboxCtrlProductos.Image = Properties.Resources.ControlProductos11;
-            pboxCtrlProductos.Location = new Point(38, 12);
+            pboxCtrlProductos.Location = new Point(43, 16);
+            pboxCtrlProductos.Margin = new Padding(3, 4, 3, 4);
             pboxCtrlProductos.Name = "pboxCtrlProductos";
-            pboxCtrlProductos.Size = new Size(296, 30);
+            pboxCtrlProductos.Size = new Size(338, 40);
             pboxCtrlProductos.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCtrlProductos.TabIndex = 51;
             pboxCtrlProductos.TabStop = false;
@@ -65,10 +65,9 @@
             // pboxAgregar
             // 
             pboxAgregar.Image = Properties.Resources.ControlProducto41;
-            pboxAgregar.Location = new Point(94, 67);
-            pboxAgregar.Margin = new Padding(3, 2, 3, 2);
+            pboxAgregar.Location = new Point(107, 91);
             pboxAgregar.Name = "pboxAgregar";
-            pboxAgregar.Size = new Size(183, 43);
+            pboxAgregar.Size = new Size(209, 42);
             pboxAgregar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAgregar.TabIndex = 52;
             pboxAgregar.TabStop = false;
@@ -76,10 +75,9 @@
             // pboxEditar
             // 
             pboxEditar.Image = Properties.Resources.ControlProducto31;
-            pboxEditar.Location = new Point(94, 126);
-            pboxEditar.Margin = new Padding(3, 2, 3, 2);
+            pboxEditar.Location = new Point(107, 168);
             pboxEditar.Name = "pboxEditar";
-            pboxEditar.Size = new Size(183, 38);
+            pboxEditar.Size = new Size(209, 42);
             pboxEditar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxEditar.TabIndex = 53;
             pboxEditar.TabStop = false;
@@ -87,27 +85,28 @@
             // pboxEliminar
             // 
             pboxEliminar.Image = Properties.Resources.ControlProducto21;
-            pboxEliminar.Location = new Point(94, 179);
-            pboxEliminar.Margin = new Padding(3, 2, 3, 2);
+            pboxEliminar.Location = new Point(107, 239);
             pboxEliminar.Name = "pboxEliminar";
-            pboxEliminar.Size = new Size(183, 38);
+            pboxEliminar.Size = new Size(209, 42);
             pboxEliminar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxEliminar.TabIndex = 54;
             pboxEliminar.TabStop = false;
             // 
             // CtrlProducto
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(373, 277);
+            ClientSize = new Size(426, 369);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);
             Controls.Add(pboxAgregar);
             Controls.Add(pboxCtrlProductos);
             Controls.Add(pboxVolver);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "CtrlProducto";
-            Text = "CtrlProducto";
+            Text = "MMM";
+            Load += CtrlProducto_Load;
             ((System.ComponentModel.ISupportInitialize)pboxVolver).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).EndInit();

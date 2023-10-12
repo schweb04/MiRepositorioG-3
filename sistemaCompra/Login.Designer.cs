@@ -109,6 +109,7 @@
             HelpButton = true;
             Name = "Login";
             FormClosing += Login_FormClosing;
+            FormClosed += Login_FormClosed;
             Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pboxAvatar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

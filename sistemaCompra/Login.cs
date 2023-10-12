@@ -49,6 +49,7 @@ namespace sistemaCompra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
             if (cajaUsuario.TextLength < 6 || cajaUsuario.TextLength > 10)
             {
                 MessageBox.Show("El nombre de usuario debe estar comprendido entre 6 y 10 caracteres");
@@ -75,25 +76,34 @@ namespace sistemaCompra
 
         private void verificarUsuario()
         {
-            if (cajaUsuario.Text.ToLower() == "jose01" && cajaClave.Text == "j1234567")
+            if (cajaUsuario.Text.ToLower() == "jose02" && cajaClave.Text == "j1234567")
             {
-                MenuSuperUser menuSuperUser = new MenuSuperUser();
-                menuSuperUser.Show();
                 this.Hide();
+                MenuSuperUser menuSuperUser = new MenuSuperUser();
+                menuSuperUser.ShowDialog();
+                menuSuperUser = null;
+                this.Show();
+                clearCajas();
             }
 
             else if (cajaUsuario.Text.ToLower() == "pedro02" && cajaClave.Text == "p1234567")
             {
-                MenuAdmin menuAdmin = new MenuAdmin();
-                menuAdmin.Show();
                 this.Hide();
+                MenuAdmin menuAdmin = new MenuAdmin();
+                menuAdmin.ShowDialog();
+                menuAdmin = null;
+                this.Show();
+                clearCajas();
             }
 
             else if (cajaUsuario.Text.ToLower() == "luis03" && cajaClave.Text == "l1234567")
             {
-                MenuCajero menuCajero = new MenuCajero();
-                menuCajero.Show();
                 this.Hide();
+                MenuCajero menuCajero = new MenuCajero();
+                menuCajero.ShowDialog();
+                menuCajero = null;
+                this.Show();
+                clearCajas();
             }
 
             else
@@ -102,6 +112,12 @@ namespace sistemaCompra
                 cajaClave.Clear();
                 cajaUsuario.Clear();
             }
+        }
+
+        private void clearCajas()
+        {
+            cajaClave.Clear();
+            cajaUsuario.Clear();
         }
 
         private void cajaUsuario_TextChanged(object sender, EventArgs e)
@@ -128,7 +144,7 @@ namespace sistemaCompra
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+          
 
         }
 
@@ -150,6 +166,11 @@ namespace sistemaCompra
         }
 
         private void pboxAvatar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
 
         }
