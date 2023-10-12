@@ -39,11 +39,16 @@ public partial class MenuCajero : Form
     private void pboxCtrlClientes_Click(object sender, EventArgs e)
     {
         CtrlCliente ctrCliente = new CtrlCliente();
-        ctrCliente.Show();
+        ctrCliente.ShowDialog();
     }
 
 
     private void MenuCajero_FormClosing(object sender, FormClosingEventArgs e)
+    {
+
+    }
+
+    private void pboxCtrlProductos_Click(object sender, EventArgs e)
     {
 
     }

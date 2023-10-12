@@ -62,6 +62,7 @@
             pboxCtrlProductos.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCtrlProductos.TabIndex = 22;
             pboxCtrlProductos.TabStop = false;
+            pboxCtrlProductos.Click += pboxCtrlProductos_Click;
             // 
             // pboxCtrlClientes
             // 

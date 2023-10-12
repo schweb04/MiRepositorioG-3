@@ -59,7 +59,7 @@ namespace sistemaCompra
         private void pboxCtrlUsuarios_Click_1(object sender, EventArgs e)
         {
             CtrlUsuario ctrlUsuario = new CtrlUsuario();
-            ctrlUsuario.Show();
+            ctrlUsuario.ShowDialog();
         }
     }
 }
