@@ -38,9 +38,8 @@ public partial class MenuCajero : Form
 
     private void pboxCtrlClientes_Click(object sender, EventArgs e)
     {
-        CtrlCliente ctrCliente = new CtrlCliente(OrigenMenu.Cajero);
+        CtrlCliente ctrCliente = new CtrlCliente();
         ctrCliente.Show();
-        this.Close();
     }
 
 

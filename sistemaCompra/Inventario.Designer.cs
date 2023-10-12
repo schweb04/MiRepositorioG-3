@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             pictureBox1 = new PictureBox();
             dtgvProductosInventario = new DataGridView();
             clmCodigo = new DataGridViewTextBoxColumn();
@@ -46,35 +46,36 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.BotonSalirMenu1;
-            pictureBox1.Location = new Point(10, 292);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(11, 389);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(187, 37);
+            pictureBox1.Size = new Size(214, 49);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_1;
             // 
             // dtgvProductosInventario
             // 
             dtgvProductosInventario.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(90, 180, 0);
-            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(255, 180, 0);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dtgvProductosInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(90, 180, 0);
+            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 180, 0);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgvProductosInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvProductosInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvProductosInventario.Columns.AddRange(new DataGridViewColumn[] { clmCodigo, clmNombre, clmCantidad, clmUnidad, clmCosto, clmPrecio });
             dtgvProductosInventario.EnableHeadersVisualStyles = false;
             dtgvProductosInventario.GridColor = Color.FromArgb(168, 223, 0);
-            dtgvProductosInventario.Location = new Point(12, 84);
+            dtgvProductosInventario.Location = new Point(14, 112);
+            dtgvProductosInventario.Margin = new Padding(3, 4, 3, 4);
             dtgvProductosInventario.Name = "dtgvProductosInventario";
             dtgvProductosInventario.ReadOnly = true;
             dtgvProductosInventario.RowHeadersWidth = 51;
             dtgvProductosInventario.RowTemplate.Height = 25;
-            dtgvProductosInventario.Size = new Size(804, 96);
+            dtgvProductosInventario.Size = new Size(919, 128);
             dtgvProductosInventario.TabIndex = 3;
             // 
             // clmCodigo
@@ -128,23 +129,23 @@
             // pboxInvent
             // 
             pboxInvent.Image = Properties.Resources.Invetario121;
-            pboxInvent.Location = new Point(316, 12);
+            pboxInvent.Location = new Point(361, 16);
+            pboxInvent.Margin = new Padding(3, 4, 3, 4);
             pboxInvent.Name = "pboxInvent";
-            pboxInvent.Size = new Size(240, 47);
+            pboxInvent.Size = new Size(274, 63);
             pboxInvent.SizeMode = PictureBoxSizeMode.Zoom;
             pboxInvent.TabIndex = 4;
             pboxInvent.TabStop = false;
             // 
             // Inventario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(828, 338);
+            ClientSize = new Size(946, 451);
             Controls.Add(pboxInvent);
             Controls.Add(dtgvProductosInventario);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Inventario";
             Text = "Inventario";
             Load += Inventario_Load;

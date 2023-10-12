@@ -19,9 +19,7 @@ namespace sistemaCompra
 
         private void pboxVolver_Click(object sender, EventArgs e)
         {
-            MenuAdmin menuAdmin = new MenuAdmin();
-            this.Hide();
-            menuAdmin.Show();
+            this.Close();
         }
 
         private void pboxAgregar_Click(object sender, EventArgs e)

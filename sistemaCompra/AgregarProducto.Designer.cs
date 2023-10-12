@@ -35,7 +35,6 @@
             txtCosto = new TextBox();
             txtPrecio = new TextBox();
             pboxAceptar = new PictureBox();
-            pboxCancelar = new PictureBox();
             pboxCodigoProducto = new PictureBox();
             pboxAgregarPr = new PictureBox();
             pboxNombreProducto = new PictureBox();
@@ -44,7 +43,6 @@
             pboxCosto = new PictureBox();
             pboxPrecio = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pboxAceptar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCodigoProducto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregarPr).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxNombreProducto).BeginInit();
@@ -110,25 +108,13 @@
             // pboxAceptar
             // 
             pboxAceptar.Image = Properties.Resources.BotonAceptar;
-            pboxAceptar.Location = new Point(655, 328);
+            pboxAceptar.Location = new Point(749, 331);
             pboxAceptar.Margin = new Padding(3, 4, 3, 4);
             pboxAceptar.Name = "pboxAceptar";
             pboxAceptar.Size = new Size(122, 52);
             pboxAceptar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAceptar.TabIndex = 34;
             pboxAceptar.TabStop = false;
-            // 
-            // pboxCancelar
-            // 
-            pboxCancelar.Image = Properties.Resources.BotonCancelar;
-            pboxCancelar.Location = new Point(784, 328);
-            pboxCancelar.Margin = new Padding(3, 4, 3, 4);
-            pboxCancelar.Name = "pboxCancelar";
-            pboxCancelar.Size = new Size(126, 52);
-            pboxCancelar.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxCancelar.TabIndex = 35;
-            pboxCancelar.TabStop = false;
-            pboxCancelar.Click += pboxCancelar_Click;
             // 
             // pboxCodigoProducto
             // 
@@ -213,7 +199,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(923, 396);
             Controls.Add(pboxAgregarPr);
-            Controls.Add(pboxCancelar);
             Controls.Add(pboxAceptar);
             Controls.Add(txtPrecio);
             Controls.Add(txtCosto);
@@ -233,7 +218,6 @@
             Text = "AgregarProducto";
             Load += AgregarProducto_Load;
             ((System.ComponentModel.ISupportInitialize)pboxAceptar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCodigoProducto).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregarPr).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxNombreProducto).EndInit();
@@ -253,7 +237,6 @@
         private TextBox txtCosto;
         private TextBox txtPrecio;
         private PictureBox pboxAceptar;
-        private PictureBox pboxCancelar;
         private PictureBox pboxCodigoProducto;
         private PictureBox pboxAgregarPr;
         private PictureBox pboxNombreProducto;

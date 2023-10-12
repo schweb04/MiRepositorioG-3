@@ -41,28 +41,27 @@ namespace sistemaCompra
 
         private void pboxCtrlUsuarios_Click(object sender, EventArgs e)
         {
+            
             CtrlUsuario ctrlUsuario = new CtrlUsuario();
-            ctrlUsuario.Show();
-            this.Close();
+            ctrlUsuario.ShowDialog();
+            
         }
 
         private void pboxCtrlProductos_Click(object sender, EventArgs e)
         {
             CtrlProducto ctrlProducto = new CtrlProducto();
-            ctrlProducto.Show();
-            this.Close();
+            ctrlProducto.ShowDialog();
         }
 
         private void pboxCtrlClientes_Click(object sender, EventArgs e)
         {
-            CtrlCliente ctrlCliente = new CtrlCliente(OrigenMenu.Admin);
-            ctrlCliente.Show();
-            this.Close();
+            
         }
 
         private void pboxCtrlClientes_Click_1(object sender, EventArgs e)
         {
-
+            CtrlCliente ctrlCliente = new CtrlCliente();
+            ctrlCliente.ShowDialog();
         }
 
         private void MenuAdmin_FormClosing(object sender, FormClosingEventArgs e)

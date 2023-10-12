@@ -35,7 +35,6 @@
             txtCodigoCliente = new TextBox();
             txtApellido = new TextBox();
             txtIdentificacion = new TextBox();
-            pboxCancelar = new PictureBox();
             pboxAceptar = new PictureBox();
             pboxAgregarCl = new PictureBox();
             pboxCodigoCliente = new PictureBox();
@@ -45,7 +44,6 @@
             pboxTelefono = new PictureBox();
             pboxCorreo = new PictureBox();
             pboxDireccion = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregarCl).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCodigoCliente).BeginInit();
@@ -114,22 +112,10 @@
             txtIdentificacion.Size = new Size(146, 27);
             txtIdentificacion.TabIndex = 51;
             // 
-            // pboxCancelar
-            // 
-            pboxCancelar.Image = Properties.Resources.BotonCancelar;
-            pboxCancelar.Location = new Point(776, 380);
-            pboxCancelar.Margin = new Padding(3, 4, 3, 4);
-            pboxCancelar.Name = "pboxCancelar";
-            pboxCancelar.Size = new Size(126, 52);
-            pboxCancelar.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxCancelar.TabIndex = 53;
-            pboxCancelar.TabStop = false;
-            pboxCancelar.Click += pboxCancelar_Click;
-            // 
             // pboxAceptar
             // 
             pboxAceptar.Image = Properties.Resources.BotonAceptar;
-            pboxAceptar.Location = new Point(647, 380);
+            pboxAceptar.Location = new Point(744, 329);
             pboxAceptar.Margin = new Padding(3, 4, 3, 4);
             pboxAceptar.Name = "pboxAceptar";
             pboxAceptar.Size = new Size(122, 52);
@@ -232,7 +218,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(926, 460);
             Controls.Add(pboxAgregarCl);
-            Controls.Add(pboxCancelar);
             Controls.Add(pboxAceptar);
             Controls.Add(txtIdentificacion);
             Controls.Add(txtApellido);
@@ -253,7 +238,6 @@
             Name = "AgregarCliente";
             Text = "Agregar cliente";
             Load += AgregarCliente_Load;
-            ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregarCl).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCodigoCliente).EndInit();
@@ -275,7 +259,6 @@
         private TextBox txtCodigoCliente;
         private TextBox txtApellido;
         private TextBox txtIdentificacion;
-        private PictureBox pboxCancelar;
         private PictureBox pboxAceptar;
         private PictureBox pboxAgregarCl;
         private PictureBox pboxCodigoCliente;
