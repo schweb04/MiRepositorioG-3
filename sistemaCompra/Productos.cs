@@ -12,5 +12,7 @@ namespace sistemaCompra
         private string UnidadDeMedida = ""; //Kilogramos, paquetes, etc
         private double CostoUnitario;
         private double PrecioDeVenta;
+
+        
     }
 }
