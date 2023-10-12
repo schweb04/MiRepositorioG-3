@@ -36,6 +36,7 @@
             mostrarPass = new CheckBox();
             pboxUsuario = new PictureBox();
             pboxPassword = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pboxAvatar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxUsuario).BeginInit();
@@ -93,11 +94,19 @@
             pboxPassword.Name = "pboxPassword";
             pboxPassword.TabStop = false;
             // 
+            // button1
+            // 
+            resources.ApplyResources(button1, "button1");
+            button1.Name = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Login
             // 
             AutoScaleMode = AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             BackColor = Color.Honeydew;
+            Controls.Add(button1);
             Controls.Add(mostrarPass);
             Controls.Add(cajaClave);
             Controls.Add(cajaUsuario);
@@ -128,5 +137,6 @@
         private CheckBox mostrarPass;
         private PictureBox pboxUsuario;
         private PictureBox pboxPassword;
+        private Button button1;
     }
 }

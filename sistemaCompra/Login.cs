@@ -144,7 +144,7 @@ namespace sistemaCompra
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-          
+
 
         }
 
@@ -173,6 +173,12 @@ namespace sistemaCompra
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuAdministrador menuAdministrador = new MenuAdministrador();
+            menuAdministrador.ShowDialog();
         }
     }
 }
