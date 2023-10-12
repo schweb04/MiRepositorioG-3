@@ -117,6 +117,7 @@
             controlDeClientesToolStripMenuItem.Size = new Size(207, 22);
             controlDeClientesToolStripMenuItem.Text = "Control de Clientes";
             controlDeClientesToolStripMenuItem.ToolTipText = "Ver lista de clientes, agregar clientes, editar clientes, y eliminar clientes ";
+            controlDeClientesToolStripMenuItem.Click += controlDeClientesToolStripMenuItem_Click;
             // 
             // importarClientesToolStripMenuItem
             // 

@@ -47,6 +47,11 @@ namespace sistemaCompra
             AgregarFormulario(ctrlProducto);
         }
 
-
+        private void controlDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<CtrlCliente>().FirstOrDefault();
+            CtrlCliente ctrlCliente = form ?? new CtrlCliente();
+            AgregarFormulario(ctrlCliente);
+        }
     }
 }
