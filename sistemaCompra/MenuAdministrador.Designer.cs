@@ -55,6 +55,7 @@
             // 
             // usuariosToolStripMenuItem
             // 
+            usuariosToolStripMenuItem.BackColor = Color.White;
             usuariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeUsuariosToolStripMenuItem, importarUsuariosToolStripMenuItem });
             usuariosToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
