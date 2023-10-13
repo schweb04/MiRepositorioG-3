@@ -193,9 +193,29 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BotonAceptar1 {
+            get {
+                object obj = ResourceManager.GetObject("BotonAceptar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonCancelar {
             get {
                 object obj = ResourceManager.GetObject("BotonCancelar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonCancelar1 {
+            get {
+                object obj = ResourceManager.GetObject("BotonCancelar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +236,26 @@ namespace sistemaCompra.Properties {
         internal static System.Drawing.Bitmap BotonCerrarSesion {
             get {
                 object obj = ResourceManager.GetObject("BotonCerrarSesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonCheckbox1 {
+            get {
+                object obj = ResourceManager.GetObject("BotonCheckbox1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BotonCheckbox2 {
+            get {
+                object obj = ResourceManager.GetObject("BotonCheckbox2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,6 +493,16 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ControlAñadir {
+            get {
+                object obj = ResourceManager.GetObject("ControlAñadir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ControlCliente2 {
             get {
                 object obj = ResourceManager.GetObject("ControlCliente2", resourceCulture);
@@ -533,6 +583,36 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ControlDato2 {
+            get {
+                object obj = ResourceManager.GetObject("ControlDato2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ControlDesplegar {
+            get {
+                object obj = ResourceManager.GetObject("ControlDesplegar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ControlEliminar {
+            get {
+                object obj = ResourceManager.GetObject("ControlEliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ControlProducto2 {
             get {
                 object obj = ResourceManager.GetObject("ControlProducto2", resourceCulture);
@@ -586,6 +666,16 @@ namespace sistemaCompra.Properties {
         internal static System.Drawing.Bitmap ControlProducto41 {
             get {
                 object obj = ResourceManager.GetObject("ControlProducto41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ControlProductos {
+            get {
+                object obj = ResourceManager.GetObject("ControlProductos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -956,6 +1046,16 @@ namespace sistemaCompra.Properties {
         internal static System.Drawing.Bitmap Usuario2 {
             get {
                 object obj = ResourceManager.GetObject("Usuario2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VentasEditar {
+            get {
+                object obj = ResourceManager.GetObject("VentasEditar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

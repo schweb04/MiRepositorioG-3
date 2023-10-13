@@ -38,10 +38,10 @@
             clientesToolStripMenuItem = new ToolStripMenuItem();
             controlDeClientesToolStripMenuItem = new ToolStripMenuItem();
             importarClientesToolStripMenuItem = new ToolStripMenuItem();
-            acercaDeToolStripMenuItem = new ToolStripMenuItem();
-            pnlMenuAdministrador = new Panel();
             tasaDolarMenuItem = new ToolStripMenuItem();
             toolStripTextBox1 = new ToolStripTextBox();
+            acercaDeToolStripMenuItem = new ToolStripMenuItem();
+            pnlMenuAdministrador = new Panel();
             mnuMenuAdministrador.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, tasaDolarMenuItem, acercaDeToolStripMenuItem });
             mnuMenuAdministrador.Location = new Point(0, 0);
             mnuMenuAdministrador.Name = "mnuMenuAdministrador";
-            mnuMenuAdministrador.Size = new Size(584, 24);
+            mnuMenuAdministrador.Size = new Size(651, 24);
             mnuMenuAdministrador.TabIndex = 0;
             mnuMenuAdministrador.Text = "menuStrip1";
             // 
@@ -138,23 +138,6 @@
             importarClientesToolStripMenuItem.Text = "Importar Clientes";
             importarClientesToolStripMenuItem.ToolTipText = "Cargar datos de los clientes en el sistema";
             // 
-            // acercaDeToolStripMenuItem
-            // 
-            acercaDeToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            acercaDeToolStripMenuItem.Size = new Size(103, 20);
-            acercaDeToolStripMenuItem.Text = "Acerca de...";
-            acercaDeToolStripMenuItem.ToolTipText = "Dale click para saber que se encuentra en esta ventana...";
-            acercaDeToolStripMenuItem.Click += acercaDeToolStripMenuItem_Click;
-            // 
-            // pnlMenuAdministrador
-            // 
-            pnlMenuAdministrador.Dock = DockStyle.Fill;
-            pnlMenuAdministrador.Location = new Point(0, 24);
-            pnlMenuAdministrador.Name = "pnlMenuAdministrador";
-            pnlMenuAdministrador.Size = new Size(584, 299);
-            pnlMenuAdministrador.TabIndex = 1;
-            // 
             // tasaDolarMenuItem
             // 
             tasaDolarMenuItem.AutoToolTip = true;
@@ -170,11 +153,28 @@
             toolStripTextBox1.Name = "toolStripTextBox1";
             toolStripTextBox1.Size = new Size(100, 23);
             // 
+            // acercaDeToolStripMenuItem
+            // 
+            acercaDeToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            acercaDeToolStripMenuItem.Size = new Size(103, 20);
+            acercaDeToolStripMenuItem.Text = "Acerca de...";
+            acercaDeToolStripMenuItem.ToolTipText = "Dale click para saber que se encuentra en esta ventana...";
+            acercaDeToolStripMenuItem.Click += acercaDeToolStripMenuItem_Click;
+            // 
+            // pnlMenuAdministrador
+            // 
+            pnlMenuAdministrador.Dock = DockStyle.Fill;
+            pnlMenuAdministrador.Location = new Point(0, 24);
+            pnlMenuAdministrador.Name = "pnlMenuAdministrador";
+            pnlMenuAdministrador.Size = new Size(651, 358);
+            pnlMenuAdministrador.TabIndex = 1;
+            // 
             // MenuAdministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(584, 323);
+            ClientSize = new Size(651, 382);
             Controls.Add(pnlMenuAdministrador);
             Controls.Add(mnuMenuAdministrador);
             Name = "MenuAdministrador";

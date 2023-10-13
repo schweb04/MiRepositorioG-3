@@ -124,11 +124,8 @@
   <data name="IconoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Graficos\IconoUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Admin3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Admin3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconoControlUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Graficos\IconoControlUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="InterfazLogin4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\InterfazLogin4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Admin4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Admin4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,8 +133,8 @@
   <data name="ProductoNuevo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProductoNuevo31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconoControlProducto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Graficos\IconoControlProducto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ControlProductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\ControlProductos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="InterfazNuevo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InterfazNuevo21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +144,9 @@
   </data>
   <data name="ClienteNuevo5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClienteNuevo51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonCheckbox1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\BotonCheckbox1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ClienteNuevo6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClienteNuevo61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +163,9 @@
   <data name="ClienteNuevo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClienteNuevo21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ControlDato2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\ControlDato2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ClienteNuevo31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClienteNuevo32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -171,6 +174,9 @@
   </data>
   <data name="Cajero1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cajero11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ControlDesplegar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\ControlDesplegar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ControlCliente21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ControlCliente2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,11 +190,20 @@
   <data name="InterfazNuevo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InterfazNuevo31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BotonCheckbox2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\BotonCheckbox2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BotonSalirMenu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonSalirMenu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ControlAñadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\ControlAñadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="InterfazNuevo31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InterfazNuevo32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonCancelar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\BotonCancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Usuario2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Usuario21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,9 +265,6 @@
   <data name="Sin título" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sin título.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="InterfazLogin4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Graficos\InterfazLogin4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Interfaz1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Interfaz1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -262,6 +274,12 @@
   <data name="Interfaz2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Interfaz2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cliente3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cliente3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonAceptar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\BotonAceptar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ClienteNuevo7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClienteNuevo71.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -270,6 +288,9 @@
   </data>
   <data name="ClienteNuevo8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClienteNuevo81.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoControlProducto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\IconoControlProducto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BotonSalirMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BotonSalirMenu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -298,8 +319,8 @@
   <data name="ControlProducto4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ControlProducto41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cliente1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cliente1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Admin3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Admin3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ControlUsuario4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ControlUsuario41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -312,6 +333,12 @@
   </data>
   <data name="ControlCliente3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ControlCliente31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cliente1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cliente1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VentasEditar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\VentasEditar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cliente2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cliente2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -355,6 +382,9 @@
   <data name="Invetario121" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Invetario12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconoControlUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\IconoControlUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Agregar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -379,13 +409,13 @@
   <data name="InterfazLogin3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Graficos\InterfazLogin3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cliente3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cliente3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BotonEntrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\BotonEntrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cliente4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cliente4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BotonEntrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Graficos\BotonEntrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ControlEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graficos\ControlEliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

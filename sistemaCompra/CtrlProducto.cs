@@ -17,11 +17,6 @@ namespace sistemaCompra
             InitializeComponent();
         }
 
-        private void pboxVolver_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void pboxAgregar_Click(object sender, EventArgs e)
         {
             AgregarProducto agregarProducto = new AgregarProducto();
