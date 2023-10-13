@@ -45,7 +45,7 @@
             // 
             // mnuMenuAdministrador
             // 
-            mnuMenuAdministrador.BackColor = Color.FromArgb(70, 100, 185);
+            mnuMenuAdministrador.BackColor = Color.FromArgb(189, 195, 199);
             mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, acercaDeToolStripMenuItem });
             mnuMenuAdministrador.Location = new Point(0, 0);
             mnuMenuAdministrador.Name = "mnuMenuAdministrador";
@@ -55,16 +55,18 @@
             // 
             // usuariosToolStripMenuItem
             // 
-            usuariosToolStripMenuItem.BackColor = Color.FromArgb(70, 100, 185);
+            usuariosToolStripMenuItem.BackColor = Color.FromArgb(189, 195, 199);
             usuariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeUsuariosToolStripMenuItem, importarUsuariosToolStripMenuItem });
             usuariosToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            usuariosToolStripMenuItem.Image = Properties.Resources.IconoUsuario;
             usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            usuariosToolStripMenuItem.Size = new Size(75, 20);
+            usuariosToolStripMenuItem.Size = new Size(91, 20);
             usuariosToolStripMenuItem.Text = "Usuarios";
             usuariosToolStripMenuItem.ToolTipText = "Opciones de Usuario";
             // 
             // controlDeUsuariosToolStripMenuItem
             // 
+            controlDeUsuariosToolStripMenuItem.Image = Properties.Resources.IconoControlUsuario;
             controlDeUsuariosToolStripMenuItem.Name = "controlDeUsuariosToolStripMenuItem";
             controlDeUsuariosToolStripMenuItem.Size = new Size(207, 22);
             controlDeUsuariosToolStripMenuItem.Text = "Control de Usuarios";
@@ -73,6 +75,7 @@
             // 
             // importarUsuariosToolStripMenuItem
             // 
+            importarUsuariosToolStripMenuItem.Image = Properties.Resources.IconoImportar;
             importarUsuariosToolStripMenuItem.Name = "importarUsuariosToolStripMenuItem";
             importarUsuariosToolStripMenuItem.Size = new Size(207, 22);
             importarUsuariosToolStripMenuItem.Text = "Importar Usuarios";
@@ -82,13 +85,15 @@
             // 
             productosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeProductosToolStripMenuItem, importarProductosToolStripMenuItem });
             productosToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            productosToolStripMenuItem.Image = Properties.Resources.IconoProducto;
             productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            productosToolStripMenuItem.Size = new Size(82, 20);
+            productosToolStripMenuItem.Size = new Size(98, 20);
             productosToolStripMenuItem.Text = "Productos";
             productosToolStripMenuItem.ToolTipText = "Opciones de Producto";
             // 
             // controlDeProductosToolStripMenuItem
             // 
+            controlDeProductosToolStripMenuItem.Image = Properties.Resources.IconoControlProducto;
             controlDeProductosToolStripMenuItem.Name = "controlDeProductosToolStripMenuItem";
             controlDeProductosToolStripMenuItem.Size = new Size(214, 22);
             controlDeProductosToolStripMenuItem.Text = "Control de Productos";
@@ -97,6 +102,7 @@
             // 
             // importarProductosToolStripMenuItem
             // 
+            importarProductosToolStripMenuItem.Image = Properties.Resources.IconoImportar;
             importarProductosToolStripMenuItem.Name = "importarProductosToolStripMenuItem";
             importarProductosToolStripMenuItem.Size = new Size(214, 22);
             importarProductosToolStripMenuItem.Text = "Importar Productos";
@@ -106,13 +112,15 @@
             // 
             clientesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeClientesToolStripMenuItem, importarClientesToolStripMenuItem });
             clientesToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            clientesToolStripMenuItem.Image = Properties.Resources.IconoCliente;
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(75, 20);
+            clientesToolStripMenuItem.Size = new Size(91, 20);
             clientesToolStripMenuItem.Text = "Clientes";
             clientesToolStripMenuItem.ToolTipText = "Opciones de Cliente";
             // 
             // controlDeClientesToolStripMenuItem
             // 
+            controlDeClientesToolStripMenuItem.Image = Properties.Resources.IconoControlCliente;
             controlDeClientesToolStripMenuItem.Name = "controlDeClientesToolStripMenuItem";
             controlDeClientesToolStripMenuItem.Size = new Size(207, 22);
             controlDeClientesToolStripMenuItem.Text = "Control de Clientes";
@@ -121,6 +129,7 @@
             // 
             // importarClientesToolStripMenuItem
             // 
+            importarClientesToolStripMenuItem.Image = Properties.Resources.IconoImportar;
             importarClientesToolStripMenuItem.Name = "importarClientesToolStripMenuItem";
             importarClientesToolStripMenuItem.Size = new Size(207, 22);
             importarClientesToolStripMenuItem.Text = "Importar Clientes";
