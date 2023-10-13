@@ -36,7 +36,6 @@
             mostrarPass = new CheckBox();
             pboxUsuario = new PictureBox();
             pboxPassword = new PictureBox();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pboxAvatar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxUsuario).BeginInit();
@@ -46,7 +45,7 @@
             // pboxAvatar
             // 
             pboxAvatar.AccessibleRole = AccessibleRole.None;
-            pboxAvatar.Image = Properties.Resources.Interfaz1;
+            pboxAvatar.Image = Properties.Resources.InterfazLogin2;
             resources.ApplyResources(pboxAvatar, "pboxAvatar");
             pboxAvatar.Name = "pboxAvatar";
             pboxAvatar.TabStop = false;
@@ -54,6 +53,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.Image = Properties.Resources.BotonEntrar;
             resources.ApplyResources(pictureBox2, "pictureBox2");
             pictureBox2.Name = "pictureBox2";
             pictureBox2.TabStop = false;
@@ -82,31 +82,23 @@
             // 
             // pboxUsuario
             // 
-            pboxUsuario.Image = Properties.Resources.InterfazNuevo2;
+            pboxUsuario.Image = Properties.Resources.InterfazLogin3;
             resources.ApplyResources(pboxUsuario, "pboxUsuario");
             pboxUsuario.Name = "pboxUsuario";
             pboxUsuario.TabStop = false;
             // 
             // pboxPassword
             // 
-            pboxPassword.Image = Properties.Resources.InterfazNuevo3;
+            pboxPassword.Image = Properties.Resources.InterfazLogin4;
             resources.ApplyResources(pboxPassword, "pboxPassword");
             pboxPassword.Name = "pboxPassword";
             pboxPassword.TabStop = false;
-            // 
-            // button1
-            // 
-            resources.ApplyResources(button1, "button1");
-            button1.Name = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // Login
             // 
             AutoScaleMode = AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             BackColor = Color.Honeydew;
-            Controls.Add(button1);
             Controls.Add(mostrarPass);
             Controls.Add(cajaClave);
             Controls.Add(cajaUsuario);
@@ -137,6 +129,5 @@
         private CheckBox mostrarPass;
         private PictureBox pboxUsuario;
         private PictureBox pboxPassword;
-        private Button button1;
     }
 }

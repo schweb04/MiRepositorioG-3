@@ -89,7 +89,7 @@ namespace sistemaCompra
             else if (cajaUsuario.Text.ToLower() == "pedro02" && cajaClave.Text == "p1234567")
             {
                 this.Hide();
-                MenuAdmin menuAdmin = new MenuAdmin();
+                MenuAdministrador menuAdmin = new MenuAdministrador();
                 menuAdmin.ShowDialog();
                 menuAdmin = null;
                 this.Show();
@@ -173,12 +173,6 @@ namespace sistemaCompra
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MenuAdministrador menuAdministrador = new MenuAdministrador();
-            menuAdministrador.ShowDialog();
         }
     }
 }

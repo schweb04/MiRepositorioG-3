@@ -40,16 +40,18 @@
             importarClientesToolStripMenuItem = new ToolStripMenuItem();
             acercaDeToolStripMenuItem = new ToolStripMenuItem();
             pnlMenuAdministrador = new Panel();
+            tasaDolarMenuItem = new ToolStripMenuItem();
+            toolStripTextBox1 = new ToolStripTextBox();
             mnuMenuAdministrador.SuspendLayout();
             SuspendLayout();
             // 
             // mnuMenuAdministrador
             // 
             mnuMenuAdministrador.BackColor = Color.FromArgb(189, 195, 199);
-            mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, acercaDeToolStripMenuItem });
+            mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, tasaDolarMenuItem, acercaDeToolStripMenuItem });
             mnuMenuAdministrador.Location = new Point(0, 0);
             mnuMenuAdministrador.Name = "mnuMenuAdministrador";
-            mnuMenuAdministrador.Size = new Size(507, 24);
+            mnuMenuAdministrador.Size = new Size(584, 24);
             mnuMenuAdministrador.TabIndex = 0;
             mnuMenuAdministrador.Text = "menuStrip1";
             // 
@@ -86,6 +88,7 @@
             productosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeProductosToolStripMenuItem, importarProductosToolStripMenuItem });
             productosToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             productosToolStripMenuItem.Image = Properties.Resources.IconoProducto;
+            productosToolStripMenuItem.ImageAlign = ContentAlignment.MiddleLeft;
             productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             productosToolStripMenuItem.Size = new Size(98, 20);
             productosToolStripMenuItem.Text = "Productos";
@@ -149,14 +152,29 @@
             pnlMenuAdministrador.Dock = DockStyle.Fill;
             pnlMenuAdministrador.Location = new Point(0, 24);
             pnlMenuAdministrador.Name = "pnlMenuAdministrador";
-            pnlMenuAdministrador.Size = new Size(507, 299);
+            pnlMenuAdministrador.Size = new Size(584, 299);
             pnlMenuAdministrador.TabIndex = 1;
+            // 
+            // tasaDolarMenuItem
+            // 
+            tasaDolarMenuItem.AutoToolTip = true;
+            tasaDolarMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox1 });
+            tasaDolarMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            tasaDolarMenuItem.Name = "tasaDolarMenuItem";
+            tasaDolarMenuItem.Size = new Size(117, 20);
+            tasaDolarMenuItem.Text = "Tasa del Dólar";
+            tasaDolarMenuItem.ToolTipText = "Ingrese la tasa del dólar";
+            // 
+            // toolStripTextBox1
+            // 
+            toolStripTextBox1.Name = "toolStripTextBox1";
+            toolStripTextBox1.Size = new Size(100, 23);
             // 
             // MenuAdministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(507, 323);
+            ClientSize = new Size(584, 323);
             Controls.Add(pnlMenuAdministrador);
             Controls.Add(mnuMenuAdministrador);
             Name = "MenuAdministrador";
@@ -181,5 +199,7 @@
         private ToolStripMenuItem importarClientesToolStripMenuItem;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
         private Panel pnlMenuAdministrador;
+        private ToolStripMenuItem tasaDolarMenuItem;
+        private ToolStripTextBox toolStripTextBox1;
     }
 }

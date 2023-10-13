@@ -223,6 +223,16 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BotonEntrar {
+            get {
+                object obj = ResourceManager.GetObject("BotonEntrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonMinimizar {
             get {
                 object obj = ResourceManager.GetObject("BotonMinimizar", resourceCulture);
@@ -736,6 +746,36 @@ namespace sistemaCompra.Properties {
         internal static System.Drawing.Bitmap Interfaz3 {
             get {
                 object obj = ResourceManager.GetObject("Interfaz3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InterfazLogin2 {
+            get {
+                object obj = ResourceManager.GetObject("InterfazLogin2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InterfazLogin3 {
+            get {
+                object obj = ResourceManager.GetObject("InterfazLogin3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InterfazLogin4 {
+            get {
+                object obj = ResourceManager.GetObject("InterfazLogin4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
