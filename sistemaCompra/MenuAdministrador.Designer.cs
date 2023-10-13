@@ -45,17 +45,17 @@
             // 
             // mnuMenuAdministrador
             // 
-            mnuMenuAdministrador.BackColor = Color.White;
+            mnuMenuAdministrador.BackColor = Color.FromArgb(70, 100, 185);
             mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, acercaDeToolStripMenuItem });
             mnuMenuAdministrador.Location = new Point(0, 0);
             mnuMenuAdministrador.Name = "mnuMenuAdministrador";
-            mnuMenuAdministrador.Size = new Size(560, 24);
+            mnuMenuAdministrador.Size = new Size(507, 24);
             mnuMenuAdministrador.TabIndex = 0;
             mnuMenuAdministrador.Text = "menuStrip1";
             // 
             // usuariosToolStripMenuItem
             // 
-            usuariosToolStripMenuItem.BackColor = Color.White;
+            usuariosToolStripMenuItem.BackColor = Color.FromArgb(70, 100, 185);
             usuariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeUsuariosToolStripMenuItem, importarUsuariosToolStripMenuItem });
             usuariosToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
@@ -140,14 +140,14 @@
             pnlMenuAdministrador.Dock = DockStyle.Fill;
             pnlMenuAdministrador.Location = new Point(0, 24);
             pnlMenuAdministrador.Name = "pnlMenuAdministrador";
-            pnlMenuAdministrador.Size = new Size(560, 276);
+            pnlMenuAdministrador.Size = new Size(507, 299);
             pnlMenuAdministrador.TabIndex = 1;
             // 
             // MenuAdministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(560, 300);
+            ClientSize = new Size(507, 323);
             Controls.Add(pnlMenuAdministrador);
             Controls.Add(mnuMenuAdministrador);
             Name = "MenuAdministrador";
