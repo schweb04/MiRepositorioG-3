@@ -43,6 +43,7 @@
             pboxDatos = new PictureBox();
             pboxAgregar = new PictureBox();
             pboxCtrlUsuarios = new PictureBox();
+            pboxLista = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             pnlDesplegar.SuspendLayout();
@@ -54,12 +55,13 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxLista).BeginInit();
             SuspendLayout();
             // 
             // pboxEliminar
             // 
             pboxEliminar.Image = Properties.Resources.ControlEliminar;
-            pboxEliminar.Location = new Point(141, 67);
+            pboxEliminar.Location = new Point(140, 59);
             pboxEliminar.Margin = new Padding(3, 2, 3, 2);
             pboxEliminar.Name = "pboxEliminar";
             pboxEliminar.Size = new Size(40, 38);
@@ -70,7 +72,7 @@
             // pboxEditar
             // 
             pboxEditar.Image = Properties.Resources.VentasEditar;
-            pboxEditar.Location = new Point(79, 67);
+            pboxEditar.Location = new Point(79, 58);
             pboxEditar.Margin = new Padding(3, 2, 3, 2);
             pboxEditar.Name = "pboxEditar";
             pboxEditar.Size = new Size(40, 38);
@@ -196,7 +198,7 @@
             // pboxAgregar
             // 
             pboxAgregar.Image = Properties.Resources.ControlAñadir;
-            pboxAgregar.Location = new Point(17, 67);
+            pboxAgregar.Location = new Point(21, 58);
             pboxAgregar.Margin = new Padding(3, 2, 3, 2);
             pboxAgregar.Name = "pboxAgregar";
             pboxAgregar.Size = new Size(40, 38);
@@ -214,11 +216,22 @@
             pboxCtrlUsuarios.TabIndex = 58;
             pboxCtrlUsuarios.TabStop = false;
             // 
+            // pboxLista
+            // 
+            pboxLista.Image = Properties.Resources.ControlTabla123;
+            pboxLista.Location = new Point(12, 105);
+            pboxLista.Name = "pboxLista";
+            pboxLista.Size = new Size(174, 203);
+            pboxLista.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxLista.TabIndex = 63;
+            pboxLista.TabStop = false;
+            // 
             // CtrlUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(607, 318);
+            Controls.Add(pboxLista);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);
             Controls.Add(pnlDesplegar);
@@ -239,6 +252,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxLista).EndInit();
             ResumeLayout(false);
         }
 
@@ -259,5 +273,6 @@
         private PictureBox pboxDatos;
         private PictureBox pboxAgregar;
         private PictureBox pboxCtrlUsuarios;
+        private PictureBox pboxLista;
     }
 }

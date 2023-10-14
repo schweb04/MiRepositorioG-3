@@ -58,6 +58,7 @@
             pboxDatos = new PictureBox();
             pboxAgregar = new PictureBox();
             pboxCtrlClientes = new PictureBox();
+            pboxLista = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             pnlDesplegar.SuspendLayout();
@@ -73,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxLista).BeginInit();
             SuspendLayout();
             // 
             // pboxEliminar
@@ -387,11 +389,22 @@
             pboxCtrlClientes.TabIndex = 58;
             pboxCtrlClientes.TabStop = false;
             // 
+            // pboxLista
+            // 
+            pboxLista.Image = Properties.Resources.ControlTabla13;
+            pboxLista.Location = new Point(12, 107);
+            pboxLista.Name = "pboxLista";
+            pboxLista.Size = new Size(174, 203);
+            pboxLista.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxLista.TabIndex = 63;
+            pboxLista.TabStop = false;
+            // 
             // CtrlCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(607, 316);
+            Controls.Add(pboxLista);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);
             Controls.Add(pnlDesplegar);
@@ -417,6 +430,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxLista).EndInit();
             ResumeLayout(false);
         }
 
@@ -452,5 +466,6 @@
         private Label lblTelefono;
         private ComboBox cboxSiYNo;
         private PictureBox pboxAceptarEditar;
+        private PictureBox pboxLista;
     }
 }

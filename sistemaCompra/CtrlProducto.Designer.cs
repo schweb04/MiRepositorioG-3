@@ -56,6 +56,7 @@
             pboxBarra = new PictureBox();
             pboxEditar = new PictureBox();
             pboxEliminar = new PictureBox();
+            pboxLista = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
@@ -70,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxBarra).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxLista).BeginInit();
             SuspendLayout();
             // 
             // pboxCtrlProductos
@@ -85,7 +87,7 @@
             // pboxAgregar
             // 
             pboxAgregar.Image = Properties.Resources.ControlAñadir;
-            pboxAgregar.Location = new Point(22, 60);
+            pboxAgregar.Location = new Point(21, 60);
             pboxAgregar.Margin = new Padding(3, 2, 3, 2);
             pboxAgregar.Name = "pboxAgregar";
             pboxAgregar.Size = new Size(40, 38);
@@ -365,11 +367,22 @@
             pboxEliminar.TabIndex = 57;
             pboxEliminar.TabStop = false;
             // 
+            // pboxLista
+            // 
+            pboxLista.Image = Properties.Resources.ControlTabla121;
+            pboxLista.Location = new Point(12, 103);
+            pboxLista.Name = "pboxLista";
+            pboxLista.Size = new Size(174, 203);
+            pboxLista.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxLista.TabIndex = 58;
+            pboxLista.TabStop = false;
+            // 
             // CtrlProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(607, 318);
+            Controls.Add(pboxLista);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);
             Controls.Add(pnlDesplegar);
@@ -394,6 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxBarra).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxLista).EndInit();
             ResumeLayout(false);
         }
 
@@ -426,5 +440,6 @@
         private ComboBox cboxUdMedidas;
         private ComboBox cboxSiYNo;
         private PictureBox pboxAceptarEditar;
+        private PictureBox pboxLista;
     }
 }
