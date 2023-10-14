@@ -29,107 +29,54 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSuperUser));
-            pboxReinicioUsuarios = new PictureBox();
-            pboxAvatarSuperUser = new PictureBox();
-            pboxSuperUser = new PictureBox();
-            pboxReseteoDatos = new PictureBox();
-            pboxReseteoFabrica = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pboxReinicioUsuarios).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxAvatarSuperUser).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxSuperUser).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxReseteoDatos).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxReseteoFabrica).BeginInit();
+            pictureBox3 = new PictureBox();
+            pboxCtrlUsuarios = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).BeginInit();
             SuspendLayout();
             // 
-            // pboxReinicioUsuarios
+            // pictureBox3
             // 
-            pboxReinicioUsuarios.ErrorImage = (Image)resources.GetObject("pboxReinicioUsuarios.ErrorImage");
-            pboxReinicioUsuarios.Image = Properties.Resources.InterfazSuperUsuario3;
-            pboxReinicioUsuarios.Location = new Point(67, 231);
-            pboxReinicioUsuarios.Margin = new Padding(3, 2, 3, 2);
-            pboxReinicioUsuarios.Name = "pboxReinicioUsuarios";
-            pboxReinicioUsuarios.Size = new Size(212, 32);
-            pboxReinicioUsuarios.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxReinicioUsuarios.TabIndex = 14;
-            pboxReinicioUsuarios.TabStop = false;
-            pboxReinicioUsuarios.Click += pboxReinicioUsuarios_Click;
+            pictureBox3.ErrorImage = (Image)resources.GetObject("pictureBox3.ErrorImage");
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(126, 189);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(271, 53);
+            pictureBox3.TabIndex = 14;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
-            // pboxAvatarSuperUser
+            // pboxCtrlUsuarios
             // 
-            pboxAvatarSuperUser.AccessibleRole = AccessibleRole.None;
-            pboxAvatarSuperUser.Image = Properties.Resources.InterfazSuperUsuario2;
-            pboxAvatarSuperUser.ImeMode = ImeMode.NoControl;
-            pboxAvatarSuperUser.Location = new Point(122, 48);
-            pboxAvatarSuperUser.Name = "pboxAvatarSuperUser";
-            pboxAvatarSuperUser.Size = new Size(110, 121);
-            pboxAvatarSuperUser.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxAvatarSuperUser.TabIndex = 20;
-            pboxAvatarSuperUser.TabStop = false;
-            // 
-            // pboxSuperUser
-            // 
-            pboxSuperUser.Image = Properties.Resources.InterfazSuperUsuario1;
-            pboxSuperUser.Location = new Point(67, 12);
-            pboxSuperUser.Name = "pboxSuperUser";
-            pboxSuperUser.Size = new Size(220, 30);
-            pboxSuperUser.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxSuperUser.TabIndex = 52;
-            pboxSuperUser.TabStop = false;
-            // 
-            // pboxReseteoDatos
-            // 
-            pboxReseteoDatos.ErrorImage = (Image)resources.GetObject("pboxReseteoDatos.ErrorImage");
-            pboxReseteoDatos.Image = (Image)resources.GetObject("pboxReseteoDatos.Image");
-            pboxReseteoDatos.Location = new Point(67, 183);
-            pboxReseteoDatos.Margin = new Padding(3, 2, 3, 2);
-            pboxReseteoDatos.Name = "pboxReseteoDatos";
-            pboxReseteoDatos.Size = new Size(212, 32);
-            pboxReseteoDatos.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxReseteoDatos.TabIndex = 53;
-            pboxReseteoDatos.TabStop = false;
-            // 
-            // pboxReseteoFabrica
-            // 
-            pboxReseteoFabrica.ErrorImage = (Image)resources.GetObject("pboxReseteoFabrica.ErrorImage");
-            pboxReseteoFabrica.Image = Properties.Resources.InterfazSuperUsuario5;
-            pboxReseteoFabrica.Location = new Point(67, 279);
-            pboxReseteoFabrica.Margin = new Padding(3, 2, 3, 2);
-            pboxReseteoFabrica.Name = "pboxReseteoFabrica";
-            pboxReseteoFabrica.Size = new Size(212, 32);
-            pboxReseteoFabrica.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxReseteoFabrica.TabIndex = 54;
-            pboxReseteoFabrica.TabStop = false;
+            pboxCtrlUsuarios.Image = Properties.Resources.Admin3;
+            pboxCtrlUsuarios.Location = new Point(151, 261);
+            pboxCtrlUsuarios.Name = "pboxCtrlUsuarios";
+            pboxCtrlUsuarios.Size = new Size(209, 41);
+            pboxCtrlUsuarios.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxCtrlUsuarios.TabIndex = 19;
+            pboxCtrlUsuarios.TabStop = false;
+            pboxCtrlUsuarios.Click += pboxCtrlUsuarios_Click_1;
             // 
             // MenuSuperUser
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Honeydew;
-            ClientSize = new Size(353, 356);
-            Controls.Add(pboxReseteoFabrica);
-            Controls.Add(pboxReseteoDatos);
-            Controls.Add(pboxSuperUser);
-            Controls.Add(pboxAvatarSuperUser);
-            Controls.Add(pboxReinicioUsuarios);
+            ClientSize = new Size(530, 475);
+            Controls.Add(pboxCtrlUsuarios);
+            Controls.Add(pictureBox3);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "MenuSuperUser";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MenuSuperUser";
             FormClosing += MenuSuperUser_FormClosing;
-            ((System.ComponentModel.ISupportInitialize)pboxReinicioUsuarios).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxAvatarSuperUser).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxSuperUser).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxReseteoDatos).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxReseteoFabrica).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private PictureBox pboxReinicioUsuarios;
-        private PictureBox pboxAvatarSuperUser;
-        private PictureBox pboxSuperUser;
-        private PictureBox pboxReseteoDatos;
-        private PictureBox pboxReseteoFabrica;
+        private PictureBox pictureBox3;
+        private PictureBox pboxCtrlUsuarios;
     }
 }

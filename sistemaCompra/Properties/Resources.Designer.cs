@@ -283,6 +283,16 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BotonRetroceder {
+            get {
+                object obj = ResourceManager.GetObject("BotonRetroceder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotonSalirMenu {
             get {
                 object obj = ResourceManager.GetObject("BotonSalirMenu", resourceCulture);
@@ -586,6 +596,16 @@ namespace sistemaCompra.Properties {
         internal static System.Drawing.Bitmap ControlClientes11 {
             get {
                 object obj = ResourceManager.GetObject("ControlClientes11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ControlDato1 {
+            get {
+                object obj = ResourceManager.GetObject("ControlDato1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -913,9 +933,9 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap InterfazSuperUsuario1 {
+        internal static System.Drawing.Bitmap InterfazVentas1 {
             get {
-                object obj = ResourceManager.GetObject("InterfazSuperUsuario1", resourceCulture);
+                object obj = ResourceManager.GetObject("InterfazVentas1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -923,9 +943,9 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap InterfazSuperUsuario2 {
+        internal static System.Drawing.Bitmap InterfazVentas2 {
             get {
-                object obj = ResourceManager.GetObject("InterfazSuperUsuario2", resourceCulture);
+                object obj = ResourceManager.GetObject("InterfazVentas2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -933,19 +953,9 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap InterfazSuperUsuario3 {
+        internal static System.Drawing.Bitmap InterfazVentas3 {
             get {
-                object obj = ResourceManager.GetObject("InterfazSuperUsuario3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap InterfazSuperUsuario5 {
-            get {
-                object obj = ResourceManager.GetObject("InterfazSuperUsuario5", resourceCulture);
+                object obj = ResourceManager.GetObject("InterfazVentas3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
