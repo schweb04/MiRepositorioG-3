@@ -221,7 +221,7 @@
             dataGridView1.ScrollBars = ScrollBars.Vertical;
             dataGridView1.Size = new Size(356, 350);
             dataGridView1.TabIndex = 37;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
+           
             // 
             // Columna3
             // 
