@@ -35,7 +35,7 @@
             txtNombre = new TextBox();
             txtPassword = new TextBox();
             lblNombre = new Label();
-            lblCodigo = new Label();
+            lblPassword = new Label();
             pboxCancelar = new PictureBox();
             pboxAceptarAgregar = new PictureBox();
             pboxBarra2 = new PictureBox();
@@ -44,6 +44,7 @@
             pboxAgregar = new PictureBox();
             pboxCtrlUsuarios = new PictureBox();
             pboxLista = new PictureBox();
+            dtgvListaUsuarios = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             pnlDesplegar.SuspendLayout();
@@ -56,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvListaUsuarios).BeginInit();
             SuspendLayout();
             // 
             // pboxEliminar
@@ -79,6 +81,7 @@
             pboxEditar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxEditar.TabIndex = 61;
             pboxEditar.TabStop = false;
+            pboxEditar.Click += pboxEditar_Click;
             // 
             // pnlDesplegar
             // 
@@ -86,7 +89,7 @@
             pnlDesplegar.Controls.Add(txtNombre);
             pnlDesplegar.Controls.Add(txtPassword);
             pnlDesplegar.Controls.Add(lblNombre);
-            pnlDesplegar.Controls.Add(lblCodigo);
+            pnlDesplegar.Controls.Add(lblPassword);
             pnlDesplegar.Controls.Add(pboxCancelar);
             pnlDesplegar.Controls.Add(pboxAceptarAgregar);
             pnlDesplegar.Controls.Add(pboxBarra2);
@@ -100,55 +103,55 @@
             // pboxAceptarEditar
             // 
             pboxAceptarEditar.Image = Properties.Resources.BotonAceptar1;
-            pboxAceptarEditar.Location = new Point(180, 192);
+            pboxAceptarEditar.Location = new Point(75, 194);
             pboxAceptarEditar.Margin = new Padding(3, 2, 3, 2);
             pboxAceptarEditar.Name = "pboxAceptarEditar";
-            pboxAceptarEditar.Size = new Size(79, 32);
+            pboxAceptarEditar.Size = new Size(101, 27);
             pboxAceptarEditar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAceptarEditar.TabIndex = 75;
             pboxAceptarEditar.TabStop = false;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(132, 51);
+            txtNombre.Location = new Point(117, 46);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(100, 23);
+            txtNombre.Size = new Size(133, 23);
             txtNombre.TabIndex = 70;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(36, 51);
+            txtPassword.Location = new Point(111, 130);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(90, 23);
+            txtPassword.Size = new Size(145, 23);
             txtPassword.TabIndex = 58;
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblNombre.Location = new Point(160, 33);
+            lblNombre.Location = new Point(160, 25);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(49, 13);
             lblNombre.TabIndex = 64;
             lblNombre.Text = "Nombre";
             // 
-            // lblCodigo
+            // lblPassword
             // 
-            lblCodigo.AutoSize = true;
-            lblCodigo.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblCodigo.Location = new Point(55, 33);
-            lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(49, 13);
-            lblCodigo.TabIndex = 56;
-            lblCodigo.Text = "Código";
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblPassword.Location = new Point(144, 114);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(77, 13);
+            lblPassword.TabIndex = 56;
+            lblPassword.Text = "Contraseña";
             // 
             // pboxCancelar
             // 
             pboxCancelar.Image = Properties.Resources.BotonCancelar1;
-            pboxCancelar.Location = new Point(265, 192);
+            pboxCancelar.Location = new Point(197, 194);
             pboxCancelar.Margin = new Padding(3, 2, 3, 2);
             pboxCancelar.Name = "pboxCancelar";
-            pboxCancelar.Size = new Size(79, 32);
+            pboxCancelar.Size = new Size(100, 27);
             pboxCancelar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCancelar.TabIndex = 63;
             pboxCancelar.TabStop = false;
@@ -156,10 +159,10 @@
             // pboxAceptarAgregar
             // 
             pboxAceptarAgregar.Image = Properties.Resources.BotonAceptar1;
-            pboxAceptarAgregar.Location = new Point(180, 192);
+            pboxAceptarAgregar.Location = new Point(75, 194);
             pboxAceptarAgregar.Margin = new Padding(3, 2, 3, 2);
             pboxAceptarAgregar.Name = "pboxAceptarAgregar";
-            pboxAceptarAgregar.Size = new Size(79, 32);
+            pboxAceptarAgregar.Size = new Size(98, 27);
             pboxAceptarAgregar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAceptarAgregar.TabIndex = 56;
             pboxAceptarAgregar.TabStop = false;
@@ -167,9 +170,9 @@
             // pboxBarra2
             // 
             pboxBarra2.Image = Properties.Resources.ControlDato2;
-            pboxBarra2.Location = new Point(132, 70);
+            pboxBarra2.Location = new Point(117, 67);
             pboxBarra2.Name = "pboxBarra2";
-            pboxBarra2.Size = new Size(100, 27);
+            pboxBarra2.Size = new Size(133, 30);
             pboxBarra2.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra2.TabIndex = 57;
             pboxBarra2.TabStop = false;
@@ -177,9 +180,9 @@
             // pboxBarra
             // 
             pboxBarra.Image = Properties.Resources.ControlDato2;
-            pboxBarra.Location = new Point(36, 70);
+            pboxBarra.Location = new Point(111, 148);
             pboxBarra.Name = "pboxBarra";
-            pboxBarra.Size = new Size(90, 27);
+            pboxBarra.Size = new Size(145, 30);
             pboxBarra.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra.TabIndex = 56;
             pboxBarra.TabStop = false;
@@ -205,6 +208,7 @@
             pboxAgregar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAgregar.TabIndex = 59;
             pboxAgregar.TabStop = false;
+            pboxAgregar.Click += pboxAgregar_Click;
             // 
             // pboxCtrlUsuarios
             // 
@@ -226,20 +230,31 @@
             pboxLista.TabIndex = 63;
             pboxLista.TabStop = false;
             // 
+            // dtgvListaUsuarios
+            // 
+            dtgvListaUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvListaUsuarios.Location = new Point(30, 158);
+            dtgvListaUsuarios.Name = "dtgvListaUsuarios";
+            dtgvListaUsuarios.RowTemplate.Height = 25;
+            dtgvListaUsuarios.Size = new Size(141, 134);
+            dtgvListaUsuarios.TabIndex = 65;
+            // 
             // CtrlUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(607, 318);
-            Controls.Add(pboxLista);
+            Controls.Add(dtgvListaUsuarios);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);
             Controls.Add(pnlDesplegar);
             Controls.Add(pboxAgregar);
             Controls.Add(pboxCtrlUsuarios);
+            Controls.Add(pboxLista);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "CtrlUsuario";
             Text = "CtrlUsuario";
+            Load += CtrlUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).EndInit();
             pnlDesplegar.ResumeLayout(false);
@@ -253,6 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvListaUsuarios).EndInit();
             ResumeLayout(false);
         }
 
@@ -265,7 +281,7 @@
         private TextBox txtNombre;
         private TextBox txtPassword;
         private Label lblNombre;
-        private Label lblCodigo;
+        private Label lblPassword;
         private PictureBox pboxCancelar;
         private PictureBox pboxAceptarAgregar;
         private PictureBox pboxBarra2;
@@ -274,5 +290,6 @@
         private PictureBox pboxAgregar;
         private PictureBox pboxCtrlUsuarios;
         private PictureBox pboxLista;
+        private DataGridView dtgvListaUsuarios;
     }
 }

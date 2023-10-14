@@ -59,6 +59,7 @@
             pboxAgregar = new PictureBox();
             pboxCtrlClientes = new PictureBox();
             pboxLista = new PictureBox();
+            dtgvListaClientes = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             pnlDesplegar.SuspendLayout();
@@ -75,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvListaClientes).BeginInit();
             SuspendLayout();
             // 
             // pboxEliminar
@@ -399,17 +401,27 @@
             pboxLista.TabIndex = 63;
             pboxLista.TabStop = false;
             // 
+            // dtgvListaClientes
+            // 
+            dtgvListaClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvListaClientes.Location = new Point(30, 158);
+            dtgvListaClientes.Name = "dtgvListaClientes";
+            dtgvListaClientes.RowTemplate.Height = 25;
+            dtgvListaClientes.Size = new Size(141, 138);
+            dtgvListaClientes.TabIndex = 64;
+            // 
             // CtrlCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(607, 316);
-            Controls.Add(pboxLista);
+            Controls.Add(dtgvListaClientes);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);
             Controls.Add(pnlDesplegar);
             Controls.Add(pboxAgregar);
             Controls.Add(pboxCtrlClientes);
+            Controls.Add(pboxLista);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "CtrlCliente";
             Text = "CtrlCliente";
@@ -431,6 +443,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvListaClientes).EndInit();
             ResumeLayout(false);
         }
 
@@ -467,5 +480,6 @@
         private ComboBox cboxSiYNo;
         private PictureBox pboxAceptarEditar;
         private PictureBox pboxLista;
+        private DataGridView dtgvListaClientes;
     }
 }

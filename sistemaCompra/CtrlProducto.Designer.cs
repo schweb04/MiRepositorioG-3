@@ -57,6 +57,7 @@
             pboxEditar = new PictureBox();
             pboxEliminar = new PictureBox();
             pboxLista = new PictureBox();
+            dtgvListaProductos = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvListaProductos).BeginInit();
             SuspendLayout();
             // 
             // pboxCtrlProductos
@@ -377,17 +379,27 @@
             pboxLista.TabIndex = 58;
             pboxLista.TabStop = false;
             // 
+            // dtgvListaProductos
+            // 
+            dtgvListaProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvListaProductos.Location = new Point(30, 155);
+            dtgvListaProductos.Name = "dtgvListaProductos";
+            dtgvListaProductos.RowTemplate.Height = 25;
+            dtgvListaProductos.Size = new Size(141, 138);
+            dtgvListaProductos.TabIndex = 65;
+            // 
             // CtrlProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(607, 318);
-            Controls.Add(pboxLista);
+            Controls.Add(dtgvListaProductos);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);
             Controls.Add(pnlDesplegar);
             Controls.Add(pboxAgregar);
             Controls.Add(pboxCtrlProductos);
+            Controls.Add(pboxLista);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "CtrlProducto";
             Text = "CtrlProducto";
@@ -408,6 +420,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxEditar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvListaProductos).EndInit();
             ResumeLayout(false);
         }
 
@@ -441,5 +454,6 @@
         private ComboBox cboxSiYNo;
         private PictureBox pboxAceptarEditar;
         private PictureBox pboxLista;
+        private DataGridView dtgvListaProductos;
     }
 }
