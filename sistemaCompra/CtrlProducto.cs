@@ -25,7 +25,17 @@ namespace sistemaCompra
 
         private void CtrlProducto_Load(object sender, EventArgs e)
         {
+            pnlDesplegar.Visible = false;
+        }
 
+        private void pboxEditar_Click(object sender, EventArgs e)
+        {
+            pnlDesplegar.Visible = true;
+        }
+
+        private void pboxCancelar_Click(object sender, EventArgs e)
+        {
+            pnlDesplegar.Visible = false;
         }
     }
 }

@@ -51,6 +51,12 @@
             pboxBarra = new PictureBox();
             pboxEditar = new PictureBox();
             pboxEliminar = new PictureBox();
+            txtCodigo = new TextBox();
+            txtNombre = new TextBox();
+            txtCantidad = new TextBox();
+            txtUnidad = new TextBox();
+            txtCosto = new TextBox();
+            txtPrecio = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
@@ -103,6 +109,12 @@
             // 
             // pnlDesplegar
             // 
+            pnlDesplegar.Controls.Add(txtPrecio);
+            pnlDesplegar.Controls.Add(txtCosto);
+            pnlDesplegar.Controls.Add(txtUnidad);
+            pnlDesplegar.Controls.Add(txtCantidad);
+            pnlDesplegar.Controls.Add(txtNombre);
+            pnlDesplegar.Controls.Add(txtCodigo);
             pnlDesplegar.Controls.Add(lblPrecio);
             pnlDesplegar.Controls.Add(lblCosto);
             pnlDesplegar.Controls.Add(lblUnidad);
@@ -206,6 +218,7 @@
             pboxCancelar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCancelar.TabIndex = 63;
             pboxCancelar.TabStop = false;
+            pboxCancelar.Click += pboxCancelar_Click;
             // 
             // pboxAceptar
             // 
@@ -310,6 +323,7 @@
             pboxEditar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxEditar.TabIndex = 56;
             pboxEditar.TabStop = false;
+            pboxEditar.Click += pboxEditar_Click;
             // 
             // pboxEliminar
             // 
@@ -321,6 +335,48 @@
             pboxEliminar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxEliminar.TabIndex = 57;
             pboxEliminar.TabStop = false;
+            // 
+            // txtCodigo
+            // 
+            txtCodigo.Location = new Point(26, 41);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(100, 23);
+            txtCodigo.TabIndex = 58;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(132, 41);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(100, 23);
+            txtNombre.TabIndex = 70;
+            // 
+            // txtCantidad
+            // 
+            txtCantidad.Location = new Point(238, 41);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(100, 23);
+            txtCantidad.TabIndex = 71;
+            // 
+            // txtUnidad
+            // 
+            txtUnidad.Location = new Point(26, 123);
+            txtUnidad.Name = "txtUnidad";
+            txtUnidad.Size = new Size(100, 23);
+            txtUnidad.TabIndex = 72;
+            // 
+            // txtCosto
+            // 
+            txtCosto.Location = new Point(132, 123);
+            txtCosto.Name = "txtCosto";
+            txtCosto.Size = new Size(100, 23);
+            txtCosto.TabIndex = 73;
+            // 
+            // txtPrecio
+            // 
+            txtPrecio.Location = new Point(238, 123);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(100, 23);
+            txtPrecio.TabIndex = 74;
             // 
             // CtrlProducto
             // 
@@ -380,5 +436,11 @@
         private Label lblPrecio;
         private PictureBox pboxEditar;
         private PictureBox pboxEliminar;
+        private TextBox txtNombre;
+        private TextBox txtCodigo;
+        private TextBox txtPrecio;
+        private TextBox txtCosto;
+        private TextBox txtUnidad;
+        private TextBox txtCantidad;
     }
 }
