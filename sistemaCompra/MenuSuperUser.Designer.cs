@@ -59,7 +59,7 @@
             pboxAvatarSuperUser.AccessibleRole = AccessibleRole.None;
             pboxAvatarSuperUser.Image = Properties.Resources.InterfazSuperUsuario2;
             pboxAvatarSuperUser.ImeMode = ImeMode.NoControl;
-            pboxAvatarSuperUser.Location = new Point(116, 48);
+            pboxAvatarSuperUser.Location = new Point(122, 48);
             pboxAvatarSuperUser.Name = "pboxAvatarSuperUser";
             pboxAvatarSuperUser.Size = new Size(110, 121);
             pboxAvatarSuperUser.SizeMode = PictureBoxSizeMode.Zoom;
@@ -69,7 +69,7 @@
             // pboxSuperUser
             // 
             pboxSuperUser.Image = Properties.Resources.InterfazSuperUsuario1;
-            pboxSuperUser.Location = new Point(59, 12);
+            pboxSuperUser.Location = new Point(67, 12);
             pboxSuperUser.Name = "pboxSuperUser";
             pboxSuperUser.Size = new Size(220, 30);
             pboxSuperUser.SizeMode = PictureBoxSizeMode.Zoom;
