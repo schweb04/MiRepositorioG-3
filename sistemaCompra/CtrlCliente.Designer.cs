@@ -31,6 +31,7 @@
             pboxEliminar = new PictureBox();
             pboxEditar = new PictureBox();
             pnlDesplegar = new Panel();
+            cboxSiYNo = new ComboBox();
             lblTelefono = new Label();
             cboxTipoIdentificacion = new ComboBox();
             txtDireccion = new TextBox();
@@ -46,9 +47,7 @@
             lblApellido = new Label();
             lblNombre = new Label();
             pboxCancelar = new PictureBox();
-            pboxAceptar = new PictureBox();
-            pboxNo = new PictureBox();
-            pboxSi = new PictureBox();
+            pboxAceptarAgregar = new PictureBox();
             pboxBarra6 = new PictureBox();
             pboxBarra5 = new PictureBox();
             pboxBarra4 = new PictureBox();
@@ -58,13 +57,12 @@
             pboxDatos = new PictureBox();
             pboxAgregar = new PictureBox();
             pboxCtrlClientes = new PictureBox();
+            pboxAceptarEditar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             pnlDesplegar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxAceptar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxNo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxSi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra4).BeginInit();
@@ -74,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).BeginInit();
             SuspendLayout();
             // 
             // pboxEliminar
@@ -101,6 +100,8 @@
             // 
             // pnlDesplegar
             // 
+            pnlDesplegar.Controls.Add(pboxAceptarEditar);
+            pnlDesplegar.Controls.Add(cboxSiYNo);
             pnlDesplegar.Controls.Add(lblTelefono);
             pnlDesplegar.Controls.Add(cboxTipoIdentificacion);
             pnlDesplegar.Controls.Add(txtDireccion);
@@ -116,9 +117,7 @@
             pnlDesplegar.Controls.Add(lblApellido);
             pnlDesplegar.Controls.Add(lblNombre);
             pnlDesplegar.Controls.Add(pboxCancelar);
-            pnlDesplegar.Controls.Add(pboxAceptar);
-            pnlDesplegar.Controls.Add(pboxNo);
-            pnlDesplegar.Controls.Add(pboxSi);
+            pnlDesplegar.Controls.Add(pboxAceptarAgregar);
             pnlDesplegar.Controls.Add(pboxBarra6);
             pnlDesplegar.Controls.Add(pboxBarra5);
             pnlDesplegar.Controls.Add(pboxBarra4);
@@ -130,6 +129,15 @@
             pnlDesplegar.Name = "pnlDesplegar";
             pnlDesplegar.Size = new Size(377, 241);
             pnlDesplegar.TabIndex = 60;
+            // 
+            // cboxSiYNo
+            // 
+            cboxSiYNo.FormattingEnabled = true;
+            cboxSiYNo.Items.AddRange(new object[] { "SI", "NO" });
+            cboxSiYNo.Location = new Point(49, 192);
+            cboxSiYNo.Name = "cboxSiYNo";
+            cboxSiYNo.Size = new Size(110, 23);
+            cboxSiYNo.TabIndex = 63;
             // 
             // lblTelefono
             // 
@@ -226,11 +234,11 @@
             // 
             lblContribuyenteEspecial.AutoSize = true;
             lblContribuyenteEspecial.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblContribuyenteEspecial.Location = new Point(34, 183);
+            lblContribuyenteEspecial.Location = new Point(38, 176);
             lblContribuyenteEspecial.Name = "lblContribuyenteEspecial";
-            lblContribuyenteEspecial.Size = new Size(35, 13);
+            lblContribuyenteEspecial.Size = new Size(133, 13);
             lblContribuyenteEspecial.TabIndex = 66;
-            lblContribuyenteEspecial.Text = "C.E.";
+            lblContribuyenteEspecial.Text = "Contribuyente Esp.";
             // 
             // lblApellido
             // 
@@ -264,38 +272,16 @@
             pboxCancelar.TabStop = false;
             pboxCancelar.Click += pboxCancelar_Click;
             // 
-            // pboxAceptar
+            // pboxAceptarAgregar
             // 
-            pboxAceptar.Image = Properties.Resources.BotonAceptar1;
-            pboxAceptar.Location = new Point(186, 183);
-            pboxAceptar.Margin = new Padding(3, 2, 3, 2);
-            pboxAceptar.Name = "pboxAceptar";
-            pboxAceptar.Size = new Size(79, 32);
-            pboxAceptar.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxAceptar.TabIndex = 56;
-            pboxAceptar.TabStop = false;
-            // 
-            // pboxNo
-            // 
-            pboxNo.Image = Properties.Resources.BotonCheckbox2;
-            pboxNo.Location = new Point(127, 183);
-            pboxNo.Margin = new Padding(3, 2, 3, 2);
-            pboxNo.Name = "pboxNo";
-            pboxNo.Size = new Size(53, 24);
-            pboxNo.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxNo.TabIndex = 62;
-            pboxNo.TabStop = false;
-            // 
-            // pboxSi
-            // 
-            pboxSi.Image = Properties.Resources.BotonCheckbox1;
-            pboxSi.Location = new Point(68, 183);
-            pboxSi.Margin = new Padding(3, 2, 3, 2);
-            pboxSi.Name = "pboxSi";
-            pboxSi.Size = new Size(53, 24);
-            pboxSi.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxSi.TabIndex = 56;
-            pboxSi.TabStop = false;
+            pboxAceptarAgregar.Image = Properties.Resources.BotonAceptar1;
+            pboxAceptarAgregar.Location = new Point(186, 183);
+            pboxAceptarAgregar.Margin = new Padding(3, 2, 3, 2);
+            pboxAceptarAgregar.Name = "pboxAceptarAgregar";
+            pboxAceptarAgregar.Size = new Size(79, 32);
+            pboxAceptarAgregar.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxAceptarAgregar.TabIndex = 56;
+            pboxAceptarAgregar.TabStop = false;
             // 
             // pboxBarra6
             // 
@@ -390,6 +376,17 @@
             pboxCtrlClientes.TabIndex = 58;
             pboxCtrlClientes.TabStop = false;
             // 
+            // pboxAceptarEditar
+            // 
+            pboxAceptarEditar.Image = Properties.Resources.BotonAceptar1;
+            pboxAceptarEditar.Location = new Point(186, 183);
+            pboxAceptarEditar.Margin = new Padding(3, 2, 3, 2);
+            pboxAceptarEditar.Name = "pboxAceptarEditar";
+            pboxAceptarEditar.Size = new Size(79, 32);
+            pboxAceptarEditar.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxAceptarEditar.TabIndex = 76;
+            pboxAceptarEditar.TabStop = false;
+            // 
             // CtrlCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -409,9 +406,7 @@
             pnlDesplegar.ResumeLayout(false);
             pnlDesplegar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxAceptar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxNo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxSi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra4).EndInit();
@@ -421,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).EndInit();
             ResumeLayout(false);
         }
 
@@ -442,9 +438,7 @@
         private Label lblApellido;
         private Label lblNombre;
         private PictureBox pboxCancelar;
-        private PictureBox pboxAceptar;
-        private PictureBox pboxNo;
-        private PictureBox pboxSi;
+        private PictureBox pboxAceptarAgregar;
         private PictureBox pboxBarra6;
         private PictureBox pboxBarra5;
         private PictureBox pboxBarra4;
@@ -456,5 +450,7 @@
         private PictureBox pboxCtrlClientes;
         private ComboBox cboxTipoIdentificacion;
         private Label lblTelefono;
+        private ComboBox cboxSiYNo;
+        private PictureBox pboxAceptarEditar;
     }
 }
