@@ -17,20 +17,27 @@ namespace sistemaCompra
             InitializeComponent();
         }
 
-        private void pboxVolver_Click(object sender, EventArgs e)
+
+        private void CtrlProducto_Load(object sender, EventArgs e)
         {
-            this.Close();
+            pnlDesplegar.Visible = false;
         }
 
         private void pboxAgregar_Click(object sender, EventArgs e)
         {
-            AgregarProducto agregarProducto = new AgregarProducto();
-            agregarProducto.ShowDialog();
+            pnlDesplegar.Visible = true;
         }
 
-        private void CtrlProducto_Load(object sender, EventArgs e)
+        private void pboxEditar_Click(object sender, EventArgs e)
         {
-
+            pnlDesplegar.Visible = true;
         }
+
+        private void pboxCancelar_Click(object sender, EventArgs e)
+        {
+            pnlDesplegar.Visible = false;
+        }
+
+
     }
 }
