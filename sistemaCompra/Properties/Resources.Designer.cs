@@ -743,6 +743,16 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ControlTabla11 {
+            get {
+                object obj = ResourceManager.GetObject("ControlTabla11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ControlUsuario1 {
             get {
                 object obj = ResourceManager.GetObject("ControlUsuario1", resourceCulture);
