@@ -23,19 +23,24 @@ namespace sistemaCompra
 
         private void CtrlCliente_Load(object sender, EventArgs e)
         {
-
+            pnlDesplegar.Visible = false;
         }
-
 
         private void pboxAgregar_Click(object sender, EventArgs e)
         {
-            AgregarUsuario agregarUsuario = new AgregarUsuario();
-            agregarUsuario.ShowDialog();
+            pnlDesplegar.Visible = true;
         }
 
-        private void pboxVolver2_Click(object sender, EventArgs e)
+        private void pboxEditar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            pnlDesplegar.Visible = true;
         }
+
+        private void pboxCancelar_Click(object sender, EventArgs e)
+        {
+            pnlDesplegar.Visible = false;
+        }
+
+
     }
 }

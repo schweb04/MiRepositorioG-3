@@ -32,6 +32,12 @@
             pboxAgregar = new PictureBox();
             pboxDatos = new PictureBox();
             pnlDesplegar = new Panel();
+            cboxUdMedidas = new ComboBox();
+            txtPrecio = new TextBox();
+            txtCosto = new TextBox();
+            txtCantidad = new TextBox();
+            txtNombre = new TextBox();
+            txtCodigo = new TextBox();
             lblPrecio = new Label();
             lblCosto = new Label();
             lblUnidad = new Label();
@@ -45,18 +51,11 @@
             pboxSi = new PictureBox();
             pboxBarra6 = new PictureBox();
             pboxBarra5 = new PictureBox();
-            pboxBarra4 = new PictureBox();
             pboxBarra3 = new PictureBox();
             pboxBarra2 = new PictureBox();
             pboxBarra = new PictureBox();
             pboxEditar = new PictureBox();
             pboxEliminar = new PictureBox();
-            txtCodigo = new TextBox();
-            txtNombre = new TextBox();
-            txtCantidad = new TextBox();
-            txtUnidad = new TextBox();
-            txtCosto = new TextBox();
-            txtPrecio = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
@@ -67,7 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)pboxSi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxBarra4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra).BeginInit();
@@ -95,6 +93,7 @@
             pboxAgregar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAgregar.TabIndex = 52;
             pboxAgregar.TabStop = false;
+            pboxAgregar.Click += pboxAgregar_Click;
             // 
             // pboxDatos
             // 
@@ -109,9 +108,9 @@
             // 
             // pnlDesplegar
             // 
+            pnlDesplegar.Controls.Add(cboxUdMedidas);
             pnlDesplegar.Controls.Add(txtPrecio);
             pnlDesplegar.Controls.Add(txtCosto);
-            pnlDesplegar.Controls.Add(txtUnidad);
             pnlDesplegar.Controls.Add(txtCantidad);
             pnlDesplegar.Controls.Add(txtNombre);
             pnlDesplegar.Controls.Add(txtCodigo);
@@ -128,7 +127,6 @@
             pnlDesplegar.Controls.Add(pboxSi);
             pnlDesplegar.Controls.Add(pboxBarra6);
             pnlDesplegar.Controls.Add(pboxBarra5);
-            pnlDesplegar.Controls.Add(pboxBarra4);
             pnlDesplegar.Controls.Add(pboxBarra3);
             pnlDesplegar.Controls.Add(pboxBarra2);
             pnlDesplegar.Controls.Add(pboxBarra);
@@ -137,6 +135,50 @@
             pnlDesplegar.Name = "pnlDesplegar";
             pnlDesplegar.Size = new Size(371, 241);
             pnlDesplegar.TabIndex = 55;
+            // 
+            // cboxUdMedidas
+            // 
+            cboxUdMedidas.FormattingEnabled = true;
+            cboxUdMedidas.Items.AddRange(new object[] { "Kilogramo (Kg)", "Litro (L)", "Unidad (Ud.)" });
+            cboxUdMedidas.Location = new Point(26, 123);
+            cboxUdMedidas.Name = "cboxUdMedidas";
+            cboxUdMedidas.Size = new Size(100, 23);
+            cboxUdMedidas.TabIndex = 58;
+            // 
+            // txtPrecio
+            // 
+            txtPrecio.Location = new Point(238, 123);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(100, 23);
+            txtPrecio.TabIndex = 74;
+            // 
+            // txtCosto
+            // 
+            txtCosto.Location = new Point(132, 123);
+            txtCosto.Name = "txtCosto";
+            txtCosto.Size = new Size(100, 23);
+            txtCosto.TabIndex = 73;
+            // 
+            // txtCantidad
+            // 
+            txtCantidad.Location = new Point(238, 41);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(100, 23);
+            txtCantidad.TabIndex = 71;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(132, 41);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(100, 23);
+            txtNombre.TabIndex = 70;
+            // 
+            // txtCodigo
+            // 
+            txtCodigo.Location = new Point(26, 41);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(100, 23);
+            txtCodigo.TabIndex = 58;
             // 
             // lblPrecio
             // 
@@ -273,16 +315,6 @@
             pboxBarra5.TabIndex = 60;
             pboxBarra5.TabStop = false;
             // 
-            // pboxBarra4
-            // 
-            pboxBarra4.Image = Properties.Resources.ControlDato2;
-            pboxBarra4.Location = new Point(26, 140);
-            pboxBarra4.Name = "pboxBarra4";
-            pboxBarra4.Size = new Size(100, 27);
-            pboxBarra4.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxBarra4.TabIndex = 59;
-            pboxBarra4.TabStop = false;
-            // 
             // pboxBarra3
             // 
             pboxBarra3.Image = Properties.Resources.ControlDato2;
@@ -336,48 +368,6 @@
             pboxEliminar.TabIndex = 57;
             pboxEliminar.TabStop = false;
             // 
-            // txtCodigo
-            // 
-            txtCodigo.Location = new Point(26, 41);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(100, 23);
-            txtCodigo.TabIndex = 58;
-            // 
-            // txtNombre
-            // 
-            txtNombre.Location = new Point(132, 41);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(100, 23);
-            txtNombre.TabIndex = 70;
-            // 
-            // txtCantidad
-            // 
-            txtCantidad.Location = new Point(238, 41);
-            txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(100, 23);
-            txtCantidad.TabIndex = 71;
-            // 
-            // txtUnidad
-            // 
-            txtUnidad.Location = new Point(26, 123);
-            txtUnidad.Name = "txtUnidad";
-            txtUnidad.Size = new Size(100, 23);
-            txtUnidad.TabIndex = 72;
-            // 
-            // txtCosto
-            // 
-            txtCosto.Location = new Point(132, 123);
-            txtCosto.Name = "txtCosto";
-            txtCosto.Size = new Size(100, 23);
-            txtCosto.TabIndex = 73;
-            // 
-            // txtPrecio
-            // 
-            txtPrecio.Location = new Point(238, 123);
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(100, 23);
-            txtPrecio.TabIndex = 74;
-            // 
             // CtrlProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -403,7 +393,6 @@
             ((System.ComponentModel.ISupportInitialize)pboxSi).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxBarra4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra).EndInit();
@@ -419,7 +408,6 @@
         private Panel pnlDesplegar;
         private PictureBox pboxBarra;
         private PictureBox pboxBarra2;
-        private PictureBox pboxBarra4;
         private PictureBox pboxBarra3;
         private PictureBox pboxBarra5;
         private PictureBox pboxBarra6;
@@ -440,7 +428,7 @@
         private TextBox txtCodigo;
         private TextBox txtPrecio;
         private TextBox txtCosto;
-        private TextBox txtUnidad;
         private TextBox txtCantidad;
+        private ComboBox cboxUdMedidas;
     }
 }

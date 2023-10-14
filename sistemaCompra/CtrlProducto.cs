@@ -17,15 +17,15 @@ namespace sistemaCompra
             InitializeComponent();
         }
 
-        private void pboxAgregar_Click(object sender, EventArgs e)
-        {
-            AgregarProducto agregarProducto = new AgregarProducto();
-            agregarProducto.ShowDialog();
-        }
 
         private void CtrlProducto_Load(object sender, EventArgs e)
         {
             pnlDesplegar.Visible = false;
+        }
+
+        private void pboxAgregar_Click(object sender, EventArgs e)
+        {
+            pnlDesplegar.Visible = true;
         }
 
         private void pboxEditar_Click(object sender, EventArgs e)
@@ -37,5 +37,7 @@ namespace sistemaCompra
         {
             pnlDesplegar.Visible = false;
         }
+
+
     }
 }
