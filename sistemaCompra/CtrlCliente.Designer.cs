@@ -31,6 +31,7 @@
             pboxEliminar = new PictureBox();
             pboxEditar = new PictureBox();
             pnlDesplegar = new Panel();
+            pboxAceptarEditar = new PictureBox();
             cboxSiYNo = new ComboBox();
             lblTelefono = new Label();
             cboxTipoIdentificacion = new ComboBox();
@@ -57,10 +58,10 @@
             pboxDatos = new PictureBox();
             pboxAgregar = new PictureBox();
             pboxCtrlClientes = new PictureBox();
-            pboxAceptarEditar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             pnlDesplegar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra6).BeginInit();
@@ -72,7 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).BeginInit();
             SuspendLayout();
             // 
             // pboxEliminar
@@ -129,6 +129,17 @@
             pnlDesplegar.Name = "pnlDesplegar";
             pnlDesplegar.Size = new Size(377, 241);
             pnlDesplegar.TabIndex = 60;
+            // 
+            // pboxAceptarEditar
+            // 
+            pboxAceptarEditar.Image = Properties.Resources.BotonAceptar1;
+            pboxAceptarEditar.Location = new Point(186, 183);
+            pboxAceptarEditar.Margin = new Padding(3, 2, 3, 2);
+            pboxAceptarEditar.Name = "pboxAceptarEditar";
+            pboxAceptarEditar.Size = new Size(79, 32);
+            pboxAceptarEditar.SizeMode = PictureBoxSizeMode.Zoom;
+            pboxAceptarEditar.TabIndex = 76;
+            pboxAceptarEditar.TabStop = false;
             // 
             // cboxSiYNo
             // 
@@ -376,22 +387,11 @@
             pboxCtrlClientes.TabIndex = 58;
             pboxCtrlClientes.TabStop = false;
             // 
-            // pboxAceptarEditar
-            // 
-            pboxAceptarEditar.Image = Properties.Resources.BotonAceptar1;
-            pboxAceptarEditar.Location = new Point(186, 183);
-            pboxAceptarEditar.Margin = new Padding(3, 2, 3, 2);
-            pboxAceptarEditar.Name = "pboxAceptarEditar";
-            pboxAceptarEditar.Size = new Size(79, 32);
-            pboxAceptarEditar.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxAceptarEditar.TabIndex = 76;
-            pboxAceptarEditar.TabStop = false;
-            // 
             // CtrlCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(607, 313);
+            ClientSize = new Size(607, 316);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);
             Controls.Add(pnlDesplegar);
@@ -405,6 +405,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxEditar).EndInit();
             pnlDesplegar.ResumeLayout(false);
             pnlDesplegar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra6).EndInit();
@@ -416,7 +417,6 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlClientes).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).EndInit();
             ResumeLayout(false);
         }
 
