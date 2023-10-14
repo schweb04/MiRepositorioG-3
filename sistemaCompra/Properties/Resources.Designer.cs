@@ -913,6 +913,36 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap InterfazSuperUsuario1 {
+            get {
+                object obj = ResourceManager.GetObject("InterfazSuperUsuario1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InterfazSuperUsuario2 {
+            get {
+                object obj = ResourceManager.GetObject("InterfazSuperUsuario2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InterfazSuperUsuario3 {
+            get {
+                object obj = ResourceManager.GetObject("InterfazSuperUsuario3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Invetario1 {
             get {
                 object obj = ResourceManager.GetObject("Invetario1", resourceCulture);
