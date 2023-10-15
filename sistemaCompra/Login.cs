@@ -1,3 +1,4 @@
+using System.Drawing.Text;
 using System.Windows.Forms.VisualStyles;
 
 namespace sistemaCompra
@@ -74,7 +75,21 @@ namespace sistemaCompra
 
         private void verificarUsuario()
         {
-            if (cajaUsuario.Text.ToLower() == "jose02" && cajaClave.Text == "j1234567")
+            String? linea = null;
+            try 
+            {
+                string path = AppDomain.CurrentDomain.BaseDirectory;
+                string fileName = "usuarios.csv";
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Ejecutando el bloque \"finally\"");
+            }
+            /*if (cajaUsuario.Text.ToLower() == "jose02" && cajaClave.Text == "j1234567")
             {
                 this.Hide();
                 MenuSuperUser menuSuperUser = new MenuSuperUser();
@@ -108,7 +123,7 @@ namespace sistemaCompra
             {
                 MessageBox.Show("Usuario o clave incorrecto");
                 
-            }
+            }*/
         }
 
         private void clearCajas()
