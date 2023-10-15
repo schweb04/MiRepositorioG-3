@@ -9,17 +9,5 @@ namespace sistemaCompra
         {
             MessageBox.Show("Invalido");
         }
-
-        public passwordException(string? message) : base(message)
-        {
-        }
-
-        public passwordException(string? message, Exception? innerException) : base(message, innerException)
-        {
-        }
-
-        protected passwordException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }

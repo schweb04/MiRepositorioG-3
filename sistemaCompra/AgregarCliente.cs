@@ -36,5 +36,10 @@ namespace sistemaCompra
         {
 
         }
+
+        private void pboxAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

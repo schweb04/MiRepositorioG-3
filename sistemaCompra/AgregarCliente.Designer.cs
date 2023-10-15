@@ -122,6 +122,7 @@
             pboxAceptar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAceptar.TabIndex = 52;
             pboxAceptar.TabStop = false;
+            pboxAceptar.Click += pboxAceptar_Click;
             // 
             // pboxAgregarCl
             // 

@@ -41,6 +41,9 @@ namespace sistemaCompra
             pnlDesplegar.Visible = false;
         }
 
+        private void cboxTipoIdentificacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
