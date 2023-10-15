@@ -370,8 +370,7 @@
             pboxEliminar.TabStop = false;
             // 
             // pboxLista
-            // 
-            pboxLista.Image = Properties.Resources.ControlTabla121;
+            //             
             pboxLista.Location = new Point(12, 103);
             pboxLista.Name = "pboxLista";
             pboxLista.Size = new Size(174, 203);

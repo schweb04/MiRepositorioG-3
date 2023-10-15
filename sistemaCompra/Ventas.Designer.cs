@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label5 = new Label();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -50,8 +50,8 @@
             Fila1 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Columna3 = new DataGridViewTextBoxColumn();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            clienteCedulaTB = new TextBox();
+            textBoxPrueba = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -238,12 +238,12 @@
             // Fila1
             // 
             Fila1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle7.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Fila1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Fila1.DefaultCellStyle = dataGridViewCellStyle1;
             Fila1.DividerWidth = 5;
             Fila1.HeaderText = "Fila1";
             Fila1.MinimumWidth = 6;
@@ -252,12 +252,12 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle8.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Column1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Column1.DefaultCellStyle = dataGridViewCellStyle2;
             Column1.DividerWidth = 5;
             Column1.HeaderText = "Fila2";
             Column1.MinimumWidth = 6;
@@ -266,39 +266,40 @@
             // 
             // Columna3
             // 
-            dataGridViewCellStyle9.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle9.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Columna3.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle3.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Columna3.DefaultCellStyle = dataGridViewCellStyle3;
             Columna3.HeaderText = "Fila3";
             Columna3.MinimumWidth = 6;
             Columna3.Name = "Columna3";
             Columna3.Width = 116;
             // 
-            // textBox1
+            // clienteCedulaTB
             // 
-            textBox1.Location = new Point(157, 136);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(174, 27);
-            textBox1.TabIndex = 38;
-            textBox1.TextChanged += textBox1_TextChanged;
+            clienteCedulaTB.Location = new Point(157, 136);
+            clienteCedulaTB.Name = "clienteCedulaTB";
+            clienteCedulaTB.Size = new Size(174, 27);
+            clienteCedulaTB.TabIndex = 38;
+            clienteCedulaTB.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // textBoxPrueba
             // 
-            textBox2.Location = new Point(147, 217);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 39;
+            textBoxPrueba.Location = new Point(147, 217);
+            textBoxPrueba.Name = "textBoxPrueba";
+            textBoxPrueba.Size = new Size(125, 27);
+            textBoxPrueba.TabIndex = 39;
+            textBoxPrueba.TextChanged += textBoxPrueba_TextChanged;
             // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 728);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxPrueba);
+            Controls.Add(clienteCedulaTB);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox9);
@@ -354,7 +355,7 @@
         private DataGridViewTextBoxColumn Fila1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Columna3;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox clienteCedulaTB;
+        private TextBox textBoxPrueba;
     }
 }

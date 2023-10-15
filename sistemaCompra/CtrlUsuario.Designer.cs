@@ -212,7 +212,6 @@
             // 
             // pboxCtrlUsuarios
             // 
-            pboxCtrlUsuarios.Image = Properties.Resources.ControlUsuarios;
             pboxCtrlUsuarios.Location = new Point(131, 11);
             pboxCtrlUsuarios.Name = "pboxCtrlUsuarios";
             pboxCtrlUsuarios.Size = new Size(296, 30);
@@ -222,7 +221,6 @@
             // 
             // pboxLista
             // 
-            pboxLista.Image = Properties.Resources.ControlTabla123;
             pboxLista.Location = new Point(12, 105);
             pboxLista.Name = "pboxLista";
             pboxLista.Size = new Size(174, 203);

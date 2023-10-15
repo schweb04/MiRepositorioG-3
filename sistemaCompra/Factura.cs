@@ -3,9 +3,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using Rectangle = iTextSharp.text.Rectangle;
 
 namespace sistemaCompra
 {
@@ -21,7 +18,7 @@ namespace sistemaCompra
         private const double IGTF = 0.03;
 
 
-        public void GenerarFactura(string rutaArchivo)
+       /* public void GenerarFactura(string rutaArchivo)
         {
             string carpetaFacturas = "Facturas";
             string rutaCarpetaFacturas = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, carpetaFacturas);
@@ -98,12 +95,10 @@ namespace sistemaCompra
     }
     Este es un ejemplo básico y deberás adaptarlo según tu diseño y necesidades específicas.Puedes agregar más detalles y personalizar el formato según tus requisitos, incluyendo el uso adecuado de tablas, fuentes, colores y estilos para crear una factura visualmente atractiva y funcional.
 
-
+*/
 
 
 
 
         }
     }
-}
-    */
