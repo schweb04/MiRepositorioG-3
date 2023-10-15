@@ -44,7 +44,7 @@
             // pboxCtrlUsuarios
             // 
             pboxCtrlUsuarios.Image = Properties.Resources.Admin3;
-            pboxCtrlUsuarios.Location = new Point(76, 257);
+            pboxCtrlUsuarios.Location = new Point(213, 245);
             pboxCtrlUsuarios.Name = "pboxCtrlUsuarios";
             pboxCtrlUsuarios.Size = new Size(209, 57);
             pboxCtrlUsuarios.SizeMode = PictureBoxSizeMode.Zoom;
@@ -55,7 +55,7 @@
             // pboxAdmin
             // 
             pboxAdmin.Image = (Image)resources.GetObject("pboxAdmin.Image");
-            pboxAdmin.Location = new Point(34, 25);
+            pboxAdmin.Location = new Point(171, 13);
             pboxAdmin.Margin = new Padding(3, 4, 3, 4);
             pboxAdmin.Name = "pboxAdmin";
             pboxAdmin.Size = new Size(291, 47);
@@ -66,7 +66,7 @@
             // pboxAvatarAdmin
             // 
             pboxAvatarAdmin.Image = Properties.Resources.Admin2;
-            pboxAvatarAdmin.Location = new Point(110, 80);
+            pboxAvatarAdmin.Location = new Point(247, 68);
             pboxAvatarAdmin.Margin = new Padding(3, 4, 3, 4);
             pboxAvatarAdmin.Name = "pboxAvatarAdmin";
             pboxAvatarAdmin.Size = new Size(137, 175);
@@ -77,7 +77,7 @@
             // pboxCtrlProductos
             // 
             pboxCtrlProductos.Image = Properties.Resources.Admin4;
-            pboxCtrlProductos.Location = new Point(76, 321);
+            pboxCtrlProductos.Location = new Point(213, 309);
             pboxCtrlProductos.Margin = new Padding(3, 4, 3, 4);
             pboxCtrlProductos.Name = "pboxCtrlProductos";
             pboxCtrlProductos.Size = new Size(210, 53);
@@ -89,7 +89,7 @@
             // pboxCtrlClientes
             // 
             pboxCtrlClientes.Image = Properties.Resources.Admin5;
-            pboxCtrlClientes.Location = new Point(76, 383);
+            pboxCtrlClientes.Location = new Point(213, 371);
             pboxCtrlClientes.Margin = new Padding(3, 4, 3, 4);
             pboxCtrlClientes.Name = "pboxCtrlClientes";
             pboxCtrlClientes.Size = new Size(210, 53);
@@ -102,7 +102,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(373, 485);
+            ClientSize = new Size(614, 525);
             Controls.Add(pboxCtrlClientes);
             Controls.Add(pboxCtrlProductos);
             Controls.Add(pboxAvatarAdmin);
