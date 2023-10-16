@@ -22,7 +22,7 @@ namespace sistemaCompra
             string[] lineas = File.ReadAllLines("C:\\Users\\ojito\\OneDrive\\Documents\\pruebaCs.csv");
             int i = 0;
 
-             
+
             foreach (string linea in lineas.Skip(1))
             {
 
@@ -41,12 +41,12 @@ namespace sistemaCompra
                     cliente.TipoDocumento = Convert.ToChar(valores[6]);
                     cliente.ContribuyenteEspecial = Convert.ToBoolean(valores[7]);
                     clientes.Add(cliente);
-                    }
+                }
 
                 i++;
             }
-            
-           
+
+
         }
 
 
@@ -102,7 +102,7 @@ namespace sistemaCompra
                 textBoxPrueba.Text = "error";
             }
 
-            }
+        }
 
         private void textBoxPrueba_TextChanged(object sender, EventArgs e)
         {

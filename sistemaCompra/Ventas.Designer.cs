@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label5 = new Label();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -238,12 +238,12 @@
             // Fila1
             // 
             Fila1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Fila1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle4.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Fila1.DefaultCellStyle = dataGridViewCellStyle4;
             Fila1.DividerWidth = 5;
             Fila1.HeaderText = "Fila1";
             Fila1.MinimumWidth = 6;
@@ -252,12 +252,12 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle5.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Column1.DefaultCellStyle = dataGridViewCellStyle5;
             Column1.DividerWidth = 5;
             Column1.HeaderText = "Fila2";
             Column1.MinimumWidth = 6;
@@ -266,12 +266,12 @@
             // 
             // Columna3
             // 
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle3.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Columna3.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle6.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Columna3.DefaultCellStyle = dataGridViewCellStyle6;
             Columna3.HeaderText = "Fila3";
             Columna3.MinimumWidth = 6;
             Columna3.Name = "Columna3";
@@ -287,7 +287,7 @@
             // 
             // textBoxPrueba
             // 
-            textBoxPrueba.Location = new Point(147, 217);
+            textBoxPrueba.Location = new Point(161, 265);
             textBoxPrueba.Name = "textBoxPrueba";
             textBoxPrueba.Size = new Size(125, 27);
             textBoxPrueba.TabIndex = 39;

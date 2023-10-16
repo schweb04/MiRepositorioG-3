@@ -40,6 +40,9 @@ namespace sistemaCompra
             pnlDesplegar.Visible = false;
         }
 
+        private void pboxAceptarEditar_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
