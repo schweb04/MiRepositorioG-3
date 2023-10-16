@@ -53,14 +53,16 @@ namespace sistemaCompra
             if (cajaUsuario.TextLength < 6 || cajaUsuario.TextLength > 10)
             {
                 MessageBox.Show("El nombre de usuario debe estar comprendido entre 6 y 10 caracteres");
-                
+                cajaClave.Clear();
+                cajaUsuario.Clear();
 
             }
 
             if (cajaClave.TextLength < 8 || cajaClave.TextLength > 12)
             {
                 MessageBox.Show("La clave debe estar comprendida entre 8 y 12 caracteres");
-              
+                cajaClave.Clear();
+                cajaUsuario.Clear();
 
             }
 
@@ -97,7 +99,7 @@ namespace sistemaCompra
             else if (cajaUsuario.Text.ToLower() == "luis03" && cajaClave.Text == "l1234567")
             {
                 this.Hide();
-                Ventas menuCajero = new Ventas();
+                MenuCajero menuCajero = new MenuCajero();
                 menuCajero.ShowDialog();
                 menuCajero = null;
                 this.Show();
@@ -107,7 +109,8 @@ namespace sistemaCompra
             else
             {
                 MessageBox.Show("Usuario o clave incorrecto");
-                
+                cajaClave.Clear();
+                cajaUsuario.Clear();
             }
         }
 

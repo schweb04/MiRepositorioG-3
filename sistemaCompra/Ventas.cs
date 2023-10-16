@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace sistemaCompra
 {
@@ -38,7 +37,7 @@ namespace sistemaCompra
                     cliente.Direccion = valores[3];
                     cliente.Telefono = valores[4];
                     cliente.CorreoElectronico = valores[5];
-                    cliente.TipoDocumento = Convert.ToChar(valores[6]);
+                    cliente.TipoDeDocumento = Convert.ToChar(valores[6]);
                     cliente.ContribuyenteEspecial = Convert.ToBoolean(valores[7]);
                     clientes.Add(cliente);
                 }
@@ -70,31 +69,15 @@ namespace sistemaCompra
 
         }
 
-        private void dtgvProductosSeleccionados_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Ventas_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            string buscador = clienteCedulaTB.Text;
 
-            try
-            {
-                foreach (Cliente cliente in clientes)
-                {
-                    if (buscador == Convert.ToString(cliente.Cedula))
-                    {
-                        textBoxPrueba.Text = $"{cliente.Nombre}";
-                        break;
-                    }
-
-                }
+        }
 
             }
             catch (Exception ex)
