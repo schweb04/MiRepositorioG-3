@@ -75,5 +75,10 @@ namespace sistemaCompra
                 }
             }
         }
+
+        private void Ventas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

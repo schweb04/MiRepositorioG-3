@@ -1,0 +1,10 @@
+Codigo,Nombre,Cantidad,UnidadDeMedida,CostoUnitario,PrecioDeVenta,tieneIVA
+
+1,Pan,15,Kilogramo (Kg),19,20,SI
+
+2,Harina,12,Kilogramo (Kg),123,156,SI
+0,Coca,10,Litro (L),12,16,SI
+
+4,Josue,1,Kilogramo (Kg),2,3,SI
+
+5,Pollito,123,Kilogramo (Kg),213,123,SI
