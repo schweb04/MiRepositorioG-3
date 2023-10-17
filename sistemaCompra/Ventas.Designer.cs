@@ -47,7 +47,6 @@
             label4 = new Label();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
-            pictureBox8 = new PictureBox();
             pictureBox9 = new PictureBox();
             dataGridView1 = new DataGridView();
             Fila1 = new DataGridViewTextBoxColumn();
@@ -66,7 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -186,6 +184,8 @@
             // 
             // pictureBox7
             // 
+            pictureBox7.Image = Properties.Resources.IconoLupa;
+            pictureBox7.Location = new Point(247, 132);
             pictureBox7.Image = Properties.Resources.ControlAñadir;
             pictureBox7.Location = new Point(282, 198);
             pictureBox7.Margin = new Padding(3, 4, 3, 4);
@@ -195,27 +195,16 @@
             pictureBox7.TabIndex = 33;
             pictureBox7.TabStop = false;
             // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = Properties.Resources.ControlAñadir;
-            pictureBox8.Location = new Point(282, 312);
-            pictureBox8.Margin = new Padding(3, 4, 3, 4);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(33, 35);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 34;
-            pictureBox8.TabStop = false;
-            // 
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.ControlAñadir;
-            pictureBox9.Location = new Point(282, 441);
-            pictureBox9.Margin = new Padding(3, 4, 3, 4);
+            pictureBox9.Location = new Point(247, 331);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(33, 35);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 35;
             pictureBox9.TabStop = false;
+            pictureBox9.Click += pictureBox9_Click;
             // 
             // dataGridView1
             // 
@@ -347,7 +336,6 @@
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox9);
-            Controls.Add(pictureBox8);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
             Controls.Add(label4);
@@ -370,7 +358,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -390,7 +377,6 @@
         private Label label4;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
         private PictureBox pictureBox9;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Fila1;
