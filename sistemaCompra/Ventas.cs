@@ -94,5 +94,44 @@ namespace sistemaCompra
         {
 
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            string buscador = textBoxCliente.Text;
+
+            foreach (Cliente cliente in clientes)
+            {
+                if (buscador == Convert.ToString(cliente.Cedula))
+                {
+                    nombreTB.Text = cliente.Nombre;
+                    apellidoTB.Text = cliente.Apellido;
+                    telefonoTB.Text = cliente.Telefono;
+                    emailTB.Text = cliente.CorreoElectronico;
+                    direccionTB.Text = cliente.Direccion;
+                    tipoDeDocumentoCB.Text = cliente.tipoDeDocumento.ToString();
+
+                    if (cliente.ContribuyenteEspecial)
+                    {
+                        Si.Checked = true;
+                    }
+                    else
+                    {
+                        No.Checked = true;
+                    }
+
+                    break;
+                }
+            }
+        }
+
+        private void tipoDeDocumentoCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
