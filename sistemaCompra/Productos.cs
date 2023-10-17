@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sistemaCompra
 {
-    internal class Productos: Auxiliares
+    internal class Producto: Auxiliares
     {
         private double cantidad;
         private string unidadDeMedida = ""; //Kilogramos, paquetes, etc
@@ -20,7 +20,7 @@ namespace sistemaCompra
         public double PrecioDeVenta {  get { return precioDeVenta; } set {  precioDeVenta = value; } }
         public bool IVA { get { return iva; } set { iva = value; } }
 
-        public Productos(double _cantidad, string _unidadDeMedida, double _costoUnitario, double _precioDeVenta, bool _iva)
+        public Producto(double _cantidad, string _unidadDeMedida, double _costoUnitario, double _precioDeVenta, bool _iva)
         {
             Cantidad = _cantidad;
             UnidadDeMedida = _unidadDeMedida;

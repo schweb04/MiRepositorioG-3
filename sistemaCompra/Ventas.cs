@@ -13,17 +13,21 @@ namespace sistemaCompra
     public partial class Ventas : Form
     {
         private List<Cliente> clientes;
+        private List<Producto> productos;
 
         public Ventas()
         {
             InitializeComponent();
+
             clientes = new List<Cliente>();
-            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clientes.csv");
-            string[] lineas = File.ReadAllLines(path);
+            productos = new List<Producto>();
+
+            string pathClientes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clientes.csv");
+            string[] lineasClientes = File.ReadAllLines(pathClientes);
             int i = 0;
 
 
-            foreach (string linea in lineas.Skip(1))
+            foreach (string linea in lineasClientes.Skip(1))
             {
 
                 string[] valores = linea.Split(',');
@@ -45,6 +49,8 @@ namespace sistemaCompra
 
                 i++;
             }
+
+
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -77,6 +83,11 @@ namespace sistemaCompra
         }
 
         private void Ventas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
