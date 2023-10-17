@@ -211,8 +211,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = Properties.Resources.IconoLupa;
-            pictureBox7.Location = new Point(327, 69);
-            pictureBox7.Margin = new Padding(3, 4, 3, 4);
+            pictureBox7.Location = new Point(247, 148);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(33, 35);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -223,7 +222,8 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.ControlAñadir;
-            pictureBox9.Location = new Point(282, 431);
+            pictureBox9.Location = new Point(247, 234);
+            pictureBox9.Margin = new Padding(3, 2, 3, 2);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(33, 35);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
