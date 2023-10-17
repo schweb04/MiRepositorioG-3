@@ -99,9 +99,9 @@ namespace sistemaCompra
             else if (cajaUsuario.Text.ToLower() == "luis03" && cajaClave.Text == "l1234567")
             {
                 this.Hide();
-                MenuCajero menuCajero = new MenuCajero();
-                menuCajero.ShowDialog();
-                menuCajero = null;
+                Ventas ventas = new Ventas();
+                ventas.ShowDialog();
+                ventas = null;
                 this.Show();
                 clearCajas();
             }

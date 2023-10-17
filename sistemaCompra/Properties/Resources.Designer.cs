@@ -733,66 +733,6 @@ namespace sistemaCompra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ControlTabla1 {
-            get {
-                object obj = ResourceManager.GetObject("ControlTabla1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ControlTabla11 {
-            get {
-                object obj = ResourceManager.GetObject("ControlTabla11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ControlTabla12 {
-            get {
-                object obj = ResourceManager.GetObject("ControlTabla12", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ControlTabla121 {
-            get {
-                object obj = ResourceManager.GetObject("ControlTabla121", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ControlTabla123 {
-            get {
-                object obj = ResourceManager.GetObject("ControlTabla123", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ControlTabla13 {
-            get {
-                object obj = ResourceManager.GetObject("ControlTabla13", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ControlUsuario1 {
             get {
                 object obj = ResourceManager.GetObject("ControlUsuario1", resourceCulture);
@@ -826,16 +766,6 @@ namespace sistemaCompra.Properties {
         internal static System.Drawing.Bitmap ControlUsuario4 {
             get {
                 object obj = ResourceManager.GetObject("ControlUsuario4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ControlUsuarios {
-            get {
-                object obj = ResourceManager.GetObject("ControlUsuarios", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

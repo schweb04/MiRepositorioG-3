@@ -18,7 +18,8 @@ namespace sistemaCompra
         {
             InitializeComponent();
             clientes = new List<Cliente>();
-            string[] lineas = File.ReadAllLines("C:\\Users\\ojito\\OneDrive\\Documents\\pruebaCs.csv");
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clientes.csv");
+            string[] lineas = File.ReadAllLines(path);
             int i = 0;
 
 
@@ -79,15 +80,12 @@ namespace sistemaCompra
 
         }
 
-            }
-            catch (Exception ex)
-            {
-                textBoxPrueba.Text = "error";
-            }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void textBoxPrueba_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
