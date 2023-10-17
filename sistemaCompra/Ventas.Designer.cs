@@ -72,9 +72,9 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(14, 136);
+            label5.Location = new Point(12, 102);
             label5.Name = "label5";
-            label5.Size = new Size(55, 20);
+            label5.Size = new Size(44, 15);
             label5.TabIndex = 8;
             label5.Text = "Cliente";
             label5.Click += label5_Click;
@@ -82,10 +82,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.InterfazVentas2;
-            pictureBox1.Location = new Point(603, 624);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(528, 468);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(271, 80);
+            pictureBox1.Size = new Size(237, 60);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
@@ -93,10 +92,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.BotonRetroceder;
-            pictureBox2.Location = new Point(14, 624);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(12, 468);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(114, 67);
+            pictureBox2.Size = new Size(100, 50);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 24;
             pictureBox2.TabStop = false;
@@ -104,10 +102,9 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.ControlDato1;
-            pictureBox3.Location = new Point(51, 194);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Location = new Point(45, 146);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(208, 39);
+            pictureBox3.Size = new Size(182, 29);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 25;
             pictureBox3.TabStop = false;
@@ -116,10 +113,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.ControlDato1;
-            pictureBox4.Location = new Point(51, 308);
-            pictureBox4.Margin = new Padding(3, 4, 3, 4);
+            pictureBox4.Location = new Point(45, 231);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(208, 39);
+            pictureBox4.Size = new Size(182, 29);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 26;
             pictureBox4.TabStop = false;
@@ -127,19 +123,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(11, 265);
+            label1.Location = new Point(10, 199);
             label1.Name = "label1";
-            label1.Size = new Size(69, 20);
+            label1.Size = new Size(56, 15);
             label1.TabIndex = 27;
             label1.Text = "Producto";
             // 
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.ControlDato1;
-            pictureBox5.Location = new Point(51, 437);
-            pictureBox5.Margin = new Padding(3, 4, 3, 4);
+            pictureBox5.Location = new Point(45, 328);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(208, 39);
+            pictureBox5.Size = new Size(182, 29);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 28;
             pictureBox5.TabStop = false;
@@ -147,48 +142,46 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(14, 413);
+            label2.Location = new Point(12, 310);
             label2.Name = "label2";
-            label2.Size = new Size(56, 20);
+            label2.Size = new Size(46, 15);
             label2.TabIndex = 29;
             label2.Text = "Factura";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(11, 480);
+            label3.Location = new Point(10, 360);
             label3.Name = "label3";
-            label3.Size = new Size(34, 20);
+            label3.Size = new Size(27, 15);
             label3.TabIndex = 30;
             label3.Text = "IVA:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(11, 500);
+            label4.Location = new Point(10, 375);
             label4.Name = "label4";
-            label4.Size = new Size(128, 20);
+            label4.Size = new Size(101, 15);
             label4.TabIndex = 31;
             label4.Text = "Precio en Dolares:";
             // 
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.InterfazVentas1;
-            pictureBox6.Location = new Point(603, -9);
-            pictureBox6.Margin = new Padding(3, 4, 3, 4);
+            pictureBox6.Location = new Point(528, -7);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(147, 56);
+            pictureBox6.Size = new Size(129, 42);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 32;
             pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
-            pictureBox7.Image = Properties.Resources.ControlAñadir;
-            pictureBox7.Location = new Point(282, 198);
-            pictureBox7.Margin = new Padding(3, 4, 3, 4);
+            pictureBox7.Image = Properties.Resources.IconoLupa;
+            pictureBox7.Location = new Point(247, 148);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(33, 35);
+            pictureBox7.Size = new Size(29, 26);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 33;
             pictureBox7.TabStop = false;
@@ -196,9 +189,10 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.ControlAñadir;
-            pictureBox9.Location = new Point(282, 298);
+            pictureBox9.Location = new Point(247, 234);
+            pictureBox9.Margin = new Padding(3, 2, 3, 2);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(33, 35);
+            pictureBox9.Size = new Size(29, 26);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 35;
             pictureBox9.TabStop = false;
@@ -209,13 +203,12 @@
             dataGridView1.BackgroundColor = Color.FromArgb(11, 87, 96);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Fila1, Column1, Columna3, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(603, 115);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(528, 86);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 6;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.ScrollBars = ScrollBars.Vertical;
-            dataGridView1.Size = new Size(776, 467);
+            dataGridView1.Size = new Size(679, 350);
             dataGridView1.TabIndex = 37;
             // 
             // Fila1
@@ -312,24 +305,26 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(80, 181);
+            textBox1.Location = new Point(70, 136);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(179, 27);
+            textBox1.Size = new Size(157, 23);
             textBox1.TabIndex = 38;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(80, 298);
+            textBox2.Location = new Point(70, 224);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(179, 27);
+            textBox2.Size = new Size(157, 23);
             textBox2.TabIndex = 39;
             // 
             // Ventas
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1416, 707);
+            ClientSize = new Size(1208, 530);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
@@ -346,6 +341,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label5);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Ventas";
             Text = "Ventas";
             Load += Ventas_Load;
