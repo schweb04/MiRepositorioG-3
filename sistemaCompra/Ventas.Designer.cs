@@ -99,7 +99,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(80, 45);
+            label5.Location = new Point(51, 33);
             label5.Name = "label5";
             label5.Size = new Size(249, 20);
             label5.TabIndex = 8;
@@ -137,7 +137,6 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 25;
             pictureBox3.TabStop = false;
-
             // 
             // pictureBox4
             // 
@@ -211,7 +210,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = Properties.Resources.IconoLupa;
-            pictureBox7.Location = new Point(247, 148);
+            pictureBox7.Location = new Point(323, 69);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(33, 35);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -222,7 +221,7 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.ControlAñadir;
-            pictureBox9.Location = new Point(247, 234);
+            pictureBox9.Location = new Point(282, 431);
             pictureBox9.Margin = new Padding(3, 2, 3, 2);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(33, 35);
@@ -373,7 +372,7 @@
             // 
             // apellidoTB
             // 
-            apellidoTB.Location = new Point(209, 155);
+            apellidoTB.Location = new Point(204, 155);
             apellidoTB.Name = "apellidoTB";
             apellidoTB.Size = new Size(125, 27);
             apellidoTB.TabIndex = 44;
