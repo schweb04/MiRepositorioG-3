@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             label5 = new Label();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -184,8 +184,6 @@
             // 
             // pictureBox7
             // 
-            pictureBox7.Image = Properties.Resources.IconoLupa;
-            pictureBox7.Location = new Point(247, 132);
             pictureBox7.Image = Properties.Resources.ControlAñadir;
             pictureBox7.Location = new Point(282, 198);
             pictureBox7.Margin = new Padding(3, 4, 3, 4);
@@ -198,7 +196,7 @@
             // pictureBox9
             // 
             pictureBox9.Image = Properties.Resources.ControlAñadir;
-            pictureBox9.Location = new Point(247, 331);
+            pictureBox9.Location = new Point(282, 298);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(33, 35);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -223,12 +221,12 @@
             // Fila1
             // 
             Fila1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle8.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Fila1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Fila1.DefaultCellStyle = dataGridViewCellStyle1;
             Fila1.HeaderText = "Codigo";
             Fila1.MinimumWidth = 6;
             Fila1.Name = "Fila1";
@@ -236,12 +234,12 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle9.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle9.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Column1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Column1.DefaultCellStyle = dataGridViewCellStyle2;
             Column1.HeaderText = "Nombre";
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
@@ -249,12 +247,12 @@
             // 
             // Columna3
             // 
-            dataGridViewCellStyle10.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle10.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle10.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Columna3.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle3.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Columna3.DefaultCellStyle = dataGridViewCellStyle3;
             Columna3.HeaderText = "Cantidad";
             Columna3.MinimumWidth = 6;
             Columna3.Name = "Columna3";
@@ -262,12 +260,12 @@
             // 
             // Column2
             // 
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle11.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle11.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle11.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Column2.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle4.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Column2.DefaultCellStyle = dataGridViewCellStyle4;
             Column2.HeaderText = "Ud. Medida";
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
@@ -275,12 +273,12 @@
             // 
             // Column3
             // 
-            dataGridViewCellStyle12.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle12.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Column3.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle5.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Column3.DefaultCellStyle = dataGridViewCellStyle5;
             Column3.HeaderText = "Costo Unitario";
             Column3.MinimumWidth = 6;
             Column3.Name = "Column3";
@@ -288,12 +286,12 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle13.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle13.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle13.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle13.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Column4.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle6.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Column4.DefaultCellStyle = dataGridViewCellStyle6;
             Column4.HeaderText = "Precio Total";
             Column4.MinimumWidth = 6;
             Column4.Name = "Column4";
@@ -301,12 +299,12 @@
             // 
             // Column5
             // 
-            dataGridViewCellStyle14.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle14.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle14.SelectionForeColor = Color.FromArgb(11, 87, 96);
-            Column5.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle7.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(11, 87, 96);
+            Column5.DefaultCellStyle = dataGridViewCellStyle7;
             Column5.HeaderText = "Iva";
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
