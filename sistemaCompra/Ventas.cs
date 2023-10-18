@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace sistemaCompra
 {
@@ -122,14 +123,32 @@ namespace sistemaCompra
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             string buscador = textBox2.Text;
-
+            double cantidad = Convert.ToInt64(cantidadTB.Text);
             foreach (Producto producto in productos)
             {
                 if (buscador == Convert.ToString(producto.Codigo))
                 {
-                    label13.Text = producto.Nombre;
+                    factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, producto.PrecioDeVenta, cantidad * producto.PrecioDeVenta, producto.IVA);
                     break;
                 }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0 && factura.Columns[e.ColumnIndex].Name == "Eliminar" && e.RowIndex < factura.Rows.Count && !factura.Rows[e.RowIndex].IsNewRow)
+            {
+                factura.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private void cantidadTB_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(cantidadTB.Text, out _))
+            {
+                MessageBox.Show("Solo se permiten numeros enteros");
+                cantidadTB.Clear();
             }
         }
     }
