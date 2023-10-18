@@ -49,7 +49,7 @@
             mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, acercaDeToolStripMenuItem });
             mnuMenuAdministrador.Location = new Point(0, 0);
             mnuMenuAdministrador.Name = "mnuMenuAdministrador";
-            mnuMenuAdministrador.Size = new Size(507, 24);
+            mnuMenuAdministrador.Size = new Size(537, 24);
             mnuMenuAdministrador.TabIndex = 0;
             mnuMenuAdministrador.Text = "menuStrip1";
             // 
@@ -140,14 +140,14 @@
             pnlMenuAdministrador.Dock = DockStyle.Fill;
             pnlMenuAdministrador.Location = new Point(0, 24);
             pnlMenuAdministrador.Name = "pnlMenuAdministrador";
-            pnlMenuAdministrador.Size = new Size(507, 299);
+            pnlMenuAdministrador.Size = new Size(537, 299);
             pnlMenuAdministrador.TabIndex = 1;
             // 
             // MenuAdministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(507, 323);
+            ClientSize = new Size(537, 323);
             Controls.Add(pnlMenuAdministrador);
             Controls.Add(mnuMenuAdministrador);
             Name = "MenuAdministrador";
