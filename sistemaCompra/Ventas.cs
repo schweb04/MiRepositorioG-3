@@ -136,9 +136,9 @@ namespace sistemaCompra
                 }
             }
 
-            catch(Exception ex) {
+            catch(Exception ex) 
+            {
                 MessageBox.Show("Introducir solo caracteres validos");
-                textBox2.Clear();
                 cantidadTB.Clear();
             }
         }
