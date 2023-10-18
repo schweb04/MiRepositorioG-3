@@ -8,8 +8,8 @@ namespace sistemaCompra
 {
     internal class Auxiliares
     {
-        private string codigo;
-        private string nombre;
+        private string? codigo;
+        private string? nombre;
         
         public string Codigo {  get { return codigo; } set { codigo = value; } }
         public string Nombre { get {  return nombre; } set {  nombre = value; } }

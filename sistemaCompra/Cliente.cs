@@ -17,7 +17,7 @@ namespace sistemaCompra
         private bool contribuyenteEspecial;
 
         public string Apellido { get { return apellido; } set { apellido = value; } }
-        public int Telefono { get; set; }
+        public int Telefono { get { return telefono; } set { telefono = value; } }
         public string CorreoElectronico { get {  return correoElectronico; } set {  correoElectronico = value; } }
         public char TipoDeDocumento { get { return tipoDeDocumento; } set { tipoDeDocumento = value; } }
         public int NumeroDeDocumento { get { return numeroDeDocumento; } set {  numeroDeDocumento = value; } }  
