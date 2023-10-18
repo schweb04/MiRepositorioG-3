@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,8 +25,11 @@ namespace sistemaCompra
 
             string pathClientes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clientes.csv");
             string[] lineasClientes = File.ReadAllLines(pathClientes);
-            int i = 0;
 
+            string pathProductos = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "inventario.csv");
+            string[] lineasProductos = File.ReadAllLines(pathProductos);
+
+            int i = 0;
 
             foreach (string linea in lineasClientes.Skip(1))
             {
@@ -50,7 +54,31 @@ namespace sistemaCompra
                 i++;
             }
 
+            foreach (string linea in lineasProductos.Skip(1))
+            {
 
+                string[] valores = linea.Split(',');
+
+                Producto producto = new Producto();
+                producto.Codigo = valores[0];
+                producto.Nombre = valores[1];
+                producto.Cantidad = Convert.ToInt64(valores[2]);
+                producto.UnidadDeMedida = valores[3];
+                producto.CostoUnitario = Convert.ToInt64(valores[4]);
+                producto.PrecioDeVenta = Convert.ToInt64(valores[5]);
+
+                if (valores[6] == "SI")
+                {
+                    producto.IVA = true;
+                }
+
+                else if (valores[6] == "NO")
+                {
+                    producto.IVA = false;
+                }
+
+                productos.Add(producto);
+            }
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -89,7 +117,20 @@ namespace sistemaCompra
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            string buscador = textBox2.Text;
+
+            foreach (Producto producto in productos)
+            {
+                if (buscador == Convert.ToString(producto.Codigo))
+                {
+                    label13.Text = producto.Nombre;
+                    break;
+                }
+            }
         }
     }
 }

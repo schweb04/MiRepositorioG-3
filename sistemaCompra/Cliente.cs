@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace sistemaCompra
 {
-    internal class Cliente: Auxiliares
+    internal class Cliente
     {
+        private string nombre = "";
         private string apellido = "";
-        private string telefono; //Formato: 0000-0000000
+        private string telefono = ""; //Formato: 0000-0000000
         private string correoElectronico = "";
         public char tipoDeDocumento = 'd'; //d = Valor por defecto, V = Venezolano, E = Extranjero, J = Judicial
         private int cedula;
         private string direccion = "";
         private bool contribuyenteEspecial;
 
+        public string Nombre { get { return nombre; } set { nombre = value; } }
         public string Apellido { get { return apellido; } set { apellido = value; } }
         public string Telefono { get { return telefono; } set { telefono = value; } }
         public string CorreoElectronico { get {  return correoElectronico; } set {  correoElectronico = value; } }
