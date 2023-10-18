@@ -122,15 +122,24 @@ namespace sistemaCompra
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            string buscador = textBox2.Text;
-            double cantidad = Convert.ToInt64(cantidadTB.Text);
-            foreach (Producto producto in productos)
+            try
             {
-                if (buscador == Convert.ToString(producto.Codigo))
+                string buscador = textBox2.Text;
+                double cantidad = Convert.ToInt64(cantidadTB.Text);
+                foreach (Producto producto in productos)
                 {
-                    factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, producto.PrecioDeVenta, cantidad * producto.PrecioDeVenta, producto.IVA);
-                    break;
+                    if (buscador == Convert.ToString(producto.Codigo))
+                    {
+                        factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, producto.PrecioDeVenta, cantidad * producto.PrecioDeVenta, producto.IVA);
+                        break;
+                    }
                 }
+            }
+
+            catch(Exception ex) {
+                MessageBox.Show("Introducir solo caracteres validos");
+                textBox2.Clear();
+                cantidadTB.Clear();
             }
         }
 
@@ -145,11 +154,7 @@ namespace sistemaCompra
 
         private void cantidadTB_TextChanged(object sender, EventArgs e)
         {
-            if (!int.TryParse(cantidadTB.Text, out _))
-            {
-                MessageBox.Show("Solo se permiten numeros enteros");
-                cantidadTB.Clear();
-            }
+            
         }
     }
 }

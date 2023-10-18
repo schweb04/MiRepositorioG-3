@@ -24,8 +24,8 @@ namespace sistemaCompra
 
         private void pboxAgregar_Click(object sender, EventArgs e)
         {
-            AgregarUsuario agregarUsuario = new AgregarUsuario();
-            agregarUsuario.ShowDialog();
+            //AgregarUsuario agregarUsuario = new AgregarUsuario();
+           // agregarUsuario.ShowDialog();
         }
     }
 }
