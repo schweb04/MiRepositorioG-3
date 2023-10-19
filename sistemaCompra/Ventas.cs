@@ -47,7 +47,7 @@ namespace sistemaCompra
                     cliente.Direccion = valores[3];
                     cliente.Telefono = valores[4];
                     cliente.CorreoElectronico = valores[5];
-                    cliente.TipoDeDocumento = Convert.ToChar(valores[6]);
+                    cliente.TipoDocumento = Convert.ToChar(valores[6]);
                     cliente.ContribuyenteEspecial = Convert.ToBoolean(valores[7]);
                     clientes.Add(cliente);
                 }
@@ -95,7 +95,7 @@ namespace sistemaCompra
                     telefonoTB.Text = cliente.Telefono;
                     emailTB.Text = cliente.CorreoElectronico;
                     direccionTB.Text = cliente.Direccion;
-                    tipoDeDocumentoCB.Text = cliente.tipoDeDocumento.ToString();
+                    tipoDeDocumentoCB.Text = cliente.TipoDocumento.ToString();
 
                     if (cliente.ContribuyenteEspecial)
                     {
@@ -162,9 +162,6 @@ namespace sistemaCompra
 
         }
 
-        private void Ventas_Load(object sender, EventArgs e)
-        {
-            
-        }
+
     }
 }
