@@ -53,16 +53,14 @@ namespace sistemaCompra
             if (cajaUsuario.TextLength < 6 || cajaUsuario.TextLength > 10)
             {
                 MessageBox.Show("El nombre de usuario debe estar comprendido entre 6 y 10 caracteres");
-                cajaClave.Clear();
-                cajaUsuario.Clear();
+                
 
             }
 
             if (cajaClave.TextLength < 8 || cajaClave.TextLength > 12)
             {
                 MessageBox.Show("La clave debe estar comprendida entre 8 y 12 caracteres");
-                cajaClave.Clear();
-                cajaUsuario.Clear();
+              
 
             }
 
@@ -76,7 +74,7 @@ namespace sistemaCompra
 
         private void verificarUsuario()
         {
-            if (cajaUsuario.Text.ToLower() == "jose02" && cajaClave.Text == "j1234567")
+            if (cajaUsuario.Text.ToLower() == "jose01" && cajaClave.Text == "j1234567")
             {
                 this.Hide();
                 MenuSuperUser menuSuperUser = new MenuSuperUser();
@@ -109,8 +107,7 @@ namespace sistemaCompra
             else
             {
                 MessageBox.Show("Usuario o clave incorrecto");
-                cajaClave.Clear();
-                cajaUsuario.Clear();
+                
             }
         }
 
@@ -127,46 +124,6 @@ namespace sistemaCompra
                 MessageBox.Show("El nombre de usuario no debe tener espacios");
                 cajaUsuario.Clear();
             }
-
-        }
-
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void Login_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-
-        }
-
-        private void invalido_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cajaClave_TextChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void pboxAvatar_Click(object sender, EventArgs e)
-        {
 
         }
 

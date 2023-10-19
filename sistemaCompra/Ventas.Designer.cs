@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -309,7 +311,7 @@
             label6.TabIndex = 46;
             label6.Text = "Nombre";
             // 
-            // label7
+            // pictureBox3
             // 
             label7.AutoSize = true;
             label7.Location = new Point(240, 132);
@@ -326,7 +328,7 @@
             label8.Size = new Size(0, 20);
             label8.TabIndex = 48;
             // 
-            // label9
+            // pictureBox5
             // 
             label9.AutoSize = true;
             label9.Location = new Point(414, 132);
@@ -353,7 +355,7 @@
             label11.TabIndex = 51;
             label11.Text = "Email";
             // 
-            // tipoDeDocumentoCB
+            // label4
             // 
             tipoDeDocumentoCB.FormattingEnabled = true;
             tipoDeDocumentoCB.Items.AddRange(new object[] { "V", "E", "J" });
@@ -384,7 +386,7 @@
             No.Text = "No";
             No.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // pictureBox7
             // 
             label12.AutoSize = true;
             label12.Location = new Point(58, 294);
@@ -499,7 +501,7 @@
             Column1.ReadOnly = true;
             Column1.Width = 116;
             // 
-            // Columna3
+            // clmCodigo
             // 
             dataGridViewCellStyle3.BackColor = Color.FromArgb(11, 87, 96);
             dataGridViewCellStyle3.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -581,7 +583,7 @@
             // 
             // Ventas
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1511, 722);
             Controls.Add(Cantidad);

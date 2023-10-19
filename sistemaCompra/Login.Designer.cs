@@ -49,7 +49,6 @@
             resources.ApplyResources(pboxAvatar, "pboxAvatar");
             pboxAvatar.Name = "pboxAvatar";
             pboxAvatar.TabStop = false;
-            pboxAvatar.Click += pboxAvatar_Click;
             // 
             // pictureBox2
             // 
@@ -71,7 +70,6 @@
             resources.ApplyResources(cajaClave, "cajaClave");
             cajaClave.Name = "cajaClave";
             cajaClave.UseSystemPasswordChar = true;
-            cajaClave.TextChanged += cajaClave_TextChanged;
             // 
             // mostrarPass
             // 
@@ -109,8 +107,6 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             HelpButton = true;
             Name = "Login";
-            FormClosing += Login_FormClosing;
-            FormClosed += Login_FormClosed;
             Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pboxAvatar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

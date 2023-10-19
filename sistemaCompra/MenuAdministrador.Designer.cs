@@ -31,34 +31,30 @@
             mnuMenuAdministrador = new MenuStrip();
             usuariosToolStripMenuItem = new ToolStripMenuItem();
             controlDeUsuariosToolStripMenuItem = new ToolStripMenuItem();
-            importarUsuariosToolStripMenuItem = new ToolStripMenuItem();
             productosToolStripMenuItem = new ToolStripMenuItem();
             controlDeProductosToolStripMenuItem = new ToolStripMenuItem();
-            importarProductosToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
             controlDeClientesToolStripMenuItem = new ToolStripMenuItem();
-            importarClientesToolStripMenuItem = new ToolStripMenuItem();
-            tasaDolarMenuItem = new ToolStripMenuItem();
-            toolStripTextBox1 = new ToolStripTextBox();
             acercaDeToolStripMenuItem = new ToolStripMenuItem();
             pnlMenuAdministrador = new Panel();
+            toolStripTextBox1 = new ToolStripTextBox();
             mnuMenuAdministrador.SuspendLayout();
             SuspendLayout();
             // 
             // mnuMenuAdministrador
             // 
             mnuMenuAdministrador.BackColor = Color.FromArgb(189, 195, 199);
-            mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, tasaDolarMenuItem, acercaDeToolStripMenuItem });
+            mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, acercaDeToolStripMenuItem });
             mnuMenuAdministrador.Location = new Point(0, 0);
             mnuMenuAdministrador.Name = "mnuMenuAdministrador";
-            mnuMenuAdministrador.Size = new Size(651, 24);
+            mnuMenuAdministrador.Size = new Size(683, 24);
             mnuMenuAdministrador.TabIndex = 0;
             mnuMenuAdministrador.Text = "menuStrip1";
             // 
             // usuariosToolStripMenuItem
             // 
             usuariosToolStripMenuItem.BackColor = Color.FromArgb(189, 195, 199);
-            usuariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeUsuariosToolStripMenuItem, importarUsuariosToolStripMenuItem });
+            usuariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeUsuariosToolStripMenuItem });
             usuariosToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             usuariosToolStripMenuItem.Image = Properties.Resources.IconoUsuario;
             usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
@@ -75,17 +71,9 @@
             controlDeUsuariosToolStripMenuItem.ToolTipText = "Ver lista de usuarios, agregar usuarios, editar usuarios, y eliminar usuarios ";
             controlDeUsuariosToolStripMenuItem.Click += controlDeUsuariosToolStripMenuItem_Click;
             // 
-            // importarUsuariosToolStripMenuItem
-            // 
-            importarUsuariosToolStripMenuItem.Image = Properties.Resources.IconoImportar;
-            importarUsuariosToolStripMenuItem.Name = "importarUsuariosToolStripMenuItem";
-            importarUsuariosToolStripMenuItem.Size = new Size(207, 22);
-            importarUsuariosToolStripMenuItem.Text = "Importar Usuarios";
-            importarUsuariosToolStripMenuItem.ToolTipText = "Cargar datos de los usuarios en el sistema";
-            // 
             // productosToolStripMenuItem
             // 
-            productosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeProductosToolStripMenuItem, importarProductosToolStripMenuItem });
+            productosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeProductosToolStripMenuItem });
             productosToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             productosToolStripMenuItem.Image = Properties.Resources.IconoProducto;
             productosToolStripMenuItem.ImageAlign = ContentAlignment.MiddleLeft;
@@ -103,17 +91,9 @@
             controlDeProductosToolStripMenuItem.ToolTipText = "Ver lista de productos, agregar productos, editar productos, y eliminar productos ";
             controlDeProductosToolStripMenuItem.Click += controlDeProductosToolStripMenuItem_Click;
             // 
-            // importarProductosToolStripMenuItem
-            // 
-            importarProductosToolStripMenuItem.Image = Properties.Resources.IconoImportar;
-            importarProductosToolStripMenuItem.Name = "importarProductosToolStripMenuItem";
-            importarProductosToolStripMenuItem.Size = new Size(214, 22);
-            importarProductosToolStripMenuItem.Text = "Importar Productos";
-            importarProductosToolStripMenuItem.ToolTipText = "Cargar datos de los productos en el sistema";
-            // 
             // clientesToolStripMenuItem
             // 
-            clientesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeClientesToolStripMenuItem, importarClientesToolStripMenuItem });
+            clientesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeClientesToolStripMenuItem });
             clientesToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             clientesToolStripMenuItem.Image = Properties.Resources.IconoCliente;
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
@@ -130,29 +110,6 @@
             controlDeClientesToolStripMenuItem.ToolTipText = "Ver lista de clientes, agregar clientes, editar clientes, y eliminar clientes ";
             controlDeClientesToolStripMenuItem.Click += controlDeClientesToolStripMenuItem_Click;
             // 
-            // importarClientesToolStripMenuItem
-            // 
-            importarClientesToolStripMenuItem.Image = Properties.Resources.IconoImportar;
-            importarClientesToolStripMenuItem.Name = "importarClientesToolStripMenuItem";
-            importarClientesToolStripMenuItem.Size = new Size(207, 22);
-            importarClientesToolStripMenuItem.Text = "Importar Clientes";
-            importarClientesToolStripMenuItem.ToolTipText = "Cargar datos de los clientes en el sistema";
-            // 
-            // tasaDolarMenuItem
-            // 
-            tasaDolarMenuItem.AutoToolTip = true;
-            tasaDolarMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox1 });
-            tasaDolarMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            tasaDolarMenuItem.Name = "tasaDolarMenuItem";
-            tasaDolarMenuItem.Size = new Size(117, 20);
-            tasaDolarMenuItem.Text = "Tasa del Dólar";
-            tasaDolarMenuItem.ToolTipText = "Ingrese la tasa del dólar";
-            // 
-            // toolStripTextBox1
-            // 
-            toolStripTextBox1.Name = "toolStripTextBox1";
-            toolStripTextBox1.Size = new Size(100, 23);
-            // 
             // acercaDeToolStripMenuItem
             // 
             acercaDeToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
@@ -167,14 +124,19 @@
             pnlMenuAdministrador.Dock = DockStyle.Fill;
             pnlMenuAdministrador.Location = new Point(0, 24);
             pnlMenuAdministrador.Name = "pnlMenuAdministrador";
-            pnlMenuAdministrador.Size = new Size(651, 358);
+            pnlMenuAdministrador.Size = new Size(683, 413);
             pnlMenuAdministrador.TabIndex = 1;
+            // 
+            // toolStripTextBox1
+            // 
+            toolStripTextBox1.Name = "toolStripTextBox1";
+            toolStripTextBox1.Size = new Size(100, 23);
             // 
             // MenuAdministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(651, 382);
+            ClientSize = new Size(683, 437);
             Controls.Add(pnlMenuAdministrador);
             Controls.Add(mnuMenuAdministrador);
             Name = "MenuAdministrador";
@@ -190,16 +152,12 @@
         private MenuStrip mnuMenuAdministrador;
         private ToolStripMenuItem usuariosToolStripMenuItem;
         private ToolStripMenuItem controlDeUsuariosToolStripMenuItem;
-        private ToolStripMenuItem importarUsuariosToolStripMenuItem;
         private ToolStripMenuItem productosToolStripMenuItem;
         private ToolStripMenuItem controlDeProductosToolStripMenuItem;
-        private ToolStripMenuItem importarProductosToolStripMenuItem;
         private ToolStripMenuItem clientesToolStripMenuItem;
         private ToolStripMenuItem controlDeClientesToolStripMenuItem;
-        private ToolStripMenuItem importarClientesToolStripMenuItem;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
         private Panel pnlMenuAdministrador;
-        private ToolStripMenuItem tasaDolarMenuItem;
         private ToolStripTextBox toolStripTextBox1;
     }
 }

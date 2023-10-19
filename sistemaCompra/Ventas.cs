@@ -156,5 +156,15 @@ namespace sistemaCompra
         {
             
         }
+
+        private void dtgvProductosSeleccionados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Ventas_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
