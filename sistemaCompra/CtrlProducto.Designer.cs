@@ -88,10 +88,10 @@
             // 
             // pboxAgregar
             // 
-            pboxAgregar.Image = Properties.Resources.ControlProducto41;
-            pboxAgregar.Location = new Point(107, 91);
+            pboxAgregar.Image = Properties.Resources.ControlAñadir;
+            pboxAgregar.Location = new Point(279, 60);
             pboxAgregar.Name = "pboxAgregar";
-            pboxAgregar.Size = new Size(209, 42);
+            pboxAgregar.Size = new Size(41, 37);
             pboxAgregar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAgregar.TabIndex = 52;
             pboxAgregar.TabStop = false;
