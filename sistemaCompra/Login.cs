@@ -76,12 +76,7 @@ namespace sistemaCompra
         {
             if (cajaUsuario.Text.ToLower() == "jose01" && cajaClave.Text == "j1234567")
             {
-                this.Hide();
-                MenuSuperUser menuSuperUser = new MenuSuperUser();
-                menuSuperUser.ShowDialog();
-                menuSuperUser = null;
-                this.Show();
-                clearCajas();
+                ShowMenuSuperUser();
             }
 
             else if (cajaUsuario.Text.ToLower() == "pedro02" && cajaClave.Text == "p1234567")
@@ -109,6 +104,16 @@ namespace sistemaCompra
                 MessageBox.Show("Usuario o clave incorrecto");
                 
             }
+        }
+
+        private void ShowMenuSuperUser()
+        {
+            this.Hide();
+            MenuSuperUser menuSuperUser = new MenuSuperUser();
+            menuSuperUser.ShowDialog();
+            menuSuperUser = null;
+            this.Show();
+            clearCajas();
         }
 
         private void clearCajas()
