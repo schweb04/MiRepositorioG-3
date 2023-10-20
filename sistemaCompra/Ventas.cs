@@ -16,7 +16,8 @@ namespace sistemaCompra
     {
         private List<Cliente> clientes;
         private List<Producto> productos;
-
+        private double facturaTotal = 0;
+        private double facturaDolar = 0;
         public Ventas()
         {
             InitializeComponent();
@@ -120,28 +121,43 @@ namespace sistemaCompra
         {
         }
 
+
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             try
             {
                 string buscador = textBox2.Text;
                 double cantidad = Convert.ToInt64(cantidadTB.Text);
+                double precioTotal = 0;
+                
                 foreach (Producto producto in productos)
                 {
                     if (buscador == Convert.ToString(producto.Codigo))
                     {
-                        factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, producto.PrecioDeVenta, cantidad * producto.PrecioDeVenta, producto.IVA);
+                        double precioUnitario = producto.PrecioDeVenta;
+                        double totalLinea = cantidad * precioUnitario;
+
+                        factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, precioUnitario, totalLinea, producto.IVA);
+
+
+                        precioTotal = precioTotal + totalLinea;
+
                         break;
                     }
                 }
-            }
 
-            catch(Exception ex) 
+                facturaTotal = facturaTotal + precioTotal * 1.16;
+                facturaDolar = facturaDolar + facturaTotal / 34.9;
+                LabelDolares.Text = $"Total en $: {facturaDolar.ToString("N2")}$";
+                labelFactura.Text = $"{facturaTotal.ToString()}$";
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Introducir solo caracteres validos");
+                MessageBox.Show("Introducir solo caracteres válidos");
                 cantidadTB.Clear();
             }
         }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -154,7 +170,7 @@ namespace sistemaCompra
 
         private void cantidadTB_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dtgvProductosSeleccionados_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -162,6 +178,16 @@ namespace sistemaCompra
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        
     }
 }

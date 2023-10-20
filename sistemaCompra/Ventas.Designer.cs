@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
             label5 = new Label();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -44,11 +44,19 @@
             pictureBox5 = new PictureBox();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
+            LabelDolares = new Label();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox9 = new PictureBox();
             factura = new DataGridView();
+            Fila1 = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Columna3 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Eliminar = new DataGridViewButtonColumn();
             textBoxCliente = new TextBox();
             textBox2 = new TextBox();
             nombreTB = new TextBox();
@@ -74,14 +82,7 @@
             pictureBox13 = new PictureBox();
             cantidadTB = new TextBox();
             Cantidad = new Label();
-            Fila1 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Columna3 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Eliminar = new DataGridViewButtonColumn();
+            labelFactura = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -104,7 +105,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(51, 33);
             label5.Name = "label5";
-            label5.Size = new Size(249, 20);
+            label5.Size = new Size(196, 15);
             label5.TabIndex = 8;
             label5.Text = "Documento de identidad del cliente";
             // 
@@ -118,6 +119,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // pictureBox2
             // 
@@ -129,6 +131,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 24;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox3
             // 
@@ -157,14 +160,14 @@
             label1.AutoSize = true;
             label1.Location = new Point(51, 393);
             label1.Name = "label1";
-            label1.Size = new Size(69, 20);
+            label1.Size = new Size(56, 15);
             label1.TabIndex = 27;
             label1.Text = "Producto";
             // 
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.ControlDato1;
-            pictureBox5.Location = new Point(51, 510);
+            pictureBox5.Location = new Point(22, 519);
             pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(208, 39);
@@ -177,27 +180,28 @@
             label2.AutoSize = true;
             label2.Location = new Point(14, 486);
             label2.Name = "label2";
-            label2.Size = new Size(56, 20);
+            label2.Size = new Size(46, 15);
             label2.TabIndex = 29;
             label2.Text = "Factura";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(11, 553);
+            label3.Location = new Point(11, 560);
             label3.Name = "label3";
-            label3.Size = new Size(34, 20);
+            label3.Size = new Size(52, 15);
             label3.TabIndex = 30;
-            label3.Text = "IVA:";
+            label3.Text = "IVA: 16%";
             // 
-            // label4
+            // LabelDolares
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(11, 573);
-            label4.Name = "label4";
-            label4.Size = new Size(128, 20);
-            label4.TabIndex = 31;
-            label4.Text = "Precio en Dolares:";
+            LabelDolares.AutoSize = true;
+            LabelDolares.Location = new Point(11, 578);
+            LabelDolares.Name = "LabelDolares";
+            LabelDolares.Size = new Size(101, 15);
+            LabelDolares.TabIndex = 31;
+            LabelDolares.Text = "Precio en Dolares:";
+           
             // 
             // pictureBox6
             // 
@@ -250,18 +254,127 @@
             factura.TabIndex = 37;
             factura.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // Fila1
+            // 
+            Fila1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle15.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle15.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle15.ForeColor = Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle15.SelectionForeColor = Color.White;
+            Fila1.DefaultCellStyle = dataGridViewCellStyle15;
+            Fila1.HeaderText = "Codigo";
+            Fila1.MinimumWidth = 6;
+            Fila1.Name = "Fila1";
+            Fila1.ReadOnly = true;
+            Fila1.Width = 116;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle16.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle16.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle16.ForeColor = Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle16.SelectionForeColor = Color.White;
+            Column1.DefaultCellStyle = dataGridViewCellStyle16;
+            Column1.HeaderText = "Nombre";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Width = 116;
+            // 
+            // Columna3
+            // 
+            dataGridViewCellStyle17.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle17.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle17.ForeColor = Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle17.SelectionForeColor = Color.White;
+            Columna3.DefaultCellStyle = dataGridViewCellStyle17;
+            Columna3.HeaderText = "Cantidad";
+            Columna3.MinimumWidth = 6;
+            Columna3.Name = "Columna3";
+            Columna3.ReadOnly = true;
+            Columna3.Width = 116;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle18.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle18.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle18.ForeColor = Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle18.SelectionForeColor = Color.White;
+            Column2.DefaultCellStyle = dataGridViewCellStyle18;
+            Column2.HeaderText = "Ud. Medida";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle19.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle19.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle19.ForeColor = Color.White;
+            dataGridViewCellStyle19.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle19.SelectionForeColor = Color.White;
+            Column3.DefaultCellStyle = dataGridViewCellStyle19;
+            Column3.HeaderText = "Costo Unitario";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle20.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle20.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle20.ForeColor = Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle20.SelectionForeColor = Color.White;
+            Column4.DefaultCellStyle = dataGridViewCellStyle20;
+            Column4.HeaderText = "Precio Total";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
+            Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle21.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle21.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle21.ForeColor = Color.White;
+            dataGridViewCellStyle21.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle21.SelectionForeColor = Color.White;
+            Column5.DefaultCellStyle = dataGridViewCellStyle21;
+            Column5.HeaderText = "Iva";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
+            Column5.Width = 45;
+            // 
+            // Eliminar
+            // 
+            Eliminar.HeaderText = "Eliminar";
+            Eliminar.MinimumWidth = 6;
+            Eliminar.Name = "Eliminar";
+            Eliminar.ReadOnly = true;
+            Eliminar.Resizable = DataGridViewTriState.True;
+            Eliminar.SortMode = DataGridViewColumnSortMode.Automatic;
+            Eliminar.Width = 125;
+            // 
             // textBoxCliente
             // 
             textBoxCliente.Location = new Point(80, 69);
             textBoxCliente.Name = "textBoxCliente";
-            textBoxCliente.Size = new Size(179, 27);
+            textBoxCliente.Size = new Size(179, 23);
             textBoxCliente.TabIndex = 38;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(51, 416);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(179, 27);
+            textBox2.Size = new Size(179, 23);
             textBox2.TabIndex = 39;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
@@ -269,35 +382,35 @@
             // 
             nombreTB.Location = new Point(51, 155);
             nombreTB.Name = "nombreTB";
-            nombreTB.Size = new Size(125, 27);
+            nombreTB.Size = new Size(125, 23);
             nombreTB.TabIndex = 41;
             // 
             // direccionTB
             // 
             direccionTB.Location = new Point(364, 155);
             direccionTB.Name = "direccionTB";
-            direccionTB.Size = new Size(190, 27);
+            direccionTB.Size = new Size(190, 23);
             direccionTB.TabIndex = 42;
             // 
             // telefonoTB
             // 
             telefonoTB.Location = new Point(51, 228);
             telefonoTB.Name = "telefonoTB";
-            telefonoTB.Size = new Size(208, 27);
+            telefonoTB.Size = new Size(208, 23);
             telefonoTB.TabIndex = 43;
             // 
             // apellidoTB
             // 
             apellidoTB.Location = new Point(204, 155);
             apellidoTB.Name = "apellidoTB";
-            apellidoTB.Size = new Size(125, 27);
+            apellidoTB.Size = new Size(125, 23);
             apellidoTB.TabIndex = 44;
             // 
             // emailTB
             // 
             emailTB.Location = new Point(282, 228);
             emailTB.Name = "emailTB";
-            emailTB.Size = new Size(178, 27);
+            emailTB.Size = new Size(178, 23);
             emailTB.TabIndex = 45;
             // 
             // label6
@@ -305,16 +418,16 @@
             label6.AutoSize = true;
             label6.Location = new Point(80, 132);
             label6.Name = "label6";
-            label6.Size = new Size(64, 20);
+            label6.Size = new Size(51, 15);
             label6.TabIndex = 46;
             label6.Text = "Nombre";
             // 
-            // pictureBox3
+            // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(240, 132);
             label7.Name = "label7";
-            label7.Size = new Size(66, 20);
+            label7.Size = new Size(51, 15);
             label7.TabIndex = 47;
             label7.Text = "Apellido";
             // 
@@ -323,15 +436,15 @@
             label8.AutoSize = true;
             label8.Location = new Point(408, 132);
             label8.Name = "label8";
-            label8.Size = new Size(0, 20);
+            label8.Size = new Size(0, 15);
             label8.TabIndex = 48;
             // 
-            // pictureBox5
+            // label9
             // 
             label9.AutoSize = true;
             label9.Location = new Point(414, 132);
             label9.Name = "label9";
-            label9.Size = new Size(72, 20);
+            label9.Size = new Size(57, 15);
             label9.TabIndex = 49;
             label9.Text = "Direccion";
             // 
@@ -340,7 +453,7 @@
             label10.AutoSize = true;
             label10.Location = new Point(118, 205);
             label10.Name = "label10";
-            label10.Size = new Size(67, 20);
+            label10.Size = new Size(52, 15);
             label10.TabIndex = 50;
             label10.Text = "Telefono";
             // 
@@ -349,17 +462,17 @@
             label11.AutoSize = true;
             label11.Location = new Point(350, 205);
             label11.Name = "label11";
-            label11.Size = new Size(46, 20);
+            label11.Size = new Size(36, 15);
             label11.TabIndex = 51;
             label11.Text = "Email";
             // 
-            // label4
+            // tipoDeDocumentoCB
             // 
             tipoDeDocumentoCB.FormattingEnabled = true;
             tipoDeDocumentoCB.Items.AddRange(new object[] { "V", "E", "J" });
             tipoDeDocumentoCB.Location = new Point(266, 71);
             tipoDeDocumentoCB.Name = "tipoDeDocumentoCB";
-            tipoDeDocumentoCB.Size = new Size(40, 28);
+            tipoDeDocumentoCB.Size = new Size(40, 23);
             tipoDeDocumentoCB.TabIndex = 52;
             // 
             // Si
@@ -367,7 +480,7 @@
             Si.AutoSize = true;
             Si.Location = new Point(60, 317);
             Si.Name = "Si";
-            Si.Size = new Size(42, 24);
+            Si.Size = new Size(34, 19);
             Si.TabIndex = 53;
             Si.TabStop = true;
             Si.Text = "Si";
@@ -378,18 +491,18 @@
             No.AutoSize = true;
             No.Location = new Point(106, 317);
             No.Name = "No";
-            No.Size = new Size(50, 24);
+            No.Size = new Size(41, 19);
             No.TabIndex = 54;
             No.TabStop = true;
             No.Text = "No";
             No.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
+            // label12
             // 
             label12.AutoSize = true;
             label12.Location = new Point(58, 294);
             label12.Name = "label12";
-            label12.Size = new Size(79, 20);
+            label12.Size = new Size(64, 15);
             label12.TabIndex = 55;
             label12.Text = "Excluyente";
             // 
@@ -457,7 +570,7 @@
             // 
             cantidadTB.Location = new Point(271, 416);
             cantidadTB.Name = "cantidadTB";
-            cantidadTB.Size = new Size(73, 27);
+            cantidadTB.Size = new Size(73, 23);
             cantidadTB.TabIndex = 68;
             cantidadTB.TextChanged += cantidadTB_TextChanged;
             // 
@@ -466,124 +579,24 @@
             Cantidad.AutoSize = true;
             Cantidad.Location = new Point(271, 393);
             Cantidad.Name = "Cantidad";
-            Cantidad.Size = new Size(69, 20);
+            Cantidad.Size = new Size(55, 15);
             Cantidad.TabIndex = 69;
             Cantidad.Text = "Cantidad";
             // 
-            // Fila1
+            // labelFactura
             // 
-            Fila1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            Fila1.DefaultCellStyle = dataGridViewCellStyle1;
-            Fila1.HeaderText = "Codigo";
-            Fila1.MinimumWidth = 6;
-            Fila1.Name = "Fila1";
-            Fila1.ReadOnly = true;
-            Fila1.Width = 116;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            Column1.HeaderText = "Nombre";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            Column1.Width = 116;
-            // 
-            // clmCodigo
-            // 
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle3.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            Columna3.DefaultCellStyle = dataGridViewCellStyle3;
-            Columna3.HeaderText = "Cantidad";
-            Columna3.MinimumWidth = 6;
-            Columna3.Name = "Columna3";
-            Columna3.ReadOnly = true;
-            Columna3.Width = 116;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle4.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            Column2.HeaderText = "Ud. Medida";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle5.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle5.SelectionForeColor = Color.White;
-            Column3.DefaultCellStyle = dataGridViewCellStyle5;
-            Column3.HeaderText = "Costo Unitario";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle6.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            Column4.DefaultCellStyle = dataGridViewCellStyle6;
-            Column4.HeaderText = "Precio Total";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle7.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle7.SelectionForeColor = Color.White;
-            Column5.DefaultCellStyle = dataGridViewCellStyle7;
-            Column5.HeaderText = "Iva";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            Column5.Width = 45;
-            // 
-            // Eliminar
-            // 
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.MinimumWidth = 6;
-            Eliminar.Name = "Eliminar";
-            Eliminar.ReadOnly = true;
-            Eliminar.Resizable = DataGridViewTriState.True;
-            Eliminar.SortMode = DataGridViewColumnSortMode.Automatic;
-            Eliminar.Width = 125;
+            labelFactura.AutoSize = true;
+            labelFactura.Location = new Point(94, 519);
+            labelFactura.Name = "labelFactura";
+            labelFactura.Size = new Size(0, 15);
+            labelFactura.TabIndex = 70;
             // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1511, 722);
+            ClientSize = new Size(1370, 722);
+            Controls.Add(labelFactura);
             Controls.Add(Cantidad);
             Controls.Add(cantidadTB);
             Controls.Add(pictureBox13);
@@ -613,7 +626,7 @@
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
-            Controls.Add(label4);
+            Controls.Add(LabelDolares);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(pictureBox5);
@@ -654,7 +667,7 @@
         private PictureBox pictureBox5;
         private Label label2;
         private Label label3;
-        private Label label4;
+        private Label LabelDolares;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private PictureBox pictureBox9;
@@ -692,5 +705,6 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewButtonColumn Eliminar;
+        private Label labelFactura;
     }
 }
