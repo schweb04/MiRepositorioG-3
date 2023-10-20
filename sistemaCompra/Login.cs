@@ -7,9 +7,9 @@ namespace sistemaCompra
         private List<Usuario> usuarios;
 
         /*
-         * el usuario jose01 es superusuario, clave j1234567
-         * el usuario pedro02 es administrador, clave p1234567
-         * el usuario luis03 es cajero, clave l1234567
+         * el usuario jose01 es superusuario, clave j1234
+         * el usuario pedro02 es administrador, clave p1234
+         * el usuario luis03 es cajero, clave l1234
          * si quieren registrar otro usuario, modifiquen el csv
          */
 
@@ -103,6 +103,16 @@ namespace sistemaCompra
                     break;
                 }
             }
+        }
+
+        private void ShowMenuSuperUser()
+        {
+            this.Hide();
+            MenuSuperUser menuSuperUser = new MenuSuperUser();
+            menuSuperUser.ShowDialog();
+            menuSuperUser = null;
+            this.Show();
+            clearCajas();
         }
 
         private void ShowVentas()
