@@ -125,16 +125,6 @@ namespace sistemaCompra
             clearCajas();
         }
 
-        private void ShowMenuSuperUser()
-        {
-            this.Hide();
-            MenuSuperUser menuSuperUser = new MenuSuperUser();
-            menuSuperUser.ShowDialog();
-            menuSuperUser = null;
-            this.Show();
-            clearCajas();
-        }
-
         private void clearCajas()
         {
             cajaClave.Clear();
