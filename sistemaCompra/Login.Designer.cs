@@ -70,6 +70,7 @@
             resources.ApplyResources(cajaClave, "cajaClave");
             cajaClave.Name = "cajaClave";
             cajaClave.UseSystemPasswordChar = true;
+            cajaClave.TextChanged += cajaClave_TextChanged;
             // 
             // mostrarPass
             // 

@@ -4,29 +4,34 @@ namespace sistemaCompra
 {
     public partial class Login : Form
     {
+        private List<Usuario> usuarios;
 
         /*
-         * Ya se controló la excepción del nombre de usuario, no importa si ingresa el nombre
-         * en minúsculas, mayúsculas o combinadas
-         * 
-         * Se necesita controlar la excepción de espacios, los espacios son inválidos tanto en el
-         * nombre de usuario como en la contraseña
-         * 
-         * Se necesita controlar la excepción del tamaño del nombre de usuario y contraseña,
-         * no pueden ser ni tan cortos ni tan largos, 
-         * Nombre de usuario: mínimo 6 caracteres, máximo 10 caracteres
-         * Contraseña: mínimo 8 caracteres, máximo 12 caracteres
-         * 
          * el usuario jose01 es superusuario, clave j1234567
          * el usuario pedro02 es administrador, clave p1234567
          * el usuario luis03 es cajero, clave l1234567
+         * si quieren registrar otro usuario, modifiquen el csv
          */
 
         public Login()
         {
             InitializeComponent();
 
+            usuarios = new List<Usuario>();
+            string pathUsuarios = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "usuarios.csv");
+            string[] lineasUsuarios = File.ReadAllLines(pathUsuarios);
 
+            foreach (string linea in lineasUsuarios.Skip(1))
+            {
+                string[] valores = linea.Split(',');
+
+                Usuario usuario = new Usuario();
+                usuario.Username = valores[0];
+                usuario.Password = valores[1];
+                usuario.TipoDeUsuario = valores[2];
+                usuarios.Add(usuario);
+
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -50,18 +55,16 @@ namespace sistemaCompra
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-            if (cajaUsuario.TextLength < 6 || cajaUsuario.TextLength > 10)
+            if (cajaUsuario.TextLength < 4)
             {
-                MessageBox.Show("El nombre de usuario debe estar comprendido entre 6 y 10 caracteres");
-                
+                MessageBox.Show("El nombre de usuario debe tener mas de 4 caracteres");
+
 
             }
 
-            if (cajaClave.TextLength < 8 || cajaClave.TextLength > 12)
+            if (cajaClave.TextLength < 4)
             {
-                MessageBox.Show("La clave debe estar comprendida entre 8 y 12 caracteres");
-              
-
+                MessageBox.Show("La clave debe tener mas de 4 caracteres");
             }
 
             else
@@ -74,36 +77,52 @@ namespace sistemaCompra
 
         private void verificarUsuario()
         {
-            if (cajaUsuario.Text.ToLower() == "jose01" && cajaClave.Text == "j1234567")
-            {
-                ShowMenuSuperUser();
-            }
 
-            else if (cajaUsuario.Text.ToLower() == "pedro02" && cajaClave.Text == "p1234567")
-            {
-                this.Hide();
-                MenuAdministrador menuAdmin = new MenuAdministrador();
-                menuAdmin.ShowDialog();
-                menuAdmin = null;
-                this.Show();
-                clearCajas();
-            }
+            string username = cajaUsuario.Text;
+            string password = cajaClave.Text;
 
-            else if (cajaUsuario.Text.ToLower() == "luis03" && cajaClave.Text == "l1234567")
+            foreach (Usuario usuario in usuarios)
             {
-                this.Hide();
-                Ventas ventas = new Ventas();
-                ventas.ShowDialog();
-                ventas = null;
-                this.Show();
-                clearCajas();
-            }
+                if (usuario.Username == username && usuario.Password == password)
+                {
+                    switch (usuario.TipoDeUsuario)
+                    {
+                        case "Superuser":
+                            ShowMenuSuperUser();
+                            break;
 
-            else
-            {
-                MessageBox.Show("Usuario o clave incorrecto");
-                
+                        case "Admin":
+                            ShowMenuAdmin();
+                            break;
+
+                        case "Cajero":
+                            ShowVentas();
+                            break;
+
+                    }
+                    break;
+                }
             }
+        }
+
+        private void ShowVentas()
+        {
+            this.Hide();
+            Ventas ventas = new Ventas();
+            ventas.ShowDialog();
+            ventas = null;
+            this.Show();
+            clearCajas();
+        }
+
+        private void ShowMenuAdmin()
+        {
+            this.Hide();
+            MenuAdministrador menuAdmin = new MenuAdministrador();
+            menuAdmin.ShowDialog();
+            menuAdmin = null;
+            this.Show();
+            clearCajas();
         }
 
         private void ShowMenuSuperUser()
@@ -135,6 +154,15 @@ namespace sistemaCompra
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
 
+        }
+
+        private void cajaClave_TextChanged(object sender, EventArgs e)
+        {
+            if (cajaClave.Text.Contains(" "))
+            {
+                MessageBox.Show("La clave no debe tener espacios");
+                cajaClave.Clear();
+            }
         }
     }
 }

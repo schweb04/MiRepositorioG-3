@@ -178,7 +178,7 @@
     <value>112, 238</value>
   </data>
   <data name="cajaUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
+    <value>165, 25</value>
   </data>
   <data name="cajaUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -202,7 +202,7 @@
     <value>112, 351</value>
   </data>
   <data name="cajaClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
+    <value>165, 25</value>
   </data>
   <data name="cajaClave.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -229,7 +229,7 @@
     <value>112, 408</value>
   </data>
   <data name="mostrarPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 17</value>
+    <value>192, 21</value>
   </data>
   <data name="mostrarPass.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
