@@ -57,6 +57,7 @@ namespace Examen
                 }
             }
         }
+        /*
         static void Main(string[] args)
         {
             // Crear productos y agregarlos al inventario
@@ -76,6 +77,7 @@ namespace Examen
             producto1.SetCantidadMinima(15);
             inventario.VerificarInventario();
         }
+        */
 
     }
 }

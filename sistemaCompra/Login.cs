@@ -1,43 +1,54 @@
 using System.Windows.Forms.VisualStyles;
+using System.IO;
 
 namespace sistemaCompra
 {
     public partial class Login : Form
     {
         private List<Usuario> usuarios;
+        private string filePath = "usuarios.csv";
 
-        /*
-         * el usuario jose01 es superusuario, clave j1234
-         * el usuario pedro02 es administrador, clave p1234
-         * el usuario luis03 es cajero, clave l1234
-         * si quieren registrar otro usuario, modifiquen el csv
-         */
 
         public Login()
         {
             InitializeComponent();
-
             usuarios = new List<Usuario>();
-            string pathUsuarios = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "usuarios.csv");
-            string[] lineasUsuarios = File.ReadAllLines(pathUsuarios);
-
-            foreach (string linea in lineasUsuarios.Skip(1))
-            {
-                string[] valores = linea.Split(',');
-
-                Usuario usuario = new Usuario();
-                usuario.Username = valores[0];
-                usuario.Password = valores[1];
-                usuario.TipoDeUsuario = valores[2];
-                usuarios.Add(usuario);
-
-            }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            CargarUsuarios();
         }
+
+        private void CargarUsuarios()
+        {
+            usuarios.Clear();
+
+            if (File.Exists(filePath))
+            {
+                string[] lineasUsuarios = File.ReadAllLines(filePath);
+
+                for (int i = 1; i < lineasUsuarios.Length; i++)
+                {
+                    string linea = lineasUsuarios[i];
+                    string[] valores = linea.Split(',');
+
+                    if (valores.Length >= 3)
+                    {
+                        Usuario usuario = new Usuario();
+                        usuario.Username = valores[0];
+                        usuario.Password = valores[1];
+                        usuario.TipoDeUsuario = valores[2];
+                        usuarios.Add(usuario);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("El archivo de usuarios no se encontró en el directorio de la aplicación.");
+            }
+        }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -54,6 +65,7 @@ namespace sistemaCompra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            CargarUsuarios();
 
             if (cajaUsuario.TextLength < 4)
             {

@@ -31,10 +31,4 @@
     <Folder Include="bin\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="usuarios.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>

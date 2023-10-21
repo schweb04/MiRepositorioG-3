@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -64,7 +63,7 @@ namespace sistemaCompra
                 Producto producto = new Producto();
                 producto.Codigo = valores[0];
                 producto.Nombre = valores[1];
-                producto.Cantidad = Convert.ToDouble(valores[2]);
+                producto.Cantidad = Convert.ToInt32(valores[2]);
                 producto.CantidadMinima = Convert.ToInt32(valores[3]);
                 producto.UnidadDeMedida = valores[4];
                 producto.CostoUnitario = Convert.ToInt64(valores[5]);
@@ -144,10 +143,17 @@ namespace sistemaCompra
             try
             {
                 string buscador = textBox2.Text;
-                double cantidad = Convert.ToDouble(cantidadTB.Text);
+                double cantidad = 0;
+                if (!double.TryParse(cantidadTB.Text, out cantidad))
+                {
+                    MessageBox.Show("Introducir solo caracteres válidos");
+                    cantidadTB.Clear();
+                    return;
+                }
+
                 double precioTotal = 0;
-                
-                //Aquí va a ser 
+                bool productoEncontrado = false;
+
                 foreach (Producto producto in productos)
                 {
                     if (buscador == Convert.ToString(producto.Codigo))
@@ -157,22 +163,25 @@ namespace sistemaCompra
 
                         factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, precioUnitario, totalLinea, producto.IVA);
 
-
                         precioTotal = precioTotal + totalLinea;
-
+                        productoEncontrado = true;
                         break;
                     }
                 }
 
+                if (!productoEncontrado)
+                {
+                    MessageBox.Show("Producto no encontrado");
+                }
+
                 facturaTotal = facturaTotal + precioTotal * 1.16;
-                facturaDolar = facturaDolar + facturaTotal / 34.9;
+                facturaDolar = facturaTotal / 34.9;
                 LabelDolares.Text = $"Total en $: {facturaDolar.ToString("N2")}$";
                 labelFactura.Text = $"{facturaTotal.ToString()}$";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Introducir solo caracteres válidos");
-                cantidadTB.Clear();
+                MessageBox.Show($"Se produjo un error: {ex.Message}");
             }
         }
 

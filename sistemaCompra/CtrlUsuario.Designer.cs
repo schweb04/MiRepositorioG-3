@@ -31,6 +31,9 @@
             pboxEliminar = new PictureBox();
             pboxEditar = new PictureBox();
             pnlDesplegar = new Panel();
+            lblConfirmarPassword = new Label();
+            pictureBox1 = new PictureBox();
+            txtConfirmarPassword = new TextBox();
             pboxAceptarEditar = new PictureBox();
             txtNombre = new TextBox();
             txtPassword = new TextBox();
@@ -45,12 +48,10 @@
             pboxCtrlUsuarios = new PictureBox();
             pboxLista = new PictureBox();
             dtgvListaUsuarios = new DataGridView();
-            txtConfirmarPassword = new TextBox();
-            pictureBox1 = new PictureBox();
-            lblConfirmarPassword = new Label();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             pnlDesplegar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).BeginInit();
@@ -61,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvListaUsuarios).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pboxEliminar
@@ -74,6 +74,7 @@
             pboxEliminar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxEliminar.TabIndex = 62;
             pboxEliminar.TabStop = false;
+            pboxEliminar.Click += pboxEliminar_Click;
             // 
             // pboxEditar
             // 
@@ -107,16 +108,45 @@
             pnlDesplegar.Size = new Size(372, 249);
             pnlDesplegar.TabIndex = 60;
             // 
+            // lblConfirmarPassword
+            // 
+            lblConfirmarPassword.AutoSize = true;
+            lblConfirmarPassword.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblConfirmarPassword.Location = new Point(197, 114);
+            lblConfirmarPassword.Name = "lblConfirmarPassword";
+            lblConfirmarPassword.Size = new Size(127, 15);
+            lblConfirmarPassword.TabIndex = 78;
+            lblConfirmarPassword.Text = "Confirmar Contraseña";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.ControlDato2;
+            pictureBox1.Location = new Point(206, 151);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(135, 18);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 77;
+            pictureBox1.TabStop = false;
+            // 
+            // txtConfirmarPassword
+            // 
+            txtConfirmarPassword.Location = new Point(206, 130);
+            txtConfirmarPassword.Name = "txtConfirmarPassword";
+            txtConfirmarPassword.Size = new Size(135, 23);
+            txtConfirmarPassword.TabIndex = 76;
+            txtConfirmarPassword.TextChanged += txtConfirmarPassword_TextChanged;
+            // 
             // pboxAceptarEditar
             // 
             pboxAceptarEditar.Image = Properties.Resources.BotonAceptar1;
-            pboxAceptarEditar.Location = new Point(75, 194);
+            pboxAceptarEditar.Location = new Point(70, 194);
             pboxAceptarEditar.Margin = new Padding(3, 2, 3, 2);
             pboxAceptarEditar.Name = "pboxAceptarEditar";
             pboxAceptarEditar.Size = new Size(101, 27);
             pboxAceptarEditar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAceptarEditar.TabIndex = 75;
             pboxAceptarEditar.TabStop = false;
+            pboxAceptarEditar.Click += pboxAceptarEditar_Click;
             // 
             // txtNombre
             // 
@@ -124,6 +154,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(133, 23);
             txtNombre.TabIndex = 70;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // txtPassword
             // 
@@ -131,24 +162,25 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(135, 23);
             txtPassword.TabIndex = 58;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblNombre.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
             lblNombre.Location = new Point(160, 25);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(49, 13);
+            lblNombre.Size = new Size(52, 15);
             lblNombre.TabIndex = 64;
             lblNombre.Text = "Nombre";
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblPassword.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
             lblPassword.Location = new Point(66, 114);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(77, 13);
+            lblPassword.Size = new Size(70, 15);
             lblPassword.TabIndex = 56;
             lblPassword.Text = "Contraseña";
             // 
@@ -162,6 +194,7 @@
             pboxCancelar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCancelar.TabIndex = 63;
             pboxCancelar.TabStop = false;
+            pboxCancelar.Click += pboxCancelar_Click_2;
             // 
             // pboxAceptarAgregar
             // 
@@ -173,6 +206,7 @@
             pboxAceptarAgregar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAceptarAgregar.TabIndex = 56;
             pboxAceptarAgregar.TabStop = false;
+            pboxAceptarAgregar.Click += pboxAceptarAgregar_Click;
             // 
             // pboxBarra2
             // 
@@ -245,33 +279,7 @@
             dtgvListaUsuarios.RowTemplate.Height = 25;
             dtgvListaUsuarios.Size = new Size(177, 165);
             dtgvListaUsuarios.TabIndex = 65;
-            // 
-            // txtConfirmarPassword
-            // 
-            txtConfirmarPassword.Location = new Point(206, 130);
-            txtConfirmarPassword.Name = "txtConfirmarPassword";
-            txtConfirmarPassword.Size = new Size(135, 23);
-            txtConfirmarPassword.TabIndex = 76;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.ControlDato2;
-            pictureBox1.Location = new Point(206, 151);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(135, 18);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 77;
-            pictureBox1.TabStop = false;
-            // 
-            // lblConfirmarPassword
-            // 
-            lblConfirmarPassword.AutoSize = true;
-            lblConfirmarPassword.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblConfirmarPassword.Location = new Point(197, 114);
-            lblConfirmarPassword.Name = "lblConfirmarPassword";
-            lblConfirmarPassword.Size = new Size(147, 13);
-            lblConfirmarPassword.TabIndex = 78;
-            lblConfirmarPassword.Text = "Confirmar Contraseña";
+            dtgvListaUsuarios.CellContentClick += dtgvListaUsuarios_CellContentClick;
             // 
             // CtrlUsuario
             // 
@@ -293,6 +301,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxEditar).EndInit();
             pnlDesplegar.ResumeLayout(false);
             pnlDesplegar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).EndInit();
@@ -303,7 +312,6 @@
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvListaUsuarios).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
