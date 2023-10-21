@@ -13,7 +13,7 @@ namespace sistemaCompra
     public partial class CtrlProducto : Form
     {
         private const string NOMBRE_ARCHIVO = "inventario.csv";
-        private string encabezadoCSV = "Codigo,Nombre,Cantidad,UnidadDeMedida,CostoUnitario,PrecioDeVenta,tieneIVA";
+        private string encabezadoCSV = "Codigo,Nombre,Cantidad,CantidadMinima,UnidadDeMedida,CostoUnitario,PrecioDeVenta,tieneIVA";
 
         public CtrlProducto()
         {
@@ -56,7 +56,7 @@ namespace sistemaCompra
             }
         }
 
-        private void AgregarProductoAlCSV(string codigo, string nombre, string cantidad, string unidadMedida, string costo, string precio, string tieneIVA)
+        private void AgregarProductoAlCSV(string codigo, string nombre, string cantidad, string cantidadMinima, string unidadMedida, string costo, string precio, string tieneIVA)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace sistemaCompra
                 {
                     StringBuilder sb = new StringBuilder();
                     sb.Append(Environment.NewLine);
-                    sb.Append($"{codigo},{nombre},{cantidad},{unidadMedida},{costo},{precio},{tieneIVA}");
+                    sb.Append($"{codigo},{nombre},{cantidad},{cantidadMinima},{unidadMedida},{costo},{precio},{tieneIVA}");
                     sw.Write(sb.ToString());
                 }
                 MessageBox.Show("El producto ha sido agregado correctamente.", "Producto Agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -83,6 +83,7 @@ namespace sistemaCompra
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtCantidad.Text = "";
+            txtCantidadMinima.Text = "";
             cboxUdMedidas.SelectedIndex = -1;
             txtCosto.Text = "";
             txtPrecio.Text = "";
@@ -94,6 +95,7 @@ namespace sistemaCompra
             dt.Columns.Add("Codigo");
             dt.Columns.Add("Nombre");
             dt.Columns.Add("Cantidad");
+            dt.Columns.Add("Cantidad Mínima");
             dt.Columns.Add("UnidadMedida");
             dt.Columns.Add("Costo");
             dt.Columns.Add("Precio");
@@ -131,6 +133,7 @@ namespace sistemaCompra
             DataTable dtProductos = ObtenerTablaProductos();
             dtgvListaProductos.DataSource = dtProductos;
             dtgvListaProductos.Columns["Cantidad"].Visible = false;
+            dtgvListaProductos.Columns["Cantidad Mínima"].Visible = false;
             dtgvListaProductos.Columns["UnidadMedida"].Visible = false;
             dtgvListaProductos.Columns["Costo"].Visible = false;
             dtgvListaProductos.Columns["Precio"].Visible = false;
@@ -173,10 +176,11 @@ namespace sistemaCompra
                 txtCodigo.Text = filaSeleccionada.Cells[0].Value.ToString();
                 txtNombre.Text = filaSeleccionada.Cells[1].Value.ToString();
                 txtCantidad.Text = filaSeleccionada.Cells[2].Value.ToString();
-                cboxUdMedidas.SelectedItem = filaSeleccionada.Cells[3].Value.ToString();
-                txtCosto.Text = filaSeleccionada.Cells[4].Value.ToString();
-                txtPrecio.Text = filaSeleccionada.Cells[5].Value.ToString();
-                cboxSiYNo.SelectedItem = filaSeleccionada.Cells[6].Value.ToString();
+                txtCantidadMinima.Text = filaSeleccionada.Cells[3].Value.ToString();
+                cboxUdMedidas.SelectedItem = filaSeleccionada.Cells[4].Value.ToString();
+                txtCosto.Text = filaSeleccionada.Cells[5].Value.ToString();
+                txtPrecio.Text = filaSeleccionada.Cells[6].Value.ToString();
+                cboxSiYNo.SelectedItem = filaSeleccionada.Cells[7].Value.ToString();
 
                 pnlDesplegar.Visible = true;
             }
@@ -227,13 +231,13 @@ namespace sistemaCompra
 
         }
 
-        private void ActualizarProductoEnCSV(string codigo, string nombre, string cantidad, string unidadMedida, string costo, string precio, string tieneIVA)
+        private void ActualizarProductoEnCSV(string codigo, string nombre, string cantidad, string cantidadMinima, string unidadMedida, string costo, string precio, string tieneIVA)
         {
             string tempFile = Path.GetTempFileName();
             var linesToKeep = File.ReadLines(NOMBRE_ARCHIVO).Where(l => !l.StartsWith(codigo + ","));
             File.WriteAllLines(tempFile, linesToKeep);
 
-            string nuevaLinea = $"{codigo},{nombre},{cantidad},{unidadMedida},{costo},{precio},{tieneIVA}";
+            string nuevaLinea = $"{codigo},{nombre},{cantidad},{cantidadMinima},{unidadMedida},{costo},{precio},{tieneIVA}";
             File.AppendAllText(tempFile, nuevaLinea + Environment.NewLine);
 
             File.Delete(NOMBRE_ARCHIVO);
@@ -254,12 +258,13 @@ namespace sistemaCompra
                 string codigo = txtCodigo.Text;
                 string nombre = txtNombre.Text;
                 string cantidad = txtCantidad.Text;
+                string cantidadMinima = txtCantidadMinima.Text;
                 string unidadMedida = cboxUdMedidas.SelectedItem.ToString();
                 string costo = txtCosto.Text;
                 string precio = txtPrecio.Text;
                 string tieneIVA = cboxSiYNo.SelectedItem.ToString();
 
-                ActualizarProductoEnCSV(codigo, nombre, cantidad, unidadMedida, costo, precio, tieneIVA);
+                ActualizarProductoEnCSV(codigo, nombre, cantidad, cantidadMinima, unidadMedida, costo, precio, tieneIVA);
 
                 MessageBox.Show("El producto ha sido editado correctamente.", "Producto Editado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimpiarCasillas();
@@ -348,12 +353,13 @@ namespace sistemaCompra
                 {
                     string nombre = txtNombre.Text;
                     string cantidad = txtCantidad.Text;
+                    string cantidadMinima = txtCantidadMinima.Text;
                     string unidadMedida = cboxUdMedidas.SelectedItem.ToString();
                     string costo = txtCosto.Text;
                     string precio = txtPrecio.Text;
                     string tieneIVA = cboxSiYNo.SelectedItem.ToString();
 
-                    AgregarProductoAlCSV(codigo, nombre, cantidad, unidadMedida, costo, precio, tieneIVA);
+                    AgregarProductoAlCSV(codigo, nombre, cantidad, cantidadMinima, unidadMedida, costo, precio, tieneIVA);
                 }
             }
 

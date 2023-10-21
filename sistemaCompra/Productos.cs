@@ -10,7 +10,8 @@ namespace sistemaCompra
     {
         private string codigo = "";
         private string nombre = "";
-        private double cantidad;
+        private int cantidad;
+        private int cantidadMinima;
         private string unidadDeMedida = ""; //Kilogramos, paquetes, etc
         private double costoUnitario;
         private double precioDeVenta;
@@ -18,15 +19,17 @@ namespace sistemaCompra
 
         public string Codigo { get { return codigo; } set { codigo = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
-        public double Cantidad {  get { return cantidad; } set { cantidad = value; } }
+        public int Cantidad {  get { return cantidad; } set { cantidad = value; } }
+        public int CantidadMinima { get { return cantidadMinima; } set { cantidadMinima = value; } }
         public string UnidadDeMedida { get {  return unidadDeMedida; } set {  unidadDeMedida = value; } }
         public double CostoUnitario { get {  return costoUnitario; } set {  costoUnitario = value; } }
         public double PrecioDeVenta {  get { return precioDeVenta; } set {  precioDeVenta = value; } }
         public bool IVA { get { return iva; } set { iva = value; } }
 
-        public Producto(double _cantidad, string _unidadDeMedida, double _costoUnitario, double _precioDeVenta, bool _iva, string _codigo, string _nombre)
+        public Producto(int _cantidad, int _cantidadMinima, string _unidadDeMedida, double _costoUnitario, double _precioDeVenta, bool _iva, string _codigo, string _nombre)
         {
             Cantidad = _cantidad;
+            CantidadMinima = _cantidadMinima;
             UnidadDeMedida = _unidadDeMedida;
             CostoUnitario = _costoUnitario;
             PrecioDeVenta = _precioDeVenta;
