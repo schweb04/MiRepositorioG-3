@@ -45,6 +45,7 @@
             importarClientesToolStripMenuItem = new ToolStripMenuItem();
             exportarClientesToolStripMenuItem = new ToolStripMenuItem();
             tasaDelDólarToolStripMenuItem = new ToolStripMenuItem();
+            toolStripTextBox2 = new ToolStripTextBox();
             mnuMenuAdministrador.SuspendLayout();
             SuspendLayout();
             // 
@@ -183,10 +184,16 @@
             // 
             // tasaDelDólarToolStripMenuItem
             // 
+            tasaDelDólarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox2 });
             tasaDelDólarToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             tasaDelDólarToolStripMenuItem.Name = "tasaDelDólarToolStripMenuItem";
             tasaDelDólarToolStripMenuItem.Size = new Size(117, 20);
             tasaDelDólarToolStripMenuItem.Text = "Tasa del dólar";
+            // 
+            // toolStripTextBox2
+            // 
+            toolStripTextBox2.Name = "toolStripTextBox2";
+            toolStripTextBox2.Size = new Size(100, 23);
             // 
             // MenuAdministrador
             // 
@@ -222,5 +229,6 @@
         private ToolStripMenuItem importarClientesToolStripMenuItem;
         private ToolStripMenuItem exportarClientesToolStripMenuItem;
         private ToolStripMenuItem tasaDelDólarToolStripMenuItem;
+        private ToolStripTextBox toolStripTextBox2;
     }
 }
