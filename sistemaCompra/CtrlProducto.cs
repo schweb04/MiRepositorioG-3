@@ -391,5 +391,10 @@ namespace sistemaCompra
             var lineasAGuardar = lineas.Where(linea => !linea.StartsWith(codigo + ","));
             File.WriteAllLines(NOMBRE_ARCHIVO, lineasAGuardar);
         }
+
+        private void txtCantidadMinima_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

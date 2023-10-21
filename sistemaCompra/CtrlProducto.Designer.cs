@@ -32,6 +32,10 @@
             pboxAgregar = new PictureBox();
             pboxDatos = new PictureBox();
             pnlDesplegar = new Panel();
+            lblCantidadMinima = new Label();
+            pictureBox2 = new PictureBox();
+            txtCantidadMinima = new TextBox();
+            pictureBox1 = new PictureBox();
             pboxAceptarEditar = new PictureBox();
             cboxSiYNo = new ComboBox();
             cboxUdMedidas = new ComboBox();
@@ -57,14 +61,12 @@
             pboxEliminar = new PictureBox();
             pboxLista = new PictureBox();
             dtgvListaProductos = new DataGridView();
-            pictureBox1 = new PictureBox();
-            txtCantidadMinima = new TextBox();
-            pictureBox2 = new PictureBox();
-            lblCantidadMinima = new Label();
             ((System.ComponentModel.ISupportInitialize)pboxCtrlProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
             pnlDesplegar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).BeginInit();
@@ -76,8 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvListaProductos).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pboxCtrlProductos
@@ -144,6 +144,44 @@
             pnlDesplegar.Name = "pnlDesplegar";
             pnlDesplegar.Size = new Size(372, 249);
             pnlDesplegar.TabIndex = 55;
+            // 
+            // lblCantidadMinima
+            // 
+            lblCantidadMinima.AutoSize = true;
+            lblCantidadMinima.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblCantidadMinima.Location = new Point(238, 88);
+            lblCantidadMinima.Name = "lblCantidadMinima";
+            lblCantidadMinima.Size = new Size(112, 13);
+            lblCantidadMinima.TabIndex = 79;
+            lblCantidadMinima.Text = "Cantidad Mínima";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.ControlDato2;
+            pictureBox2.Location = new Point(247, 126);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(97, 11);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 78;
+            pictureBox2.TabStop = false;
+            // 
+            // txtCantidadMinima
+            // 
+            txtCantidadMinima.Location = new Point(247, 104);
+            txtCantidadMinima.Name = "txtCantidadMinima";
+            txtCantidadMinima.Size = new Size(97, 23);
+            txtCantidadMinima.TabIndex = 77;
+            txtCantidadMinima.TextChanged += txtCantidadMinima_TextChanged;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.ControlDato2;
+            pictureBox1.Location = new Point(132, 126);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 13);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 76;
+            pictureBox1.TabStop = false;
             // 
             // pboxAceptarEditar
             // 
@@ -395,43 +433,6 @@
             dtgvListaProductos.TabIndex = 65;
             dtgvListaProductos.CellContentClick += dtgvListaProductos_CellContentClick;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.ControlDato2;
-            pictureBox1.Location = new Point(132, 126);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 13);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 76;
-            pictureBox1.TabStop = false;
-            // 
-            // txtCantidadMinima
-            // 
-            txtCantidadMinima.Location = new Point(247, 104);
-            txtCantidadMinima.Name = "txtCantidadMinima";
-            txtCantidadMinima.Size = new Size(97, 23);
-            txtCantidadMinima.TabIndex = 77;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.ControlDato2;
-            pictureBox2.Location = new Point(247, 126);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(97, 11);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 78;
-            pictureBox2.TabStop = false;
-            // 
-            // lblCantidadMinima
-            // 
-            lblCantidadMinima.AutoSize = true;
-            lblCantidadMinima.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblCantidadMinima.Location = new Point(238, 88);
-            lblCantidadMinima.Name = "lblCantidadMinima";
-            lblCantidadMinima.Size = new Size(112, 13);
-            lblCantidadMinima.TabIndex = 79;
-            lblCantidadMinima.Text = "Cantidad Mínima";
-            // 
             // CtrlProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -453,6 +454,8 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).EndInit();
             pnlDesplegar.ResumeLayout(false);
             pnlDesplegar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).EndInit();
@@ -464,8 +467,6 @@
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvListaProductos).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
