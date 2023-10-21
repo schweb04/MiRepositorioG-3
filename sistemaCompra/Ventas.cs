@@ -150,7 +150,22 @@ namespace sistemaCompra
         {
         }
 
-
+        private void restarProducto(string codigoProducto, double cantidadVendida)
+        {
+            foreach (Producto producto in productos)
+            {
+                if (codigoProducto == producto.Codigo)
+                {
+                    if(producto.Cantidad != 0) 
+                    { 
+                        producto.Cantidad = producto.Cantidad - cantidadVendida;
+                 
+                        break;
+                    }
+                }
+            }
+        }
+       
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             try
@@ -159,7 +174,6 @@ namespace sistemaCompra
                 double cantidad = Convert.ToDouble(cantidadTB.Text);
                 double precioTotal = 0;
 
-                //Aquí va a ser 
                 foreach (Producto producto in productos)
                 {
                     if (buscador == Convert.ToString(producto.Codigo))
