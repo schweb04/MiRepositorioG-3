@@ -84,15 +84,17 @@ namespace sistemaCompra
             }
         }
 
-        public void VerificarCantidadDisponible()
+        public bool VerificarCantidadDisponible()
         {
             foreach (var producto in productos)
             {
                 if (producto.Cantidad < producto.CantidadMinima)
                 {
                     Console.WriteLine($"ALERTA: El producto {producto.Nombre} tiene un nivel de stock bajo. Se recomienda solicitar un pedido al proveedor.");
+                    return true;
                 }
             }
+            return false;
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -126,7 +128,10 @@ namespace sistemaCompra
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-            VerificarCantidadDisponible();
+            //if (VerificarCantidadDisponible() == true)
+            //{
+            //    this.Close();
+            //}
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
