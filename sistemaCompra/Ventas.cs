@@ -64,7 +64,7 @@ namespace sistemaCompra
                 Producto producto = new Producto();
                 producto.Codigo = valores[0];
                 producto.Nombre = valores[1];
-                producto.Cantidad = Convert.ToInt32(valores[2]);
+                producto.Cantidad = Convert.ToDouble(valores[2]);
                 producto.CantidadMinima = Convert.ToInt32(valores[3]);
                 producto.UnidadDeMedida = valores[4];
                 producto.CostoUnitario = Convert.ToInt64(valores[5]);
@@ -81,6 +81,17 @@ namespace sistemaCompra
                 }
 
                 productos.Add(producto);
+            }
+        }
+
+        public void VerificarCantidadDisponible()
+        {
+            foreach (var producto in productos)
+            {
+                if (producto.Cantidad < producto.CantidadMinima)
+                {
+                    Console.WriteLine($"ALERTA: El producto {producto.Nombre} tiene un nivel de stock bajo. Se recomienda solicitar un pedido al proveedor.");
+                }
             }
         }
 
@@ -115,7 +126,7 @@ namespace sistemaCompra
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-
+            VerificarCantidadDisponible();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -128,7 +139,7 @@ namespace sistemaCompra
             try
             {
                 string buscador = textBox2.Text;
-                int cantidad = Convert.ToInt32(cantidadTB.Text);
+                double cantidad = Convert.ToDouble(cantidadTB.Text);
                 double precioTotal = 0;
                 
                 //Aquí va a ser 

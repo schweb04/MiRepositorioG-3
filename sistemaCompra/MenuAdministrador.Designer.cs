@@ -38,13 +38,20 @@
             acercaDeToolStripMenuItem = new ToolStripMenuItem();
             pnlMenuAdministrador = new Panel();
             toolStripTextBox1 = new ToolStripTextBox();
+            importarUsuariosToolStripMenuItem = new ToolStripMenuItem();
+            exportarUsuariosToolStripMenuItem = new ToolStripMenuItem();
+            importarProductosToolStripMenuItem = new ToolStripMenuItem();
+            exportarProductosToolStripMenuItem = new ToolStripMenuItem();
+            importarClientesToolStripMenuItem = new ToolStripMenuItem();
+            exportarClientesToolStripMenuItem = new ToolStripMenuItem();
+            tasaDelDólarToolStripMenuItem = new ToolStripMenuItem();
             mnuMenuAdministrador.SuspendLayout();
             SuspendLayout();
             // 
             // mnuMenuAdministrador
             // 
             mnuMenuAdministrador.BackColor = Color.FromArgb(189, 195, 199);
-            mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, acercaDeToolStripMenuItem });
+            mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, tasaDelDólarToolStripMenuItem, acercaDeToolStripMenuItem });
             mnuMenuAdministrador.Location = new Point(0, 0);
             mnuMenuAdministrador.Name = "mnuMenuAdministrador";
             mnuMenuAdministrador.Size = new Size(683, 24);
@@ -54,7 +61,7 @@
             // usuariosToolStripMenuItem
             // 
             usuariosToolStripMenuItem.BackColor = Color.FromArgb(189, 195, 199);
-            usuariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeUsuariosToolStripMenuItem });
+            usuariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeUsuariosToolStripMenuItem, importarUsuariosToolStripMenuItem, exportarUsuariosToolStripMenuItem });
             usuariosToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             usuariosToolStripMenuItem.Image = Properties.Resources.IconoUsuario;
             usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
@@ -73,7 +80,7 @@
             // 
             // productosToolStripMenuItem
             // 
-            productosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeProductosToolStripMenuItem });
+            productosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeProductosToolStripMenuItem, importarProductosToolStripMenuItem, exportarProductosToolStripMenuItem });
             productosToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             productosToolStripMenuItem.Image = Properties.Resources.IconoProducto;
             productosToolStripMenuItem.ImageAlign = ContentAlignment.MiddleLeft;
@@ -93,7 +100,7 @@
             // 
             // clientesToolStripMenuItem
             // 
-            clientesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeClientesToolStripMenuItem });
+            clientesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { controlDeClientesToolStripMenuItem, importarClientesToolStripMenuItem, exportarClientesToolStripMenuItem });
             clientesToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
             clientesToolStripMenuItem.Image = Properties.Resources.IconoCliente;
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
@@ -132,6 +139,49 @@
             toolStripTextBox1.Name = "toolStripTextBox1";
             toolStripTextBox1.Size = new Size(100, 23);
             // 
+            // importarUsuariosToolStripMenuItem
+            // 
+            importarUsuariosToolStripMenuItem.Name = "importarUsuariosToolStripMenuItem";
+            importarUsuariosToolStripMenuItem.Size = new Size(207, 22);
+            importarUsuariosToolStripMenuItem.Text = "Importar Usuarios";
+            // 
+            // exportarUsuariosToolStripMenuItem
+            // 
+            exportarUsuariosToolStripMenuItem.Name = "exportarUsuariosToolStripMenuItem";
+            exportarUsuariosToolStripMenuItem.Size = new Size(207, 22);
+            exportarUsuariosToolStripMenuItem.Text = "Exportar Usuarios";
+            // 
+            // importarProductosToolStripMenuItem
+            // 
+            importarProductosToolStripMenuItem.Name = "importarProductosToolStripMenuItem";
+            importarProductosToolStripMenuItem.Size = new Size(214, 22);
+            importarProductosToolStripMenuItem.Text = "Importar Productos";
+            // 
+            // exportarProductosToolStripMenuItem
+            // 
+            exportarProductosToolStripMenuItem.Name = "exportarProductosToolStripMenuItem";
+            exportarProductosToolStripMenuItem.Size = new Size(214, 22);
+            exportarProductosToolStripMenuItem.Text = "Exportar Productos";
+            // 
+            // importarClientesToolStripMenuItem
+            // 
+            importarClientesToolStripMenuItem.Name = "importarClientesToolStripMenuItem";
+            importarClientesToolStripMenuItem.Size = new Size(207, 22);
+            importarClientesToolStripMenuItem.Text = "Importar Clientes";
+            // 
+            // exportarClientesToolStripMenuItem
+            // 
+            exportarClientesToolStripMenuItem.Name = "exportarClientesToolStripMenuItem";
+            exportarClientesToolStripMenuItem.Size = new Size(207, 22);
+            exportarClientesToolStripMenuItem.Text = "Exportar Clientes";
+            // 
+            // tasaDelDólarToolStripMenuItem
+            // 
+            tasaDelDólarToolStripMenuItem.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            tasaDelDólarToolStripMenuItem.Name = "tasaDelDólarToolStripMenuItem";
+            tasaDelDólarToolStripMenuItem.Size = new Size(117, 20);
+            tasaDelDólarToolStripMenuItem.Text = "Tasa del dólar";
+            // 
             // MenuAdministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -159,5 +209,12 @@
         private ToolStripMenuItem acercaDeToolStripMenuItem;
         private Panel pnlMenuAdministrador;
         private ToolStripTextBox toolStripTextBox1;
+        private ToolStripMenuItem importarUsuariosToolStripMenuItem;
+        private ToolStripMenuItem exportarUsuariosToolStripMenuItem;
+        private ToolStripMenuItem importarProductosToolStripMenuItem;
+        private ToolStripMenuItem exportarProductosToolStripMenuItem;
+        private ToolStripMenuItem importarClientesToolStripMenuItem;
+        private ToolStripMenuItem exportarClientesToolStripMenuItem;
+        private ToolStripMenuItem tasaDelDólarToolStripMenuItem;
     }
 }
