@@ -40,17 +40,23 @@ namespace sistemaCompra
 
                 if (valores[0] != "")
                 {
-
-                    Cliente cliente = new Cliente();
-                    cliente.Cedula = Convert.ToInt32(valores[0]);
-                    cliente.Nombre = valores[1];
-                    cliente.Apellido = valores[2];
-                    cliente.Direccion = valores[3];
-                    cliente.Telefono = valores[4];
-                    cliente.CorreoElectronico = valores[5];
-                    cliente.TipoDocumento = Convert.ToChar(valores[6]);
-                    cliente.ContribuyenteEspecial = Convert.ToBoolean(valores[7]);
-                    clientes.Add(cliente);
+                    try
+                    {
+                        Cliente cliente = new Cliente();
+                        cliente.Cedula = Convert.ToInt32(valores[0]);
+                        cliente.Nombre = valores[1];
+                        cliente.Apellido = valores[2];
+                        cliente.Direccion = valores[3];
+                        cliente.Telefono = valores[4];
+                        cliente.CorreoElectronico = valores[5];
+                        cliente.TipoDocumento = Convert.ToChar(valores[6]);
+                        cliente.ContribuyenteEspecial = Convert.ToBoolean(valores[7]);
+                        clientes.Add(cliente);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Nooo");
+                    }
                 }
 
                 i++;
@@ -58,29 +64,35 @@ namespace sistemaCompra
 
             foreach (string linea in lineasProductos.Skip(1))
             {
-
-                string[] valores = linea.Split(',');
-
-                Producto producto = new Producto();
-                producto.Codigo = valores[0];
-                producto.Nombre = valores[1];
-                producto.Cantidad = Convert.ToDouble(valores[2]);
-                producto.CantidadMinima = Convert.ToInt32(valores[3]);
-                producto.UnidadDeMedida = valores[4];
-                producto.CostoUnitario = Convert.ToInt64(valores[5]);
-                producto.PrecioDeVenta = Convert.ToInt64(valores[6]);
-
-                if (valores[7] == "SI")
+                try
                 {
-                    producto.IVA = true;
-                }
+                    string[] valores = linea.Split(',');
 
-                else if (valores[7] == "NO")
+                    Producto producto = new Producto();
+                    producto.Codigo = valores[0];
+                    producto.Nombre = valores[1];
+                    producto.Cantidad = Convert.ToInt64(valores[2]);
+                    producto.CantidadMinima = Convert.ToInt32(valores[3]);
+                    producto.UnidadDeMedida = valores[4];
+                    producto.CostoUnitario = Convert.ToInt64(valores[5]);
+                    producto.PrecioDeVenta = Convert.ToInt64(valores[6]);
+
+                    if (valores[7] == "SI")
+                    {
+                        producto.IVA = true;
+                    }
+
+                    else if (valores[7] == "NO")
+                    {
+                        producto.IVA = false;
+                    }
+
+                    productos.Add(producto);
+                }
+                catch (Exception e)
                 {
-                    producto.IVA = false;
+                    MessageBox.Show("aaah");
                 }
-
-                productos.Add(producto);
             }
         }
 
@@ -146,7 +158,7 @@ namespace sistemaCompra
                 string buscador = textBox2.Text;
                 double cantidad = Convert.ToDouble(cantidadTB.Text);
                 double precioTotal = 0;
-                
+
                 //Aquí va a ser 
                 foreach (Producto producto in productos)
                 {
@@ -206,6 +218,6 @@ namespace sistemaCompra
             this.Hide();
         }
 
-        
+
     }
 }

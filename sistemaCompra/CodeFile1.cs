@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examen
+/*namespace Examen
 {
     internal class Program
     {
@@ -78,4 +78,4 @@ namespace Examen
         }
 
     }
-}
+}*/

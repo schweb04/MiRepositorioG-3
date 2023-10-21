@@ -102,6 +102,12 @@ namespace sistemaCompra
                     }
                     break;
                 }
+
+                else 
+                {
+                    MessageBox.Show("Credenciales incorrectas");
+                    break;
+                }
             }
         }
 
