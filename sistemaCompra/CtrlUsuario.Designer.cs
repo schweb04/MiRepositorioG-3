@@ -45,6 +45,9 @@
             pboxCtrlUsuarios = new PictureBox();
             pboxLista = new PictureBox();
             dtgvListaUsuarios = new DataGridView();
+            txtConfirmarPassword = new TextBox();
+            pictureBox1 = new PictureBox();
+            lblConfirmarPassword = new Label();
             ((System.ComponentModel.ISupportInitialize)pboxEliminar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxEditar).BeginInit();
             pnlDesplegar.SuspendLayout();
@@ -58,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvListaUsuarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pboxEliminar
@@ -85,6 +89,9 @@
             // 
             // pnlDesplegar
             // 
+            pnlDesplegar.Controls.Add(lblConfirmarPassword);
+            pnlDesplegar.Controls.Add(pictureBox1);
+            pnlDesplegar.Controls.Add(txtConfirmarPassword);
             pnlDesplegar.Controls.Add(pboxAceptarEditar);
             pnlDesplegar.Controls.Add(txtNombre);
             pnlDesplegar.Controls.Add(txtPassword);
@@ -120,9 +127,9 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(111, 130);
+            txtPassword.Location = new Point(36, 130);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(145, 23);
+            txtPassword.Size = new Size(135, 23);
             txtPassword.TabIndex = 58;
             // 
             // lblNombre
@@ -139,7 +146,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblPassword.Location = new Point(144, 114);
+            lblPassword.Location = new Point(66, 114);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(77, 13);
             lblPassword.TabIndex = 56;
@@ -180,9 +187,9 @@
             // pboxBarra
             // 
             pboxBarra.Image = Properties.Resources.ControlDato2;
-            pboxBarra.Location = new Point(111, 148);
+            pboxBarra.Location = new Point(36, 151);
             pboxBarra.Name = "pboxBarra";
-            pboxBarra.Size = new Size(145, 30);
+            pboxBarra.Size = new Size(135, 18);
             pboxBarra.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra.TabIndex = 56;
             pboxBarra.TabStop = false;
@@ -239,6 +246,33 @@
             dtgvListaUsuarios.Size = new Size(177, 165);
             dtgvListaUsuarios.TabIndex = 65;
             // 
+            // txtConfirmarPassword
+            // 
+            txtConfirmarPassword.Location = new Point(206, 130);
+            txtConfirmarPassword.Name = "txtConfirmarPassword";
+            txtConfirmarPassword.Size = new Size(135, 23);
+            txtConfirmarPassword.TabIndex = 76;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.ControlDato2;
+            pictureBox1.Location = new Point(206, 151);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(135, 18);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 77;
+            pictureBox1.TabStop = false;
+            // 
+            // lblConfirmarPassword
+            // 
+            lblConfirmarPassword.AutoSize = true;
+            lblConfirmarPassword.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblConfirmarPassword.Location = new Point(197, 114);
+            lblConfirmarPassword.Name = "lblConfirmarPassword";
+            lblConfirmarPassword.Size = new Size(147, 13);
+            lblConfirmarPassword.TabIndex = 78;
+            lblConfirmarPassword.Text = "Confirmar Contraseña";
+            // 
             // CtrlUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -269,6 +303,7 @@
             ((System.ComponentModel.ISupportInitialize)pboxCtrlUsuarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxLista).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvListaUsuarios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -291,5 +326,8 @@
         private PictureBox pboxCtrlUsuarios;
         private PictureBox pboxLista;
         private DataGridView dtgvListaUsuarios;
+        private Label lblConfirmarPassword;
+        private PictureBox pictureBox1;
+        private TextBox txtConfirmarPassword;
     }
 }
