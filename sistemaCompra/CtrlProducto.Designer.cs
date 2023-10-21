@@ -32,6 +32,10 @@
             pboxAgregar = new PictureBox();
             pboxDatos = new PictureBox();
             pnlDesplegar = new Panel();
+            lblCantidadMinima = new Label();
+            pictureBox2 = new PictureBox();
+            txtCantidadMinima = new TextBox();
+            pictureBox1 = new PictureBox();
             pboxAceptarEditar = new PictureBox();
             cboxSiYNo = new ComboBox();
             cboxUdMedidas = new ComboBox();
@@ -50,7 +54,6 @@
             pboxCancelar = new PictureBox();
             pboxAceptarAgregar = new PictureBox();
             pboxBarra6 = new PictureBox();
-            pboxBarra5 = new PictureBox();
             pboxBarra3 = new PictureBox();
             pboxBarra2 = new PictureBox();
             pboxBarra = new PictureBox();
@@ -62,11 +65,12 @@
             ((System.ComponentModel.ISupportInitialize)pboxAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxDatos).BeginInit();
             pnlDesplegar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboxBarra5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra).BeginInit();
@@ -110,6 +114,10 @@
             // 
             // pnlDesplegar
             // 
+            pnlDesplegar.Controls.Add(lblCantidadMinima);
+            pnlDesplegar.Controls.Add(pictureBox2);
+            pnlDesplegar.Controls.Add(txtCantidadMinima);
+            pnlDesplegar.Controls.Add(pictureBox1);
             pnlDesplegar.Controls.Add(pboxAceptarEditar);
             pnlDesplegar.Controls.Add(cboxSiYNo);
             pnlDesplegar.Controls.Add(cboxUdMedidas);
@@ -128,7 +136,6 @@
             pnlDesplegar.Controls.Add(pboxCancelar);
             pnlDesplegar.Controls.Add(pboxAceptarAgregar);
             pnlDesplegar.Controls.Add(pboxBarra6);
-            pnlDesplegar.Controls.Add(pboxBarra5);
             pnlDesplegar.Controls.Add(pboxBarra3);
             pnlDesplegar.Controls.Add(pboxBarra2);
             pnlDesplegar.Controls.Add(pboxBarra);
@@ -138,10 +145,48 @@
             pnlDesplegar.Size = new Size(372, 249);
             pnlDesplegar.TabIndex = 55;
             // 
+            // lblCantidadMinima
+            // 
+            lblCantidadMinima.AutoSize = true;
+            lblCantidadMinima.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblCantidadMinima.Location = new Point(238, 88);
+            lblCantidadMinima.Name = "lblCantidadMinima";
+            lblCantidadMinima.Size = new Size(112, 13);
+            lblCantidadMinima.TabIndex = 79;
+            lblCantidadMinima.Text = "Cantidad Mínima";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.ControlDato2;
+            pictureBox2.Location = new Point(247, 126);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(97, 11);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 78;
+            pictureBox2.TabStop = false;
+            // 
+            // txtCantidadMinima
+            // 
+            txtCantidadMinima.Location = new Point(247, 104);
+            txtCantidadMinima.Name = "txtCantidadMinima";
+            txtCantidadMinima.Size = new Size(97, 23);
+            txtCantidadMinima.TabIndex = 77;
+            txtCantidadMinima.TextChanged += txtCantidadMinima_TextChanged;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.ControlDato2;
+            pictureBox1.Location = new Point(132, 126);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 13);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 76;
+            pictureBox1.TabStop = false;
+            // 
             // pboxAceptarEditar
             // 
             pboxAceptarEditar.Image = Properties.Resources.BotonAceptar1;
-            pboxAceptarEditar.Location = new Point(180, 192);
+            pboxAceptarEditar.Location = new Point(265, 156);
             pboxAceptarEditar.Margin = new Padding(3, 2, 3, 2);
             pboxAceptarEditar.Name = "pboxAceptarEditar";
             pboxAceptarEditar.Size = new Size(79, 32);
@@ -154,7 +199,7 @@
             // 
             cboxSiYNo.FormattingEnabled = true;
             cboxSiYNo.Items.AddRange(new object[] { "SI", "NO" });
-            cboxSiYNo.Location = new Point(70, 192);
+            cboxSiYNo.Location = new Point(61, 174);
             cboxSiYNo.Name = "cboxSiYNo";
             cboxSiYNo.Size = new Size(56, 23);
             cboxSiYNo.TabIndex = 64;
@@ -164,15 +209,15 @@
             // 
             cboxUdMedidas.FormattingEnabled = true;
             cboxUdMedidas.Items.AddRange(new object[] { "Kilogramo (Kg)", "Litro (L)", "Unidad (Ud.)" });
-            cboxUdMedidas.Location = new Point(36, 132);
+            cboxUdMedidas.Location = new Point(36, 104);
             cboxUdMedidas.Name = "cboxUdMedidas";
-            cboxUdMedidas.Size = new Size(90, 23);
+            cboxUdMedidas.Size = new Size(77, 23);
             cboxUdMedidas.TabIndex = 58;
             cboxUdMedidas.SelectedIndexChanged += cboxUdMedidas_SelectedIndexChanged;
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(238, 132);
+            txtPrecio.Location = new Point(132, 174);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(100, 23);
             txtPrecio.TabIndex = 74;
@@ -180,7 +225,7 @@
             // 
             // txtCosto
             // 
-            txtCosto.Location = new Point(132, 132);
+            txtCosto.Location = new Point(132, 104);
             txtCosto.Name = "txtCosto";
             txtCosto.Size = new Size(100, 23);
             txtCosto.TabIndex = 73;
@@ -188,7 +233,7 @@
             // 
             // txtCantidad
             // 
-            txtCantidad.Location = new Point(238, 51);
+            txtCantidad.Location = new Point(238, 41);
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new Size(100, 23);
             txtCantidad.TabIndex = 71;
@@ -196,7 +241,7 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(132, 51);
+            txtNombre.Location = new Point(132, 41);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(100, 23);
             txtNombre.TabIndex = 70;
@@ -204,7 +249,7 @@
             // 
             // txtCodigo
             // 
-            txtCodigo.Location = new Point(36, 51);
+            txtCodigo.Location = new Point(36, 41);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(90, 23);
             txtCodigo.TabIndex = 58;
@@ -214,7 +259,7 @@
             // 
             lblPrecio.AutoSize = true;
             lblPrecio.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblPrecio.Location = new Point(238, 116);
+            lblPrecio.Location = new Point(127, 158);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(112, 13);
             lblPrecio.TabIndex = 69;
@@ -224,7 +269,7 @@
             // 
             lblCosto.AutoSize = true;
             lblCosto.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblCosto.Location = new Point(127, 116);
+            lblCosto.Location = new Point(127, 88);
             lblCosto.Name = "lblCosto";
             lblCosto.Size = new Size(105, 13);
             lblCosto.TabIndex = 68;
@@ -234,7 +279,7 @@
             // 
             lblUnidad.AutoSize = true;
             lblUnidad.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblUnidad.Location = new Point(36, 116);
+            lblUnidad.Location = new Point(36, 88);
             lblUnidad.Name = "lblUnidad";
             lblUnidad.Size = new Size(77, 13);
             lblUnidad.TabIndex = 67;
@@ -244,7 +289,7 @@
             // 
             lblIVA.AutoSize = true;
             lblIVA.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblIVA.Location = new Point(36, 192);
+            lblIVA.Location = new Point(27, 178);
             lblIVA.Name = "lblIVA";
             lblIVA.Size = new Size(28, 13);
             lblIVA.TabIndex = 66;
@@ -254,7 +299,7 @@
             // 
             lblCantidad.AutoSize = true;
             lblCantidad.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblCantidad.Location = new Point(256, 33);
+            lblCantidad.Location = new Point(256, 22);
             lblCantidad.Name = "lblCantidad";
             lblCantidad.Size = new Size(63, 13);
             lblCantidad.TabIndex = 65;
@@ -264,7 +309,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblNombre.Location = new Point(160, 33);
+            lblNombre.Location = new Point(160, 22);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(49, 13);
             lblNombre.TabIndex = 64;
@@ -274,7 +319,7 @@
             // 
             lblCodigo.AutoSize = true;
             lblCodigo.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblCodigo.Location = new Point(55, 33);
+            lblCodigo.Location = new Point(55, 22);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(49, 13);
             lblCodigo.TabIndex = 56;
@@ -295,7 +340,7 @@
             // pboxAceptarAgregar
             // 
             pboxAceptarAgregar.Image = Properties.Resources.BotonAceptar1;
-            pboxAceptarAgregar.Location = new Point(180, 192);
+            pboxAceptarAgregar.Location = new Point(265, 156);
             pboxAceptarAgregar.Margin = new Padding(3, 2, 3, 2);
             pboxAceptarAgregar.Name = "pboxAceptarAgregar";
             pboxAceptarAgregar.Size = new Size(79, 32);
@@ -307,29 +352,19 @@
             // pboxBarra6
             // 
             pboxBarra6.Image = Properties.Resources.ControlDato2;
-            pboxBarra6.Location = new Point(238, 152);
+            pboxBarra6.Location = new Point(132, 192);
             pboxBarra6.Name = "pboxBarra6";
-            pboxBarra6.Size = new Size(100, 27);
+            pboxBarra6.Size = new Size(100, 19);
             pboxBarra6.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra6.TabIndex = 61;
             pboxBarra6.TabStop = false;
             // 
-            // pboxBarra5
-            // 
-            pboxBarra5.Image = Properties.Resources.ControlDato2;
-            pboxBarra5.Location = new Point(132, 152);
-            pboxBarra5.Name = "pboxBarra5";
-            pboxBarra5.Size = new Size(100, 27);
-            pboxBarra5.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxBarra5.TabIndex = 60;
-            pboxBarra5.TabStop = false;
-            // 
             // pboxBarra3
             // 
             pboxBarra3.Image = Properties.Resources.ControlDato2;
-            pboxBarra3.Location = new Point(238, 70);
+            pboxBarra3.Location = new Point(238, 63);
             pboxBarra3.Name = "pboxBarra3";
-            pboxBarra3.Size = new Size(100, 27);
+            pboxBarra3.Size = new Size(100, 10);
             pboxBarra3.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra3.TabIndex = 58;
             pboxBarra3.TabStop = false;
@@ -337,9 +372,9 @@
             // pboxBarra2
             // 
             pboxBarra2.Image = Properties.Resources.ControlDato2;
-            pboxBarra2.Location = new Point(132, 70);
+            pboxBarra2.Location = new Point(132, 61);
             pboxBarra2.Name = "pboxBarra2";
-            pboxBarra2.Size = new Size(100, 27);
+            pboxBarra2.Size = new Size(100, 13);
             pboxBarra2.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra2.TabIndex = 57;
             pboxBarra2.TabStop = false;
@@ -347,9 +382,9 @@
             // pboxBarra
             // 
             pboxBarra.Image = Properties.Resources.ControlDato2;
-            pboxBarra.Location = new Point(36, 70);
+            pboxBarra.Location = new Point(36, 59);
             pboxBarra.Name = "pboxBarra";
-            pboxBarra.Size = new Size(90, 27);
+            pboxBarra.Size = new Size(90, 15);
             pboxBarra.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra.TabIndex = 56;
             pboxBarra.TabStop = false;
@@ -419,11 +454,12 @@
             ((System.ComponentModel.ISupportInitialize)pboxDatos).EndInit();
             pnlDesplegar.ResumeLayout(false);
             pnlDesplegar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarEditar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxCancelar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxAceptarAgregar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboxBarra5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxBarra).EndInit();
@@ -442,7 +478,6 @@
         private PictureBox pboxBarra;
         private PictureBox pboxBarra2;
         private PictureBox pboxBarra3;
-        private PictureBox pboxBarra5;
         private PictureBox pboxBarra6;
         private PictureBox pboxAceptarAgregar;
         private PictureBox pboxCancelar;
@@ -465,5 +500,9 @@
         private PictureBox pboxAceptarEditar;
         private PictureBox pboxLista;
         private DataGridView dtgvListaProductos;
+        private Label lblCantidadMinima;
+        private PictureBox pictureBox2;
+        private TextBox txtCantidadMinima;
+        private PictureBox pictureBox1;
     }
 }

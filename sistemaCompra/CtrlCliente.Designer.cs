@@ -145,6 +145,7 @@
             pboxAceptarEditar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAceptarEditar.TabIndex = 76;
             pboxAceptarEditar.TabStop = false;
+            pboxAceptarEditar.Click += pboxAceptarEditar_Click;
             // 
             // cboxSiYNo
             // 
@@ -159,10 +160,10 @@
             // lblTelefono
             // 
             lblTelefono.AutoSize = true;
-            lblTelefono.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblTelefono.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
             lblTelefono.Location = new Point(46, 107);
             lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(63, 13);
+            lblTelefono.Size = new Size(55, 15);
             lblTelefono.TabIndex = 75;
             lblTelefono.Text = "Teléfono";
             // 
@@ -227,60 +228,60 @@
             // lblDireccion
             // 
             lblDireccion.AutoSize = true;
-            lblDireccion.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblDireccion.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
             lblDireccion.Location = new Point(243, 107);
             lblDireccion.Name = "lblDireccion";
-            lblDireccion.Size = new Size(70, 13);
+            lblDireccion.Size = new Size(59, 15);
             lblDireccion.TabIndex = 69;
             lblDireccion.Text = "Dirección";
             // 
             // lblCorreo
             // 
             lblCorreo.AutoSize = true;
-            lblCorreo.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblCorreo.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
             lblCorreo.Location = new Point(144, 107);
             lblCorreo.Name = "lblCorreo";
-            lblCorreo.Size = new Size(49, 13);
+            lblCorreo.Size = new Size(43, 15);
             lblCorreo.TabIndex = 68;
             lblCorreo.Text = "E-mail";
             // 
             // lblIdentificacion
             // 
             lblIdentificacion.AutoSize = true;
-            lblIdentificacion.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblIdentificacion.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
             lblIdentificacion.Location = new Point(19, 29);
             lblIdentificacion.Name = "lblIdentificacion";
-            lblIdentificacion.Size = new Size(105, 13);
+            lblIdentificacion.Size = new Size(79, 15);
             lblIdentificacion.TabIndex = 67;
             lblIdentificacion.Text = "Identificación";
             // 
             // lblContribuyenteEspecial
             // 
             lblContribuyenteEspecial.AutoSize = true;
-            lblContribuyenteEspecial.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblContribuyenteEspecial.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
             lblContribuyenteEspecial.Location = new Point(29, 175);
             lblContribuyenteEspecial.Name = "lblContribuyenteEspecial";
-            lblContribuyenteEspecial.Size = new Size(133, 13);
+            lblContribuyenteEspecial.Size = new Size(109, 15);
             lblContribuyenteEspecial.TabIndex = 66;
             lblContribuyenteEspecial.Text = "Contribuyente Esp.";
             // 
             // lblApellido
             // 
             lblApellido.AutoSize = true;
-            lblApellido.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblApellido.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
             lblApellido.Location = new Point(243, 29);
             lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(63, 13);
+            lblApellido.Size = new Size(51, 15);
             lblApellido.TabIndex = 65;
             lblApellido.Text = "Apellido";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblNombre.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
             lblNombre.Location = new Point(144, 29);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(49, 13);
+            lblNombre.Size = new Size(52, 15);
             lblNombre.TabIndex = 64;
             lblNombre.Text = "Nombre";
             // 
@@ -306,6 +307,7 @@
             pboxAceptarAgregar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAceptarAgregar.TabIndex = 56;
             pboxAceptarAgregar.TabStop = false;
+            pboxAceptarAgregar.Click += pboxAceptarAgregar_Click;
             // 
             // pboxBarra6
             // 

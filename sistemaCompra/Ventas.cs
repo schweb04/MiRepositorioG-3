@@ -64,23 +64,37 @@ namespace sistemaCompra
                 Producto producto = new Producto();
                 producto.Codigo = valores[0];
                 producto.Nombre = valores[1];
-                producto.Cantidad = Convert.ToInt64(valores[2]);
-                producto.UnidadDeMedida = valores[3];
-                producto.CostoUnitario = Convert.ToInt64(valores[4]);
-                producto.PrecioDeVenta = Convert.ToInt64(valores[5]);
+                producto.Cantidad = Convert.ToDouble(valores[2]);
+                producto.CantidadMinima = Convert.ToInt32(valores[3]);
+                producto.UnidadDeMedida = valores[4];
+                producto.CostoUnitario = Convert.ToInt64(valores[5]);
+                producto.PrecioDeVenta = Convert.ToInt64(valores[6]);
 
-                if (valores[6] == "SI")
+                if (valores[7] == "SI")
                 {
                     producto.IVA = true;
                 }
 
-                else if (valores[6] == "NO")
+                else if (valores[7] == "NO")
                 {
                     producto.IVA = false;
                 }
 
                 productos.Add(producto);
             }
+        }
+
+        public bool VerificarCantidadDisponible()
+        {
+            foreach (var producto in productos)
+            {
+                if (producto.Cantidad < producto.CantidadMinima)
+                {
+                    Console.WriteLine($"ALERTA: El producto {producto.Nombre} tiene un nivel de stock bajo. Se recomienda solicitar un pedido al proveedor.");
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -114,7 +128,10 @@ namespace sistemaCompra
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-
+            //if (VerificarCantidadDisponible() == true)
+            //{
+            //    this.Close();
+            //}
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -127,9 +144,10 @@ namespace sistemaCompra
             try
             {
                 string buscador = textBox2.Text;
-                double cantidad = Convert.ToInt64(cantidadTB.Text);
+                double cantidad = Convert.ToDouble(cantidadTB.Text);
                 double precioTotal = 0;
                 
+                //Aquí va a ser 
                 foreach (Producto producto in productos)
                 {
                     if (buscador == Convert.ToString(producto.Codigo))
