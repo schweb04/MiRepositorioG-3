@@ -64,17 +64,18 @@ namespace sistemaCompra
                 Producto producto = new Producto();
                 producto.Codigo = valores[0];
                 producto.Nombre = valores[1];
-                producto.Cantidad = Convert.ToInt64(valores[2]);
-                producto.UnidadDeMedida = valores[3];
-                producto.CostoUnitario = Convert.ToInt64(valores[4]);
-                producto.PrecioDeVenta = Convert.ToInt64(valores[5]);
+                producto.Cantidad = Convert.ToInt32(valores[2]);
+                producto.CantidadMinima = Convert.ToInt32(valores[3]);
+                producto.UnidadDeMedida = valores[4];
+                producto.CostoUnitario = Convert.ToInt64(valores[5]);
+                producto.PrecioDeVenta = Convert.ToInt64(valores[6]);
 
-                if (valores[6] == "SI")
+                if (valores[7] == "SI")
                 {
                     producto.IVA = true;
                 }
 
-                else if (valores[6] == "NO")
+                else if (valores[7] == "NO")
                 {
                     producto.IVA = false;
                 }
