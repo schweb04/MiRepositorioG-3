@@ -14,7 +14,7 @@ namespace sistemaCompra
     {
 
 
-
+        /*Hola Manuel;*/
 
         public CtrlCliente()
         {
