@@ -141,36 +141,42 @@
             // 
             // importarUsuariosToolStripMenuItem
             // 
+            importarUsuariosToolStripMenuItem.Image = Properties.Resources.IconoExportar;
             importarUsuariosToolStripMenuItem.Name = "importarUsuariosToolStripMenuItem";
             importarUsuariosToolStripMenuItem.Size = new Size(207, 22);
             importarUsuariosToolStripMenuItem.Text = "Importar Usuarios";
             // 
             // exportarUsuariosToolStripMenuItem
             // 
+            exportarUsuariosToolStripMenuItem.Image = Properties.Resources.IconoImportar;
             exportarUsuariosToolStripMenuItem.Name = "exportarUsuariosToolStripMenuItem";
             exportarUsuariosToolStripMenuItem.Size = new Size(207, 22);
             exportarUsuariosToolStripMenuItem.Text = "Exportar Usuarios";
             // 
             // importarProductosToolStripMenuItem
             // 
+            importarProductosToolStripMenuItem.Image = Properties.Resources.IconoExportar1;
             importarProductosToolStripMenuItem.Name = "importarProductosToolStripMenuItem";
             importarProductosToolStripMenuItem.Size = new Size(214, 22);
             importarProductosToolStripMenuItem.Text = "Importar Productos";
             // 
             // exportarProductosToolStripMenuItem
             // 
+            exportarProductosToolStripMenuItem.Image = Properties.Resources.IconoImportar;
             exportarProductosToolStripMenuItem.Name = "exportarProductosToolStripMenuItem";
             exportarProductosToolStripMenuItem.Size = new Size(214, 22);
             exportarProductosToolStripMenuItem.Text = "Exportar Productos";
             // 
             // importarClientesToolStripMenuItem
             // 
+            importarClientesToolStripMenuItem.Image = Properties.Resources.IconoExportar;
             importarClientesToolStripMenuItem.Name = "importarClientesToolStripMenuItem";
             importarClientesToolStripMenuItem.Size = new Size(207, 22);
             importarClientesToolStripMenuItem.Text = "Importar Clientes";
             // 
             // exportarClientesToolStripMenuItem
             // 
+            exportarClientesToolStripMenuItem.Image = Properties.Resources.IconoImportar;
             exportarClientesToolStripMenuItem.Name = "exportarClientesToolStripMenuItem";
             exportarClientesToolStripMenuItem.Size = new Size(207, 22);
             exportarClientesToolStripMenuItem.Text = "Exportar Clientes";
