@@ -128,9 +128,10 @@ namespace sistemaCompra
             try
             {
                 string buscador = textBox2.Text;
-                double cantidad = Convert.ToInt64(cantidadTB.Text);
+                int cantidad = Convert.ToInt32(cantidadTB.Text);
                 double precioTotal = 0;
                 
+                //Aquí va a ser 
                 foreach (Producto producto in productos)
                 {
                     if (buscador == Convert.ToString(producto.Codigo))
