@@ -82,10 +82,10 @@
             // pboxEliminar
             // 
             pboxEliminar.Image = Properties.Resources.ControlEliminar;
-            pboxEliminar.Location = new Point(417, 65);
+            pboxEliminar.Location = new Point(570, 100);
             pboxEliminar.Margin = new Padding(3, 2, 3, 2);
             pboxEliminar.Name = "pboxEliminar";
-            pboxEliminar.Size = new Size(42, 38);
+            pboxEliminar.Size = new Size(49, 46);
             pboxEliminar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxEliminar.TabIndex = 62;
             pboxEliminar.TabStop = false;
@@ -93,10 +93,10 @@
             // pboxEditar
             // 
             pboxEditar.Image = Properties.Resources.VentasEditar;
-            pboxEditar.Location = new Point(358, 65);
+            pboxEditar.Location = new Point(491, 100);
             pboxEditar.Margin = new Padding(3, 2, 3, 2);
             pboxEditar.Name = "pboxEditar";
-            pboxEditar.Size = new Size(39, 38);
+            pboxEditar.Size = new Size(49, 46);
             pboxEditar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxEditar.TabIndex = 61;
             pboxEditar.TabStop = false;
@@ -129,16 +129,16 @@
             pnlDesplegar.Controls.Add(pboxBarra2);
             pnlDesplegar.Controls.Add(pboxBarra);
             pnlDesplegar.Controls.Add(pboxDatos);
-            pnlDesplegar.Location = new Point(297, 114);
+            pnlDesplegar.Location = new Point(408, 160);
             pnlDesplegar.Margin = new Padding(3, 2, 3, 2);
             pnlDesplegar.Name = "pnlDesplegar";
-            pnlDesplegar.Size = new Size(354, 234);
+            pnlDesplegar.Size = new Size(381, 266);
             pnlDesplegar.TabIndex = 60;
             // 
             // pboxAceptarEditar
             // 
             pboxAceptarEditar.Image = Properties.Resources.BotonAceptar1;
-            pboxAceptarEditar.Location = new Point(168, 190);
+            pboxAceptarEditar.Location = new Point(189, 210);
             pboxAceptarEditar.Margin = new Padding(3, 2, 3, 2);
             pboxAceptarEditar.Name = "pboxAceptarEditar";
             pboxAceptarEditar.Size = new Size(80, 27);
@@ -151,7 +151,7 @@
             // 
             cboxSiYNo.FormattingEnabled = true;
             cboxSiYNo.Items.AddRange(new object[] { "SI", "NO" });
-            cboxSiYNo.Location = new Point(37, 190);
+            cboxSiYNo.Location = new Point(252, 149);
             cboxSiYNo.Margin = new Padding(3, 2, 3, 2);
             cboxSiYNo.Name = "cboxSiYNo";
             cboxSiYNo.Size = new Size(97, 23);
@@ -160,10 +160,10 @@
             // lblTelefono
             // 
             lblTelefono.AutoSize = true;
-            lblTelefono.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblTelefono.Location = new Point(46, 107);
+            lblTelefono.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblTelefono.Location = new Point(38, 105);
             lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(55, 15);
+            lblTelefono.Size = new Size(63, 13);
             lblTelefono.TabIndex = 75;
             lblTelefono.Text = "Teléfono";
             // 
@@ -171,7 +171,7 @@
             // 
             cboxTipoIdentificacion.FormattingEnabled = true;
             cboxTipoIdentificacion.Items.AddRange(new object[] { "V", "E", "J" });
-            cboxTipoIdentificacion.Location = new Point(19, 44);
+            cboxTipoIdentificacion.Location = new Point(252, 58);
             cboxTipoIdentificacion.Margin = new Padding(3, 2, 3, 2);
             cboxTipoIdentificacion.Name = "cboxTipoIdentificacion";
             cboxTipoIdentificacion.Size = new Size(42, 23);
@@ -179,23 +179,23 @@
             // 
             // txtDireccion
             // 
-            txtDireccion.Location = new Point(232, 122);
+            txtDireccion.Location = new Point(123, 122);
             txtDireccion.Margin = new Padding(3, 2, 3, 2);
             txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(88, 23);
+            txtDireccion.Size = new Size(104, 23);
             txtDireccion.TabIndex = 74;
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(132, 122);
+            txtCorreo.Location = new Point(33, 198);
             txtCorreo.Margin = new Padding(3, 2, 3, 2);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(82, 23);
+            txtCorreo.Size = new Size(88, 23);
             txtCorreo.TabIndex = 73;
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(33, 122);
+            txtTelefono.Location = new Point(27, 122);
             txtTelefono.Margin = new Padding(3, 2, 3, 2);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(88, 23);
@@ -203,92 +203,92 @@
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(232, 44);
+            txtApellido.Location = new Point(137, 58);
             txtApellido.Margin = new Padding(3, 2, 3, 2);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(88, 23);
+            txtApellido.Size = new Size(104, 23);
             txtApellido.TabIndex = 71;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(132, 44);
+            txtNombre.Location = new Point(27, 53);
             txtNombre.Margin = new Padding(3, 2, 3, 2);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(81, 23);
+            txtNombre.Size = new Size(94, 23);
             txtNombre.TabIndex = 70;
             // 
             // txtIdentificacion
             // 
-            txtIdentificacion.Location = new Point(63, 44);
+            txtIdentificacion.Location = new Point(294, 58);
             txtIdentificacion.Margin = new Padding(3, 2, 3, 2);
             txtIdentificacion.Name = "txtIdentificacion";
-            txtIdentificacion.Size = new Size(58, 23);
+            txtIdentificacion.Size = new Size(64, 23);
             txtIdentificacion.TabIndex = 58;
             // 
             // lblDireccion
             // 
             lblDireccion.AutoSize = true;
-            lblDireccion.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblDireccion.Location = new Point(243, 107);
+            lblDireccion.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblDireccion.Location = new Point(141, 105);
             lblDireccion.Name = "lblDireccion";
-            lblDireccion.Size = new Size(59, 15);
+            lblDireccion.Size = new Size(70, 13);
             lblDireccion.TabIndex = 69;
             lblDireccion.Text = "Dirección";
             // 
             // lblCorreo
             // 
             lblCorreo.AutoSize = true;
-            lblCorreo.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblCorreo.Location = new Point(144, 107);
+            lblCorreo.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblCorreo.Location = new Point(49, 173);
             lblCorreo.Name = "lblCorreo";
-            lblCorreo.Size = new Size(43, 15);
+            lblCorreo.Size = new Size(49, 13);
             lblCorreo.TabIndex = 68;
             lblCorreo.Text = "E-mail";
             // 
             // lblIdentificacion
             // 
             lblIdentificacion.AutoSize = true;
-            lblIdentificacion.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblIdentificacion.Location = new Point(19, 29);
+            lblIdentificacion.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblIdentificacion.Location = new Point(252, 29);
             lblIdentificacion.Name = "lblIdentificacion";
-            lblIdentificacion.Size = new Size(79, 15);
+            lblIdentificacion.Size = new Size(105, 13);
             lblIdentificacion.TabIndex = 67;
             lblIdentificacion.Text = "Identificación";
             // 
             // lblContribuyenteEspecial
             // 
             lblContribuyenteEspecial.AutoSize = true;
-            lblContribuyenteEspecial.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblContribuyenteEspecial.Location = new Point(29, 175);
+            lblContribuyenteEspecial.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblContribuyenteEspecial.Location = new Point(233, 132);
             lblContribuyenteEspecial.Name = "lblContribuyenteEspecial";
-            lblContribuyenteEspecial.Size = new Size(109, 15);
+            lblContribuyenteEspecial.Size = new Size(133, 13);
             lblContribuyenteEspecial.TabIndex = 66;
             lblContribuyenteEspecial.Text = "Contribuyente Esp.";
             // 
             // lblApellido
             // 
             lblApellido.AutoSize = true;
-            lblApellido.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblApellido.Location = new Point(243, 29);
+            lblApellido.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblApellido.Location = new Point(155, 29);
             lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(51, 15);
+            lblApellido.Size = new Size(63, 13);
             lblApellido.TabIndex = 65;
             lblApellido.Text = "Apellido";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            lblNombre.Location = new Point(144, 29);
+            lblNombre.Font = new Font("OCR A Extended", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblNombre.Location = new Point(49, 29);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(52, 15);
+            lblNombre.Size = new Size(49, 13);
             lblNombre.TabIndex = 64;
             lblNombre.Text = "Nombre";
             // 
             // pboxCancelar
             // 
             pboxCancelar.Image = Properties.Resources.BotonCancelar1;
-            pboxCancelar.Location = new Point(254, 190);
+            pboxCancelar.Location = new Point(275, 210);
             pboxCancelar.Margin = new Padding(3, 2, 3, 2);
             pboxCancelar.Name = "pboxCancelar";
             pboxCancelar.Size = new Size(83, 27);
@@ -300,7 +300,7 @@
             // pboxAceptarAgregar
             // 
             pboxAceptarAgregar.Image = Properties.Resources.BotonAceptar1;
-            pboxAceptarAgregar.Location = new Point(168, 190);
+            pboxAceptarAgregar.Location = new Point(189, 210);
             pboxAceptarAgregar.Margin = new Padding(3, 2, 3, 2);
             pboxAceptarAgregar.Name = "pboxAceptarAgregar";
             pboxAceptarAgregar.Size = new Size(80, 27);
@@ -312,10 +312,10 @@
             // pboxBarra6
             // 
             pboxBarra6.Image = Properties.Resources.ControlDato2;
-            pboxBarra6.Location = new Point(232, 149);
+            pboxBarra6.Location = new Point(123, 149);
             pboxBarra6.Margin = new Padding(3, 2, 3, 2);
             pboxBarra6.Name = "pboxBarra6";
-            pboxBarra6.Size = new Size(88, 10);
+            pboxBarra6.Size = new Size(102, 10);
             pboxBarra6.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra6.TabIndex = 61;
             pboxBarra6.TabStop = false;
@@ -323,10 +323,10 @@
             // pboxBarra5
             // 
             pboxBarra5.Image = Properties.Resources.ControlDato2;
-            pboxBarra5.Location = new Point(132, 149);
+            pboxBarra5.Location = new Point(33, 225);
             pboxBarra5.Margin = new Padding(3, 2, 3, 2);
             pboxBarra5.Name = "pboxBarra5";
-            pboxBarra5.Size = new Size(82, 10);
+            pboxBarra5.Size = new Size(88, 12);
             pboxBarra5.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra5.TabIndex = 60;
             pboxBarra5.TabStop = false;
@@ -334,7 +334,7 @@
             // pboxBarra4
             // 
             pboxBarra4.Image = Properties.Resources.ControlDato2;
-            pboxBarra4.Location = new Point(33, 149);
+            pboxBarra4.Location = new Point(27, 149);
             pboxBarra4.Margin = new Padding(3, 2, 3, 2);
             pboxBarra4.Name = "pboxBarra4";
             pboxBarra4.Size = new Size(88, 10);
@@ -345,10 +345,10 @@
             // pboxBarra3
             // 
             pboxBarra3.Image = Properties.Resources.ControlDato2;
-            pboxBarra3.Location = new Point(232, 71);
+            pboxBarra3.Location = new Point(137, 80);
             pboxBarra3.Margin = new Padding(3, 2, 3, 2);
             pboxBarra3.Name = "pboxBarra3";
-            pboxBarra3.Size = new Size(88, 10);
+            pboxBarra3.Size = new Size(104, 10);
             pboxBarra3.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra3.TabIndex = 58;
             pboxBarra3.TabStop = false;
@@ -356,10 +356,10 @@
             // pboxBarra2
             // 
             pboxBarra2.Image = Properties.Resources.ControlDato2;
-            pboxBarra2.Location = new Point(132, 71);
+            pboxBarra2.Location = new Point(27, 73);
             pboxBarra2.Margin = new Padding(3, 2, 3, 2);
             pboxBarra2.Name = "pboxBarra2";
-            pboxBarra2.Size = new Size(82, 10);
+            pboxBarra2.Size = new Size(94, 17);
             pboxBarra2.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra2.TabIndex = 57;
             pboxBarra2.TabStop = false;
@@ -367,10 +367,10 @@
             // pboxBarra
             // 
             pboxBarra.Image = Properties.Resources.ControlDato2;
-            pboxBarra.Location = new Point(63, 71);
+            pboxBarra.Location = new Point(294, 80);
             pboxBarra.Margin = new Padding(3, 2, 3, 2);
             pboxBarra.Name = "pboxBarra";
-            pboxBarra.Size = new Size(58, 10);
+            pboxBarra.Size = new Size(64, 10);
             pboxBarra.SizeMode = PictureBoxSizeMode.Zoom;
             pboxBarra.TabIndex = 56;
             pboxBarra.TabStop = false;
@@ -381,7 +381,7 @@
             pboxDatos.Location = new Point(3, 2);
             pboxDatos.Margin = new Padding(3, 2, 3, 2);
             pboxDatos.Name = "pboxDatos";
-            pboxDatos.Size = new Size(348, 230);
+            pboxDatos.Size = new Size(375, 259);
             pboxDatos.SizeMode = PictureBoxSizeMode.Zoom;
             pboxDatos.TabIndex = 54;
             pboxDatos.TabStop = false;
@@ -389,10 +389,10 @@
             // pboxAgregar
             // 
             pboxAgregar.Image = Properties.Resources.ControlAñadir;
-            pboxAgregar.Location = new Point(297, 65);
+            pboxAgregar.Location = new Point(411, 100);
             pboxAgregar.Margin = new Padding(3, 2, 3, 2);
             pboxAgregar.Name = "pboxAgregar";
-            pboxAgregar.Size = new Size(41, 38);
+            pboxAgregar.Size = new Size(50, 46);
             pboxAgregar.SizeMode = PictureBoxSizeMode.Zoom;
             pboxAgregar.TabIndex = 59;
             pboxAgregar.TabStop = false;
@@ -401,10 +401,10 @@
             // pboxCtrlClientes
             // 
             pboxCtrlClientes.Image = Properties.Resources.ControlClientes;
-            pboxCtrlClientes.Location = new Point(202, 11);
+            pboxCtrlClientes.Location = new Point(289, 11);
             pboxCtrlClientes.Margin = new Padding(3, 2, 3, 2);
             pboxCtrlClientes.Name = "pboxCtrlClientes";
-            pboxCtrlClientes.Size = new Size(288, 42);
+            pboxCtrlClientes.Size = new Size(288, 32);
             pboxCtrlClientes.SizeMode = PictureBoxSizeMode.Zoom;
             pboxCtrlClientes.TabIndex = 58;
             pboxCtrlClientes.TabStop = false;
@@ -412,10 +412,10 @@
             // pboxLista
             // 
             pboxLista.Image = Properties.Resources.ControlTabla13;
-            pboxLista.Location = new Point(12, 65);
+            pboxLista.Location = new Point(12, 57);
             pboxLista.Margin = new Padding(3, 2, 3, 2);
             pboxLista.Name = "pboxLista";
-            pboxLista.Size = new Size(238, 281);
+            pboxLista.Size = new Size(378, 481);
             pboxLista.SizeMode = PictureBoxSizeMode.Zoom;
             pboxLista.TabIndex = 63;
             pboxLista.TabStop = false;
@@ -423,18 +423,18 @@
             // dtgvListaClientes
             // 
             dtgvListaClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvListaClientes.Location = new Point(31, 143);
+            dtgvListaClientes.Location = new Point(21, 175);
             dtgvListaClientes.Margin = new Padding(3, 2, 3, 2);
             dtgvListaClientes.Name = "dtgvListaClientes";
             dtgvListaClientes.RowTemplate.Height = 25;
-            dtgvListaClientes.Size = new Size(195, 184);
+            dtgvListaClientes.Size = new Size(356, 334);
             dtgvListaClientes.TabIndex = 64;
             // 
             // CtrlCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(663, 364);
+            ClientSize = new Size(821, 549);
             Controls.Add(dtgvListaClientes);
             Controls.Add(pboxEliminar);
             Controls.Add(pboxEditar);

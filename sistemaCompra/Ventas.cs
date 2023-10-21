@@ -83,17 +83,19 @@ namespace sistemaCompra
             }
         }
 
-        public bool VerificarCantidadDisponible()
+
+        public void VerificarCantidadDisponible()
         {
             foreach (var producto in productos)
             {
-                if (producto.Cantidad < producto.CantidadMinima)
+                if (producto.Cantidad <= producto.CantidadMinima)
                 {
-                    Console.WriteLine($"ALERTA: El producto {producto.Nombre} tiene un nivel de stock bajo. Se recomienda solicitar un pedido al proveedor.");
-                    return true;
+                    MessageBox.Show($"ALERTA: El producto {producto.Nombre} tiene un nivel de stock bajo. Se solicitará un pedido al proveedor.");
+                    double cantidadFaltante = producto.CantidadMinima - producto.Cantidad;
+                    producto.Cantidad += cantidadFaltante;
+                    MessageBox.Show($"Pedido realizado al Proveedor para el producto {producto.Nombre}.Cantidad:{cantidadFaltante}.");
                 }
             }
-            return false;
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -127,10 +129,7 @@ namespace sistemaCompra
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-            //if (VerificarCantidadDisponible() == true)
-            //{
-            //    this.Close();
-            //}
+            //VerificarCantidadDisponible();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

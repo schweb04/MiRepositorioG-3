@@ -58,6 +58,8 @@ namespace sistemaCompra
 
         private void importarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Para importar usuarios, el formato a usarse debe ser el siguiente:\nNombreDeUsuario,Clave,TipoDeUsuario");
+            
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory; // Directorio actual del programa
             openFileDialog.Filter = "Archivos CSV|*.csv";
@@ -152,6 +154,8 @@ namespace sistemaCompra
 
         private void importarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Para importar productos, el formato a usarse debe ser el siguiente:\nCodigo,Nombre,Cantidad,CantidadMinima,UnidadDeMedida,CostoUnitario,PrecioDeVenta,tieneIVA");
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory; // Directorio actual del programa
             openFileDialog.Filter = "Archivos CSV|*.csv";
@@ -270,6 +274,8 @@ namespace sistemaCompra
 
         private void importarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Para importar usuarios, el formato a usarse debe ser el siguiente:\nCedula,Nombre,Apellido,Direccion,NumeroTelefono,CorreoElectronico,TipoDocumento,ContribuyenteEspecial");
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory; // Directorio actual del programa
             openFileDialog.Filter = "Archivos CSV|*.csv";
@@ -304,8 +310,8 @@ namespace sistemaCompra
                                 }
                             }
 
-                                // Agregar el mensaje para la notificación
-                                string mensaje = $"Cedula: {cedula}, Nombre: {nombre}, Apellido: {apellido}, Direccion: {direccion}, Numero de Telefono: {numeroTelefono}, Correo Electronico: {correoElectronico}, Tipo de Documento: {tipoDocumento}, Contribuyente Especial: {contribuyenteEspecial}";
+                            // Agregar el mensaje para la notificación
+                            string mensaje = $"Cedula: {cedula}, Nombre: {nombre}, Apellido: {apellido}, Direccion: {direccion}, Numero de Telefono: {numeroTelefono}, Correo Electronico: {correoElectronico}, Tipo de Documento: {tipoDocumento}, Contribuyente Especial: {contribuyenteEspecial}";
                             mensajes.Add(mensaje);
                         }
                         else

@@ -55,7 +55,7 @@
             mnuMenuAdministrador.Items.AddRange(new ToolStripItem[] { usuariosToolStripMenuItem, productosToolStripMenuItem, clientesToolStripMenuItem, tasaDelDólarToolStripMenuItem, acercaDeToolStripMenuItem });
             mnuMenuAdministrador.Location = new Point(0, 0);
             mnuMenuAdministrador.Name = "mnuMenuAdministrador";
-            mnuMenuAdministrador.Size = new Size(683, 24);
+            mnuMenuAdministrador.Size = new Size(857, 24);
             mnuMenuAdministrador.TabIndex = 0;
             mnuMenuAdministrador.Text = "menuStrip1";
             // 
@@ -155,7 +155,7 @@
             // 
             importarClientesToolStripMenuItem.Image = Properties.Resources.IconoExportar;
             importarClientesToolStripMenuItem.Name = "importarClientesToolStripMenuItem";
-            importarClientesToolStripMenuItem.Size = new Size(180, 22);
+            importarClientesToolStripMenuItem.Size = new Size(177, 22);
             importarClientesToolStripMenuItem.Text = "Importar Clientes";
             importarClientesToolStripMenuItem.Click += importarClientesToolStripMenuItem_Click;
             // 
@@ -163,7 +163,7 @@
             // 
             exportarClientesToolStripMenuItem.Image = Properties.Resources.IconoImportar;
             exportarClientesToolStripMenuItem.Name = "exportarClientesToolStripMenuItem";
-            exportarClientesToolStripMenuItem.Size = new Size(180, 22);
+            exportarClientesToolStripMenuItem.Size = new Size(177, 22);
             exportarClientesToolStripMenuItem.Text = "Exportar Clientes";
             exportarClientesToolStripMenuItem.Click += exportarClientesToolStripMenuItem_Click;
             // 
@@ -194,7 +194,7 @@
             pnlMenuAdministrador.Dock = DockStyle.Fill;
             pnlMenuAdministrador.Location = new Point(0, 24);
             pnlMenuAdministrador.Name = "pnlMenuAdministrador";
-            pnlMenuAdministrador.Size = new Size(683, 413);
+            pnlMenuAdministrador.Size = new Size(857, 592);
             pnlMenuAdministrador.TabIndex = 1;
             // 
             // toolStripTextBox1
@@ -206,7 +206,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(683, 437);
+            ClientSize = new Size(857, 616);
             Controls.Add(pnlMenuAdministrador);
             Controls.Add(mnuMenuAdministrador);
             Name = "MenuAdministrador";
