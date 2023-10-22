@@ -21,11 +21,11 @@ namespace sistemaCompra
             
         }
 
-        public Usuario(string _username, string _password, string _tipoDeUsuario)
+        /*public Usuario(string _username, string _password, string _tipoDeUsuario)
         {
             Username = _username;
             Password = _password;
             TipoDeUsuario = _tipoDeUsuario;
-        }
+        }*/
     }
 }

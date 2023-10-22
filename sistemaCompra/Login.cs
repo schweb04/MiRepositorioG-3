@@ -19,12 +19,11 @@ namespace sistemaCompra
 
             usuarios = new List<Usuario>();
             string pathUsuarios = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "usuarios.csv");
-            string[] lineasUsuarios = File.ReadAllLines(pathUsuarios);
+            String[] lineasUsuarios = File.ReadAllLines(pathUsuarios);
 
             foreach (string linea in lineasUsuarios.Skip(1))
             {
                 string[] valores = linea.Split(',');
-
                 Usuario usuario = new Usuario();
                 usuario.Username = valores[0];
                 usuario.Password = valores[1];

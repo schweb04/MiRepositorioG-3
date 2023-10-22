@@ -88,6 +88,7 @@ namespace sistemaCompra
                     }
 
                     productos.Add(producto);
+                    DTGVConsultaID.Rows.Add(producto.Codigo, producto.Nombre);
                 }
                 catch (Exception e)
                 {
@@ -156,16 +157,16 @@ namespace sistemaCompra
             {
                 if (codigoProducto == producto.Codigo)
                 {
-                    if(producto.Cantidad != 0) 
-                    { 
+                    if (producto.Cantidad != 0)
+                    {
                         producto.Cantidad = producto.Cantidad - cantidadVendida;
-                 
+
                         break;
                     }
                 }
             }
         }
-       
+
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             try
@@ -232,6 +233,27 @@ namespace sistemaCompra
             this.Hide();
         }
 
-
+        private void textBoxCliente_TextChanged(object sender, EventArgs e)
+        {
+            foreach(Cliente cliente in clientes)
+            {
+                if(textBoxCliente.Text == Convert.ToString(cliente.Cedula) && tipoDeDocumentoCB.Text == Convert.ToString(cliente.TipoDocumento))
+                {
+                    nombreTB.Text = cliente.Nombre;
+                    apellidoTB.Text = cliente.Apellido;
+                    direccionTB.Text = cliente.Direccion;
+                    telefonoTB.Text = cliente.Telefono;
+                    emailTB.Text = cliente.CorreoElectronico;
+                    if(cliente.ContribuyenteEspecial)
+                    {
+                        Si.Checked = true;
+                    }
+                    else
+                    {
+                        No.Checked = true;
+                    }
+                }
+            }
+        }
     }
 }
