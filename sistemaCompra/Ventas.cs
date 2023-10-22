@@ -159,8 +159,19 @@ namespace sistemaCompra
                     {
                         double precioUnitario = producto.PrecioDeVenta;
                         double totalLinea = cantidad * precioUnitario;
+                        string iva = "16%";
 
-                        factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, precioUnitario, totalLinea, producto.IVA);
+                        if (producto.IVA)
+                        {
+                            iva = "16%";
+                        }
+
+                        else
+                        {
+                            iva = "0%";
+                        }
+
+                        factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, precioUnitario, totalLinea, iva);
 
                         precioTotal = precioTotal + totalLinea;
                         productoEncontrado = true;
@@ -172,6 +183,7 @@ namespace sistemaCompra
                 {
                     MessageBox.Show("Producto no encontrado");
                 }
+
 
                 facturaTotal = facturaTotal + precioTotal * 1.16;
                 facturaDolar = facturaTotal / 34.9;
@@ -214,6 +226,9 @@ namespace sistemaCompra
             this.Hide();
         }
 
-        
+        private void LabelDolares_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
