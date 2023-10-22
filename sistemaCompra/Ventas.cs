@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -39,17 +40,23 @@ namespace sistemaCompra
 
                 if (valores[0] != "")
                 {
-
-                    Cliente cliente = new Cliente();
-                    cliente.Cedula = Convert.ToInt32(valores[0]);
-                    cliente.Nombre = valores[1];
-                    cliente.Apellido = valores[2];
-                    cliente.Direccion = valores[3];
-                    cliente.Telefono = valores[4];
-                    cliente.CorreoElectronico = valores[5];
-                    cliente.TipoDocumento = Convert.ToChar(valores[6]);
-                    cliente.ContribuyenteEspecial = Convert.ToBoolean(valores[7]);
-                    clientes.Add(cliente);
+                    try
+                    {
+                        Cliente cliente = new Cliente();
+                        cliente.Cedula = Convert.ToInt32(valores[0]);
+                        cliente.Nombre = valores[1];
+                        cliente.Apellido = valores[2];
+                        cliente.Direccion = valores[3];
+                        cliente.Telefono = valores[4];
+                        cliente.CorreoElectronico = valores[5];
+                        cliente.TipoDocumento = Convert.ToChar(valores[6]);
+                        cliente.ContribuyenteEspecial = Convert.ToBoolean(valores[7]);
+                        clientes.Add(cliente);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Nooo");
+                    }
                 }
 
                 i++;
@@ -57,46 +64,56 @@ namespace sistemaCompra
 
             foreach (string linea in lineasProductos.Skip(1))
             {
-
-                string[] valores = linea.Split(',');
-
-                Producto producto = new Producto();
-                producto.Codigo = valores[0];
-                producto.Nombre = valores[1];
-                producto.Cantidad = Convert.ToInt32(valores[2]);
-                producto.CantidadMinima = Convert.ToInt32(valores[3]);
-                producto.UnidadDeMedida = valores[4];
-                producto.CostoUnitario = Convert.ToInt64(valores[5]);
-                producto.PrecioDeVenta = Convert.ToInt64(valores[6]);
-
-                if (valores[7] == "SI")
+                try
                 {
-                    producto.IVA = true;
-                }
+                    string[] valores = linea.Split(',');
 
-                else if (valores[7] == "NO")
-                {
-                    producto.IVA = false;
-                }
+                    Producto producto = new Producto();
+                    producto.Codigo = valores[0];
+                    producto.Nombre = valores[1];
+                    producto.Cantidad = Convert.ToInt64(valores[2]);
+                    producto.CantidadMinima = Convert.ToInt32(valores[3]);
+                    producto.UnidadDeMedida = valores[4];
+                    producto.CostoUnitario = Convert.ToInt64(valores[5]);
+                    producto.PrecioDeVenta = Convert.ToInt64(valores[6]);
+
+                    if (valores[7] == "SI")
+                    {
+                        producto.IVA = true;
+                    }
+
+                    else if (valores[7] == "NO")
+                    {
+                        producto.IVA = false;
+                    }
 
                 productos.Add(producto);
+                //VerificarPocaCantidad();
             }
         }
 
 
-        public void VerificarCantidadDisponible()
+        public void VerificarPocaCantidad()
         {
             foreach (var producto in productos)
             {
                 if (producto.Cantidad <= producto.CantidadMinima)
-                {
-                    MessageBox.Show($"ALERTA: El producto {producto.Nombre} tiene un nivel de stock bajo. Se solicitará un pedido al proveedor.");
-                    double cantidadFaltante = producto.CantidadMinima - producto.Cantidad;
-                    producto.Cantidad += cantidadFaltante;
+                    MessageBox.Show($"ALERTA: La cantidad disponible del producto '{producto.Nombre}' es menor a la cantidad mínima especificada del mismo.");
                     MessageBox.Show($"Pedido realizado al Proveedor para el producto {producto.Nombre}.Cantidad:{cantidadFaltante}.");
                 }
             }
         }
+        public void VerificarCantidadDisponible()
+        {
+            foreach (var producto in productos)
+            {
+                if (producto.Cantidad < producto.CantidadMinima)
+                {
+                    MessageBox.Show($"ALERTA: La cantidad disponible del producto {producto.Nombre} es menor a su cantidad mínima especificada.");
+                }
+            }
+        }
+
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
@@ -128,71 +145,70 @@ namespace sistemaCompra
         }
 
         private void Ventas_Load(object sender, EventArgs e)
-        {
-            //VerificarCantidadDisponible();
+            VerificarCantidadDisponible();
+            VerificarPocaCantidad();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
         }
 
+        private void restarProducto(string codigoProducto, double cantidadVendida)
+        {
+            foreach (Producto producto in productos)
+            {
+                if (codigoProducto == producto.Codigo)
+                {
+                    producto.Cantidad = producto.Cantidad - cantidadVendida;
+
+                    break;
+                }
+            }
+        }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             try
             {
                 string buscador = textBox2.Text;
-                double cantidad = 0;
-                if (!double.TryParse(cantidadTB.Text, out cantidad))
-                {
-                    MessageBox.Show("Introducir solo caracteres válidos");
-                    cantidadTB.Clear();
-                    return;
-                }
-
+                double cantidad = Convert.ToDouble(cantidadTB.Text);
                 double precioTotal = 0;
-                bool productoEncontrado = false;
 
                 foreach (Producto producto in productos)
                 {
                     if (buscador == Convert.ToString(producto.Codigo))
-                    {
-                        double precioUnitario = producto.PrecioDeVenta;
-                        double totalLinea = cantidad * precioUnitario;
-                        string iva = "16%";
-
-                        if (producto.IVA)
+                        if (producto.Cantidad == 0)
+                        if (producto.Cantidad == 0)
+                            MessageBox.Show($"El producto {producto.Nombre} no está disponible.");
+                        }
+                        else if (producto.Cantidad < cantidad)
                         {
-                            iva = "16%";
+                            MessageBox.Show($"La cantidad solicitada del producto {producto.Nombre} es mayor a la disponible.");
+                            MessageBox.Show("No hay unidades disponibles.");
                         }
 
                         else
                         {
                             iva = "0%";
                         }
-
-                        factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, precioUnitario, totalLinea, iva);
-
-                        precioTotal = precioTotal + totalLinea;
-                        productoEncontrado = true;
+                            restarProducto(buscador, cantidad);
+                            precioTotal = precioTotal + totalLinea;
+                        }
+                        }
                         break;
                     }
                 }
 
-                if (!productoEncontrado)
-                {
-                    MessageBox.Show("Producto no encontrado");
-                }
-
 
                 facturaTotal = facturaTotal + precioTotal * 1.16;
-                facturaDolar = facturaTotal / 34.9;
+                facturaDolar = facturaDolar + facturaTotal / 34.9;
                 LabelDolares.Text = $"Total en $: {facturaDolar.ToString("N2")}$";
                 labelFactura.Text = $"{facturaTotal.ToString()}$";
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Se produjo un error: {ex.Message}");
+                MessageBox.Show("Introducir solo caracteres válidos");
+                cantidadTB.Clear();
             }
         }
 
@@ -226,9 +242,6 @@ namespace sistemaCompra
             this.Hide();
         }
 
-        private void LabelDolares_Click(object sender, EventArgs e)
-        {
-
-        }
     }
+}
 }
