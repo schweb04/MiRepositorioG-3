@@ -199,7 +199,6 @@ namespace sistemaCompra
                     }
                 }
 
-
                 facturaTotal = facturaTotal + precioTotal * 1.16;
                 facturaDolar = facturaDolar + facturaTotal / 34.9;
                 LabelDolares.Text = $"Total en $: {facturaDolar.ToString("N2")}$";
