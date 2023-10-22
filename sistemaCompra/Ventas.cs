@@ -97,16 +97,16 @@ namespace sistemaCompra
             }
         }
 
-        public bool VerificarCantidadVacia()
+        private void restarProducto(string codigoProducto, double cantidadVendida)
         {
-            foreach (var producto in productos)
+            foreach (Producto producto in productos)
             {
-                if (producto.Cantidad == 0)
+                if (codigoProducto == producto.Codigo)
                 {
-                    return true;
+                    producto.Cantidad = producto.Cantidad - cantidadVendida;
+                    break;
                 }
             }
-            return false;
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
