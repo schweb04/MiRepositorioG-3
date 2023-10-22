@@ -35,6 +35,7 @@
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             label5 = new Label();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -43,19 +44,11 @@
             label1 = new Label();
             subtotal = new Label();
             label3 = new Label();
-            LabelDolares = new Label();
+            labelDolares = new Label();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox9 = new PictureBox();
             factura = new DataGridView();
-            Codigo = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Quantity = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Total = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Eliminar = new DataGridViewButtonColumn();
             textBoxCliente = new TextBox();
             textBox2 = new TextBox();
             nombreTB = new TextBox();
@@ -81,8 +74,16 @@
             pictureBox13 = new PictureBox();
             cantidadTB = new TextBox();
             Cantidad = new Label();
-            label4 = new Label();
-            can = new Label();
+            labelTotal = new Label();
+            Codigo = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Quantity = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Subtota = new DataGridViewTextBoxColumn();
+            Total = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Eliminar = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -159,9 +160,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(58, 524);
             label1.Name = "label1";
-            label1.Size = new Size(69, 20);
+            label1.Size = new Size(148, 20);
             label1.TabIndex = 27;
-            label1.Text = "Producto";
+            label1.Text = "Codigo del producto";
             // 
             // subtotal
             // 
@@ -177,18 +178,18 @@
             label3.AutoSize = true;
             label3.Location = new Point(12, 700);
             label3.Name = "label3";
-            label3.Size = new Size(38, 20);
+            label3.Size = new Size(66, 20);
             label3.TabIndex = 30;
-            label3.Text = "IVA: ";
+            label3.Text = "IVA: 16%";
             // 
-            // LabelDolares
+            // labelDolares
             // 
-            LabelDolares.AutoSize = true;
-            LabelDolares.Location = new Point(12, 744);
-            LabelDolares.Name = "LabelDolares";
-            LabelDolares.Size = new Size(128, 20);
-            LabelDolares.TabIndex = 31;
-            LabelDolares.Text = "Precio en Dolares:";
+            labelDolares.AutoSize = true;
+            labelDolares.Location = new Point(12, 744);
+            labelDolares.Name = "labelDolares";
+            labelDolares.Size = new Size(128, 20);
+            labelDolares.TabIndex = 31;
+            labelDolares.Text = "Precio en Dolares:";
             // 
             // pictureBox6
             // 
@@ -228,7 +229,7 @@
             // 
             factura.BackgroundColor = Color.FromArgb(11, 87, 96);
             factura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            factura.Columns.AddRange(new DataGridViewColumn[] { Codigo, Column1, Quantity, Column2, Column3, Total, Column5, Eliminar });
+            factura.Columns.AddRange(new DataGridViewColumn[] { Codigo, Column1, Quantity, Column2, Column3, Subtota, Total, Column5, Eliminar });
             factura.Location = new Point(678, 141);
             factura.Margin = new Padding(3, 5, 3, 5);
             factura.Name = "factura";
@@ -237,118 +238,9 @@
             factura.RowTemplate.Height = 25;
             factura.ScrollBars = ScrollBars.Vertical;
             factura.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            factura.Size = new Size(900, 623);
+            factura.Size = new Size(1000, 623);
             factura.TabIndex = 37;
             factura.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Codigo
-            // 
-            Codigo.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            Codigo.DefaultCellStyle = dataGridViewCellStyle1;
-            Codigo.HeaderText = "Codigo";
-            Codigo.MinimumWidth = 6;
-            Codigo.Name = "Codigo";
-            Codigo.ReadOnly = true;
-            Codigo.Width = 116;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            Column1.HeaderText = "Nombre";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            Column1.Width = 116;
-            // 
-            // Quantity
-            // 
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle3.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            Quantity.DefaultCellStyle = dataGridViewCellStyle3;
-            Quantity.HeaderText = "Cantidad";
-            Quantity.MinimumWidth = 6;
-            Quantity.Name = "Quantity";
-            Quantity.ReadOnly = true;
-            Quantity.Width = 116;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle4.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            Column2.HeaderText = "Ud. Medida";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle5.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle5.SelectionForeColor = Color.White;
-            Column3.DefaultCellStyle = dataGridViewCellStyle5;
-            Column3.HeaderText = "Costo Unitario";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            Column3.Width = 125;
-            // 
-            // Total
-            // 
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle6.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            Total.DefaultCellStyle = dataGridViewCellStyle6;
-            Total.HeaderText = "Precio Total";
-            Total.MinimumWidth = 6;
-            Total.Name = "Total";
-            Total.ReadOnly = true;
-            Total.Width = 125;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle7.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(11, 87, 96);
-            dataGridViewCellStyle7.SelectionForeColor = Color.White;
-            Column5.DefaultCellStyle = dataGridViewCellStyle7;
-            Column5.HeaderText = "Iva";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            Column5.Width = 45;
-            // 
-            // Eliminar
-            // 
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.MinimumWidth = 6;
-            Eliminar.Name = "Eliminar";
-            Eliminar.ReadOnly = true;
-            Eliminar.Resizable = DataGridViewTriState.True;
-            Eliminar.SortMode = DataGridViewColumnSortMode.Automatic;
-            Eliminar.Width = 125;
             // 
             // textBoxCliente
             // 
@@ -587,31 +479,143 @@
             Cantidad.TabIndex = 69;
             Cantidad.Text = "Cantidad";
             // 
-            // label4
+            // labelTotal
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 724);
-            label4.Name = "label4";
-            label4.Size = new Size(45, 20);
-            label4.TabIndex = 70;
-            label4.Text = "Total:";
+            labelTotal.AutoSize = true;
+            labelTotal.Location = new Point(12, 724);
+            labelTotal.Name = "labelTotal";
+            labelTotal.Size = new Size(45, 20);
+            labelTotal.TabIndex = 70;
+            labelTotal.Text = "Total:";
             // 
-            // can
+            // Codigo
             // 
-            can.AutoSize = true;
-            can.Location = new Point(1292, 44);
-            can.Name = "can";
-            can.Size = new Size(50, 20);
-            can.TabIndex = 71;
-            can.Text = "label2";
+            Codigo.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle1.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            Codigo.DefaultCellStyle = dataGridViewCellStyle1;
+            Codigo.HeaderText = "Codigo";
+            Codigo.MinimumWidth = 6;
+            Codigo.Name = "Codigo";
+            Codigo.ReadOnly = true;
+            Codigo.Width = 116;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle2.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            Column1.HeaderText = "Nombre";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Width = 116;
+            // 
+            // Quantity
+            // 
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle3.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            Quantity.DefaultCellStyle = dataGridViewCellStyle3;
+            Quantity.HeaderText = "Cantidad";
+            Quantity.MinimumWidth = 6;
+            Quantity.Name = "Quantity";
+            Quantity.ReadOnly = true;
+            Quantity.Width = 116;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle4.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            Column2.HeaderText = "Ud. Medida";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle5.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            Column3.HeaderText = "Costo Unitario";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            Column3.Width = 125;
+            // 
+            // Subtota
+            // 
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle6.ForeColor = Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle6.SelectionForeColor = Color.White;
+            Subtota.DefaultCellStyle = dataGridViewCellStyle6;
+            Subtota.HeaderText = "Subtotal";
+            Subtota.MinimumWidth = 6;
+            Subtota.Name = "Subtota";
+            Subtota.ReadOnly = true;
+            Subtota.Width = 125;
+            // 
+            // Total
+            // 
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle7.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle7.SelectionForeColor = Color.White;
+            Total.DefaultCellStyle = dataGridViewCellStyle7;
+            Total.HeaderText = "Precio Total";
+            Total.MinimumWidth = 6;
+            Total.Name = "Total";
+            Total.ReadOnly = true;
+            Total.Width = 125;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle8.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(11, 87, 96);
+            dataGridViewCellStyle8.SelectionForeColor = Color.White;
+            Column5.DefaultCellStyle = dataGridViewCellStyle8;
+            Column5.HeaderText = "Iva";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
+            Column5.Width = 45;
+            // 
+            // Eliminar
+            // 
+            Eliminar.HeaderText = "Eliminar";
+            Eliminar.MinimumWidth = 6;
+            Eliminar.Name = "Eliminar";
+            Eliminar.ReadOnly = true;
+            Eliminar.Resizable = DataGridViewTriState.True;
+            Eliminar.SortMode = DataGridViewColumnSortMode.Automatic;
+            Eliminar.Width = 125;
             // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1615, 963);
-            Controls.Add(can);
-            Controls.Add(label4);
+            ClientSize = new Size(1742, 963);
+            Controls.Add(labelTotal);
             Controls.Add(Cantidad);
             Controls.Add(cantidadTB);
             Controls.Add(pictureBox13);
@@ -641,7 +645,7 @@
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
-            Controls.Add(LabelDolares);
+            Controls.Add(labelDolares);
             Controls.Add(label3);
             Controls.Add(subtotal);
             Controls.Add(label1);
@@ -683,7 +687,7 @@
         private Label label1;
         private Label subtotal;
         private Label label3;
-        private Label LabelDolares;
+        private Label labelDolares;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private PictureBox pictureBox9;
@@ -713,13 +717,13 @@
         private PictureBox pictureBox13;
         private TextBox cantidadTB;
         private Label Cantidad;
-        private Label label4;
-        private Label can;
+        private Label labelTotal;
         private DataGridViewTextBoxColumn Codigo;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Subtota;
         private DataGridViewTextBoxColumn Total;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewButtonColumn Eliminar;

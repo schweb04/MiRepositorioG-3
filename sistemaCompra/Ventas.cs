@@ -175,12 +175,14 @@ namespace sistemaCompra
                     {
                         double precioUnitario = producto.PrecioDeVenta;
                         double totalLinea;
+                        double subtotal = cantidad * precioUnitario;
                         string IVA;
 
-                        if (producto.IVA && clienteSeleccionado.ContribuyenteEspecial)
+                        if (producto.IVA)
                         {
                             IVA = "16%";
                             totalLinea = cantidad * precioUnitario * 1.16;
+
                         }
 
                         else
@@ -189,7 +191,7 @@ namespace sistemaCompra
                             totalLinea = cantidad * precioUnitario;
                         }
 
-                        factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, precioUnitario, totalLinea, IVA);
+                        factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, precioUnitario, subtotal, totalLinea, IVA);
                         restarProducto(buscador, cantidad);
                         break;
                     }
@@ -255,7 +257,10 @@ namespace sistemaCompra
 
         private void refrescarPrecio()
         {
+
+            double subPrecioTotal = 0;
             double precioTotal = 0;
+
             foreach (DataGridViewRow fila in factura.Rows)
             {
 
@@ -265,18 +270,25 @@ namespace sistemaCompra
                     // Nombre de la columna de precios, reemplázalo con el nombre real de tu columna
 
                     // Asegúrate de que la columna existe en la fila
-                    if (fila.Cells["Total"].Value != null)
+                    if (fila.Cells["Subtota"].Value != null && fila.Cells["Total"].Value != null)
                     {
                         // Obtener el valor de la celda en la columna de precios
+                        double subPrecio = Convert.ToInt64(fila.Cells["Subtota"].Value);
                         double precio = Convert.ToInt64(fila.Cells["Total"].Value);
 
                         // Sumar al precio total
+
+                        subPrecioTotal += subPrecio;
                         precioTotal += precio;
+
                     }
                 }
             }
 
-            subtotal.Text = $"Subtotal: {precioTotal.ToString()} Bs.D";
+            subtotal.Text = $"Subtotal: {subPrecioTotal} Bs.D";
+            labelTotal.Text = $"Total: {precioTotal} Bs.D";
+            labelDolares.Text = $"Precio en dolares {precioTotal /35}$";
+
         }
     }
 }
