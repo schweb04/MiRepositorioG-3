@@ -46,7 +46,14 @@ namespace sistemaCompra
                 cliente.Telefono = valores[4];
                 cliente.CorreoElectronico = valores[5];
                 cliente.TipoDocumento = Convert.ToChar(valores[6]);
-                cliente.ContribuyenteEspecial = Convert.ToBoolean(valores[7]);
+                if (valores[7] == "SI")
+                {
+                    cliente.ContribuyenteEspecial = true;
+                }
+                else if (valores[7] == "NO")
+                {
+                    cliente.ContribuyenteEspecial = false;
+                }
                 clientes.Add(cliente);
             }
 
