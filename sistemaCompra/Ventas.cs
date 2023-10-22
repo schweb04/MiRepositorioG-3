@@ -64,45 +64,38 @@ namespace sistemaCompra
 
             foreach (string linea in lineasProductos.Skip(1))
             {
-                try
+
+                string[] valores = linea.Split(',');
+
+                Producto producto = new Producto();
+                producto.Codigo = valores[0];
+                producto.Nombre = valores[1];
+                producto.Cantidad = Convert.ToInt64(valores[2]);
+                producto.CantidadMinima = Convert.ToInt32(valores[3]);
+                producto.UnidadDeMedida = valores[4];
+                producto.CostoUnitario = Convert.ToInt64(valores[5]);
+                producto.PrecioDeVenta = Convert.ToInt64(valores[6]);
+
+                if (valores[7] == "SI")
                 {
-                    string[] valores = linea.Split(',');
+                    producto.IVA = true;
+                }
 
-                    Producto producto = new Producto();
-                    producto.Codigo = valores[0];
-                    producto.Nombre = valores[1];
-                    producto.Cantidad = Convert.ToInt64(valores[2]);
-                    producto.CantidadMinima = Convert.ToInt32(valores[3]);
-                    producto.UnidadDeMedida = valores[4];
-                    producto.CostoUnitario = Convert.ToInt64(valores[5]);
-                    producto.PrecioDeVenta = Convert.ToInt64(valores[6]);
-
-                    if (valores[7] == "SI")
-                    {
-                        producto.IVA = true;
-                    }
-
-                    else if (valores[7] == "NO")
-                    {
-                        producto.IVA = false;
-                    }
+                else if (valores[7] == "NO")
+                {
+                    producto.IVA = false;
+                }
 
                 productos.Add(producto);
-                //VerificarPocaCantidad();
+
+
             }
         }
 
 
-        public void VerificarPocaCantidad()
-        {
-            foreach (var producto in productos)
-            {
-                if (producto.Cantidad <= producto.CantidadMinima)
-                    MessageBox.Show($"ALERTA: La cantidad disponible del producto '{producto.Nombre}' es menor a la cantidad mínima especificada del mismo.");
-                    MessageBox.Show($"Pedido realizado al Proveedor para el producto {producto.Nombre}.Cantidad:{cantidadFaltante}.");
-                }
-            }
-        }
+
+
+
         public void VerificarCantidadDisponible()
         {
             foreach (var producto in productos)
@@ -145,8 +138,8 @@ namespace sistemaCompra
         }
 
         private void Ventas_Load(object sender, EventArgs e)
+        {
             VerificarCantidadDisponible();
-            VerificarPocaCantidad();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -177,32 +170,46 @@ namespace sistemaCompra
                 foreach (Producto producto in productos)
                 {
                     if (buscador == Convert.ToString(producto.Codigo))
+                    {
                         if (producto.Cantidad == 0)
-                        if (producto.Cantidad == 0)
+                        {
                             MessageBox.Show($"El producto {producto.Nombre} no está disponible.");
                         }
                         else if (producto.Cantidad < cantidad)
                         {
                             MessageBox.Show($"La cantidad solicitada del producto {producto.Nombre} es mayor a la disponible.");
-                            MessageBox.Show("No hay unidades disponibles.");
                         }
 
                         else
                         {
-                            iva = "0%";
-                        }
+                            double precioUnitario = producto.PrecioDeVenta;
+                            double totalLinea = cantidad * precioUnitario;
+                            string IVA;
+
+                            if (producto.IVA)
+                            {
+                                IVA = "16%";
+                            }
+
+                            else
+                            {
+                                IVA = "0%";
+                            }
+
+                            factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, precioUnitario, totalLinea, IVA);
+
                             restarProducto(buscador, cantidad);
-                            precioTotal = precioTotal + totalLinea;
-                        }
                         }
                         break;
                     }
-                }
 
-                facturaTotal = facturaTotal + precioTotal * 1.16;
-                facturaDolar = facturaDolar + facturaTotal / 34.9;
-                LabelDolares.Text = $"Total en $: {facturaDolar.ToString("N2")}$";
-                labelFactura.Text = $"{facturaTotal.ToString()}$";
+                    else
+                    {
+                        MessageBox.Show("Codigo invalido");
+                    }
+
+
+                }
             }
             catch (Exception ex)
             {
@@ -210,6 +217,7 @@ namespace sistemaCompra
                 cantidadTB.Clear();
             }
         }
+
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -240,7 +248,6 @@ namespace sistemaCompra
         {
             this.Hide();
         }
-
     }
 }
-}
+

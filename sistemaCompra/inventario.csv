@@ -1,0 +1,7 @@
+Codigo,Nombre,Cantidad,CantidadMinima,UnidadDeMedida,CostoUnitario,PrecioDeVenta,tieneIVA
+1,Harina,1,5,Kilogramo (Kg),10,20,SI
+3,Bistec,10,20,Kilogramo (Kg),11,25,NO
+4,Bistec,10,20,Kilogramo (Kg),11,25,NO
+5,Bistec,10,20,Kilogramo (Kg),11,25,SI
+6,Bistec,10,20,Kilogramo (Kg),11,25,NO
+2,Bistec,10,20,Kilogramo (Kg),11,25,SI
