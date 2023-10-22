@@ -285,6 +285,7 @@ namespace sistemaCompra
                 RefrescarDataGridView();
                 // Ocultar columnas no deseadas después de editar
                 OcultarColumnasNoDeseadas();
+                pnlDesplegar.Visible = false;
             }
             else
             {
