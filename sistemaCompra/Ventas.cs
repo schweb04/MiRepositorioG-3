@@ -6,6 +6,8 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Examen.Program;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -14,10 +16,20 @@ namespace sistemaCompra
 {
     public partial class Ventas : Form
     {
+        private List<string> metodosDePago = new List<string>();
+
+        private decimal subtotal = 100; //cambiar segun la logica de programacion
+        private decimal dolarBCV = 2.00m; //cambiar segun la tasa del sistema
+        private const decimal taxIGTF = 1.03m;
+        private const decimal revIGTF = 0.9434m; //revierte el IGTF 
+        private const decimal error = 0.01m; //Termino de error en las cuentas
+
+        public object N2 { get; private set; }
         private List<Cliente> clientes;
         private List<Producto> productos;
         private double facturaTotal = 0;
         private double facturaDolar = 0;
+        
         public Ventas()
         {
             InitializeComponent();
@@ -234,6 +246,548 @@ namespace sistemaCompra
         {
             this.Hide();
         }
+
+        //Boton Factura 1
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            btnBorrarMetodoPago.Visible = true;
+            groupBox1.Visible = true;
+            listMetdPagSelec.Visible = true;
+
+        }
+        
+        private void btnBorrarMetodoPago_Click(object sender, EventArgs e)
+        {
+            // Verifica si se ha seleccionado un elemento en el ListBox
+            if (listMetdPagSelec.SelectedIndex != -1)
+            {
+                // Obtiene el índice del elemento seleccionado
+                int indiceSeleccionado = listMetdPagSelec.SelectedIndex;
+
+                // Obtener el elemento seleccionado en el ListBox
+                string elementoSeleccionado = metodosDePago[indiceSeleccionado].ToString();
+
+                // Separar el monto y la moneda
+                string[] partes = elementoSeleccionado.Split(' ');
+                decimal monto = decimal.Parse(partes[1]);
+                string moneda = partes[2];
+
+                // Elimina el elemento de la lista
+                metodosDePago.RemoveAt(indiceSeleccionado);
+
+                // Elimina el elemento del ListBox
+                listMetdPagSelec.Items.RemoveAt(indiceSeleccionado);
+
+                // Actualizar el subtotal teniendo en cuenta la moneda
+                if (moneda == "$")
+                {
+                    subtotal += (monto * dolarBCV) / taxIGTF;
+                }
+                else if (moneda == "Bs")
+                {
+                    subtotal += monto;
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido eliminar el método de pago seleccionado.");
+                }
+
+            }
+        }
+        private void btnCerrarMetdPago_Click_1(object sender, EventArgs e)
+        {
+            groupBox1.Visible = false;
+            listMetdPagSelec.Visible = false;
+            btnBorrarMetodoPago.Visible = false;
+        }
+
+        private void ActualizarListBoxMetodosDePago()
+        {
+            // Limpia el ListBox para evitar duplicados.
+            listMetdPagSelec.Items.Clear();
+
+            // Agrega todos los métodos de pago a la lista.
+            foreach (string metodoDePago in metodosDePago)
+            {
+                listMetdPagSelec.Items.Add(metodoDePago);
+            }
+        }
+         private void btnEfectivoBs_Click(object sender, EventArgs e)
+        {
+            // Crear una nueva instancia de la ventana emergente
+            Form ventanaEmergente = new Form();
+            ventanaEmergente.StartPosition = FormStartPosition.CenterScreen;
+
+            // Crear un nuevo Label para el mensaje
+            Label lblMensaje = new Label();
+            lblMensaje.Text = $"Ingrese el monto en Bs: (Subtotal: {subtotal:N2} Bs)";
+            lblMensaje.AutoSize = true;
+            lblMensaje.Location = new Point(10, 10);
+
+            // Crear un nuevo TextBox para el precio ingresado
+            System.Windows.Forms.TextBox txtEfectBs = new System.Windows.Forms.TextBox();
+            txtEfectBs.Size = new Size(150, 50);
+            txtEfectBs.Location = new Point(10, lblMensaje.Bottom + 10);
+
+            // Crear un botón para aceptar el valor ingresado
+            System.Windows.Forms.Button btnAceptar = new System.Windows.Forms.Button();
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.Location = new Point(txtEfectBs.Left, txtEfectBs.Bottom + 10);
+            btnAceptar.Click += (senderBtn, eBtn) =>
+            {
+                string precioIngresado = txtEfectBs.Text;
+
+                // Validaciones
+
+                // Reemplazar "." por "," en la entrada
+                precioIngresado = precioIngresado.Replace('.', ',');
+
+                // Convierte la cadena a un valor decimal
+                if (decimal.TryParse(precioIngresado, out decimal montoIngresado))
+                {
+                    // Tomar el valor absoluto
+                    montoIngresado = Math.Abs(montoIngresado);
+
+                    // Redondear a 2 decimales
+                    montoIngresado = Math.Round(montoIngresado, 2);
+
+                    // Verificar que el monto no sea mayor que el subtotal
+                    if (montoIngresado <= subtotal && montoIngresado != 0)
+                    {
+                        subtotal -= montoIngresado;
+
+                        MessageBox.Show($"El Subtotal Restante es: {subtotal:N2} Bs\nPrecio válido: {montoIngresado:N2} Bs", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Agrega el método de pago y monto ingresado a la lista.
+                        string metodoDePago = "EfectivoBs";
+                        metodosDePago.Add($"{metodoDePago} {montoIngresado:N2} Bs");
+
+                        // Limpia el TextBox después de aceptar el valor.
+                        txtEfectBs.Text = string.Empty;
+
+                        // Muestra la lista actualizada en el control ListBox.
+                        ActualizarListBoxMetodosDePago();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"El monto ingresado no se le puede descontar al Subtotal: {subtotal:N2} Bs. Favor ingresar un valor válido.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El precio ingresado no cumple con los requisitos.", "Precio Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                ventanaEmergente.Close(); // Cierra la ventana emergente después de aceptar.
+            };
+
+            // Agregar los controles a la ventana emergente
+            ventanaEmergente.Controls.Add(lblMensaje);
+            ventanaEmergente.Controls.Add(txtEfectBs);
+            ventanaEmergente.Controls.Add(btnAceptar);
+
+            // Mostrar la ventana emergente
+            ventanaEmergente.ShowDialog();
+
+        }
+        private void btnEfectivoDolares_Click(object sender, EventArgs e)
+        {
+            // Crear una nueva instancia de la ventana emergente
+            Form ventanaEmergente = new Form();
+            ventanaEmergente.StartPosition = FormStartPosition.CenterScreen;
+
+            // Crear un nuevo Label para el mensaje
+            Label lblMensaje = new Label();
+            lblMensaje.Text = $"Ingrese el monto en $: (Subtotal: {((subtotal * taxIGTF) / dolarBCV):N2} $)";
+            lblMensaje.AutoSize = true;
+            lblMensaje.Location = new Point(10, 10);
+
+            // Crear un nuevo TextBox para el precio ingresado
+            System.Windows.Forms.TextBox txtEfectDolar = new System.Windows.Forms.TextBox();
+            txtEfectDolar.Size = new Size(150, 50);
+            txtEfectDolar.Location = new Point(10, lblMensaje.Bottom + 10);
+
+            // Crear un botón para aceptar el valor ingresado
+            System.Windows.Forms.Button btnAceptar = new System.Windows.Forms.Button();
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.Location = new Point(txtEfectDolar.Left, txtEfectDolar.Bottom + 10);
+            btnAceptar.Click += (senderBtn, eBtn) =>
+            {
+                string precioIngresado = txtEfectDolar.Text;
+
+                // Validaciones
+
+                // Reemplazar "." por "," en la entrada
+                precioIngresado = precioIngresado.Replace('.', ',');
+
+                // Convierte la cadena a un valor decimal
+                if (decimal.TryParse(precioIngresado, out decimal montoIngresado))
+                {
+                    // Tomar el valor absoluto
+                    montoIngresado = Math.Abs(montoIngresado);
+
+                    // Redondear a 2 decimales
+                    montoIngresado = Math.Round(montoIngresado, 2);
+
+                    // Verificar que el monto no sea mayor que el subtotal
+                    if (montoIngresado <= ((subtotal * taxIGTF / dolarBCV)+error) && montoIngresado != 0)
+                    {
+                        subtotal = ((subtotal / dolarBCV) * taxIGTF) - montoIngresado;
+                        subtotal *= dolarBCV*revIGTF;
+
+                        MessageBox.Show($"El Subtotal Restante es: {subtotal:N2} Bs\nPrecio válido: {montoIngresado:N2} $", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Agrega el método de pago y monto ingresado a la lista.
+                        string metodoDePago = "Efectivo$";
+                        metodosDePago.Add($"{metodoDePago} {montoIngresado:N2} $");
+
+                        // Limpia el TextBox después de aceptar el valor.
+                        txtEfectDolar.Text = string.Empty;
+
+                        // Muestra la lista actualizada en el control ListBox.
+                        ActualizarListBoxMetodosDePago();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"El monto ingresado no se le puede descontar al Subtotal: {((subtotal * taxIGTF) / dolarBCV):N2}  $. Favor ingresar un valor válido.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El precio ingresado no cumple con los requisitos.", "Precio Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                ventanaEmergente.Close(); // Cierra la ventana emergente después de aceptar.
+            };
+
+            // Agregar los controles a la ventana emergente
+            ventanaEmergente.Controls.Add(lblMensaje);
+            ventanaEmergente.Controls.Add(txtEfectDolar);
+            ventanaEmergente.Controls.Add(btnAceptar);
+
+            // Mostrar la ventana emergente
+            ventanaEmergente.ShowDialog();
+
+
+        }
+        private void btnTarjetaDebCred_Click(object sender, EventArgs e)
+        {
+            // Crear una nueva instancia de la ventana emergente
+            Form ventanaEmergente = new Form();
+            ventanaEmergente.StartPosition = FormStartPosition.CenterScreen;
+
+            // Crear un nuevo Label para el mensaje
+            Label lblMensaje = new Label();
+            lblMensaje.Text = $"Ingrese el monto en Bs: (Subtotal: {subtotal:N2} Bs)";
+            lblMensaje.AutoSize = true;
+            lblMensaje.Location = new Point(10, 10);
+
+            // Crear un nuevo TextBox para el precio ingresado
+            System.Windows.Forms.TextBox txtTarjeta = new System.Windows.Forms.TextBox();
+            txtTarjeta.Size = new Size(150, 50);
+            txtTarjeta.Location = new Point(10, lblMensaje.Bottom + 10);
+
+            // Crear un botón para aceptar el valor ingresado
+            System.Windows.Forms.Button btnAceptar = new System.Windows.Forms.Button();
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.Location = new Point(txtTarjeta.Left, txtTarjeta.Bottom + 10);
+            btnAceptar.Click += (senderBtn, eBtn) =>
+            {
+                string precioIngresado = txtTarjeta.Text;
+
+                // Validaciones
+
+                // Reemplazar "." por "," en la entrada
+                precioIngresado = precioIngresado.Replace('.', ',');
+
+                // Convierte la cadena a un valor decimal
+                if (decimal.TryParse(precioIngresado, out decimal montoIngresado))
+                {
+                    // Tomar el valor absoluto
+                    montoIngresado = Math.Abs(montoIngresado);
+
+                    // Redondear a 2 decimales
+                    montoIngresado = Math.Round(montoIngresado, 2);
+
+                    // Verificar que el monto no sea mayor que el subtotal
+                    if (montoIngresado <= subtotal && montoIngresado != 0)
+                    {
+                        subtotal -= montoIngresado;
+
+                        MessageBox.Show($"El Subtotal Restante es: {subtotal:N2} Bs\nPrecio válido: {montoIngresado:N2} Bs", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Agrega el método de pago y monto ingresado a la lista.
+                        string metodoDePago = "Tarjeta";
+                        metodosDePago.Add($"{metodoDePago} {montoIngresado:N2} Bs");
+
+                        // Limpia el TextBox después de aceptar el valor.
+                        txtTarjeta.Text = string.Empty;
+
+                        // Muestra la lista actualizada en el control ListBox.
+                        ActualizarListBoxMetodosDePago();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"El monto ingresado no se le puede descontar al Subtotal: {subtotal:N2} Bs. Favor ingresar un valor válido.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El precio ingresado no cumple con los requisitos.", "Precio Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                ventanaEmergente.Close(); // Cierra la ventana emergente después de aceptar.
+            };
+
+            // Agregar los controles a la ventana emergente
+            ventanaEmergente.Controls.Add(lblMensaje);
+            ventanaEmergente.Controls.Add(txtTarjeta);
+            ventanaEmergente.Controls.Add(btnAceptar);
+
+            // Mostrar la ventana emergente
+            ventanaEmergente.ShowDialog();
+
+        }
+        private void btnTarjAlimCestaT_Click(object sender, EventArgs e)
+        {
+            // Crear una nueva instancia de la ventana emergente
+            Form ventanaEmergente = new Form();
+            ventanaEmergente.StartPosition = FormStartPosition.CenterScreen;
+
+            // Crear un nuevo Label para el mensaje
+            Label lblMensaje = new Label();
+            lblMensaje.Text = $"Ingrese el monto en Bs: (Subtotal: {subtotal:N2} Bs)";
+            lblMensaje.AutoSize = true;
+            lblMensaje.Location = new Point(10, 10);
+
+            // Crear un nuevo TextBox para el precio ingresado
+            System.Windows.Forms.TextBox txtCestaticket = new System.Windows.Forms.TextBox();
+            txtCestaticket.Size = new Size(150, 50);
+            txtCestaticket.Location = new Point(10, lblMensaje.Bottom + 10);
+
+            // Crear un botón para aceptar el valor ingresado
+            System.Windows.Forms.Button btnAceptar = new System.Windows.Forms.Button();
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.Location = new Point(txtCestaticket.Left, txtCestaticket.Bottom + 10);
+            btnAceptar.Click += (senderBtn, eBtn) =>
+            {
+                string precioIngresado = txtCestaticket.Text;
+
+                // Validaciones
+
+                // Reemplazar "." por "," en la entrada
+                precioIngresado = precioIngresado.Replace('.', ',');
+
+                // Convierte la cadena a un valor decimal
+                if (decimal.TryParse(precioIngresado, out decimal montoIngresado))
+                {
+                    // Tomar el valor absoluto
+                    montoIngresado = Math.Abs(montoIngresado);
+
+                    // Redondear a 2 decimales
+                    montoIngresado = Math.Round(montoIngresado, 2);
+
+                    // Verificar que el monto no sea mayor que el subtotal
+                    if (montoIngresado <= subtotal && montoIngresado != 0)
+                    {
+                        subtotal -= montoIngresado;
+
+                        MessageBox.Show($"El Subtotal Restante es: {subtotal:N2} Bs\nPrecio válido: {montoIngresado:N2} Bs", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Agrega el método de pago y monto ingresado a la lista.
+                        string metodoDePago = "Cestaticket";
+                        metodosDePago.Add($"{metodoDePago} {montoIngresado:N2} Bs");
+
+                        // Limpia el TextBox después de aceptar el valor.
+                        txtCestaticket.Text = string.Empty;
+
+                        // Muestra la lista actualizada en el control ListBox.
+                        ActualizarListBoxMetodosDePago();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"El monto ingresado no se le puede descontar al Subtotal: {subtotal:N2} Bs. Favor ingresar un valor válido.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El precio ingresado no cumple con los requisitos.", "Precio Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                ventanaEmergente.Close(); // Cierra la ventana emergente después de aceptar.
+            };
+
+            // Agregar los controles a la ventana emergente
+            ventanaEmergente.Controls.Add(lblMensaje);
+            ventanaEmergente.Controls.Add(txtCestaticket);
+            ventanaEmergente.Controls.Add(btnAceptar);
+
+            // Mostrar la ventana emergente
+            ventanaEmergente.ShowDialog();
+
+
+        }
+        private void btnPagoMov_Click(object sender, EventArgs e)
+        {
+            // Crear una nueva instancia de la ventana emergente
+            Form ventanaEmergente = new Form();
+            ventanaEmergente.StartPosition = FormStartPosition.CenterScreen;
+
+            // Crear un nuevo Label para el mensaje
+            Label lblMensaje = new Label();
+            lblMensaje.Text = $"Ingrese el monto en Bs: (Subtotal: {subtotal:N2} Bs)";
+            lblMensaje.AutoSize = true;
+            lblMensaje.Location = new Point(10, 10);
+
+            // Crear un nuevo TextBox para el precio ingresado
+            System.Windows.Forms.TextBox txtTransferencia = new System.Windows.Forms.TextBox();
+            txtTransferencia.Size = new Size(150, 50);
+            txtTransferencia.Location = new Point(10, lblMensaje.Bottom + 10);
+
+            // Crear un botón para aceptar el valor ingresado
+            System.Windows.Forms.Button btnAceptar = new System.Windows.Forms.Button();
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.Location = new Point(txtTransferencia.Left, txtTransferencia.Bottom + 10);
+            btnAceptar.Click += (senderBtn, eBtn) =>
+            {
+                string precioIngresado = txtTransferencia.Text;
+
+                // Validaciones
+
+                // Reemplazar "." por "," en la entrada
+                precioIngresado = precioIngresado.Replace('.', ',');
+
+                // Convierte la cadena a un valor decimal
+                if (decimal.TryParse(precioIngresado, out decimal montoIngresado))
+                {
+                    // Tomar el valor absoluto
+                    montoIngresado = Math.Abs(montoIngresado);
+
+                    // Redondear a 2 decimales
+                    montoIngresado = Math.Round(montoIngresado, 2);
+
+                    // Verificar que el monto no sea mayor que el subtotal
+                    if (montoIngresado <= subtotal && montoIngresado != 0)
+                    {
+                        subtotal -= montoIngresado;
+
+                        MessageBox.Show($"El Subtotal Restante es: {subtotal:N2} Bs\nPrecio válido: {montoIngresado:N2} Bs", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Agrega el método de pago y monto ingresado a la lista.
+                        string metodoDePago = "Transferencia";
+                        metodosDePago.Add($"{metodoDePago} {montoIngresado:N2} Bs");
+
+                        // Limpia el TextBox después de aceptar el valor.
+                        txtTransferencia.Text = string.Empty;
+
+                        // Muestra la lista actualizada en el control ListBox.
+                        ActualizarListBoxMetodosDePago();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"El monto ingresado no se le puede descontar al Subtotal: {subtotal:N2} Bs. Favor ingresar un valor válido.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El precio ingresado no cumple con los requisitos.", "Precio Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                ventanaEmergente.Close(); // Cierra la ventana emergente después de aceptar.
+            };
+
+            // Agregar los controles a la ventana emergente
+            ventanaEmergente.Controls.Add(lblMensaje);
+            ventanaEmergente.Controls.Add(txtTransferencia);
+            ventanaEmergente.Controls.Add(btnAceptar);
+
+            // Mostrar la ventana emergente
+            ventanaEmergente.ShowDialog();
+
+        }
+        private void btnZelle_Click(object sender, EventArgs e)
+        {
+            // Crear una nueva instancia de la ventana emergente
+            Form ventanaEmergente = new Form();
+            ventanaEmergente.StartPosition = FormStartPosition.CenterScreen;
+
+            // Crear un nuevo Label para el mensaje
+            Label lblMensaje = new Label();
+            lblMensaje.Text = $"Ingrese el monto en $: (Subtotal: {((subtotal * taxIGTF) / dolarBCV):N2} $)";
+            lblMensaje.AutoSize = true;
+            lblMensaje.Location = new Point(10, 10);
+
+            // Crear un nuevo TextBox para el precio ingresado
+            System.Windows.Forms.TextBox txtZelle = new System.Windows.Forms.TextBox();
+            txtZelle.Size = new Size(150, 50);
+            txtZelle.Location = new Point(10, lblMensaje.Bottom + 10);
+
+            // Crear un botón para aceptar el valor ingresado
+            System.Windows.Forms.Button btnAceptar = new System.Windows.Forms.Button();
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.Location = new Point(txtZelle.Left, txtZelle.Bottom + 10);
+            btnAceptar.Click += (senderBtn, eBtn) =>
+            {
+                string precioIngresado = txtZelle.Text;
+
+                // Validaciones
+
+                // Reemplazar "." por "," en la entrada
+                precioIngresado = precioIngresado.Replace('.', ',');
+
+                // Convierte la cadena a un valor decimal
+                if (decimal.TryParse(precioIngresado, out decimal montoIngresado))
+                {
+                    // Tomar el valor absoluto
+                    montoIngresado = Math.Abs(montoIngresado);
+
+                    // Redondear a 2 decimales
+                    montoIngresado = Math.Round(montoIngresado, 2);
+
+                    // Verificar que el monto no sea mayor que el subtotal
+                    if (montoIngresado <= ((subtotal * taxIGTF / dolarBCV) + error) && montoIngresado != 0)
+                    {
+                        subtotal = (subtotal / dolarBCV * taxIGTF) - montoIngresado;
+                        subtotal *= dolarBCV * revIGTF;
+
+                        MessageBox.Show($"El Subtotal Restante es: {subtotal:N2} Bs\nPrecio válido: {montoIngresado:N2} $", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Agrega el método de pago y monto ingresado a la lista.
+                        string metodoDePago = "Zelle$";
+                        metodosDePago.Add($"{metodoDePago} {montoIngresado:N2} $");
+
+                        // Limpia el TextBox después de aceptar el valor.
+                        txtZelle.Text = string.Empty;
+
+                        // Muestra la lista actualizada en el control ListBox.
+                        ActualizarListBoxMetodosDePago();
+                        subtotal /= taxIGTF;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"El monto ingresado no se le puede descontar al Subtotal: {((subtotal * taxIGTF) / dolarBCV):N2}  Bs. Favor ingresar un valor válido.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El precio ingresado no cumple con los requisitos.", "Precio Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                ventanaEmergente.Close(); // Cierra la ventana emergente después de aceptar.
+            };
+
+            // Agregar los controles a la ventana emergente
+            ventanaEmergente.Controls.Add(lblMensaje);
+            ventanaEmergente.Controls.Add(txtZelle);
+            ventanaEmergente.Controls.Add(btnAceptar);
+
+            // Mostrar la ventana emergente
+            ventanaEmergente.ShowDialog();
+
+
+        }
+        
+
 
         
     }
