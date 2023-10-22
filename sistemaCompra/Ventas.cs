@@ -182,6 +182,7 @@ namespace sistemaCompra
 
                             factura.Rows.Add(producto.Codigo, producto.Nombre, cantidad, producto.UnidadDeMedida, precioUnitario, totalLinea, producto.IVA);
 
+                            
                             precioTotal = precioTotal + totalLinea;
                             productoEncontrado = true;
                         }
