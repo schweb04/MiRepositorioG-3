@@ -82,6 +82,17 @@
             pictureBox13 = new PictureBox();
             cantidadTB = new TextBox();
             Cantidad = new Label();
+            groupBox1 = new GroupBox();
+            btnCerrarMetdPago = new PictureBox();
+            pictureBox14 = new PictureBox();
+            btnZelle = new Button();
+            btnTarjetaDebCred = new Button();
+            btnPagoMov = new Button();
+            btnTarjAlimCestaT = new Button();
+            btnEfectivoDolares = new Button();
+            btnEfectivoBs = new Button();
+            listMetdPagSelec = new ListBox();
+            btnBorrarMetodoPago = new Button();
             labelFactura = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -98,6 +109,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnCerrarMetdPago).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             SuspendLayout();
             // 
             // label5
@@ -583,6 +597,141 @@
             Cantidad.TabIndex = 69;
             Cantidad.Text = "Cantidad";
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btnCerrarMetdPago);
+            groupBox1.Controls.Add(pictureBox14);
+            groupBox1.Controls.Add(btnZelle);
+            groupBox1.Controls.Add(btnTarjetaDebCred);
+            groupBox1.Controls.Add(btnPagoMov);
+            groupBox1.Controls.Add(btnTarjAlimCestaT);
+            groupBox1.Controls.Add(btnEfectivoDolares);
+            groupBox1.Controls.Add(btnEfectivoBs);
+            groupBox1.Location = new Point(809, 205);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(542, 296);
+            groupBox1.TabIndex = 70;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Indique el Método de Pago";
+            groupBox1.Visible = false;
+            // 
+            // btnCerrarMetdPago
+            // 
+            btnCerrarMetdPago.Image = Properties.Resources.ControlEliminar;
+            btnCerrarMetdPago.Location = new Point(509, 0);
+            btnCerrarMetdPago.Margin = new Padding(3, 2, 3, 2);
+            btnCerrarMetdPago.Name = "btnCerrarMetdPago";
+            btnCerrarMetdPago.Size = new Size(33, 38);
+            btnCerrarMetdPago.SizeMode = PictureBoxSizeMode.Zoom;
+            btnCerrarMetdPago.TabIndex = 72;
+            btnCerrarMetdPago.TabStop = false;
+            btnCerrarMetdPago.Click += btnCerrarMetdPago_Click_1;
+            // 
+            // pictureBox14
+            // 
+            pictureBox14.Image = Properties.Resources.InterfazVentas2;
+            pictureBox14.Location = new Point(386, 127);
+            pictureBox14.Margin = new Padding(3, 4, 3, 4);
+            pictureBox14.Name = "pictureBox14";
+            pictureBox14.Size = new Size(150, 49);
+            pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox14.TabIndex = 71;
+            pictureBox14.TabStop = false;
+            pictureBox14.Click += pictureBox14_Click;
+            // 
+            // btnZelle
+            // 
+            btnZelle.BackgroundImageLayout = ImageLayout.None;
+            btnZelle.Cursor = Cursors.Hand;
+            btnZelle.Location = new Point(195, 211);
+            btnZelle.Name = "btnZelle";
+            btnZelle.Size = new Size(150, 49);
+            btnZelle.TabIndex = 5;
+            btnZelle.Text = "Zelle";
+            btnZelle.UseVisualStyleBackColor = true;
+            btnZelle.Click += btnZelle_Click;
+            // 
+            // btnTarjetaDebCred
+            // 
+            btnTarjetaDebCred.BackgroundImageLayout = ImageLayout.None;
+            btnTarjetaDebCred.Cursor = Cursors.Hand;
+            btnTarjetaDebCred.Location = new Point(6, 127);
+            btnTarjetaDebCred.Name = "btnTarjetaDebCred";
+            btnTarjetaDebCred.Size = new Size(150, 49);
+            btnTarjetaDebCred.TabIndex = 4;
+            btnTarjetaDebCred.Text = "Tarjeta Débito/Credito";
+            btnTarjetaDebCred.UseVisualStyleBackColor = true;
+            btnTarjetaDebCred.Click += btnTarjetaDebCred_Click;
+            // 
+            // btnPagoMov
+            // 
+            btnPagoMov.BackgroundImageLayout = ImageLayout.None;
+            btnPagoMov.Cursor = Cursors.Hand;
+            btnPagoMov.Location = new Point(6, 211);
+            btnPagoMov.Name = "btnPagoMov";
+            btnPagoMov.Size = new Size(150, 49);
+            btnPagoMov.TabIndex = 3;
+            btnPagoMov.Text = "Pago Movil/Transferencias";
+            btnPagoMov.UseVisualStyleBackColor = true;
+            btnPagoMov.Click += btnPagoMov_Click;
+            // 
+            // btnTarjAlimCestaT
+            // 
+            btnTarjAlimCestaT.BackgroundImageLayout = ImageLayout.None;
+            btnTarjAlimCestaT.Cursor = Cursors.Hand;
+            btnTarjAlimCestaT.Location = new Point(195, 127);
+            btnTarjAlimCestaT.Name = "btnTarjAlimCestaT";
+            btnTarjAlimCestaT.Size = new Size(150, 49);
+            btnTarjAlimCestaT.TabIndex = 2;
+            btnTarjAlimCestaT.Text = "Tarjeta Alimentaria/CestaTicket";
+            btnTarjAlimCestaT.UseVisualStyleBackColor = true;
+            btnTarjAlimCestaT.Click += btnTarjAlimCestaT_Click;
+            // 
+            // btnEfectivoDolares
+            // 
+            btnEfectivoDolares.BackgroundImageLayout = ImageLayout.None;
+            btnEfectivoDolares.Cursor = Cursors.Hand;
+            btnEfectivoDolares.Location = new Point(195, 44);
+            btnEfectivoDolares.Name = "btnEfectivoDolares";
+            btnEfectivoDolares.Size = new Size(150, 49);
+            btnEfectivoDolares.TabIndex = 1;
+            btnEfectivoDolares.Text = "Efectivo $";
+            btnEfectivoDolares.UseVisualStyleBackColor = true;
+            btnEfectivoDolares.Click += btnEfectivoDolares_Click;
+            // 
+            // btnEfectivoBs
+            // 
+            btnEfectivoBs.BackgroundImageLayout = ImageLayout.None;
+            btnEfectivoBs.Cursor = Cursors.Hand;
+            btnEfectivoBs.Location = new Point(6, 44);
+            btnEfectivoBs.Name = "btnEfectivoBs";
+            btnEfectivoBs.Size = new Size(150, 49);
+            btnEfectivoBs.TabIndex = 0;
+            btnEfectivoBs.Text = "Efectivo Bs.";
+            btnEfectivoBs.UseVisualStyleBackColor = true;
+            btnEfectivoBs.Click += btnEfectivoBs_Click;
+            // 
+            // listMetdPagSelec
+            // 
+            listMetdPagSelec.FormattingEnabled = true;
+            listMetdPagSelec.ItemHeight = 15;
+            listMetdPagSelec.Location = new Point(629, 204);
+            listMetdPagSelec.Name = "listMetdPagSelec";
+            listMetdPagSelec.Size = new Size(152, 304);
+            listMetdPagSelec.TabIndex = 71;
+            listMetdPagSelec.Visible = false;
+            // 
+            // btnBorrarMetodoPago
+            // 
+            btnBorrarMetodoPago.Location = new Point(693, 469);
+            btnBorrarMetodoPago.Name = "btnBorrarMetodoPago";
+            btnBorrarMetodoPago.Size = new Size(75, 23);
+            btnBorrarMetodoPago.TabIndex = 72;
+            btnBorrarMetodoPago.Text = "Borrar";
+            btnBorrarMetodoPago.UseVisualStyleBackColor = true;
+            btnBorrarMetodoPago.Visible = false;
+            btnBorrarMetodoPago.Click += btnBorrarMetodoPago_Click;
+            // 
             // labelFactura
             // 
             labelFactura.AutoSize = true;
@@ -597,6 +746,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1370, 722);
             Controls.Add(labelFactura);
+            Controls.Add(btnBorrarMetodoPago);
+            Controls.Add(listMetdPagSelec);
+            Controls.Add(groupBox1);
             Controls.Add(Cantidad);
             Controls.Add(cantidadTB);
             Controls.Add(pictureBox13);
@@ -653,6 +805,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btnCerrarMetdPago).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -705,6 +860,17 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewButtonColumn Eliminar;
+        private GroupBox groupBox1;
+        private Button btnTarjetaDebCred;
+        private Button btnPagoMov;
+        private Button btnTarjAlimCestaT;
+        private Button btnEfectivoDolares;
+        private Button btnZelle;
+        private PictureBox pictureBox14;
+        private ListBox listMetdPagSelec;
+        public Button btnEfectivoBs;
+        private Button btnBorrarMetodoPago;
+        private PictureBox btnCerrarMetdPago;
         private Label labelFactura;
     }
 }
