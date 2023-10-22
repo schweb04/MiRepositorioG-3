@@ -41,19 +41,19 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             label1 = new Label();
-            label2 = new Label();
+            subtotal = new Label();
             label3 = new Label();
             LabelDolares = new Label();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox9 = new PictureBox();
             factura = new DataGridView();
-            Fila1 = new DataGridViewTextBoxColumn();
+            Codigo = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
-            Columna3 = new DataGridViewTextBoxColumn();
+            Quantity = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            Total = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Eliminar = new DataGridViewButtonColumn();
             textBoxCliente = new TextBox();
@@ -81,6 +81,8 @@
             pictureBox13 = new PictureBox();
             cantidadTB = new TextBox();
             Cantidad = new Label();
+            label4 = new Label();
+            can = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -161,28 +163,28 @@
             label1.TabIndex = 27;
             label1.Text = "Producto";
             // 
-            // label2
+            // subtotal
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(13, 717);
-            label2.Name = "label2";
-            label2.Size = new Size(56, 20);
-            label2.TabIndex = 29;
-            label2.Text = "Factura";
+            subtotal.AutoSize = true;
+            subtotal.Location = new Point(12, 680);
+            subtotal.Name = "subtotal";
+            subtotal.Size = new Size(68, 20);
+            subtotal.TabIndex = 29;
+            subtotal.Text = "Subtotal:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(13, 747);
+            label3.Location = new Point(12, 700);
             label3.Name = "label3";
-            label3.Size = new Size(66, 20);
+            label3.Size = new Size(38, 20);
             label3.TabIndex = 30;
-            label3.Text = "IVA: 16%";
+            label3.Text = "IVA: ";
             // 
             // LabelDolares
             // 
             LabelDolares.AutoSize = true;
-            LabelDolares.Location = new Point(13, 771);
+            LabelDolares.Location = new Point(12, 744);
             LabelDolares.Name = "LabelDolares";
             LabelDolares.Size = new Size(128, 20);
             LabelDolares.TabIndex = 31;
@@ -226,7 +228,7 @@
             // 
             factura.BackgroundColor = Color.FromArgb(11, 87, 96);
             factura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            factura.Columns.AddRange(new DataGridViewColumn[] { Fila1, Column1, Columna3, Column2, Column3, Column4, Column5, Eliminar });
+            factura.Columns.AddRange(new DataGridViewColumn[] { Codigo, Column1, Quantity, Column2, Column3, Total, Column5, Eliminar });
             factura.Location = new Point(678, 141);
             factura.Margin = new Padding(3, 5, 3, 5);
             factura.Name = "factura";
@@ -239,20 +241,20 @@
             factura.TabIndex = 37;
             factura.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // Fila1
+            // Codigo
             // 
-            Fila1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Codigo.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(11, 87, 96);
             dataGridViewCellStyle1.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.White;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(11, 87, 96);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            Fila1.DefaultCellStyle = dataGridViewCellStyle1;
-            Fila1.HeaderText = "Codigo";
-            Fila1.MinimumWidth = 6;
-            Fila1.Name = "Fila1";
-            Fila1.ReadOnly = true;
-            Fila1.Width = 116;
+            Codigo.DefaultCellStyle = dataGridViewCellStyle1;
+            Codigo.HeaderText = "Codigo";
+            Codigo.MinimumWidth = 6;
+            Codigo.Name = "Codigo";
+            Codigo.ReadOnly = true;
+            Codigo.Width = 116;
             // 
             // Column1
             // 
@@ -268,19 +270,19 @@
             Column1.ReadOnly = true;
             Column1.Width = 116;
             // 
-            // Columna3
+            // Quantity
             // 
             dataGridViewCellStyle3.BackColor = Color.FromArgb(11, 87, 96);
             dataGridViewCellStyle3.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.White;
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(11, 87, 96);
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            Columna3.DefaultCellStyle = dataGridViewCellStyle3;
-            Columna3.HeaderText = "Cantidad";
-            Columna3.MinimumWidth = 6;
-            Columna3.Name = "Columna3";
-            Columna3.ReadOnly = true;
-            Columna3.Width = 116;
+            Quantity.DefaultCellStyle = dataGridViewCellStyle3;
+            Quantity.HeaderText = "Cantidad";
+            Quantity.MinimumWidth = 6;
+            Quantity.Name = "Quantity";
+            Quantity.ReadOnly = true;
+            Quantity.Width = 116;
             // 
             // Column2
             // 
@@ -310,19 +312,19 @@
             Column3.ReadOnly = true;
             Column3.Width = 125;
             // 
-            // Column4
+            // Total
             // 
             dataGridViewCellStyle6.BackColor = Color.FromArgb(11, 87, 96);
             dataGridViewCellStyle6.Font = new Font("OCR A Extended", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle6.ForeColor = Color.White;
             dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(11, 87, 96);
             dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            Column4.DefaultCellStyle = dataGridViewCellStyle6;
-            Column4.HeaderText = "Precio Total";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            Column4.Width = 125;
+            Total.DefaultCellStyle = dataGridViewCellStyle6;
+            Total.HeaderText = "Precio Total";
+            Total.MinimumWidth = 6;
+            Total.Name = "Total";
+            Total.ReadOnly = true;
+            Total.Width = 125;
             // 
             // Column5
             // 
@@ -585,11 +587,31 @@
             Cantidad.TabIndex = 69;
             Cantidad.Text = "Cantidad";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(12, 724);
+            label4.Name = "label4";
+            label4.Size = new Size(45, 20);
+            label4.TabIndex = 70;
+            label4.Text = "Total:";
+            // 
+            // can
+            // 
+            can.AutoSize = true;
+            can.Location = new Point(1292, 44);
+            can.Name = "can";
+            can.Size = new Size(50, 20);
+            can.TabIndex = 71;
+            can.Text = "label2";
+            // 
             // Ventas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1615, 963);
+            Controls.Add(can);
+            Controls.Add(label4);
             Controls.Add(Cantidad);
             Controls.Add(cantidadTB);
             Controls.Add(pictureBox13);
@@ -621,7 +643,7 @@
             Controls.Add(pictureBox6);
             Controls.Add(LabelDolares);
             Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(subtotal);
             Controls.Add(label1);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
@@ -633,6 +655,7 @@
             Name = "Ventas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ventas";
+            Load += Ventas_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -658,7 +681,7 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private Label label1;
-        private Label label2;
+        private Label subtotal;
         private Label label3;
         private Label LabelDolares;
         private PictureBox pictureBox6;
@@ -690,12 +713,14 @@
         private PictureBox pictureBox13;
         private TextBox cantidadTB;
         private Label Cantidad;
-        private DataGridViewTextBoxColumn Fila1;
+        private Label label4;
+        private Label can;
+        private DataGridViewTextBoxColumn Codigo;
         private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Columna3;
+        private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Total;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewButtonColumn Eliminar;
     }
