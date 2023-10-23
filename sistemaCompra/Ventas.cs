@@ -8,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace sistemaCompra
 {
@@ -298,7 +301,123 @@ namespace sistemaCompra
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            int numeroFactura = ObtenerNumeroFactura();
+            CrearFactura(numeroFactura);
+            SumarAlNumero();
+        }
 
+        private void SumarAlNumero()
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "numeroFactura.txt");
+            int contenido = Convert.ToInt32(File.ReadAllText(path));
+            contenido += 1;
+            File.WriteAllText(path, contenido.ToString());
+        }
+
+        private List<Producto> ExtraerObjetosDeGrid()
+        {
+            List<Producto> productos = new List<Producto>();
+
+            foreach (DataGridViewRow fila in factura.Rows)
+            {
+                if (fila.Cells["Nombre"].Value != null)
+                {
+                    Producto producto = new Producto();
+                    producto.Nombre = fila.Cells["Nombre"].Value.ToString();
+                    producto.PrecioDeVenta = Convert.ToInt64(fila.Cells["CostoU"].Value);
+                    producto.Cantidad = Convert.ToInt64(fila.Cells["Quantity"].Value);
+                    producto.C = Convert.ToInt64(fila.Cells["Total"].Value);
+
+                    productos.Add(producto);
+                }
+            }
+
+            return productos;
+        }
+
+        private void CrearFactura(int numeroFactura)
+        {
+            FileStream fs = new FileStream($@"C:\Users\ojito\OneDrive\Documents\facturas\factura{numeroFactura}.pdf", FileMode.Create);
+            Document doc = new Document(PageSize.LETTER, 5, 5, 7, 7);
+            PdfWriter pw = PdfWriter.GetInstance(doc, fs);
+
+            doc.Open();
+
+            doc.AddAuthor("La Tienda de la Esquina");
+            doc.AddTitle("Factura");
+            iTextSharp.text.Font standarFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+            //Enesbezado
+            doc.Add(new Paragraph("FACTURA"));
+            doc.Add(Chunk.NEWLINE);
+
+            //Encabezado de columnas
+            PdfPTable tblFactura = new PdfPTable(3);
+            tblFactura.WidthPercentage = 100;
+
+            //Configurando el titulo de nuestras columnas
+            PdfPCell clNombre = new PdfPCell(new Phrase("Producto", standarFont));
+            clNombre.BorderWidth = 0;
+            clNombre.BorderWidthBottom = 0.75f;
+
+            PdfPCell clPrecio = new PdfPCell(new Phrase("Precio unitario", standarFont));
+            clPrecio.BorderWidth = 0;
+            clPrecio.BorderWidthBottom = 0.75f;
+
+            PdfPCell clCantidad = new PdfPCell(new Phrase("Cantidad", standarFont));
+            clCantidad.BorderWidth = 0;
+            clCantidad.BorderWidthBottom = 0.75f;
+
+            tblFactura.AddCell(clNombre);
+            tblFactura.AddCell(clPrecio);
+            tblFactura.AddCell(clCantidad);
+
+            List<Producto> productos = new List<Producto>();
+            productos = ExtraerObjetosDeGrid();
+
+            foreach (Producto producto in productos)
+            {
+                clNombre = new PdfPCell(new Phrase(producto.Nombre, standarFont));
+                clNombre.BorderWidth = 0;
+
+                string precio = producto.PrecioDeVenta.ToString();
+                clPrecio = new PdfPCell(new Phrase(precio, standarFont));
+                clNombre.BorderWidth = 0;
+
+                string cantidad = producto.Cantidad.ToString();
+                clCantidad = new PdfPCell(new Phrase(cantidad, standarFont));
+                clCantidad.BorderWidth = 0;
+
+                tblFactura.AddCell(clNombre);
+                tblFactura.AddCell(clPrecio);
+                tblFactura.AddCell(clCantidad);
+            }
+
+            DateTime fechaActual = DateTime.Now;
+            string fechaString = fechaActual.ToString("yyyy-MM-dd");
+
+            DateTime horaActual = DateTime.Now;
+            string horaString = horaActual.ToString("HH:mm:ss");
+
+
+
+            doc.Add(tblFactura);
+            doc.Add(new Paragraph(subtotal.Text));
+            doc.Add(new Paragraph(labelTotal.Text));
+            doc.Add(new Paragraph(labelDolares.Text));
+            doc.Close();
+            pw.Close();
+
+            MessageBox.Show("PDF generado satisfactoriamente!");
+
+        }
+
+        private int ObtenerNumeroFactura()
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "numeroFactura.txt");
+            int contenido = Convert.ToInt32(File.ReadAllText(path));
+            contenido += 1;
+            File.WriteAllText(path, contenido.ToString());
+            return contenido;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -343,7 +462,7 @@ namespace sistemaCompra
 
             subtotal.Text = $"Subtotal: {subPrecioTotal} Bs.D";
             labelTotal.Text = $"Total: {precioTotal} Bs.D";
-            labelDolares.Text = $"Precio en dolares {precioTotal / 35}$";
+            labelDolares.Text = $"Precio en dolares {precioTotal / 35:f2}$";
 
         }
     }
