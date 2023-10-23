@@ -85,6 +85,10 @@ namespace sistemaCompra
 
 
             }
+            foreach (Producto producto in productos)
+            {
+                consultaID.Rows.Add(producto.Codigo, producto.Nombre);
+            }
         }
 
 
@@ -130,6 +134,20 @@ namespace sistemaCompra
 
                     clienteSeleccionado = cliente;
                     break;
+                }
+                else if(cliente == clientes[^1] && buscador != null)
+                {
+                    string mensaje = "No se ha encontrado ningún cliente con el documento de identificación correspondiente" +
+                        Environment.NewLine + "¿Desea agregar un nuevo cliente?";
+                    string titulo = "¿Agregar cliente?";
+                    MessageBoxButtons botones = MessageBoxButtons.OKCancel;
+                    DialogResult resultado = MessageBox.Show(mensaje, titulo, botones);
+                    if(resultado == DialogResult.OK)
+                    {
+                        CtrlCliente? ctrlCliente = new();
+                        ctrlCliente.ShowDialog();
+                        ctrlCliente = null;
+                    }
                 }
             }
         }
@@ -294,7 +312,7 @@ namespace sistemaCompra
 
             subtotal.Text = $"Subtotal: {subPrecioTotal} Bs.D";
             labelTotal.Text = $"Total: {precioTotal} Bs.D";
-            labelDolares.Text = $"Precio en dolares {precioTotal /35}$";
+            labelDolares.Text = $"Precio en dolares {precioTotal / 35}$";
 
         }
     }
