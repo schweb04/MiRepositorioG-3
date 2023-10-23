@@ -138,12 +138,12 @@ namespace sistemaCompra
                     break;
                 }
             }
-            if(clienteNoEncontrado)
+            if (clienteNoEncontrado)
             {
-                AgregarCliente();
+                AgregarCliente(buscador);
             }
         }
-        private void AgregarCliente()
+        private void AgregarCliente(string buscador)
         {
             string mensaje = "No se ha encontrado ningún cliente con el documento de identificación correspondiente" +
                         Environment.NewLine + "¿Desea agregar un nuevo cliente?";
@@ -152,7 +152,7 @@ namespace sistemaCompra
             DialogResult resultado = MessageBox.Show(mensaje, titulo, botones);
             if (resultado == DialogResult.OK)
             {
-                CtrlCliente? ctrlCliente = new();
+                CtrlCliente? ctrlCliente = new(true, buscador);
                 ctrlCliente.ShowDialog();
                 ctrlCliente = null;
                 string pathClientes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clientes.csv");
