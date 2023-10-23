@@ -15,7 +15,7 @@ namespace sistemaCompra
         private string path = "clientes.csv";
         private string cedulaSeleccionada;
 
-        public CtrlCliente()
+        public CtrlCliente(bool iniciarDesdeCajero = false, string? cedula = null)
         {
             InitializeComponent();
             VerificarSiArchivoExiste();
@@ -33,6 +33,15 @@ namespace sistemaCompra
 
             // Asociar evento SelectionChanged al DataGridView
             dtgvListaClientes.SelectionChanged += new EventHandler(dtgvListaClientes_SelectionChanged);
+            if(iniciarDesdeCajero)
+            {
+                pboxEditar.Visible = false;
+                pboxEliminar.Visible = false;
+            }
+            if(cedula != null)
+            {
+                txtIdentificacion.Text = cedula;
+            }
         }
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
