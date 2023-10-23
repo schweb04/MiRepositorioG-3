@@ -85,6 +85,7 @@ namespace sistemaCompra
 
 
             }
+            VerificarCantidadDisponible();
             foreach (Producto producto in productos)
             {
                 consultaID.Rows.Add(producto.Codigo, producto.Nombre);
@@ -110,7 +111,7 @@ namespace sistemaCompra
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             string buscador = textBoxCliente.Text;
-
+            bool clienteNoEncontrado = true;
 
             foreach (Cliente cliente in clientes)
             {
@@ -133,21 +134,51 @@ namespace sistemaCompra
                     }
 
                     clienteSeleccionado = cliente;
+                    clienteNoEncontrado = false;
                     break;
                 }
-                else if(cliente == clientes[^1] && buscador != null)
-                {
-                    string mensaje = "No se ha encontrado ningún cliente con el documento de identificación correspondiente" +
+            }
+            if(clienteNoEncontrado)
+            {
+                AgregarCliente();
+            }
+        }
+        private void AgregarCliente()
+        {
+            string mensaje = "No se ha encontrado ningún cliente con el documento de identificación correspondiente" +
                         Environment.NewLine + "¿Desea agregar un nuevo cliente?";
-                    string titulo = "¿Agregar cliente?";
-                    MessageBoxButtons botones = MessageBoxButtons.OKCancel;
-                    DialogResult resultado = MessageBox.Show(mensaje, titulo, botones);
-                    if(resultado == DialogResult.OK)
+            string titulo = "¿Agregar cliente?";
+            MessageBoxButtons botones = MessageBoxButtons.OKCancel;
+            DialogResult resultado = MessageBox.Show(mensaje, titulo, botones);
+            if (resultado == DialogResult.OK)
+            {
+                CtrlCliente? ctrlCliente = new();
+                ctrlCliente.ShowDialog();
+                ctrlCliente = null;
+                string pathClientes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clientes.csv");
+                string[] lineasClientes = File.ReadAllLines(pathClientes);
+                foreach (string linea in lineasClientes.Skip(1))
+                {
+
+                    string[] valores = linea.Split(',');
+
+                    Cliente cliente = new Cliente();
+                    cliente.Cedula = Convert.ToInt32(valores[0]);
+                    cliente.Nombre = valores[1];
+                    cliente.Apellido = valores[2];
+                    cliente.Direccion = valores[3];
+                    cliente.Telefono = valores[4];
+                    cliente.CorreoElectronico = valores[5];
+                    cliente.TipoDocumento = Convert.ToChar(valores[6]);
+                    if (valores[7] == "SI")
                     {
-                        CtrlCliente? ctrlCliente = new();
-                        ctrlCliente.ShowDialog();
-                        ctrlCliente = null;
+                        cliente.ContribuyenteEspecial = true;
                     }
+                    else if (valores[7] == "NO")
+                    {
+                        cliente.ContribuyenteEspecial = false;
+                    }
+                    clientes.Add(cliente);
                 }
             }
         }
